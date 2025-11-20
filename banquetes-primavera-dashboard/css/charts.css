@@ -1,0 +1,327 @@
+/* Chart.js Custom Styles */
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 400px;
+  width: 100%;
+}
+
+/* Radar Chart Styles */
+.radar-chart {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Bar Chart Styles */
+.bar-chart {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Heat Map Styles */
+#heatMap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.heat-cell {
+  padding: 20px;
+  text-align: center;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.heat-cell:hover {
+  transform: scale(1.1);
+}
+
+.heat-low {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  color: #1976d2;
+}
+
+.heat-medium {
+  background: linear-gradient(135deg, #fff3e0, #ffcc02);
+  color: #f57c00;
+}
+
+.heat-high {
+  background: linear-gradient(135deg, #ffebee, #ffcdd2);
+  color: #d32f2f;
+}
+
+/* Pie Chart Styles */
+.pie-chart {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Timeline Styles */
+.timeline-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--rosa-intenso);
+}
+
+.timeline-item {
+  position: relative;
+  margin-left: 60px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: var(--blanco);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--sombra);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -43px;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  background: var(--rosa-intenso);
+  border-radius: 50%;
+  border: 3px solid var(--blanco);
+  box-shadow: 0 0 0 3px var(--rosa-intenso);
+}
+
+.timeline-phase {
+  font-weight: bold;
+  color: var(--rosa-intenso);
+  margin-bottom: 5px;
+}
+
+.timeline-month {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.timeline-milestones {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-milestones li {
+  padding: 2px 0;
+  position: relative;
+  padding-left: 15px;
+}
+
+.timeline-milestones li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+/* KPI Card Styles */
+.kpi-card {
+  text-align: center;
+  padding: 20px;
+  background: var(--blanco);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--sombra);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--sombra);
+}
+
+.kpi-title {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: var(--gris-texto);
+  margin-bottom: 10px;
+}
+
+.kpi-value {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: var(--rosa-intenso);
+  margin: 10px 0;
+}
+
+.kpi-target {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.kpi-description {
+  font-size: 0.85em;
+  color: #888;
+  line-height: 1.4;
+}
+
+.kpi-progress {
+  width: 100%;
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.kpi-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--rosa-primavera), var(--rosa-intenso));
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+
+/* Chart Legend */
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+}
+
+.legend-text {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Responsive Chart Adjustments */
+@media (max-width: 768px) {
+  .chart-container {
+    height: 300px;
+  }
+
+  .radar-chart,
+  .bar-chart,
+  .pie-chart {
+    max-width: 100%;
+  }
+
+  #heatMap {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 300px;
+  }
+
+  .timeline-container {
+    margin-left: 20px;
+  }
+
+  .timeline-item {
+    margin-left: 40px;
+  }
+
+  .timeline-item::before {
+    left: -33px;
+  }
+
+  .kpi-card {
+    padding: 15px;
+  }
+
+  .kpi-value {
+    font-size: 2em;
+  }
+}
+
+/* Chart Animation Classes */
+.chart-fade-in {
+  opacity: 0;
+  animation: chartFadeIn 1s ease forwards;
+}
+
+@keyframes chartFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.bar-grow {
+  transform: scaleY(0);
+  transform-origin: bottom;
+  animation: barGrow 1.5s ease forwards;
+}
+
+@keyframes barGrow {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.pie-rotate {
+  animation: pieRotate 2s ease;
+}
+
+@keyframes pieRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom Tooltip Styles */
+.chart-tooltip {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Loading States */
+.chart-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--rosa-intenso);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Transformación Digital - Banquetes Primavera</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/charts.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logos">
+                    <img src="assets/images/primaveralogo.jpg" alt="Banquetes Primavera" class="logo">
+                    <img src="assets/images/initlogo.jpg" alt="Init Idea" class="logo">
+                </div>
+                <div class="title-section">
+                    <h1>Transformación Digital Integral - Dashboard de Proyecto</h1>
+                    <p>De negocio local a ecosistema digital empresarial</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Executive Summary -->
+    <section id="executive-summary" class="section">
+        <div class="container">
+            <h2>Resumen Ejecutivo</h2>
+            <div class="ecosystem-diagram">
+                <h3>Diagrama de Ecosistema Digital</h3>
+                <div class="ecosystem-visual">
+                    <div class="central-node">
+                        <h4>Sitio Web (Núcleo Central)</h4>
+                    </div>
+                    <div class="connections">
+                        <div class="node marketing">Marketing Digital</div>
+                        <div class="node sales">Gestión de Ventas</div>
+                        <div class="node operations">Operaciones</div>
+                        <div class="node finance">Recursos Humanos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Situation Analysis -->
+    <section id="current-analysis" class="section">
+        <div class="container">
+            <h2>Análisis de Situación Actual</h2>
+            <div class="charts-container">
+                <div class="chart-wrapper">
+                    <h3>Radar: Actual vs Objetivo (Operaciones)</h3>
+                    <figure>
+                        <img src="assets/images/radaractualvsoperaciones.png" alt="Radar chart comparing current state vs target in key dimensions" loading="lazy" width="400" height="300">
+                        <figcaption>Comparativo del estado actual frente al objetivo en dimensiones clave: Presencia Digital, Operaciones, Tecnología, Ventas y Marketing. Identifica gaps prioritarios: tecnología y presencia digital requieren inversión para alcanzar objetivos.</figcaption>
+                    </figure>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>Composición Actual vs Potencial</h3>
+                    <figure>
+                        <img src="assets/images/compocision.png" alt="Bar chart showing current vs potential service composition" loading="lazy" width="400" height="300">
+                        <figcaption>Barras comparativas que muestran la composición actual de servicios (Banquetes, Coordinación, Decoración, Tecnología, Producción) frente a la composición potencial tras integrar tecnología. Muestra oportunidad para escalar servicios tecnológicos y productivos.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operational Integration -->
+    <section id="integration" class="section">
+        <div class="container">
+            <h2>Integración Operativa</h2>
+            <div class="flow-diagram">
+                <div class="flow-step">
+                    <h3>Sitio Web (Núcleo Central)</h3>
+                    <div class="sub-flow">
+                        <div class="flow-item">Marketing Digital → Leads</div>
+                        <div class="flow-item">Gestión de Ventas → Cotizaciones</div>
+                        <div class="flow-item">Operaciones → Inventarios</div>
+                        <div class="flow-item">RRHH → Capacitación</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitive Analysis -->
+    <section id="competitive" class="section">
+        <div class="container">
+            <h2>Análisis Competitivo - Morelos</h2>
+            <div class="charts-container">
+                <div class="chart-wrapper">
+                    <h3>Mapa de Calor: Competidores Clave en Morelos</h3>
+                    <figure>
+                        <img src="assets/images/mapadecalorcompetencias.png" alt="Heat map showing comparison of 4 competitors across 5 key indicators in Morelos market" loading="lazy" width="500" height="400">
+                        <figcaption>
+                            <strong>Indicadores evaluados:</strong> Presencia Digital, UX/Experiencia Digital, Branding, Tecnología/Innovación Operativa, Servicio al Cliente.<br><br>
+                            <strong>Luxury Events MX (Líder):</strong> Destaca en Branding (88) y Servicio (90). Mantiene nivel alto consistente para bodas premium.<br>
+                            <strong>Casa del Lago:</strong> Buen balance general, debilidad en Tecnología (60) - oportunidad para diferenciarse.<br>
+                            <strong>Event House:</strong> Competidor directo con UX (85), Tecnología (65) y Servicio (92) sólidos.<br>
+                            <strong>Banquetes Primavera:</strong> Servicio (75) como fortaleza. Áreas críticas: Tecnología (40), Presencia Digital (55), Branding (58).<br><br>
+                            <strong>Estrategia:</strong> Diferenciarse en Tecnología (CRM, WhatsApp automatizado), Branding (nueva identidad) y UX Digital (cotizador intuitivo, respuesta instantánea).
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="chart-wrapper">
+                    <h3>Comparativa con Top Competidores</h3>
+                    <canvas id="competitorChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Naming Strategy Analysis -->
+    <section id="naming-analysis" class="section">
+        <div class="container">
+            <h2>Análisis Estratégico de Naming</h2>
+            <p class="section-intro">Análisis completo de estrategias de naming para posicionamiento en Morelos</p>
+
+            <!-- Analysis Dropdowns -->
+            <div class="analysis-accordion">
+                <div class="analysis-item">
+                    <div class="analysis-header" role="button" tabindex="0" aria-expanded="false" aria-controls="sociological-content">
+                        🌎 Análisis Sociológico + Percepción Local en Morelos
+                        <span class="analysis-icon">+</span>
+                    </div>
+                    <div class="analysis-content" id="sociological-content">
+                        <div class="analysis-grid">
+                            <div class="analysis-text">
+                                <h4>Mercado Mixto en Morelos</h4>
+                                <ul>
+                                    <li><strong>Clientes locales:</strong> Familias, bodas, XV años, eventos empresariales</li>
+                                    <li><strong>Clientes foráneos:</strong> Destination weddings en jardines y haciendas</li>
+                                    <li><strong>Decisiones basadas en:</strong> Confianza, calidez, tradición, reputación</li>
+                                </ul>
+                                <h4>Premium ≠ Anglo</h4>
+                                <p>Lo premium se percibe por: jardines reconocidos, atención cálida, logística impecable, redes sociales fuertes, recomendaciones boca a boca.</p>
+                            </div>
+                            <div class="analysis-chart">
+                                <figure>
+                                    <img src="assets/images/radar.png" alt="Radar chart comparing Anglo, Spanish and hybrid naming strategies" loading="lazy" width="400" height="300">
+                                    <figcaption>Visualiza la comparación entre nombres anglo, español e híbrido en criterios: percepción local, premium, registro IMPI, disponibilidad de dominio y escalabilidad. Usa este gráfico para decidir si adoptar un naming que maximice escalabilidad (híbrido) o afinidad local (español).</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-item">
+                    <div class="analysis-header" role="button" tabindex="0" aria-expanded="false" aria-controls="comparison-content">
+                        🆚 Anglo vs Español: Pros y Contras
+                        <span class="analysis-icon">+</span>
+                    </div>
+                    <div class="analysis-content" id="comparison-content">
+                        <div class="comparison-container">
+                            <div class="comparison-column anglo">
+                                <h4>🇺🇸 Nombres Anglo</h4>
+                                <div class="pros-cons">
+                                    <div class="pros">
+                                        <h5>✅ Ventajas</h5>
+                                        <ul>
+                                            <li>Premium, internacionales, corporativos</li>
+                                            <li>Atraen destination weddings</li>
+                                            <li>Facilitan expansión internacional</li>
+                                            <li>Mejor CTR en ads aspiracionales</li>
+                                            <li>Esencia de grupo empresarial</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cons">
+                                        <h5>✘ Desventajas</h5>
+                                        <ul>
+                                            <li>Pueden sonar pretenciosos o "fríos"</li>
+                                            <li>Mayor inversión inicial requerida</li>
+                                            <li>Necesitan respaldo fuerte en branding</li>
+                                            <li>Requieren explicación en conversaciones</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comparison-column spanish">
+                                <h4>🇲🇽 Nombres Español</h4>
+                                <div class="pros-cons">
+                                    <div class="pros">
+                                        <h5>✅ Ventajas</h5>
+                                        <ul>
+                                            <li>Claridad y confianza inmediata</li>
+                                            <li>Excelente recordación auditiva</li>
+                                            <li>Menor inversión inicial</li>
+                                            <li>Mejor CTR en campañas locales</li>
+                                            <li>Percepción de cercanía cultural</li>
+                                        </ul>
+                                    </div>
+                                    <div class="cons">
+                                        <h5>✘ Desventajas</h5>
+                                        <ul>
+                                            <li>Menos premium si no se cuida estética</li>
+                                            <li>Saturación en registro IMPI</li>
+                                            <li>Dominios más difíciles de conseguir</li>
+                                            <li>Limitan expansión internacional</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comparison-chart">
+                            <canvas id="comparisonChart" width="600" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-item">
+                    <div class="analysis-header" role="button" tabindex="0" aria-expanded="false" aria-controls="marketing-content">
+                        📊 Impacto en Marketing Digital y Performance
+                        <span class="analysis-icon">+</span>
+                    </div>
+                    <div class="analysis-content" id="marketing-content">
+                        <div class="marketing-analysis">
+                            <div class="metric-comparison">
+                                <h4>CTR por Tipo de Campaña</h4>
+                                <div class="metric-bars">
+                                    <div class="metric-bar">
+                                        <span class="metric-label">Anglo - Bodas Premium</span>
+                                        <div class="bar-container">
+                                            <div class="bar anglo-bar" style="width: 85%"></div>
+                                            <span class="bar-value">85%</span>
+                                        </div>
+                                    </div>
+                                    <div class="metric-bar">
+                                        <span class="metric-label">Anglo - XV Años</span>
+                                        <div class="bar-container">
+                                            <div class="bar anglo-bar" style="width: 65%"></div>
+                                            <span class="bar-value">65%</span>
+                                        </div>
+                                    </div>
+                                    <div class="metric-bar">
+                                        <span class="metric-label">Español - Bodas Tradicionales</span>
+                                        <div class="bar-container">
+                                            <div class="bar spanish-bar" style="width: 78%"></div>
+                                            <span class="bar-value">78%</span>
+                                        </div>
+                                    </div>
+                                    <div class="metric-bar">
+                                        <span class="metric-label">Español - Eventos Corporativos</span>
+                                        <div class="bar-container">
+                                            <div class="bar spanish-bar" style="width: 82%"></div>
+                                            <span class="bar-value">82%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="strategy-recommendation">
+                                <h4>💡 Estrategia Recomendada</h4>
+                                <p><strong>Híbrido Adaptable:</strong> Nombres que funcionen en ambos mundos con segmentación diferenciada.</p>
+                                <ul>
+                                    <li>Campañas aspiracionales → Anglo/Híbrido</li>
+                                    <li>Campañas locales/familiares → Español</li>
+                                    <li>Destination weddings → Anglo premium</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-item">
+                    <div class="analysis-header" role="button" tabindex="0" aria-expanded="false" aria-controls="financial-content">
+                        💸 Impacto Financiero y Escalabilidad
+                        <span class="analysis-icon">+</span>
+                    </div>
+                    <div class="analysis-content" id="financial-content">
+                        <div class="financial-analysis">
+                            <div class="cost-comparison">
+                                <h4>Inversión Inicial por Estrategia</h4>
+                                <canvas id="financialChart" width="500" height="300"></canvas>
+                            </div>
+                            <div class="scalability-matrix">
+                                <h4>Matriz de Escalabilidad</h4>
+                                <div class="matrix-grid">
+                                    <div class="matrix-item">
+                                        <h5>Anglo</h5>
+                                        <div class="matrix-pros">
+                                            <span>🌍 Expansión internacional</span>
+                                            <span>💼 Credibilidad corporativa</span>
+                                            <span>🎯 Mercado premium</span>
+                                        </div>
+                                        <div class="matrix-cons">
+                                            <span>💰 +20-40% inversión inicial</span>
+                                            <span>⏰ Tiempo de adaptación</span>
+                                        </div>
+                                    </div>
+                                    <div class="matrix-item">
+                                        <h5>Español</h5>
+                                        <div class="matrix-pros">
+                                            <span>🚀 Crecimiento local rápido</span>
+                                            <span>💡 Menor inversión inicial</span>
+                                            <span>❤️ Confianza inmediata</span>
+                                        </div>
+                                        <div class="matrix-cons">
+                                            <span>🌐 Limitado internacional</span>
+                                            <span>🏷️ Riesgo de genérico</span>
+                                        </div>
+                                    </div>
+                                    <div class="matrix-item recommended">
+                                        <h5>⭐ Híbrido (Recomendado)</h5>
+                                        <div class="matrix-pros">
+                                            <span>🎯 Mejor de ambos mundos</span>
+                                            <span>📈 Escalabilidad total</span>
+                                            <span>❤️ Confianza + Premium</span>
+                                        </div>
+                                        <div class="matrix-cons">
+                                            <span>🔄 Requiere estrategia clara</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-item">
+                    <div class="analysis-header" role="button" tabindex="0" aria-expanded="false" aria-controls="recommendations-content">
+                        ⭐ Recomendaciones Finales de Naming
+                        <span class="analysis-icon">+</span>
+                    </div>
+                    <div class="analysis-content" id="recommendations-content">
+                        <div class="recommendations-grid">
+                            <div class="recommendation-card premium">
+                                <h4>🏆 Premium + Expansión</h4>
+                                <div class="name-options">
+                                    <div class="name-option">Primavera Events Group</div>
+                                    <div class="name-option">Primavera Event Company</div>
+                                    <div class="name-option">Primavera Hospitality Group</div>
+                                    <div class="name-option">Primavera Event Solutions</div>
+                                </div>
+                                <p class="recommendation-desc">Ideal para destination weddings y expansión internacional</p>
+                            </div>
+                            <div class="recommendation-card local">
+                                <h4>❤️ Local + Confianza</h4>
+                                <div class="name-options">
+                                    <div class="name-option">Grupo Primavera Eventos</div>
+                                    <div class="name-option">Primavera Producciones</div>
+                                    <div class="name-option">Eventos Primavera</div>
+                                </div>
+                                <p class="recommendation-desc">Perfecto para mercado local y crecimiento orgánico</p>
+                            </div>
+                            <div class="recommendation-card hybrid recommended">
+                                <h4>⭐ EQUILIBRIO PERFECTO</h4>
+                                <div class="name-options">
+                                    <div class="name-option featured">Primavera Events</div>
+                                    <div class="name-option">Primavera Wedding & Events</div>
+                                    <div class="name-option">Primavera Celebrations</div>
+                                    <div class="name-option">Primavera Event House</div>
+                                </div>
+                                <p class="recommendation-desc">Mejor opción para Morelos: confianza local + proyección premium</p>
+                            </div>
+                        </div>
+                        <div class="final-verdict">
+                            <h4>🎯 Veredicto Final</h4>
+                            <p>Para <strong>Banquetes Primavera</strong> en Morelos, recomendamos una estrategia <strong>híbrida</strong> que combine:</p>
+                            <ul>
+                                <li>Confianza y calidez local (español)</li>
+                                <li>Proyección premium e internacional (anglo)</li>
+                                <li>Flexibilidad para diferentes segmentos de mercado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-item">
+                    <div class="analysis-header" role="button" tabindex="0" aria-expanded="false" aria-controls="complementary-content">
+                        📋 Análisis Complementario: Aspectos No Contemplados
+                        <span class="analysis-icon">+</span>
+                    </div>
+                    <div class="analysis-content" id="complementary-content">
+                        <div class="complementary-analysis">
+                            <div class="analysis-section">
+                                <h4>🔍 1. LEGAL Y COMPLIANCE</h4>
+                                <div class="subsection">
+                                    <h5>CONTRATOS NECESARIOS:</h5>
+                                    <ul>
+                                        <li>Contrato de arrendamiento de salón (template legal)</li>
+                                        <li>Contrato de servicios integrales</li>
+                                        <li>Términos y condiciones del sitio web</li>
+                                        <li>Aviso de privacidad (LFPDPPP)</li>
+                                        <li>Política de cancelación y reembolsos</li>
+                                        <li>Contrato con proveedores externos</li>
+                                    </ul>
+                                </div>
+                                <div class="subsection">
+                                    <h5>SEGUROS:</h5>
+                                    <ul>
+                                        <li>Responsabilidad civil (eventos con alcohol)</li>
+                                        <li>Seguro de mobiliario e inmuebles</li>
+                                        <li>Seguro contra daños a terceros</li>
+                                    </ul>
+                                    <p><strong>Costo a calcular:</strong> Seguros de responsabilidad civil, mobiliario e inmuebles</p>
+                                </div>
+                                <div class="subsection">
+                                    <h5>PERMISOS:</h5>
+                                    <ul>
+                                        <li>Protección Civil por salón</li>
+                                        <li>Licencia de alcohol (si aplica)</li>
+                                        <li>Permiso de uso de suelo</li>
+                                        <li>Certificado de fumigación</li>
+                                    </ul>
+                                    <p><strong>Costo:</strong> Variable por municipio</p>
+                                </div>
+                            </div>
+
+                            <div class="analysis-section">
+                                <h4>👥 2. RECURSOS HUMANOS Y ESTRUCTURA</h4>
+                                <div class="subsection">
+                                    <h5>ORGANIGRAMA PROPUESTO:</h5>
+                                    <div class="organigram">
+                                        <div class="org-level ceo">RICHARD HERNÁNDEZ<br><small>(Director General)</small></div>
+                                        <div class="org-branches">
+                                            <div class="org-branch">
+                                                <div class="org-dept">ADMINISTRACIÓN<br><small>(Esposa de RH)</small></div>
+                                                <div class="org-sub">
+                                                    <div>Contabilidad</div>
+                                                    <div>Facturación</div>
+                                                    <div>RRHH</div>
+                                                </div>
+                                            </div>
+                                            <div class="org-branch">
+                                                <div class="org-dept">OPERACIONES<br><small>(Coordinador)</small></div>
+                                                <div class="org-sub">
+                                                    <div>Jefe de Banquetes</div>
+                                                    <div>Coordinadores de eventos</div>
+                                                    <div>Logística</div>
+                                                    <div>Almacén</div>
+                                                </div>
+                                            </div>
+                                            <div class="org-branch">
+                                                <div class="org-dept">COMERCIAL<br><small>(Ventas/Marketing)</small></div>
+                                                <div class="org-sub">
+                                                    <div>Community Manager</div>
+                                                    <div>Vendedor(es)</div>
+                                                    <div>Atención al cliente</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="subsection">
+                                    <h5>ROLES FALTANTES A CONSIDERAR:</h5>
+                                    <div class="role-card critical">
+                                        <h6>Community Manager/Marketing Digital (Crítico)</h6>
+                                        <p>Puede ser externo inicialmente<br>Eventual contratación interna a calcular</p>
+                                    </div>
+                                    <div class="role-card">
+                                        <h6>Coordinador de Eventos Senior</h6>
+                                        <p>Para eventos simultáneos<br>Salario a calcular</p>
+                                    </div>
+                                    <div class="role-card">
+                                        <h6>Asistente Administrativo</h6>
+                                        <p>Apoyo a facturación, cotizaciones<br>Salario a calcular</p>
+                                    </div>
+                                </div>
+                                <div class="subsection">
+                                    <h5>CAPACITACIÓN CONTINUA:</h5>
+                                    <p><strong>Presupuesto trimestral a calcular</strong></p>
+                                    <p><strong>Temas:</strong> Atención al cliente, tendencias en eventos, tecnología</p>
+                                </div>
+                            </div>
+
+                            <div class="analysis-section">
+                                <h4>🎯 3. EXPERIENCIA DEL CLIENTE (CUSTOMER JOURNEY)</h4>
+                                <div class="customer-journey">
+                                    <div class="journey-phase">
+                                        <h5>FASE 1: DESCUBRIMIENTO</h5>
+                                        <p><strong>¿Cómo nos encuentra?</strong> → SEO, redes sociales, recomendaciones</p>
+                                        <p><strong>Primera impresión</strong> → Sitio web, redes sociales</p>
+                                        <p><strong>Acción:</strong> Optimizar primeros 10 segundos en web</p>
+                                    </div>
+                                    <div class="journey-phase">
+                                        <h5>FASE 2: CONSIDERACIÓN</h5>
+                                        <p><strong>¿Qué información busca?</strong> → Precios, disponibilidad, galería</p>
+                                        <p><strong>¿Con quién nos compara?</strong> → Competencia local</p>
+                                        <p><strong>Acción:</strong> Calculadora de cotización online, comparativas</p>
+                                    </div>
+                                    <div class="journey-phase">
+                                        <h5>FASE 3: DECISIÓN</h5>
+                                        <p><strong>¿Qué lo convence?</strong> → Reseñas, visita al salón, atención</p>
+                                        <p><strong>¿Qué lo detiene?</strong> → Precio, disponibilidad, confianza</p>
+                                        <p><strong>Acción:</strong> Testimonios en video, tour virtual, garantías</p>
+                                    </div>
+                                    <div class="journey-phase">
+                                        <h5>FASE 4: CONTRATACIÓN</h5>
+                                        <p><strong>¿Es fácil cerrar el trato?</strong> → Proceso de pago, contrato</p>
+                                        <p><strong>Acción:</strong> Firma electrónica, pago online simplificado</p>
+                                    </div>
+                                    <div class="journey-phase">
+                                        <h5>FASE 5: PRE-EVENTO</h5>
+                                        <p><strong>¿Recibe recordatorios?</strong> → Pagos, detalles, cambios</p>
+                                        <p><strong>Acción:</strong> Automatización de emails/WhatsApp</p>
+                                    </div>
+                                    <div class="journey-phase">
+                                        <h5>FASE 6: EVENTO</h5>
+                                        <p><strong>¿Experiencia cumple expectativas?</strong> → Calidad del servicio</p>
+                                        <p><strong>Acción:</strong> Checklist de coordinación impecable</p>
+                                    </div>
+                                    <div class="journey-phase">
+                                        <h5>FASE 7: POST-EVENTO</h5>
+                                        <p><strong>¿Solicitan feedback?</strong> → Reseñas, testimonios</p>
+                                        <p><strong>¿Invitan a referir?</strong> → Programa de recomendaciones</p>
+                                        <p><strong>Acción:</strong> Email de agradecimiento + incentivo por referido</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="analysis-section">
+                                <h4>🏆 4. ANÁLISIS DE COMPETENCIA LOCAL</h4>
+                                <div class="subsection">
+                                    <h5>INVESTIGACIÓN REQUERIDA:</h5>
+                                    <ul>
+                                        <li>Top 3-5 competidores en Cuernavaca/Morelos</li>
+                                        <li>Sus precios promedio</li>
+                                        <li>Servicios que ofrecen</li>
+                                        <li>Fortalezas y debilidades percibidas</li>
+                                        <li>Presencia digital (seguidores, engagement)</li>
+                                    </ul>
+                                </div>
+                                <div class="subsection">
+                                    <h5>ESTRATEGIA DE DIFERENCIACIÓN:</h5>
+                                    <div class="uvp-box">
+                                        <h6>PROPUESTA DE VALOR ÚNICA (UVP):</h6>
+                                        <blockquote>"En Grupo Primavera convertimos tu evento en una experiencia memorable mediante tecnología de vanguardia, atención personalizada y 6 espacios únicos, garantizando que cada detalle se coordine a la perfección mientras tú solo te dedicas a disfrutar."</blockquote>
+                                    </div>
+                                    <h6>VENTAJAS COMPETITIVAS A DESTACAR:</h6>
+                                    <ul>
+                                        <li>Múltiples opciones de salones (6+ espacios)</li>
+                                        <li>Tecnología integrada (IA, apps, NFC)</li>
+                                        <li>Coordinación integral (de A a Z)</li>
+                                        <li>Transparencia digital (cotizaciones instantáneas, dashboard cliente)</li>
+                                        <li>Experiencia comprobada (cantidad de eventos realizados)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="analysis-section">
+                                <h4>🌱 5. SOSTENIBILIDAD Y RESPONSABILIDAD SOCIAL</h4>
+                                <div class="subsection">
+                                    <h5>TENDENCIA CRECIENTE EN EVENTOS:</h5>
+                                    <p>Los clientes, especialmente millennials y Gen Z, valoran empresas conscientes</p>
+                                </div>
+                                <div class="subsection">
+                                    <h5>INICIATIVAS SUGERIDAS:</h5>
+                                    <ul>
+                                        <li>♻️ Eliminación de plásticos de un solo uso</li>
+                                        <li>🌱 Compostaje de desperdicios orgánicos</li>
+                                        <li>💡 Iluminación LED de bajo consumo</li>
+                                        <li>🚗 Incentivos para carpooling</li>
+                                        <li>🎁 Donación de alimentos sobrantes a fundaciones</li>
+                                        <li>🌳 Programa "Planta un árbol por cada evento"</li>
+                                    </ul>
+                                </div>
+                                <div class="subsection">
+                                    <h5>BENEFICIOS:</h5>
+                                    <ul>
+                                        <li>Diferenciación de marca</li>
+                                        <li>Atracción de segmento premium</li>
+                                        <li>Contenido para marketing</li>
+                                        <li>Posibles certificaciones (ESR - Empresa Socialmente Responsable)</li>
+                                    </ul>
+                                    <p><strong>Costo adicional a calcular</strong></p>
+                                    <p><strong>Retorno esperado:</strong> Incremento del 10-15% en conversión de leads conscientes</p>
+                                </div>
+                            </div>
+
+                            <div class="analysis-section">
+                                <h4>📈 6. ESCALABILIDAD Y CRECIMIENTO FUTURO</h4>
+                                <div class="roadmap">
+                                    <div class="roadmap-year">
+                                        <h5>AÑO 1: CONSOLIDACIÓN</h5>
+                                        <ul>
+                                            <li>Q1-Q2: Implementación de transformación digital</li>
+                                            <li>Q3-Q4: Optimización y primeros resultados</li>
+                                            <li><strong>Meta:</strong> +30% eventos, marca registrada, operación digital</li>
+                                        </ul>
+                                    </div>
+                                    <div class="roadmap-year">
+                                        <h5>AÑO 2: EXPANSIÓN</h5>
+                                        <ul>
+                                            <li>Q1: Apertura de nuevas líneas de negocio (catering corporativo)</li>
+                                            <li>Q2: Alianzas estratégicas con hoteles/destinos</li>
+                                            <li>Q3: Lanzamiento de app móvil</li>
+                                            <li>Q4: Expansión a eventos virtuales/híbridos</li>
+                                            <li><strong>Meta:</strong> +50% ingresos, presencia regional</li>
+                                        </ul>
+                                    </div>
+                                    <div class="roadmap-year">
+                                        <h5>AÑO 3: ESCALA</h5>
+                                        <ul>
+                                            <li>Q1: Franquicia o réplica del modelo en otra ciudad</li>
+                                            <li>Q2: Eventos internacionales (destino weddings)</li>
+                                            <li>Q3: Academia de coordinadores de eventos</li>
+                                            <li>Q4: Consolidación como grupo empresarial</li>
+                                            <li><strong>Meta:</strong> Ser referente en la región, x3 ingresos</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Required Information -->
+    <section id="requirements" class="section">
+        <div class="container">
+            <h2>Información Requerida</h2>
+            <table class="requirements-table">
+                <thead>
+                    <tr>
+                        <th>Área</th>
+                        <th>Estado</th>
+                        <th>Prioridad</th>
+                        <th>Complejidad</th>
+                        <th>Dependencias</th>
+                    </tr>
+                </thead>
+                <tbody id="requirementsTableBody">
+                    <!-- Data will be populated by JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Implementation Plan -->
+    <section id="implementation" class="section">
+        <div class="container">
+            <h2>Plan de Implementación</h2>
+            <div class="timeline">
+                <div id="timelineContainer">
+                    <!-- Timeline will be populated by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Metrics -->
+    <section id="metrics" class="section">
+        <div class="container">
+            <h2>Métricas de Éxito</h2>
+            <div class="kpi-grid" id="kpiGrid">
+                <!-- KPIs will be populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Expected Benefits -->
+    <section id="benefits" class="section">
+        <div class="container">
+            <h2>Beneficios Esperados</h2>
+            <div class="chart-wrapper">
+                <h3>Distribución del Impacto Estratégico</h3>
+                <figure>
+                    <img src="assets/images/distribuciondeimpacto.png" alt="Pie chart showing strategic impact distribution" loading="lazy" width="400" height="300">
+                    <figcaption>Gráfico de pastel que presenta la distribución estimada del impacto estratégico: Mejora de experiencia (40%), Reducción de tiempo (30%), Optimización de costos (15%), Aumento de ventas (15%). Sirve para priorizar inversiones.</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technological Dependencies -->
+    <section id="dependencies" class="section">
+        <div class="container">
+            <h2>Dependencias Tecnológicas</h2>
+            <div class="architecture-diagram">
+                <div class="tech-stack">
+                    <div class="stack-item">WordPress + CRM</div>
+                    <div class="stack-item">Facturación + IA</div>
+                    <div class="stack-item">Marketing Automation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Components -->
+    <section id="interactive" class="section">
+        <div class="container">
+            <h2>Componentes Interactivos</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        ¿Por qué necesitamos integración completa?
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Actualmente cada área trabaja de forma aislada. La integración permite automatizar procesos, reducir tiempos y mejorar la experiencia del cliente.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="impact-calculator">
+                <h3>Calculadora de Impacto</h3>
+                <div class="calculator-controls">
+                    <label>Número de eventos: <input type="range" id="eventsSlider" min="10" max="50" value="25"></label>
+                    <label>Tiempo de respuesta: <input type="range" id="timeSlider" min="1" max="24" value="4"></label>
+                    <label>Capacidad: <input type="range" id="capacitySlider" min="50" max="500" value="200"></label>
+                </div>
+                <div id="impactResults"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Banquetes Primavera - Dashboard Educativo</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/scroll-effects.js"></script>
+    <script src="js/accordion-tests.js"></script>
+</body>
+</html>

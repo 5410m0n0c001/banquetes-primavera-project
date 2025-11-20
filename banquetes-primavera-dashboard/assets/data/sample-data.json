@@ -1,0 +1,47 @@
+{
+  "ecosystem": {
+    "marketing": ["Leads", "Cotizaciones"],
+    "sales": ["Cotizaciones", "Contratos"],
+    "operations": ["Inventarios", "Logística"],
+    "finance": ["Facturación", "Pagos"]
+  },
+  "radarData": {
+    "current": [3, 4, 2, 5, 3],
+    "competitors": [7, 6, 8, 4, 7],
+    "target": [8, 9, 9, 8, 9]
+  },
+  "barData": {
+    "current": [40, 30, 20, 10],
+    "potential": [60, 40, 30, 20]
+  },
+  "heatMap": [
+    {"x": "Precio", "y": "Servicios", "value": 0.8},
+    {"x": "Precio", "y": "Calidad", "value": 0.6},
+    {"x": "Ubicación", "y": "Servicios", "value": 0.9}
+  ],
+  "timeline": [
+    {"phase": "Fase 1", "month": "Mes 1-3", "milestones": ["Registro Marca", "Sitio Web", "Identidad"]},
+    {"phase": "Fase 2", "month": "Mes 4-6", "milestones": ["Automatización", "IA", "Marketing"]},
+    {"phase": "Fase 3", "month": "Mes 7-9", "milestones": ["Optimización", "Escalabilidad"]},
+    {"phase": "Fase 4", "month": "Mes 10-12", "milestones": ["Expansión", "Internacional"]}
+  ],
+  "kpis": [
+    {"name": "Conversión de Leads", "current": 25, "target": 40, "description": "Porcentaje de leads que se convierten en cotizaciones"},
+    {"name": "Tiempo de Respuesta", "current": 4, "target": 2, "description": "Horas promedio para responder consultas"},
+    {"name": "Ticket Promedio", "current": 80000, "target": 96000, "description": "Ingreso promedio por evento"},
+    {"name": "Tráfico Web", "current": 2000, "target": 5000, "description": "Visitas mensuales al sitio web"}
+  ],
+  "benefits": [
+    {"category": "Eficiencia Operativa", "percentage": 35},
+    {"category": "Crecimiento Ventas", "percentage": 25},
+    {"category": "Reducción Tiempos", "percentage": 20},
+    {"category": "Mejora Experiencia", "percentage": 15},
+    {"category": "Sostenibilidad", "percentage": 5}
+  ],
+  "requirements": [
+    {"area": "Datos Legales", "status": "red", "priority": "Alta", "complexity": "Media", "dependencies": "Registro Marca"},
+    {"area": "Información Salones", "status": "yellow", "priority": "Alta", "complexity": "Baja", "dependencies": "Fotografía"},
+    {"area": "Estructura Team", "status": "red", "priority": "Media", "complexity": "Alta", "dependencies": "Organigrama"},
+    {"area": "Proveedores", "status": "yellow", "priority": "Media", "complexity": "Media", "dependencies": "Alianzas"}
+  ]
+}
