@@ -98,6 +98,57 @@ img {
   line-height: 1.4;
 }
 
+/* Disclaimer Styles */
+.disclaimer {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: clamp(4px, 2vw, 8px);
+  border-left: 4px solid #ff9800;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.disclaimer h3 {
+  color: #ff9800;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.disclaimer p {
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  line-height: 1.5;
+  color: var(--gris-texto);
+  margin-bottom: var(--spacing-sm);
+}
+
+.disclaimer ul {
+  margin: var(--spacing-sm) 0;
+  padding-left: var(--spacing-md);
+}
+
+.disclaimer li {
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+  line-height: 1.4;
+  color: var(--gris-texto);
+  margin-bottom: var(--spacing-xs);
+  position: relative;
+}
+
+.disclaimer li::before {
+  content: "⚠️";
+  position: absolute;
+  left: -var(--spacing-md);
+  top: 0;
+  font-size: 0.7em;
+}
+
 /* Sections - Mobile First */
 .section {
   padding: var(--spacing-xl) 0;
@@ -1149,5 +1200,29 @@ img {
 @media (min-width: 1440px) {
   .container {
     max-width: 1400px;
+  }
+}
+
+/* Mobile responsive styles for disclaimer */
+@media (max-width: 767px) {
+  .disclaimer {
+    padding: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+  }
+
+  .disclaimer h3 {
+    font-size: 1rem;
+  }
+
+  .disclaimer p {
+    font-size: 0.85rem;
+  }
+
+  .disclaimer ul {
+    padding-left: var(--spacing-sm);
+  }
+
+  .disclaimer li {
+    font-size: 0.8rem;
   }
 }
