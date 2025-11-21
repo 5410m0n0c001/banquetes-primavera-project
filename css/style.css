@@ -433,8 +433,7 @@ img {
 }
 
 .accordion-content.open {
-  max-height: 2000px;
-  opacity: 1;
+    opacity: 1;
 }
 
 .accordion-content p {
@@ -1224,5 +1223,131 @@ img {
 
   .disclaimer li {
     font-size: 0.8rem;
+  }
+}
+
+/* Mobile responsive for marketing analysis */
+@media (max-width: 767px) {
+  .marketing-analysis {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .metric-label {
+    min-width: 120px;
+    font-size: 0.9rem;
+  }
+
+  .metric-bar {
+    gap: 0.5rem;
+  }
+
+  .bar-container {
+    height: 20px;
+  }
+
+  .bar-value {
+    font-size: 0.75rem;
+    right: 6px;
+  }
+
+  .strategy-recommendation {
+    padding: 1rem;
+  }
+
+  .strategy-recommendation h4 {
+    font-size: 1rem;
+  }
+
+  .strategy-recommendation p {
+    font-size: 0.9rem;
+  }
+
+  .strategy-recommendation ul {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile responsive for financial analysis */
+@media (max-width: 767px) {
+  .financial-analysis {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .matrix-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .matrix-item {
+    padding: 0.75rem;
+  }
+
+  .matrix-item h5 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .matrix-pros, .matrix-cons {
+    font-size: 0.85rem;
+  }
+
+  .cost-comparison h4, .scalability-matrix h4 {
+    font-size: 1rem;
+  }
+
+  .cost-comparison canvas {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+  }
+}
+
+/* Mobile responsive for recommendations */
+@media (max-width: 767px) {
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .recommendation-card {
+    padding: 1rem;
+  }
+
+  .recommendation-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .name-options {
+    gap: 0.5rem;
+  }
+
+  .name-option {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .recommendation-desc {
+    font-size: 0.85rem;
+  }
+
+  .final-verdict {
+    padding: 1.5rem;
+  }
+
+  .final-verdict h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .final-verdict p {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .final-verdict ul {
+    font-size: 0.85rem;
   }
 }

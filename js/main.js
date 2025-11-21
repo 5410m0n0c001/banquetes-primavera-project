@@ -145,15 +145,22 @@ function populateKPIs() {
 
 // Initialize interactive components
 function initializeInteractiveComponents() {
-    // Accordion functionality
+    // Accordion functionality with dynamic height
     const accordionHeaders = document.querySelectorAll('.accordion-header');
     accordionHeaders.forEach(header => {
         header.addEventListener('click', function() {
             const content = this.nextElementSibling;
             const icon = this.querySelector('.accordion-icon');
 
-            // Toggle content
-            content.classList.toggle('open');
+            if (content.classList.contains('open')) {
+                content.style.maxHeight = '0px';
+                setTimeout(() => {
+                    content.classList.remove('open');
+                }, 400); // Match transition duration
+            } else {
+                content.classList.add('open');
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
 
             // Rotate icon
             if (icon) {
