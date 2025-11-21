@@ -1040,6 +1040,125 @@
         </div>
     </section>
 
+    <section id="rebranding-gallery" class="section">
+        <div class="container">
+            <h2>Rebranding – Muestra</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <img src="assets/images/galeria/l1.png" alt="Rebranding muestra 1" loading="lazy">
+                        <img src="assets/images/galeria/l2.png" alt="Rebranding muestra 2" loading="lazy">
+                        <img src="assets/images/galeria/l3.png" alt="Rebranding muestra 3" loading="lazy">
+                        <img src="assets/images/galeria/l4.png" alt="Rebranding muestra 4" loading="lazy">
+                        <img src="assets/images/galeria/l5.png" alt="Rebranding muestra 5" loading="lazy">
+                        <img src="assets/images/galeria/l6.png" alt="Rebranding muestra 6" loading="lazy">
+                        <img src="assets/images/galeria/l7.png" alt="Rebranding muestra 7" loading="lazy">
+                        <img src="assets/images/galeria/l8.png" alt="Rebranding muestra 8" loading="lazy">
+                        <img src="assets/images/galeria/l9.png" alt="Rebranding muestra 9" loading="lazy">
+                        <img src="assets/images/galeria/l10.png" alt="Rebranding muestra 10" loading="lazy">
+                    </div>
+                </div>
+                <button class="carousel-prev" aria-label="Imagen anterior"><</button>
+                <button class="carousel-next" aria-label="Imagen siguiente">></button>
+            </div>
+        </div>
+        <style>
+            .carousel-container {
+                position: relative;
+                max-width: 100%;
+                overflow: hidden;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            }
+            .carousel {
+                overflow: hidden;
+            }
+            .carousel-track {
+                display: flex;
+                transition: transform 0.3s ease;
+            }
+            .carousel-track img {
+                width: 100%;
+                height: auto;
+                max-height: 400px;
+                object-fit: contain;
+                flex-shrink: 0;
+            }
+            .carousel-prev, .carousel-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(0,0,0,0.5);
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 50%;
+                font-size: 18px;
+                z-index: 1;
+            }
+            .carousel-prev {
+                left: 10px;
+            }
+            .carousel-next {
+                right: 10px;
+            }
+            .carousel-prev:hover, .carousel-next:hover {
+                background: rgba(0,0,0,0.7);
+            }
+            @media (max-width: 768px) {
+                .carousel-track img {
+                    max-height: 250px;
+                }
+            }
+        </style>
+        <script>
+            (function(){
+                const track = document.querySelector('#rebranding-gallery .carousel-track');
+                const prevBtn = document.querySelector('#rebranding-gallery .carousel-prev');
+                const nextBtn = document.querySelector('#rebranding-gallery .carousel-next');
+                if(!track || !prevBtn || !nextBtn) return;
+                const images = track.children;
+                let currentIndex = 0;
+                function updateCarousel(){
+                    const translateX = -currentIndex * 100;
+                    track.style.transform = `translateX(${translateX}%)`;
+                }
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
+                    updateCarousel();
+                });
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
+                    updateCarousel();
+                });
+                // Touch support
+                let startX = 0;
+                let isDragging = false;
+                track.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                    isDragging = true;
+                });
+                track.addEventListener('touchmove', (e) => {
+                    if(!isDragging) return;
+                    const currentX = e.touches[0].clientX;
+                    const diff = startX - currentX;
+                    if(Math.abs(diff) > 50) {
+                        if(diff > 0) {
+                            nextBtn.click();
+                        } else {
+                            prevBtn.click();
+                        }
+                        isDragging = false;
+                    }
+                });
+                track.addEventListener('touchend', () => {
+                    isDragging = false;
+                });
+            })();
+        </script>
+    </section>
+
     <section id="resumen-analista-colapsable" aria-labelledby="resumen-analista-toggle" style="--brand-color: var(--rosa-intenso, #E91E63); --bg-panel: var(--panel-bg, #FBFDF8); --text-color: var(--text, #3A3A3A);">
         <div class="rac-header-wrapper">
             <button id="resumen-analista-toggle" class="rac-toggle" aria-expanded="false" aria-controls="resumen-analista-contenido" type="button">
