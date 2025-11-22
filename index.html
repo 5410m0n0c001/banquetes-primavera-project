@@ -1334,16 +1334,17 @@
             <div class="carousel-container">
                 <div class="carousel">
                     <div class="carousel-track">
-                        <img src="assets/images/galeria/l1.png" alt="Rebranding muestra 1" loading="lazy">
-                        <img src="assets/images/galeria/l2.png" alt="Rebranding muestra 2" loading="lazy">
-                        <img src="assets/images/galeria/l3.png" alt="Rebranding muestra 3" loading="lazy">
-                        <img src="assets/images/galeria/l4.png" alt="Rebranding muestra 4" loading="lazy">
-                        <img src="assets/images/galeria/l5.png" alt="Rebranding muestra 5" loading="lazy">
-                        <img src="assets/images/galeria/l6.png" alt="Rebranding muestra 6" loading="lazy">
-                        <img src="assets/images/galeria/l7.png" alt="Rebranding muestra 7" loading="lazy">
-                        <img src="assets/images/galeria/l8.png" alt="Rebranding muestra 8" loading="lazy">
-                        <img src="assets/images/galeria/l9.png" alt="Rebranding muestra 9" loading="lazy">
-                        <img src="assets/images/galeria/l10.png" alt="Rebranding muestra 10" loading="lazy">
+                        <img src="assets/images/galeria/l11.png" alt="Rebranding muestra 11">
+                        <img src="assets/images/galeria/l1.png" alt="Rebranding muestra 1">
+                        <img src="assets/images/galeria/l2.png" alt="Rebranding muestra 2">
+                        <img src="assets/images/galeria/l3.png" alt="Rebranding muestra 3">
+                        <img src="assets/images/galeria/l4.png" alt="Rebranding muestra 4">
+                        <img src="assets/images/galeria/l5.png" alt="Rebranding muestra 5">
+                        <img src="assets/images/galeria/l6.png" alt="Rebranding muestra 6">
+                        <img src="assets/images/galeria/l7.png" alt="Rebranding muestra 7">
+                        <img src="assets/images/galeria/l8.png" alt="Rebranding muestra 8">
+                        <img src="assets/images/galeria/l9.png" alt="Rebranding muestra 9">
+                        <img src="assets/images/galeria/l10.png" alt="Rebranding muestra 10">
                     </div>
                 </div>
                 <button class="carousel-prev" aria-label="Imagen anterior"><</button>
@@ -1412,6 +1413,13 @@
                     const translateX = -currentIndex * 100;
                     track.style.transform = `translateX(${translateX}%)`;
                 }
+                // Add error handling for images
+                Array.from(images).forEach(img => {
+                    img.addEventListener('error', () => {
+                        console.warn('Carousel image failed to load:', img.src);
+                        img.style.display = 'none';
+                    });
+                });
                 prevBtn.addEventListener('click', () => {
                     currentIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
                     updateCarousel();
