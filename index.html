@@ -1325,6 +1325,66 @@
                 </div>
                 <div id="impactResults"></div>
             </div>
+            <div class="site-map-container">
+                <a href="https://www.figma.com/make/q9zGnDjTO6Xnsfrv2eJWyZ/Site-Map-and-Ecosystem-Diagram?t=SPTZji7DfcDxKZwz-20&fullscreen=1" target="_blank" class="site-map-button">Site Map preliminar</a>
+            </div>
+            <div class="sofia-agent-container">
+                <a href="https://ai.studio/apps/drive/1hNUJJcXa_byWBh8HD0YOGcwBnvaXh3Z3" target="_blank" class="sofia-agent-button">Agente de ventas Sofia</a>
+            </div>
+            <style>
+                @keyframes buttonPulse {
+                    0% {
+                        transform: scale(1);
+                        box-shadow: 0 0 10px rgba(233, 30, 99, 0.3);
+                    }
+                    50% {
+                        transform: scale(1.05);
+                        box-shadow: 0 0 20px rgba(233, 30, 99, 0.6);
+                    }
+                    100% {
+                        transform: scale(1);
+                        box-shadow: 0 0 10px rgba(233, 30, 99, 0.3);
+                    }
+                }
+                .site-map-container {
+                    margin-top: 20px;
+                    text-align: center;
+                }
+                .site-map-button {
+                    display: inline-block;
+                    background: var(--rosa-intenso, #E91E63);
+                    color: #fff;
+                    padding: 16px 24px;
+                    border-radius: 12px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    transition: background 0.3s ease;
+                    animation: buttonPulse 2s ease-in-out infinite;
+                }
+                .site-map-button:hover {
+                    background: #d81b60;
+                }
+                .sofia-agent-container {
+                    margin-top: 20px;
+                    text-align: center;
+                }
+                .sofia-agent-button {
+                    display: inline-block;
+                    background: var(--rosa-intenso, #E91E63);
+                    color: #fff;
+                    padding: 16px 24px;
+                    border-radius: 12px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    transition: background 0.3s ease;
+                    animation: buttonPulse 2s ease-in-out infinite;
+                }
+                .sofia-agent-button:hover {
+                    background: #d81b60;
+                }
+            </style>
         </div>
     </section>
 
@@ -1456,6 +1516,10 @@
                 track.addEventListener('touchend', () => {
                     isDragging = false;
                 });
+                // Auto-advance every 3 seconds
+                setInterval(() => {
+                    nextBtn.click();
+                }, 3000);
             })();
         </script>
     </section>
