@@ -1359,3 +1359,53 @@ img {
     font-size: 0.85rem;
   }
 }
+
+/* Site Advances Section */
+.site-advances-section {
+  padding: var(--spacing-xl) 0;
+  background: var(--blanco);
+  text-align: center;
+}
+
+.site-advances-button {
+  display: inline-block;
+  background: var(--rosa-intenso);
+  color: var(--blanco);
+  padding: 16px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: pulse 2s ease-in-out infinite;
+  transition: background 0.3s ease;
+}
+
+.site-advances-button:hover {
+  background: #d81b60;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(233, 30, 99, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(233, 30, 99, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(233, 30, 99, 0.3);
+  }
+}
+
+.construction-notice {
+  font-size: 1rem;
+  color: var(--gris-texto);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
