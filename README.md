@@ -33,7 +33,9 @@ Este proyecto es una aplicación web estática de alto rendimiento, construida s
 
 ## 🗺️ **Mapa del Sitio (Dashboard)**
 
-El dashboard está estructurado como una Single Page Application (SPA) con navegación vertical basada en secciones colapsables (Accordions) para gestionar la densidad de información.
+El dashboard está estructurado como una Single Page Application (SPA) con navegación vertical basada en secciones colapsables (Accordions).
+
+![Mapa Visual del Dashboard](assets/images/dashboard-full-map.png)
 
 ### **1. Cabecera (Header)**
 *   **Logos:** Banquetes Primavera + Init Idea.
@@ -41,17 +43,21 @@ El dashboard está estructurado como una Single Page Application (SPA) con naveg
 *   **⚠️ Aviso Importante:** Disclaimer legal y metodología de análisis (Colapsable).
 
 ### **2. Módulos de Análisis Estratégico**
-*   **🏛️ Estudio de Viabilidad - IMPI:** Análisis de registro marcario, clases Niza (41 y 43) y estrategia de protección de marca.
-*   **📊 Resumen Ejecutivo:** Estado actual del proyecto, inversión y cronograma.
-*   **📍 Situación Actual:** Diagnóstico de debilidades, fortalezas y oportunidades digitales.
-*   **⚔️ Análisis Competitivo (Morelos):** Comparativa vs. competencia local (Jardín Huayacán, Hacienda San Antonio, etc.).
-*   **🧠 Estrategia de Naming:** Análisis semiótico y propuestas de nombres (Primavera Events Group).
-*   **📝 Información Requerida:** Checklist interactivo de activos pendientes por recibir.
+*   **🏛️ Estudio de Viabilidad - IMPI:** Análisis de registro marcario y estrategia (Clases 41/43).
+*   **📊 Resumen Ejecutivo y Situación Actual:** Estado del proyecto y diagnóstico digital.
+*   **⚔️ Análisis Competitivo:** Comparativa con competidores locales.
+*   **🧠 Estrategia de Naming:** Semiótica y propuestas.
+*   **📝 Información Requerida:** Checklist de activos pendientes.
 
-### **3. Fases del Proyecto (Sección Dinámica)**
+### **3. Fases del Proyecto (Implementación)**
 *   **Fase 1:** Identidad, Web y CRM.
 *   **Fase 2:** Marketing Digital y Ecosistema.
 *   **Fase 3:** Automatización e IA.
+
+### **4. Cierre y Visualización**
+*   **💬 Comentario Final:** Carta de presentación y valores de la propuesta.
+*   **📈 Gráficos Interactivos:** Proyecciones de impacto y distribución presupuestal.
+*   **👤 Resumen del Analista:** Conclusiones finales.
 
 ---
 

@@ -18,39 +18,39 @@ const dashboardData = {
         potential: [60, 40, 30, 20]
     },
     heatMap: [
-        {"x": "Precio", "y": "Servicios", "value": 0.8},
-        {"x": "Precio", "y": "Calidad", "value": 0.6},
-        {"x": "Ubicación", "y": "Servicios", "value": 0.9}
+        { "x": "Precio", "y": "Servicios", "value": 0.8 },
+        { "x": "Precio", "y": "Calidad", "value": 0.6 },
+        { "x": "Ubicación", "y": "Servicios", "value": 0.9 }
     ],
     timeline: [
-        {"phase": "Fase 1", "month": "Mes 1-3", "milestones": ["Registro Marca", "Sitio Web", "Identidad"]},
-        {"phase": "Fase 2", "month": "Mes 4-6", "milestones": ["Automatización", "IA", "Marketing"]},
-        {"phase": "Fase 3", "month": "Mes 7-9", "milestones": ["Optimización", "Escalabilidad"]},
-        {"phase": "Fase 4", "month": "Mes 10-12", "milestones": ["Expansión", "Internacional"]}
+        { "phase": "Fase 1", "month": "Mes 1-3", "milestones": ["Registro Marca", "Sitio Web", "Identidad"] },
+        { "phase": "Fase 2", "month": "Mes 4-6", "milestones": ["Automatización", "IA", "Marketing"] },
+        { "phase": "Fase 3", "month": "Mes 7-9", "milestones": ["Optimización", "Escalabilidad"] },
+        { "phase": "Fase 4", "month": "Mes 10-12", "milestones": ["Expansión", "Internacional"] }
     ],
     kpis: [
-        {"name": "Conversión de Leads", "current": 25, "target": 40, "description": "Porcentaje de leads que se convierten en cotizaciones"},
-        {"name": "Tiempo de Respuesta", "current": 4, "target": 2, "description": "Horas promedio para responder consultas"},
-        {"name": "Ticket Promedio", "current": 80000, "target": 96000, "description": "Ingreso promedio por evento"},
-        {"name": "Tráfico Web", "current": 2000, "target": 5000, "description": "Visitas mensuales al sitio web"}
+        { "name": "Conversión de Leads", "current": 25, "target": 40, "description": "Porcentaje de leads que se convierten en cotizaciones" },
+        { "name": "Tiempo de Respuesta", "current": 4, "target": 2, "description": "Horas promedio para responder consultas" },
+        { "name": "Ticket Promedio", "current": 80000, "target": 96000, "description": "Ingreso promedio por evento" },
+        { "name": "Tráfico Web", "current": 2000, "target": 5000, "description": "Visitas mensuales al sitio web" }
     ],
     benefits: [
-        {"category": "Eficiencia Operativa", "percentage": 35},
-        {"category": "Crecimiento Ventas", "percentage": 25},
-        {"category": "Reducción Tiempos", "percentage": 20},
-        {"category": "Mejora Experiencia", "percentage": 15},
-        {"category": "Sostenibilidad", "percentage": 5}
+        { "category": "Eficiencia Operativa", "percentage": 35 },
+        { "category": "Crecimiento Ventas", "percentage": 25 },
+        { "category": "Reducción Tiempos", "percentage": 20 },
+        { "category": "Mejora Experiencia", "percentage": 15 },
+        { "category": "Sostenibilidad", "percentage": 5 }
     ],
     requirements: [
-        {"area": "Datos Legales", "status": "red", "priority": "Alta", "complexity": "Media", "dependencies": "Registro Marca"},
-        {"area": "Información Salones", "status": "yellow", "priority": "Alta", "complexity": "Baja", "dependencies": "Fotografía"},
-        {"area": "Estructura Team", "status": "red", "priority": "Media", "complexity": "Alta", "dependencies": "Organigrama"},
-        {"area": "Proveedores", "status": "yellow", "priority": "Media", "complexity": "Media", "dependencies": "Alianzas"}
+        { "area": "Datos Legales", "status": "red", "priority": "Alta", "complexity": "Media", "dependencies": "Registro Marca" },
+        { "area": "Información Salones", "status": "yellow", "priority": "Alta", "complexity": "Baja", "dependencies": "Fotografía" },
+        { "area": "Estructura Team", "status": "red", "priority": "Media", "complexity": "Alta", "dependencies": "Organigrama" },
+        { "area": "Proveedores", "status": "yellow", "priority": "Media", "complexity": "Media", "dependencies": "Alianzas" }
     ]
 };
 
 // Load data on page load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     populateDashboard();
     initializeInteractiveComponents();
     initializeCharts();
@@ -148,7 +148,7 @@ function initializeInteractiveComponents() {
     // Accordion functionality with dynamic height
     const accordionHeaders = document.querySelectorAll('.accordion-header');
     accordionHeaders.forEach(header => {
-        header.addEventListener('click', function() {
+        header.addEventListener('click', function () {
             const content = this.nextElementSibling;
             const icon = this.querySelector('.accordion-icon');
 
@@ -179,12 +179,12 @@ function initializeAnalysisDropdowns() {
 
     analysisHeaders.forEach(header => {
         // Click event
-        header.addEventListener('click', function() {
+        header.addEventListener('click', function () {
             toggleAnalysisContent(this);
         });
 
         // Keyboard events
-        header.addEventListener('keydown', function(e) {
+        header.addEventListener('keydown', function (e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 toggleAnalysisContent(this);
@@ -221,7 +221,7 @@ function toggleAnalysisContent(header) {
 
 // Initialize analysis charts
 function initializeAnalysisCharts(sectionId) {
-    switch(sectionId) {
+    switch (sectionId) {
         case '🌎':
             createSociologicalChart();
             break;
@@ -311,4 +311,39 @@ function showError(message) {
 function showSuccess(message) {
     console.log('Success:', message);
     // Could implement success notifications
+}
+/* New Toggle Functions for Refactored Phases */
+function togglePhase(header) {
+    const content = header.nextElementSibling;
+    content.classList.toggle('active');
+    const icon = header.querySelector('.phase-icon');
+    if (content.classList.contains('active')) {
+        icon.textContent = '-';
+    } else {
+        icon.textContent = '+';
+    }
+}
+
+function toggleCollapsible(header) {
+    const body = header.nextElementSibling;
+    body.classList.toggle('active');
+    const span = header.querySelector('span');
+    if (body.classList.contains('active')) {
+        span.textContent = '-';
+    } else {
+        span.textContent = '+';
+    }
+}
+
+
+function toggleNested(header) {
+    const content = header.nextElementSibling;
+    const icon = header.querySelector('span');
+    if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+        if (icon) icon.textContent = '▲';
+    } else {
+        content.style.display = 'none';
+        if (icon) icon.textContent = '▼';
+    }
 }

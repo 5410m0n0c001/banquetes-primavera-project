@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -62,6 +62,8 @@
             </div>
         </div>
     </header>
+
+
     <!-- Trademark Registration Viability Study -->
     <section id="trademark-study" class="section collapsible-section">
         <div class="container">
@@ -2295,668 +2297,739 @@
         </div>
     </section>
 
-    <!-- 🎯 NUEVA SECCIÓN: FASE 1 - DETALLES DE INVERSIÓN -->
-    <section id="phase1-details" class="implementation-section">
+    <!-- ==============================================
+         FASE 1: IDENTIDAD, MARCA Y PLATAFORMA WEB
+         ============================================== -->
+    <section class="section">
         <div class="container">
-            <h2 class="section-title">🔹 FASE 1 – Identidad, Marca y Plataforma Web</h2>
+            <div class="phase-section">
+                <div class="phase-header" onclick="togglePhase(this)">
+                    <h2>🔹 FASE 1 – Identidad, Marca y Plataforma Web</h2>
+                    <span class="phase-icon">+</span>
+                </div>
+                <div class="phase-content">
 
-            <!-- BLOQUE COLAPSABLE 1: RESUMEN EJECUTIVO -->
-            <div class="analysis-block">
-                <button class="analysis-header" role="button" aria-expanded="false" aria-controls="phase1-overview">
-                    <span class="header-icon">+</span>
-                    <span class="header-text">Resumen Ejecutivo - Fase 1</span>
-                </button>
-                <div id="phase1-overview" class="analysis-content">
-                    <p><strong>Duración:</strong> 3 meses</p>
-                    <p><strong>Inversión Total:</strong> $15,000 MXN</p>
-                    <p><strong>Forma de Pago:</strong> $5,000 MXN / mes</p>
-                    <p class="highlight-box">
-                        💡 <strong>Valor Real en Mercado:</strong> Este nivel de servicio supera los $40,000 MXN en
-                        agencias locales.
+                    <!-- SECCIÓN 1: Filosofía de Desarrollo -->
+                    <h2 class="phase-subtitle">💡 Filosofía de Desarrollo</h2>
+                    <div class="info-box">
+                        <div class="collapsible-item">
+                            <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                                <strong>¿Por qué elegimos un CMS en lugar de código puro?</strong>
+                                <span>+</span>
+                            </div>
+                            <div class="collapsible-body">
+                                <p><strong>1. Independencia Total:</strong><br>
+                                    Con código puro, dependes 100% del desarrollador para cualquier cambio (texto,
+                                    imagen,
+                                    precio). Si él no está, tu negocio se detiene. Con nuestro CMS, TÚ tienes el
+                                    control.
+                                </p>
+                                <p><strong>2. Costos de Mantenimiento:</strong><br>
+                                    Código puro = $$$ por hora de programador.<br>
+                                    CMS = $0 para cambios que puedes hacer tú mismo.</p>
+                                <p><strong>3. Herencia de Código:</strong><br>
+                                    Si cambias de proveedor, nadie quiere "heredar" código ajeno. WordPress es el
+                                    estándar
+                                    mundial (43% de la web); cualquier profesional puede ayudarte mañana sin problemas.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="collapsible-item">
+                            <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                                <strong>📊 Comparativa Técnica: CMS vs Código Puro (+ Info)</strong>
+                                <span>+</span>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="comparison-flex" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                                    <div style="flex: 1; min-width: 250px;">
+                                        <strong style="color: #e74c3c;">🔧 Código Puro</strong>
+                                        <ul style="font-size: 0.9em;">
+                                            <li>Dependencia: <strong>ALTA</strong> (Requiere Dev)</li>
+                                            <li>Costo Mantenimiento: <strong>ALTO</strong> ($$$)</li>
+                                            <li>Tiempos: <strong>Lentos</strong> (Días/Semanas)</li>
+                                            <li>Transferencia: <strong>Compleja</strong> (Difícil heredar)</li>
+                                        </ul>
+                                    </div>
+                                    <div style="flex: 1; min-width: 250px;">
+                                        <strong style="color: #27ae60;">✅ CMS + Maquetador</strong>
+                                        <ul style="font-size: 0.9em;">
+                                            <li>Dependencia: <strong>BAJA</strong> (Autocontrol)</li>
+                                            <li>Costo Mantenimiento: <strong>BAJO</strong> ($)</li>
+                                            <li>Tiempos: <strong>Inmediatos</strong> (Minutos)</li>
+                                            <li>Transferencia: <strong>Simple</strong> (Estándar Mundial)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p style="margin-top: 10px; font-size: 0.9em;"><em>Elegimos CMS con maquetador visual
+                                        (Divi)
+                                        pensando en TU comodidad. Queremos que seas dueño de tu plataforma, no rehén de
+                                        un
+                                        desarrollador.</em></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert-box">
+                        <p><strong>🗓️ Duración Estimada:</strong> 3 Meses</p>
+                        <p><strong>💰 Inversión Total:</strong> $15,000 MXN ($5,000/mes)</p>
+                        <p>💡 <em>Valor real de mercado: >$40,000 MXN</em></p>
+                    </div>
+
+                    <!-- PLATAFORMA WEB -->
+                    <h4 style="color: var(--rosa-intenso);">🌐 1. PLATAFORMA WEB (El Núcleo Digital)</h4>
+                    <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+                    <p class="phase-note"
+                        style="font-size: 0.9em; margin-bottom: 20px; background: #fff; padding: 15px; border-left: 4px solid var(--rosa-primavera); box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                        <strong>Sobre el avance actual:</strong><br>
+                        El listado de páginas corresponde a la estructura real actualmente construida en el CMS,
+                        mostrando
+                        el avance progresivo del proyecto durante un periodo aproximado de 30 días de trabajo continuo.
+                        <br><br>
+                        Las páginas han sido desarrolladas de forma incremental, a razón de una por día o cada dos días,
+                        considerando diseño, maquetación, ajustes visuales y validación funcional.
+                        <br><br>
+                        <em>* Esta estructura no es definitiva. El número de páginas, así como su jerarquía y alcance,
+                            puede
+                            ajustarse o ampliarse una vez se complete la información pendiente y se realicen las
+                            reuniones
+                            de definición correspondientes, especialmente en lo relativo a servicios, variantes y
+                            contenidos
+                            finales.</em>
                     </p>
-                </div>
-            </div>
 
-            <!-- BLOQUE COLAPSABLE 2: QUÉ INCLUYE -->
-            <div class="analysis-block">
-                <button class="analysis-header" role="button" aria-expanded="false" aria-controls="phase1-includes">
-                    <span class="header-icon">+</span>
-                    <span class="header-text">¿Qué Incluye la Fase 1?</span>
-                </button>
-                <div id="phase1-includes" class="analysis-content">
-                    <h4 style="margin-top: 0; color: #2c3e50;">🌐 PLATAFORMA WEB</h4>
-                    <ul class="feature-list">
-                        <li>✅ 22 páginas personalizadas (con código y CSS personalizado)</li>
-                        <li>✅ Animaciones de scroll, microinteracciones y efectos visuales premium</li>
-                        <li>✅ Versión responsive perfecta (móvil, tablet, desktop)</li>
-                        <li>✅ Blog integrado (posts, categorías, tags)</li>
-                        <li>✅ Sistema de popups inteligentes (ofertas, contacto, newsletter)</li>
-                        <li>✅ Optimización SEO on-page inicial</li>
-                        <li>✅ Estructura pensada para IA (ChatGPT, Gemini, Copilot compatible)</li>
-                    </ul>
-
-                    <h4 style="margin-top: 1.5rem; color: #2c3e50;">📊 GESTIÓN & AUTOMATIZACIÓN</h4>
-                    <p><strong>HubSpot CRM Standard - GRATIS INDEFINIDO</strong></p>
-                    <ul class="feature-list">
-                        <li>✅ Gestión de leads y contactos</li>
-                        <li>✅ Formularios inteligentes (pre-llenado, validación automática)</li>
-                        <li>✅ Automatización de emails (bienvenida, confirmación, recordatorios)</li>
-                        <li>✅ Pipeline de ventas digital (seguimiento lead → conversión)</li>
-                        <li>✅ NO vence, no tiene límite de tiempo</li>
-                    </ul>
-
-                    <h4 style="margin-top: 1.5rem; color: #2c3e50;">💬 COMUNICACIÓN</h4>
-                    <p><strong>WhatsApp Business + Correos Empresariales</strong></p>
-                    <ul class="feature-list">
-                        <li>✅ Chat integrado en sitio web</li>
-                        <li>✅ Botones de CTA directos a WhatsApp</li>
-                        <li>✅ 5 cuentas de correo empresarial (@primaveraevents.com)</li>
-                        <li>✅ Webmail accesible desde cualquier navegador</li>
-                    </ul>
-
-                    <h4 style="margin-top: 1.5rem; color: #2c3e50;">🎨 IDENTIDAD VISUAL DIGITAL</h4>
-                    <p><strong>Tarjetas de Presentación Digitales Premium</strong></p>
-                    <ul class="feature-list">
-                        <li>✅ 2 diseños personalizados (Profesional + Evento)</li>
-                        <li>✅ Flat Design con animaciones suaves</li>
-                        <li>✅ Descripción de perfil (nombre, cargo, especialidad, experiencia)</li>
-                        <li>✅ Descripción de negocio (misión, servicios, diferenciadores)</li>
-                        <li>✅ Botones de Acción: Llamar, WhatsApp, Messenger, Email, vCard</li>
-                        <li>✅ Compartir a TODAS las apps del usuario (automático, ilimitado, sin restricciones)</li>
-                        <li>✅ Mensaje precargado automático por plataforma</li>
-                        <li>✅ Integración en sitio (página equipo, sidebar, footer, modal)</li>
-                    </ul>
-
-                    <h4 style="margin-top: 1.5rem; color: #2c3e50;">🔒 SEGURIDAD & CONFIABILIDAD</h4>
-                    <p><strong>Hosting Premium SiteGround + Protección Integral</strong></p>
-                    <ul class="feature-list">
-                        <li>✅ Hosting SiteGround premium por 1 año</li>
-                        <li>✅ Hasta 3 dominios (alta, configuración y gestión DNS)</li>
-                        <li>✅ Certificado SSL (HTTPS) - encriptación 256-bit</li>
-                        <li>✅ Backups automáticos diarios (3 servidores geográficamente distribuidos)</li>
-                        <li>✅ CDN Global (Cloudflare + SiteGround)</li>
-                        <li>✅ Velocidad &lt; 2 segundos (optimización Core Web Vitals)</li>
-                        <li>✅ Monitoreo uptime 99.9% con alertas automáticas</li>
-                        <li>✅ Protección contra malware y ataques DDoS</li>
-                        <li>✅ Firewall WAF avanzado</li>
-                    </ul>
-
-                    <h4 style="margin-top: 1.5rem; color: #2c3e50;">📋 LEGAL & COMPLIANCE</h4>
-                    <p><strong>Documentación Completa</strong></p>
-                    <ul class="feature-list">
-                        <li>✅ Aviso de Privacidad (LFPDPPP + RGPD)</li>
-                        <li>✅ Términos y Condiciones</li>
-                        <li>✅ Política de Cancelación</li>
-                        <li>✅ Estructura legal documentada</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- BLOQUE COTIZACIONES WEB -->
-            <div class="analysis-block">
-                <button class="analysis-header" role="button" aria-expanded="false" aria-controls="cotizaciones-web">
-                    <span class="header-icon">+</span>
-                    <span class="header-text">💻 COTIZACIONES WEB (Opcional - $100 c/u)</span>
-                </button>
-                <div id="cotizaciones-web" class="analysis-content">
-                    <p><strong>Servicio Manual - Tú provees datos, nosotros renderizamos</strong></p>
-                    <ul class="feature-list">
-                        <li>📌 <strong>Precio:</strong> $100 por cada cotización</li>
-                        <li>Renderizado responsivo (móvil, tablet, desktop)</li>
-                        <li>Enlace único válido 30 días (configurable)</li>
-                        <li>Opción para cliente: imprimir o generar PDF</li>
-                        <li>Compartir por enlace (a familia/pareja)</li>
-                        <li>Control de acceso (solo quien tenga enlace)</li>
-                    </ul>
-                    <div class="highlight-box" style="margin-top: 1rem;">
-                        <p><strong>Ejemplo de Uso:</strong></p>
-                        <p>5 cotizaciones/mes = $500<br>10 cotizaciones/mes = $1,000<br>20 cotizaciones/mes =
-                            $2,000<br><em>(Sin cuota mínima, pagas solo por lo que uses)</em></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- BLOQUE META ECOSYSTEM -->
-            <div class="analysis-block">
-                <button class="analysis-header" role="button" aria-expanded="false" aria-controls="meta-ecosystem">
-                    <span class="header-icon">+</span>
-                    <span class="header-text">📱 INTEGRACIONES META ECOSYSTEM (Opcional)</span>
-                </button>
-                <div id="meta-ecosystem" class="analysis-content">
-                    <p><strong>Rastreo Avanzado de Conversiones</strong></p>
-                    <div class="comparison-table-container">
-                        <table class="comparison-table">
-                            <tbody>
-                                <tr>
-                                    <td><strong>Meta Pixel + Eventos</strong></td>
-                                    <td class="highlight">+$1,500</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Feed Dinámico Instagram/Facebook</strong></td>
-                                    <td class="highlight">+$800</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>TikTok Pixel</strong></td>
-                                    <td class="highlight">+$600</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>LinkedIn Pixel</strong></td>
-                                    <td class="highlight">+$600</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Catálogo Dinámico Meta</strong></td>
-                                    <td class="highlight">+$700</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>CAPI (Conversions API)</strong></td>
-                                    <td class="highlight">+$500</td>
-                                </tr>
-                                <tr style="background: #d4edda;">
-                                    <td><strong>SUBTOTAL META</strong></td>
-                                    <td style="color: #155724; font-weight: bold;">+$5,000-5,500</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-            <!-- BLOQUE GOOGLE WORKSPACE -->
-            <div class="analysis-block">
-                <button class="analysis-header" role="button" aria-expanded="false" aria-controls="google-workspace">
-                    <span class="header-icon">+</span>
-                    <span class="header-text">💼 GOOGLE WORKSPACE (Integración Opcional)</span>
-                </button>
-                <div id="google-workspace" class="analysis-content">
-                    <p><strong>Business Starter - Drive, Calendar, Docs, Meet</strong></p>
-                    <div class="comparison-table-container">
-                        <table class="comparison-table">
-                            <tbody>
-                                <tr>
-                                    <td><strong>Google Workspace/usuario/mes</strong></td>
-                                    <td class="highlight">+$350</td>
-                                </tr>
-                                <tr style="background: #d4edda;">
-                                    <td><strong>BONUS: Email Marketing GRATIS</strong></td>
-                                    <td style="color: #155724; font-weight: bold;">Incluido</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <h5 style="margin-top: 1rem; color: #2c3e50;">Incluye:</h5>
-                    <ul class="feature-list">
-                        <li>Gmail (30 GB almacenamiento)</li>
-                        <li>Google Drive (almacenamiento en la nube)</li>
-                        <li>Google Calendar (calendario compartido)</li>
-                        <li>Google Meet (videoconferencias)</li>
-                        <li>Google Docs/Sheets/Slides (ofimática colaborativa)</li>
-                    </ul>
-                </div>
-
-                <!-- BLOQUE COLAPSABLE 3: FASE 2 PREVIEW -->
-                <div class="analysis-block">
-                    <button class="analysis-header" role="button" aria-expanded="false" aria-controls="phase2-preview">
-                        <span class="header-icon">+</span>
-                        <span class="header-text">Fase 2 - Marketing Digital & Automatización (Vista Previa)</span>
-                    </button>
-                    <div id="phase2-preview" class="analysis-content">
-                        <p><strong>Inicio:</strong> Puede arrancar incluso antes de terminar el sitio</p>
-                        <p><strong>Inversión Mensual:</strong> $8,000 MXN</p>
-                        <p><strong>Forma de Pago Flexible:</strong> $2,000 MXN semanales</p>
-
-                        <h4>Integración del Ecosistema Digital:</h4>
-                        <ul class="feature-list">
-                            <li>🔗 Meta (Facebook + Instagram)</li>
-                            <li>📱 TikTok</li>
-                            <li>💼 LinkedIn</li>
-                        </ul>
-
-                        <h4>Plataformas de Visibilidad:</h4>
-                        <ul class="feature-list">
-                            <li>🌟 TripAdvisor</li>
-                            <li>💍 Cásate en Morelos</li>
-                        </ul>
-
-                        <h4>Contenido & Atención:</h4>
-                        <ul class="feature-list">
-                            <li>🎨 Generación de contenidos gráficos + copywriting</li>
-                            <li>🎬 Edición y adaptación de video para formatos de alto rendimiento</li>
-                            <li>📅 Plan mensual de publicaciones</li>
-                            <li>💬 Atención omnicanal (WhatsApp, Messenger, Instagram, Email)</li>
-                            <li>☎️ Línea telefónica dedicada tipo oficina virtual</li>
-                        </ul>
-
-                        <h4>Campañas & Optimización:</h4>
-                        <ul class="feature-list">
-                            <li>📊 Meta Ads + Google Ads + TikTok Ads</li>
-                            <li>🧪 Pruebas A/B y optimización continua</li>
-                            <li>✉️ Email marketing + automatizaciones básicas</li>
-                            <li>🎯 Dirección estratégica de marketing</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- BLOQUE COLAPSABLE 4: SERVICIO OPCIONAL -->
-                <div class="analysis-block">
-                    <button class="analysis-header" role="button" aria-expanded="false" aria-controls="phase-optional">
-                        <span class="header-icon">+</span>
-                        <span class="header-text">⭐ Servicio Opcional - Community Management</span>
-                    </button>
-                    <div id="phase-optional" class="analysis-content">
-                        <p><strong>Costo Adicional:</strong> $2,000 MXN mensuales</p>
-                        <ul class="feature-list">
-                            <li>✅ Gestión activa de redes sociales</li>
-                            <li>✅ Publicación y moderación diaria</li>
-                            <li>✅ Respuesta a mensajes y comentarios</li>
-                            <li>✅ Optimización continua de perfiles</li>
-                            <li>✅ Análisis mensual de engagement</li>
-                        </ul>
-                        <p class="alert-box">
-                            💡 <strong>Recomendación:</strong> Perfecto para empresas que desean delegar completamente
-                            la
-                            gestión digital.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- BLOQUE COLAPSABLE 5: COMPARATIVO DE COSTOS -->
-                <div class="analysis-block">
-                    <button class="analysis-header" role="button" aria-expanded="false" aria-controls="cost-comparison">
-                        <span class="header-icon">+</span>
-                        <span class="header-text">📊 Comparativo de Costos (Mensual - Morelos)</span>
-                    </button>
-                    <div id="cost-comparison" class="analysis-content">
-                        <div class="comparison-table-container">
-                            <table class="comparison-table">
-                                <thead>
-                                    <tr>
-                                        <th>Servicio</th>
-                                        <th>Freelancers</th>
-                                        <th>Agencias</th>
-                                        <th>Nuestra Propuesta</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>Marketing + Contenidos</strong></td>
-                                        <td>$8,000 – $12,000</td>
-                                        <td>$18,000 – $30,000</td>
-                                        <td class="highlight">Incluido</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Community Management</strong></td>
-                                        <td>$4,000 – $7,000</td>
-                                        <td>$8,000 – $15,000</td>
-                                        <td class="highlight">$2,000 (opt.)</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Gestión de Ads</strong></td>
-                                        <td>$3,000 – $6,000</td>
-                                        <td>$8,000 – $15,000</td>
-                                        <td class="highlight">Incluido</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Producción de Video</strong></td>
-                                        <td>$4,000 – $8,000</td>
-                                        <td>$10,000 – $20,000</td>
-                                        <td class="highlight">Incluido</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Atención Omnicanal</strong></td>
-                                        <td>No incluido</td>
-                                        <td>Extra</td>
-                                        <td class="highlight">Incluido</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Dirección Estratégica</strong></td>
-                                        <td>No incluida</td>
-                                        <td>Incluida</td>
-                                        <td class="highlight">Incluida</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="collapsible-item">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <strong>📄 Listado de Páginas (Sitemap Confirmado)</strong>
+                            <span>+</span>
                         </div>
-                        <div class="savings-box">
-                            <h4>👉 Ahorro Real para el Cliente: <strong>40–60% mensual</strong></h4>
-                            <p><strong>Ventaja Clave:</strong> Todo integrado + una sola cabeza estratégica (no
-                                fragmentación)</p>
+                        <div class="collapsible-body">
+                            <ul class="feature-list" style="list-style: none; padding-left: 0;">
+                                <li
+                                    style="margin-top: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; color: var(--rosa-intenso);">
+                                    <strong>📅 30/11/2025 (Arranque)</strong>
+                                </li>
+                                <li>1. Primavera Events Group</li>
+                                <li>2. Services</li>
+                                <li>3. Contact</li>
+                                <li>4. Gallery</li>
+                                <li>5. About</li>
+                                <li>6. Blog</li>
+
+                                <li
+                                    style="margin-top: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; color: var(--rosa-intenso);">
+                                    <strong>📅 23/12/2025</strong>
+                                </li>
+                                <li>7. Centro de Convenciones Presidente</li>
+                                <li>8. Jardín La Flor</li>
+                                <li>9. Salón Jardín Yolomecatl</li>
+                                <li>10. Salón Los Potrillos</li>
+                                <li>11. Salón Los Caballos</li>
+                                <li>12. Richard Hernandez</li>
+                                <li>13. Jessy</li>
+
+                                <li
+                                    style="margin-top: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; color: var(--rosa-intenso);">
+                                    <strong>📅 26/12/2025</strong>
+                                </li>
+                                <li>14. Quinta San Francisco</li>
+
+                                <li
+                                    style="margin-top: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; color: var(--rosa-intenso);">
+                                    <strong>📅 27/12/2025</strong>
+                                </li>
+                                <li>15. Nuestros Postres</li>
+                                <li>16. Coordinación de Eventos</li>
+
+                                <li
+                                    style="margin-top: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; color: var(--rosa-intenso);">
+                                    <strong>📅 29/12/2025</strong>
+                                </li>
+                                <li>17. Fotografía y Video</li>
+                                <li>18. Nuestros Menús</li>
+
+                                <li
+                                    style="margin-top: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; color: var(--rosa-intenso);">
+                                    <strong>📅 30/12/2025</strong>
+                                </li>
+                                <li>19. Montajes y Mobiliario</li>
+                                <li>20. Clientes Felices</li>
+
+                                <li
+                                    style="margin-top: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; color: #666;">
+                                    <strong>⏳ En preparación / Estructura</strong>
+                                </li>
+                                <li>21. Venues</li>
+                                <li>22. Transportación</li>
+                            </ul>
+
+                            <div class="info-note"
+                                style="margin-top: 20px; font-size: 0.9em; background: #fdf2f5; padding: 15px; border-radius: 8px; border: 1px solid #fadce5;">
+                                <strong>💡 Estrategia de Activos Digitales:</strong><br>
+                                Algunas páginas corresponden a venues, perfiles y servicios específicos. Esto refleja
+                                una
+                                estrategia orientada a <strong>posicionamiento individual</strong> por activo, proveedor
+                                o
+                                unidad de negocio.
+                                <br><br>
+                                Este enfoque permite mayor flexibilidad comercial, mejor segmentación SEO y una futura
+                                escalabilidad del sitio sin necesidad de reestructuraciones complejas.
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- BLOQUE COLAPSABLE 6: COMENTARIO FINAL -->
-                <div class="analysis-block">
-                    <button class="analysis-header" role="button" aria-expanded="false" aria-controls="closing-speech">
-                        <span class="header-icon">+</span>
-                        <span class="header-text">💬 Comentario Final</span>
-                    </button>
-                    <div id="closing-speech" class="analysis-content">
-                        <div class="speech-box">
-                            <p class="speech-text">Queridos Jesica y Richard,</p>
-                            <p class="speech-text">Quiero compartirles esta propuesta con total honestidad y desde un
-                                lugar
-                                muy cercano. Para mí, más allá de un proyecto profesional, ustedes son amigos, y
-                                justamente
-                                por eso quise armar algo bien pensado, claro y realista, que tenga sentido para su
-                                negocio y
-                                también para una colaboración a largo plazo.</p>
-                            <p class="speech-text">Esta propuesta no está pensada solo como “un servicio”, sino como una
-                                forma de seguir trabajando juntos, de construir algo sólido y de dar continuidad a una
-                                relación basada en confianza. También es una oportunidad para mí de mostrar mi trabajo,
-                                mi
-                                forma de pensar y de ejecutar proyectos, cuidando cada detalle y buscando siempre que el
-                                resultado funcione, no solo que se vea bien.</p>
-                            <p class="speech-text">El alcance del proyecto es amplio y requiere tiempo, organización y
-                                constancia. No se trata únicamente de hacer un sitio web o publicar en redes, sino de
-                                integrar varias piezas: presencia digital, contenidos, comunicación con clientes,
-                                campañas,
-                                automatización y seguimiento. Todo esto implica planeación, pruebas, ajustes y atención
-                                continua para que realmente genere resultados y no se quede en algo superficial.</p>
-                            <p class="speech-text">Quiero ser muy transparente con el tema de los costos. Son
-                                completamente
-                                libres de comparar precios y propuestas con otros proveedores. Estoy convencido de que,
-                                para
-                                el nivel de trabajo y el alcance que se está planteando, esta propuesta se encuentra muy
-                                por
-                                debajo de la media del mercado. Aun así, si llegaran a recibir alguna propuesta que
-                                supere
-                                estas condiciones en valor y alcance, con gusto podemos revisarla y ver cómo ajustarnos,
-                                aunque honestamente lo veo poco probable.</p>
-                            <p class="speech-text">Mi intención no es competir por precio, sino aportar valor real,
-                                trabajar
-                                con tranquilidad y que todos estemos cómodos con lo que se acuerde. Prefiero avanzar
-                                solo si
-                                estamos convencidos de que esto es lo correcto para ambas partes.</p>
-                            <p class="speech-text">Gracias por el tiempo, la confianza y la apertura.<br>Quedo atento
-                                para
-                                platicarlo con calma, resolver cualquier duda y ajustar lo que haga sentido para
-                                ustedes.
+                    <div class="collapsible-item">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <strong>📱 Experiencia de Usuario y Tecnología</strong>
+                            <span>+</span>
+                        </div>
+                        <div class="collapsible-body">
+                            <!-- SECCIÓN 2: Animaciones -->
+                            <div class="nested-accordion">
+                                <div class="accordion-header-nested" onclick="toggleNested(this)">
+                                    <strong>✨ Animaciones Premium: Software Especializado</strong> <span>▼</span>
+                                </div>
+                                <div class="accordion-content-nested"
+                                    style="display:none; padding: 10px; background: #f9f9f9; margin-bottom: 10px;">
+                                    <p>Usamos un maquetador visual (Divi) para crear efectos complejos (Parallax, Scroll
+                                        effects, Micro-interacciones) sin escribir código manual. Esto asegura un
+                                        resultado
+                                        visual de agencia "top tier" que es fácil de editar para ti, a diferencia de
+                                        animaciones CSS manuales que son imposibles de modificar sin un programador.</p>
+                                </div>
+                            </div>
+
+                            <!-- SECCIÓN 3: Blog -->
+                            <div class="nested-accordion">
+                                <div class="accordion-header-nested" onclick="toggleNested(this)">
+                                    <strong>📝 Blog Integrado: Motor de Atracción Digital</strong> <span>▼</span>
+                                </div>
+                                <div class="accordion-content-nested"
+                                    style="display:none; padding: 10px; background: #f9f9f9; margin-bottom: 10px;">
+                                    <p>El blog no es solo noticias; es una herramienta SEO estratégica. Publicamos
+                                        artículos
+                                        como "Tendencias Bodas 2025" para atraer tráfico desde Google. Cada artículo es
+                                        una
+                                        "puerta de entrada" para nuevos clientes. Incluye 3 artículos precargados para
+                                        iniciar tu posicionamiento como experto en el sector.</p>
+                                </div>
+                            </div>
+
+                            <!-- SECCIÓN 4: SEO -->
+                            <div class="nested-accordion">
+                                <div class="accordion-header-nested" onclick="toggleNested(this)">
+                                    <strong>🔍 Optimización SEO: Tu Visibilidad en Buscadores</strong> <span>▼</span>
+                                </div>
+                                <div class="accordion-content-nested"
+                                    style="display:none; padding: 10px; background: #f9f9f9; margin-bottom: 10px;">
+                                    <p>SEO (Search Engine Optimization) es lo que hace que aparezcas en Google.
+                                        Implementamos: títulos optimizados, meta descripciones persuasivas, URLs
+                                        amigables y
+                                        velocidad de carga extrema. Herramientas instaladas: <strong>Yoast SEO
+                                            Premium</strong> y <strong>Google Search Console</strong> para monitorear tu
+                                        salud digital 24/7.</p>
+                                </div>
+                            </div>
+
+                            <!-- SECCIÓN 5: IA -->
+                            <div class="nested-accordion">
+                                <div class="accordion-header-nested" onclick="toggleNested(this)">
+                                    <strong>🤖 Estructura Compatible con Inteligencia Artificial</strong> <span>▼</span>
+                                </div>
+                                <div class="accordion-content-nested"
+                                    style="display:none; padding: 10px; background: #f9f9f9;">
+                                    <p>Preparamos tu sitio para la nueva era de búsqueda (ChatGPT, Gemini).
+                                        Estructuramos
+                                        datos (Schema Markup) y contenido en lenguaje natural para que las IAs puedan
+                                        "leer"
+                                        tu negocio y recomendarte directamente. Estás adelantándote 2-3 años a tu
+                                        competencia local.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GESTIÓN & AUTOMATIZACIÓN -->
+                    <h4 style="color: var(--rosa-intenso); margin-top: 20px;">📊 2. GESTIÓN & AUTOMATIZACIÓN</h4>
+                    <div class="collapsible-item">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <strong>🚀 HubSpot CRM & Brand Kit</strong>
+                            <span>+</span>
+                        </div>
+                        <div class="collapsible-body">
+                            <!-- SECCIÓN 6: HubSpot -->
+                            <div class="nested-accordion">
+                                <div class="accordion-header-nested" onclick="toggleNested(this)">
+                                    <strong>💼 HubSpot CRM: El Cerebro de tu Operación</strong> <span>▼</span>
+                                </div>
+                                <div class="accordion-content-nested"
+                                    style="display:none; padding: 10px; background: #f9f9f9; margin-bottom: 10px;">
+                                    <p>Centraliza todos tus clientes en un solo lugar. Adiós a Excel y libretas. HubSpot
+                                        captura leads desde la web, rastrea qué páginas visitan y te recuerda hacer
+                                        seguimiento. Todo el historial de conversación en una sola ficha de cliente.
+                                        Incluye
+                                        pipeline de ventas (Cotización → Contrato) y es <strong>GRATIS
+                                            indefinidamente</strong> en su version inicial.</p>
+                                </div>
+                            </div>
+                            <p><strong>Propuesta Brand Kit:</strong> Definición de colores, tipografías y logos
+                                optimizados.
+                                <em>Nota: Submarca personal pendiente de integración.</em>
                             </p>
-                            <p class="speech-text speech-closing">Con aprecio,<br><br>Atte.<br>Alex Salomón R.</p>
+                        </div>
+                    </div>
+
+                    <!-- COMUNICACIÓN -->
+                    <h4 style="color: var(--rosa-intenso); margin-top: 20px;">💬 3. COMUNICACIÓN</h4>
+                    <!-- SECCIÓN 7: Meta Suite -->
+                    <div class="collapsible-item">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <strong>💬 Centralización Omnicanal con Meta Business Suite</strong>
+                            <span>+</span>
+                        </div>
+                        <div class="collapsible-body">
+                            <p>Unificamos WhatsApp, Instagram y Messenger en UNA sola bandeja de entrada. Todo tu equipo
+                                puede responder desde cualquier lugar sin perder el hilo. Integramos mensajes
+                                precargados
+                                ("Quiero cotizar boda") para agilizar el primer contacto. Conectado directamente a tu
+                                CRM.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN 8: Canal Interno -->
+                    <div class="collapsible-item">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <strong>🔒 Canal Interno para Equipo (Separación Estratégica)</strong>
+                            <span>+</span>
+                        </div>
+                        <div class="collapsible-body">
+                            <p><strong>¿Por qué separado?</strong> No mezclar operación interna con atención al cliente
+                                es
+                                vital. Evita errores, protege información sensible y mejora la coordinación.</p>
+                            <p><strong>Recomendación:</strong> Slack o Microsoft Teams para compartir contratos, listas
+                                de
+                                compras y reportes sin "ruido" en los canales de venta. Accountability total: sabemos
+                                quién
+                                hizo qué y cuándo.</p>
+                        </div>
+                    </div>
+
+                    <!-- IDENTIDAD VISUAL -->
+                    <h4 style="color: var(--rosa-intenso); margin-top: 20px;">🎨 4. IDENTIDAD VISUAL DIGITAL</h4>
+                    <div class="collapsible-item">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <strong>🎴 Tarjetas de Presentación: Dominio Propio vs Genérico</strong>
+                            <span>+</span>
+                        </div>
+                        <!-- SECCIÓN 9: Tarjetas Digitales -->
+                        <div class="collapsible-body">
+                            <p><strong>Tu marca, Tu dominio:</strong> Usamos
+                                <code>primaveraeventsgroup.com/nombre</code> en
+                                lugar de plataformas genéricas. Esto fortalece TU SEO y te da control total. Si la
+                                plataforma externa cierra, tú no pierdes nada. Proyecta una imagen corporativa sólida y
+                                establecida.</p>
+                            <!-- SECCIÓN 10: Tarjetas Físicas -->
+                            <hr style="margin: 10px 0;">
+                            <div class="nested-accordion">
+                                <div class="accordion-header-nested" onclick="toggleNested(this)">
+                                    <strong>💳 Tarjetas Físicas Premium (Alto Impacto)</strong> <span>▼</span>
+                                </div>
+                                <div class="accordion-content-nested"
+                                    style="display:none; padding: 10px; background: #f9f9f9;">
+                                    <p>No son simples cartones. Tarjetas de PVC/Metal con acabado premium, grabado láser
+                                        y
+                                        QR impreso (no sticker). La primera impresión cuenta: entregar una tarjeta de
+                                        peso
+                                        comunica "somos una marca de alto nivel". El QR lleva directo a tu perfil
+                                        digital
+                                        exclusivo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SEGURIDAD -->
+                    <h4 style="color: var(--rosa-intenso); margin-top: 20px;">🔒 5. SEGURIDAD & CONFIABILIDAD</h4>
+                    <div class="collapsible-item">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <strong>⚡ Velocidad, Contenidos y SEO Técnico</strong>
+                            <span>+</span>
+                        </div>
+                        <div class="collapsible-body">
+                            <!-- SECCIÓN 11: Velocidad -->
+                            <p><strong>Optimización Extrema:</strong> Gestionamos 1,120 imágenes y 6 videos (2.8GB)
+                                comprimidos a WebP sin pérdida visual. Logramos tiempos de carga &lt; 2s (crítico para
+                                Google).</p>
+                            <!-- SECCIÓN 12: Herramientas SEO -->
+                            <div class="nested-accordion">
+                                <div class="accordion-header-nested" onclick="toggleNested(this)">
+                                    <strong>🛠️ Suite de Herramientas SEO Profesionales</strong> <span>▼</span>
+                                </div>
+                                <div class="accordion-content-nested"
+                                    style="display:none; padding: 10px; background: #f9f9f9; margin-bottom: 10px;">
+                                    <p><strong>Yoast SEO Premium:</strong> Tu semáforo de calidad en tiempo real.
+                                        Configura
+                                        automáticamente datos estructurados y redirecciones.<br>
+                                        <strong>Screaming Frog:</strong> Auditoría técnica profunda para detectar
+                                        enlaces
+                                        rotos y errores ocultos.<br>
+                                        <strong>Google Search Console:</strong> Monitoreo directo de tu salud en el
+                                        buscador.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- SECCIÓN 13: Keywords -->
+                            <div class="nested-accordion">
+                                <div class="accordion-header-nested" onclick="toggleNested(this)">
+                                    <strong>🎯 Estrategia de Keywords (En Espera de Naming)</strong> <span>▼</span>
+                                </div>
+                                <div class="accordion-content-nested"
+                                    style="display:none; padding: 10px; background: #f9f9f9;">
+                                    <p>La estructura técnica está lista. La inyección final de palabras clave
+                                        ("Banquetes en
+                                        Morelos", "Bodas Cuernavaca") se activará al 100% una vez definamos el Naming
+                                        final
+                                        y la lista de servicios oficial. Esto evita re-trabajo y asegura precisión
+                                        quirúrgica en el posicionamiento.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <style>
-                /* ========================================
-           SECCIÓN FASE 1 - DETALLES INVERSIÓN
-           ======================================== */
-
-                #phase1-details {
-                    margin-top: 3rem;
-                    padding: 2rem;
-                    background: linear-gradient(135deg, #fff0f3 0%, #ffeef2 100%);
-                    border-radius: 12px;
-                    border-left: 5px solid #F05A7E;
-                }
-
-                #phase1-details .section-title {
-                    font-size: 1.8rem;
-                    color: #1a1a1a;
-                    margin-bottom: 2rem;
-                    text-align: center;
-                    font-weight: 700;
-                }
-
-                .analysis-block {
-                    margin-bottom: 1.5rem;
-                    background: white;
-                    border-radius: 8px;
-                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-                    overflow: hidden;
-                }
-
-                .analysis-header {
-                    display: flex;
-                    align-items: center;
-                    width: 100%;
-                    padding: 1.2rem 1.5rem;
-                    background: linear-gradient(90deg, #F05A7E, #d64568);
-                    color: white;
-                    border: none;
-                    cursor: pointer;
-                    font-size: 1rem;
-                    font-weight: 600;
-                    transition: background 0.3s ease;
-                    text-align: left;
-                }
-
-                .analysis-header:hover {
-                    background: linear-gradient(90deg, #d64568, #b03050);
-                }
-
-                .analysis-header:focus {
-                    outline: 2px solid #F05A7E;
-                    outline-offset: -2px;
-                }
-
-                .header-icon {
-                    display: inline-flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 24px;
-                    height: 24px;
-                    margin-right: 12px;
-                    font-size: 1.2rem;
-                    transition: transform 0.3s ease;
-                    flex-shrink: 0;
-                }
-
-                .analysis-header[aria-expanded="true"] .header-icon {
-                    transform: rotate(45deg);
-                }
-
-                .header-text {
-                    flex: 1;
-                }
-
-                .analysis-content {
-                    max-height: 0;
-                    overflow: hidden;
-                    opacity: 0;
-                    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
-                    padding: 0 1.5rem;
-                }
-
-                .analysis-header[aria-expanded="true"]~.analysis-content {
-                    max-height: 1000px;
-                    opacity: 1;
-                    padding: 1.5rem;
-                }
-
-                .analysis-content p {
-                    margin: 0.8rem 0;
-                    color: #444;
-                    line-height: 1.6;
-                }
-
-                .feature-list {
-                    list-style: none;
-                    padding: 0;
-                    margin: 1rem 0;
-                }
-
-                .feature-list li {
-                    padding: 0.6rem 0;
-                    color: #444;
-                    border-bottom: 1px solid #eee;
-                }
-
-                .feature-list li:last-child {
-                    border-bottom: none;
-                }
-
-                .highlight-box,
-                .alert-box {
-                    background: #fff0f3;
-                    border-left: 4px solid #F05A7E;
-                    padding: 1rem;
-                    border-radius: 4px;
-                    margin: 1rem 0;
-                    font-size: 0.95rem;
-                }
-
-                .alert-box {
-                    background: #fff8e1;
-                    border-left-color: #ffc107;
-                }
-
-                /* TABLA COMPARATIVA */
-                .comparison-table-container {
-                    overflow-x: auto;
-                    margin: 1.5rem 0;
-                }
-
-                .comparison-table {
-                    width: 100%;
-                    border-collapse: collapse;
-                    font-size: 0.9rem;
-                }
-
-                .comparison-table th,
-                .comparison-table td {
-                    padding: 0.8rem;
-                    text-align: left;
-                    border-bottom: 1px solid #ddd;
-                }
-
-                .comparison-table th {
-                    background: #F05A7E;
-                    color: white;
-                    font-weight: 600;
-                }
-
-                .comparison-table tr:nth-child(even) {
-                    background: #f9f9f9;
-                }
-
-                .comparison-table .highlight {
-                    background: #d4edda;
-                    color: #155724;
-                    font-weight: 600;
-                }
-
-                .savings-box {
-                    background: #d4edda;
-                    border: 2px solid #28a745;
-                    padding: 1.5rem;
-                    border-radius: 8px;
-                    margin-top: 1rem;
-                }
-
-                .savings-box h4 {
-                    margin-top: 0;
-                    color: #155724;
-                    font-size: 1.1rem;
-                }
-
-                .savings-box p {
-                    color: #155724;
-                    margin: 0.5rem 0;
-                }
-
-                /* SPEECH BOX */
-                .speech-box {
-                    background: #fff0f3;
-                    border-left: 4px solid #F05A7E;
-                    padding: 1.5rem;
-                    border-radius: 4px;
-                    font-style: italic;
-                }
-
-                .speech-text {
-                    margin: 1rem 0;
-                    color: #2c3e50;
-                    line-height: 1.8;
-                    font-size: 0.95rem;
-                }
-
-                .speech-closing {
-                    font-weight: 600;
-                    color: #F05A7E;
-                    font-size: 1rem;
-                }
-
-                /* RESPONSIVE MOBILE */
-                @media (max-width: 768px) {
-                    #phase1-details {
-                        padding: 1.5rem;
-                        margin-top: 2rem;
-                    }
-
-                    #phase1-details .section-title {
-                        font-size: 1.4rem;
-                        margin-bottom: 1.5rem;
-                    }
-
-                    .analysis-header {
-                        padding: 1rem 1.2rem;
-                        font-size: 0.95rem;
-                    }
-
-                    .header-icon {
-                        width: 20px;
-                        height: 20px;
-                        margin-right: 10px;
-                    }
-
-                    .comparison-table {
-                        font-size: 0.8rem;
-                    }
-
-                    .comparison-table th,
-                    .comparison-table td {
-                        padding: 0.6rem;
-                    }
-
-                    .speech-text {
-                        font-size: 0.9rem;
-                    }
-                }
-            </style>
-            <script>
-                /* ========================================
-                   ACCORDION FUNCTIONALITY - FASE 1
-                   ======================================== */
-
-                document.addEventListener('DOMContentLoaded', function () {
-                    // Seleccionar todos los headers de análisis
-                    const headers = document.querySelectorAll('.analysis-header');
-
-                    headers.forEach(header => {
-                        // Click event
-                        header.addEventListener('click', function () {
-                            toggleAccordion(this);
-                        });
-
-                        // Keyboard support (Enter y Space)
-                        header.addEventListener('keydown', function (e) {
-                            if (e.key === 'Enter' || e.key === ' ') {
-                                e.preventDefault();
-                                toggleAccordion(this);
-                            }
-                        });
-                    });
-
-                    function toggleAccordion(header) {
-                        const isExpanded = header.getAttribute('aria-expanded') === 'true';
-                        const contentId = header.getAttribute('aria-controls');
-                        const content = document.getElementById(contentId);
-
-                        // Cerrar otros accordions (solo uno abierto a la vez)
-                        headers.forEach(h => {
-                            if (h !== header) {
-                                h.setAttribute('aria-expanded', 'false');
-                            }
-                        });
-
-                        // Toggle actual
-                        header.setAttribute('aria-expanded', !isExpanded);
-                    }
-                });
-            </script>
+        </div>
     </section>
 
+    <!-- ==============================================
+         FASE 2: MARKETING DIGITAL Y OMNICANALIDAD
+         ============================================== -->
+    <section class="section">
+        <div class="container">
+            <div class="phase-section">
+                <div class="phase-header" onclick="togglePhase(this)">
+                    <h2>🚀 FASE 2: Marketing Digital, Community Management y Automatización</h2>
+                    <span class="phase-icon">+</span>
+                </div>
+                <div class="phase-content">
+                    <div class="info-box">
+                        <p><strong>Objetivo:</strong> Convertir la plataforma web en una máquina de ventas activa y una
+                            marca omnipresente.</p>
+                        <p><strong>Inversión Mensual Estimada:</strong> $8,000 - $10,000 MXN (Flexible según presupuesto
+                            de
+                            pauta).</p>
+                        <p style="font-size: 0.9em; margin-top: 5px; color: #555;">
+                            <em>* El alcance es flexible y los costos pueden ajustarse según el nivel de delegación que
+                                decida la marca.</em>
+                        </p>
+                    </div>
+
+                    <!-- SECCIÓN 14: LinkedIn -->
+                    <div class="collapsible-item">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <strong>👔 LinkedIn Corporativo: Tu Puerta a Grandes Contratos</strong>
+                            <span>+</span>
+                        </div>
+                        <div class="collapsible-body">
+                            <p><strong>Diferenciación Clave:</strong> Mientras FB/IG son para bodas sociales, LinkedIn
+                                es
+                                para Cenas de Gala, Congresos y Eventos Empresariales (Ticket alto).<br>
+                                <strong>Estrategia:</strong> Conectar con gerentes de RRHH y Marketing de empresas en la
+                                región. Publicar casos de éxito corporativos, no solo fotos "bonitas". Posicionarte como
+                                proveedor certificado y confiable para la industria.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN 15: Plataformas Visibilidad -->
+                    <div class="collapsible-item">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <strong>🌟 TripAdvisor y Plataformas Especializadas</strong>
+                            <span>+</span>
+                        </div>
+                        <div class="collapsible-body">
+                            <p><strong>Turismo de Romance:</strong> Parejas de fuera buscan en TripAdvisor "Mejores
+                                lugares
+                                para bodas en Morelos". Optimizaremos tu perfil para captar este mercado dolarizado.</p>
+                            <div class="nested-accordion">
+                                <div class="accordion-header-nested" onclick="toggleNested(this)">
+                                    <strong>💍 Ecosistema de Plataformas de Bodas</strong> <span>▼</span>
+                                </div>
+                                <div class="accordion-content-nested"
+                                    style="display:none; padding: 10px; background: #f9f9f9; margin-top: 10px;">
+                                    <p>Gestión estratégica en <strong>Bodas.com.mx</strong> (Líder),
+                                        <strong>Zankyou</strong> (Premium) y corrección total de
+                                        <strong>CasateEnMorelos.com</strong> (Actualizar enlaces rotos y fotos viejas).
+                                        Estar donde las novias buscan antes siquiera de abrir Google.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN 16: Plan de Contenidos -->
+                    <div class="collapsible-item">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <strong>📅 Plan de Contenidos Detallado & Producción</strong>
+                            <span>+</span>
+                        </div>
+                        <div class="collapsible-body">
+                            <p><strong>Parrilla Semanal Base:</strong><br>
+                                - 3 Posts Feed (Educativo / Showcase / Testimonio)<br>
+                                - 1 Reel/TikTok (Tour de venue o Timelapse)<br>
+                                - Historias Diarias (Interacción constante)</p>
+                            <div class="nested-accordion">
+                                <div class="accordion-header-nested" onclick="toggleNested(this)">
+                                    <strong>🎥 Proceso de Producción Profesional</strong> <span>▼</span>
+                                </div>
+                                <div class="accordion-content-nested"
+                                    style="display:none; padding: 10px; background: #f9f9f9; margin-top: 10px;">
+                                    <p><strong>Sincronización Total:</strong> Un evento el sábado se convierte en Reel
+                                        el
+                                        lunes, Post el miércoles y Artículo de Blog el viernes. Maximizamos cada asset
+                                        visual. Usamos herramientas pro: Canva Pro, CapCut y Metricool para programación
+                                        inteligente.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collapsible-item">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <strong>📢 Campañas Publicitarias (Ads) & Community Management</strong>
+                            <span>+</span>
+                        </div>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><strong>Meta Ads & Google Ads:</strong> Segmentación precisa (Novias / Empresas).
+                                    <em>(Presupuesto de pauta se paga directo a plataforma).</em>
+                                </li>
+                                <li><strong>Community Management (Incluido):</strong> No solo publicar, sino responder.
+                                    Gestión diaria de comentarios y mensajes para mantener la tasa de respuesta alta.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN 17: Resultado Final Fase 2 -->
+                    <div class="success-box">
+                        <div class="accordion-header-nested" onclick="toggleNested(this)" style="cursor: pointer;">
+                            <strong>🏆 Objetivo Final: Madurez Digital de Marca (Click para
+                                ver)</strong> <span>▼</span></div>
+                        <div class="accordion-content-nested" style="display:none; padding-top: 10px;">
+                            <p>Transformamos "un negocio de banquetes" en <strong>"UNA MARCA consolidada"</strong>. Al
+                                terminar esta fase, tendrás un ecosistema activo que capta leads por múltiples canales,
+                                opera con procesos claros y está listo para recibir la automatización de I.A. Es el
+                                salto de
+                                amateur a profesional digital.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         FASE 3: AUTOMATIZACIÓN CON IA
+         ============================================== -->
+    <section class="section">
+        <div class="container">
+            <div class="phase-section">
+                <div class="phase-header" onclick="togglePhase(this)">
+                    <h2>🤖 FASE 3: Optimización, Escalabilidad y Automatización con IA (Mes 7-9)</h2>
+                    <span class="phase-icon">+</span>
+                </div>
+                <div class="phase-content">
+                    <p><em>Implementación de Inteligencia Artificial (Preparación iniciada en Fase 2).</em></p>
+
+                    <!-- SECCIÓN 18: FASE 3 COMPLETA -->
+                    <div class="alert-box" style="background-color: #fff3cd; border-color: #ffc107; color: #856404;">
+                        <p><strong>⚠️ REQUISITO CRÍTICO: Estandarización de Procesos</strong><br>
+                            No se puede automatizar el caos. Antes de la IA, debemos tener checklists operativos, flujos
+                            de
+                            venta y control de inventario definidos. La IA magnifica la eficiencia, pero también
+                            magnifica
+                            los errores si el proceso base está mal.</p>
+                    </div>
+
+                    <div class="collapsible-item">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <strong>🧠 Asistentes Virtuales & Chatbots IA</strong>
+                            <span>+</span>
+                        </div>
+                        <div class="collapsible-body">
+                            <p><strong>Atención 24/7 Real:</strong> Un chatbot entrenado con TU información responde
+                                dudas,
+                                muestra fotos de venues y pre-califica leads a las 3 AM. <br>
+                                <strong>Escenario:</strong> Cliente pide boda para 200 pax en junio -> IA revisa
+                                disponibilidad, muestra Jardín La Flor y ofrece agendar visita. Todo automático.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="collapsible-item">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <strong>📈 Optimización Predictiva & Marketing Automático</strong>
+                            <span>+</span>
+                        </div>
+                        <div class="collapsible-body">
+                            <p><strong>Predicción de Demanda:</strong> IA analiza tus históricos para sugerir ajustes de
+                                precios dinámicos según temporada.<br>
+                                <strong>Nurturing Automático:</strong> El cliente cotizó y no cerró -> El sistema le
+                                envía
+                                automáticamente casos de éxito y ofertas "tácticas" para reactivarlo sin que tú muevas
+                                un
+                                dedo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="collapsible-item">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <strong>⚙️ Automatización Operativa</strong>
+                            <span>+</span>
+                        </div>
+                        <div class="collapsible-body">
+                            <p>Contrato firmado = Generación automática de órdenes de compra a proveedores, factura al
+                                cliente y checklist para el equipo operativo. Reducción de error humano al mínimo.</p>
+                        </div>
+                    </div>
+
+                    <div class="success-box">
+                        <p><strong>Impacto Esperado:</strong> Reducción del 40% en carga administrativa y aumento del
+                            30% en
+                            capacidad de atención de eventos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         FASE 4: EXPANSIÓN INTERNACIONAL
+         ============================================== -->
+    <section class="section">
+        <div class="container">
+            <div class="phase-section">
+                <div class="phase-header" onclick="togglePhase(this)">
+                    <h2>🌍 FASE 4: Expansión y Escalabilidad Internacional (Mes 10-12)</h2>
+                    <span class="phase-icon">+</span>
+                </div>
+                <div class="phase-content">
+                    <!-- SECCIÓN 19: FASE 4 COMPLETA -->
+                    <p>Llevar la marca Primavera Events Group más allá de Morelos y de México.</p>
+
+                    <div class="collapsible-item">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <strong>🚀 Estrategia de Expansión Geográfica</strong>
+                            <span>+</span>
+                        </div>
+                        <div class="collapsible-body">
+                            <p><strong>Fase A: Regional (CDMX, Puebla, Guerrero).</strong><br>
+                                <strong>Fase B: Nacional.</strong><br>
+                                <strong>Fase C: Internacional (USA).</strong> Enfoque masivo en Destination Weddings.
+                                Alianzas con agencias de turismo para traer bodas extranjeras (ingreso en dólares).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="collapsible-item">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <strong>💼 Diversificación de Ingresos (Nuevas Líneas)</strong>
+                            <span>+</span>
+                        </div>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><strong>Modelo de Franquicia:</strong> Empaquetar tu "know-how" para venderlo a
+                                    otros
+                                    estados.</li>
+                                <li><strong>Marketplace:</strong> Tu plataforma cobra comisión por conectar clientes con
+                                    otros proveedores verificados.</li>
+                                <li><strong>Productos Digitales:</strong> Cursos, templates y asesorías para otros
+                                    banqueteros.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="collapsible-item">
+                        <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                            <strong>🔮 Tecnología de Vanguardia</strong>
+                            <span>+</span>
+                        </div>
+                        <div class="collapsible-body">
+                            <p>Implementación de Tours Virtuales 360° (Meta Quest), visualización de eventos con IA
+                                Generativa (Renders instantáneos) y Blockchain para contratos inteligentes
+                                internacionales.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="success-box">
+                        <p><strong>Visión:</strong> Dejar de ser "banquetes locales" para ser un <strong>Grupo
+                                Empresarial
+                                de Eventos</strong> con alcance global.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==============================================
+         CIERRE Y COMENTARIO FINAL
+         ============================================== -->
+    <section class="section">
+        <div class="container">
+            <div class="phase-section">
+                <div class="phase-header" onclick="togglePhase(this)">
+                    <h2>💬 Comentario Final y Cierre</h2>
+                    <span class="phase-icon">+</span>
+                </div>
+                <div class="phase-content active">
+                    <div class="speech-box">
+                        <p class="speech-text">Queridos Jesica y Richard,</p>
+                        <p class="speech-text">Quiero compartirles esta propuesta con total honestidad y desde un lugar
+                            muy
+                            cercano. Para mí, más allá de un proyecto profesional, ustedes son amigos, y justamente por
+                            eso
+                            quise armar algo bien pensado, claro y realista, que tenga sentido para su negocio y también
+                            para una colaboración a largo plazo.</p>
+                        <p class="speech-text">Esta propuesta no está pensada solo como “un servicio”, sino como una
+                            forma
+                            de seguir trabajando juntos, de construir algo sólido y de dar continuidad a una relación
+                            basada
+                            en confianza. También es una oportunidad para mí de mostrar mi trabajo, mi forma de pensar y
+                            de
+                            ejecutar proyectos, cuidando cada detalle y buscando siempre que el resultado funcione, no
+                            solo
+                            que se vea bien.</p>
+                        <p class="speech-text">El alcance del proyecto es amplio y requiere tiempo, organización y
+                            constancia. No se trata únicamente de hacer un sitio web o publicar en redes, sino de
+                            integrar
+                            varias piezas: presencia digital, contenidos, comunicación con clientes, campañas,
+                            automatización y seguimiento. Todo esto implica planeación, pruebas, ajustes y atención
+                            continua
+                            para que realmente genere resultados y no se quede en algo superficial.</p>
+                        <p class="speech-text">Quiero ser muy transparente con el tema de los costos. Son completamente
+                            libres de comparar precios y propuestas con otros proveedores. Estoy convencido de que, para
+                            el
+                            nivel de trabajo y el alcance que se está planteando, esta propuesta se encuentra muy por
+                            debajo
+                            de la media del mercado. Aun así, si llegaran a recibir alguna propuesta que supere estas
+                            condiciones en valor y alcance, con gusto podemos revisarla y ver cómo ajustarnos, aunque
+                            honestamente lo veo poco probable.</p>
+                        <p class="speech-text">Mi intención no es competir por precio, sino aportar valor real, trabajar
+                            con
+                            tranquilidad y que todos estemos cómodos con lo que se acuerde. Prefiero avanzar solo si
+                            estamos
+                            convencidos de que esto es lo correcto para ambas partes.</p>
+                        <p class="speech-text">Gracias por el tiempo, la confianza y la apertura.<br>Quedo atento para
+                            platicarlo con calma, resolver cualquier duda y ajustar lo que haga sentido para ustedes.
+                        </p>
+                        <p class="speech-text speech-closing">Con aprecio,<br><br>Atte.<br>Alex Salomón R.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Success Metrics -->
     <section id="metrics" class="section">
         <div class="container">
