@@ -1,5 +1,60 @@
 # Dashboard de Transformación Digital - Banquetes Primavera
 
+## 🏗️ **Arquitectura del Proyecto**
+
+Este proyecto es una aplicación web estática de alto rendimiento, construida siguiendo principios de diseño modular y "Vanilla" (sin frameworks pesados) para garantizar máxima velocidad, compatibilidad y facilidad de mantenimiento.
+
+### **Tecnologías Core**
+- **HTML5:** Marcado semántico y accesible.
+- **CSS3:** Estilos personalizados con CSS Variables para theming (`style.css`), animaciones optimizadas (`animations.css`) y estilos específicos para visualización de datos (`charts.css`).
+- **JavaScript (ES6+):** Lógica de negocio modular sin dependencias externas pesadas.
+
+### **Estructura de Directorios**
+```
+/
+├── index.html          # Punto de entrada principal
+├── css/                # Capa de presentación
+│   ├── style.css       # Estilos globales y layout
+│   ├── charts.css      # Estilos para gráficos y visualización de datos
+│   └── animations.css  # Definiciones de keyframes y transiciones
+├── js/                 # Lógica de aplicación
+│   ├── main.js         # Inicialización y lógica general
+│   ├── charts.js       # Configuración y renderizado de gráficos (Chart.js)
+│   ├── scroll-effects.js # Manejo de eventos de scroll y lazy loading
+│   ├── animations.js   # Control de micro-interacciones
+│   └── accordion-tests.js # Suite de pruebas para componentes interactivos
+└── assets/             # Recursos estáticos (imágenes optimizadas)
+```
+
+### **Principios de Diseño**
+1.  **Mobile-First:** Todos los estilos están diseñados pensando primero en dispositivos móviles y escalando a desktop.
+2.  **Accesibilidad (a11y):** Implementación rigurosa de roles ARIA y navegación por teclado (Checklist verificable en `accordion-tests.js`).
+3.  **Performance:** Uso de `loading="lazy"`, formatos de imagen modernos y minimización de bloqueos de renderizado.
+
+## 🗺️ **Mapa del Sitio (Dashboard)**
+
+El dashboard está estructurado como una Single Page Application (SPA) con navegación vertical basada en secciones colapsables (Accordions) para gestionar la densidad de información.
+
+### **1. Cabecera (Header)**
+*   **Logos:** Banquetes Primavera + Init Idea.
+*   **Título:** Transformación Digital Integral.
+*   **⚠️ Aviso Importante:** Disclaimer legal y metodología de análisis (Colapsable).
+
+### **2. Módulos de Análisis Estratégico**
+*   **🏛️ Estudio de Viabilidad - IMPI:** Análisis de registro marcario, clases Niza (41 y 43) y estrategia de protección de marca.
+*   **📊 Resumen Ejecutivo:** Estado actual del proyecto, inversión y cronograma.
+*   **📍 Situación Actual:** Diagnóstico de debilidades, fortalezas y oportunidades digitales.
+*   **⚔️ Análisis Competitivo (Morelos):** Comparativa vs. competencia local (Jardín Huayacán, Hacienda San Antonio, etc.).
+*   **🧠 Estrategia de Naming:** Análisis semiótico y propuestas de nombres (Primavera Events Group).
+*   **📝 Información Requerida:** Checklist interactivo de activos pendientes por recibir.
+
+### **3. Fases del Proyecto (Sección Dinámica)**
+*   **Fase 1:** Identidad, Web y CRM.
+*   **Fase 2:** Marketing Digital y Ecosistema.
+*   **Fase 3:** Automatización e IA.
+
+---
+
 ## ✅ **Mejoras Implementadas**
 
 ### **1. Reemplazo de Imágenes de Gráficos**
