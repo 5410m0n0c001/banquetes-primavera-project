@@ -338,7 +338,7 @@ function toggleCollapsible(header) {
 
 function toggleNested(header) {
     const content = header.nextElementSibling;
-    const icon = header.querySelector('span');
+    const icon = header.querySelector('.accordion-icon') || header.querySelector('span');
     if (content.style.display === 'none' || content.style.display === '') {
         content.style.display = 'block';
         if (icon) icon.textContent = '▲';
