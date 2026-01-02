@@ -312,15 +312,19 @@ function showSuccess(message) {
     console.log('Success:', message);
     // Could implement success notifications
 }
-/* New Toggle Functions for Refactored Phases */
+/* New Toggle Functions for Refactored Phases with Dynamic Height */
 function togglePhase(header) {
     const content = header.nextElementSibling;
     content.classList.toggle('active');
     const icon = header.querySelector('.phase-icon');
+
     if (content.classList.contains('active')) {
         icon.textContent = '-';
+        // Set dynamic max-height based on scrollHeight
+        content.style.maxHeight = content.scrollHeight + "px";
     } else {
         icon.textContent = '+';
+        content.style.maxHeight = null;
     }
 }
 
@@ -328,11 +332,18 @@ function toggleCollapsible(header) {
     const body = header.nextElementSibling;
     body.classList.toggle('active');
     const span = header.querySelector('span');
+
     if (body.classList.contains('active')) {
         span.textContent = '-';
+        // Set dynamic max-height based on scrollHeight
+        body.style.maxHeight = body.scrollHeight + "px";
     } else {
         span.textContent = '+';
+        body.style.maxHeight = null;
     }
+
+    // Update all parent containers to accommodate new size
+    updateParentCollapsibles(header);
 }
 
 
@@ -353,18 +364,24 @@ function toggleNested(header) {
     updateParentCollapsibles(header);
 }
 
-// Helper: Walks up the DOM to find parent collapsibles and refreshes their height
+// Helper to recursively update max-height of parent collapsibles
 function updateParentCollapsibles(element) {
     let parent = element.parentElement;
     while (parent) {
-        // Check for common collapsible content classes used in the project
+        // Identify all types of collapsible containers
         if (parent.classList.contains('collapsible-body') ||
             parent.classList.contains('accordion-content') ||
-            parent.classList.contains('rac-content')) {
+            parent.classList.contains('rac-content') ||
+            parent.classList.contains('phase-content')) {
 
-            // Should usually be open if we are interacting with child, but good to check
-            // We set max-height to scrollHeight to push boundaries
-            parent.style.maxHeight = parent.scrollHeight + 'px';
+            // If the parent is active/visible, recalculate its height
+            // We check for 'active' class (common) or explicit display block/maxHeight for others
+            if (parent.classList.contains('active') || parent.style.maxHeight) {
+                // Adding a small buffer or just re-setting to scrollHeight
+                // Note: scrollHeight includes padding, but maxHeight does not if box-sizing is content-box. 
+                // Assuming border-box (standard reset).
+                parent.style.maxHeight = parent.scrollHeight + 'px';
+            }
         }
         parent = parent.parentElement;
     }
