@@ -1550,7 +1550,6 @@ img {
   margin-bottom: 30px;
   border: 2px solid var(--rosa-primavera);
   border-radius: 15px;
-  overflow: hidden;
   transition: all 0.3s ease;
   background: var(--blanco);
 }
