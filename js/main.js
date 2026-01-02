@@ -339,11 +339,33 @@ function toggleCollapsible(header) {
 function toggleNested(header) {
     const content = header.nextElementSibling;
     const icon = header.querySelector('.accordion-icon') || header.querySelector('span');
+
+    // 1. Toggle visibility of the nested content
     if (content.style.display === 'none' || content.style.display === '') {
         content.style.display = 'block';
         if (icon) icon.textContent = '▲';
     } else {
         content.style.display = 'none';
         if (icon) icon.textContent = '▼';
+    }
+
+    // 2. Recursively update parent containers' max-height
+    updateParentCollapsibles(header);
+}
+
+// Helper: Walks up the DOM to find parent collapsibles and refreshes their height
+function updateParentCollapsibles(element) {
+    let parent = element.parentElement;
+    while (parent) {
+        // Check for common collapsible content classes used in the project
+        if (parent.classList.contains('collapsible-body') ||
+            parent.classList.contains('accordion-content') ||
+            parent.classList.contains('rac-content')) {
+
+            // Should usually be open if we are interacting with child, but good to check
+            // We set max-height to scrollHeight to push boundaries
+            parent.style.maxHeight = parent.scrollHeight + 'px';
+        }
+        parent = parent.parentElement;
     }
 }
