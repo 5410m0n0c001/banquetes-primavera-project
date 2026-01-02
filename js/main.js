@@ -312,46 +312,94 @@ function showSuccess(message) {
     console.log('Success:', message);
     // Could implement success notifications
 }
-/* New Toggle Functions for Refactored Phases with Dynamic Height */
+/* New Toggle Functions for Refactored Phases with Dynamic Height & Transition to Auto */
 function togglePhase(header) {
     const content = header.nextElementSibling;
-    content.classList.toggle('active');
     const icon = header.querySelector('.phase-icon');
+    const isOpening = !content.classList.contains('active');
 
-    if (content.classList.contains('active')) {
+    // Toggle active class
+    content.classList.toggle('active');
+
+    if (isOpening) {
         icon.textContent = '-';
-        // Set dynamic max-height based on scrollHeight
+
+        // 1. Set explicit height for animation
+        content.style.height = content.scrollHeight + "px"; // Use height instead of max-height for smoother transition if possible, but existing CSS uses max-height. let's stick to max-height as per CSS.
         content.style.maxHeight = content.scrollHeight + "px";
+        content.style.overflow = "hidden"; // Clip during animation
+
+        // 2. Wait for transition to finish, then remove limits
+        setTimeout(() => {
+            if (content.classList.contains('active')) { // Check if still open
+                content.style.maxHeight = "none";
+                content.style.overflow = "visible";
+                content.style.height = "auto";
+            }
+        }, 500); // Matches CSS transition duration roughly
+
     } else {
         icon.textContent = '+';
+
+        // 1. Set explicit height (from 'none') to enable transition
+        content.style.maxHeight = content.scrollHeight + "px";
+        content.style.overflow = "hidden";
+
+        // 2. Force reflow
+        void content.offsetHeight;
+
+        // 3. Animate to 0
         content.style.maxHeight = null;
     }
 }
 
 function toggleCollapsible(header) {
     const body = header.nextElementSibling;
-    body.classList.toggle('active');
     const span = header.querySelector('span');
+    const isOpening = !body.classList.contains('active');
 
-    if (body.classList.contains('active')) {
+    body.classList.toggle('active');
+
+    if (isOpening) {
         span.textContent = '-';
-        // Set dynamic max-height based on scrollHeight
+
+        // 1. Animate Open
         body.style.maxHeight = body.scrollHeight + "px";
+        body.style.overflow = "hidden";
+
+        // 2. Transition to Auto
+        setTimeout(() => {
+            if (body.classList.contains('active')) {
+                body.style.maxHeight = "none";
+                body.style.overflow = "visible";
+            }
+        }, 500);
+
     } else {
         span.textContent = '+';
+
+        // 1. Prepare to close (restore explicit height)
+        body.style.maxHeight = body.scrollHeight + "px";
+        body.style.overflow = "hidden";
+
+        // 2. Force reflow
+        void body.offsetHeight;
+
+        // 3. Close
         body.style.maxHeight = null;
     }
 
-    // Update all parent containers to accommodate new size
-    updateParentCollapsibles(header);
+    // Note: With max-height: none on parents, we might not strictly need updateParentCollapsibles 
+    // IF the parents are already in "auto" mode. 
+    // However, if a user clicks deeply nested items quickly before parents finish opening, 
+    // or if the hierarchy is complex, checking parents can be safe, but usually 'auto' handles it.
+    // We will leave it out for now as 'auto' is the correct CSS solution.
 }
-
 
 function toggleNested(header) {
     const content = header.nextElementSibling;
     const icon = header.querySelector('.accordion-icon') || header.querySelector('span');
 
-    // 1. Toggle visibility of the nested content
     if (content.style.display === 'none' || content.style.display === '') {
         content.style.display = 'block';
         if (icon) icon.textContent = '▲';
@@ -359,30 +407,5 @@ function toggleNested(header) {
         content.style.display = 'none';
         if (icon) icon.textContent = '▼';
     }
-
-    // 2. Recursively update parent containers' max-height
-    updateParentCollapsibles(header);
-}
-
-// Helper to recursively update max-height of parent collapsibles
-function updateParentCollapsibles(element) {
-    let parent = element.parentElement;
-    while (parent) {
-        // Identify all types of collapsible containers
-        if (parent.classList.contains('collapsible-body') ||
-            parent.classList.contains('accordion-content') ||
-            parent.classList.contains('rac-content') ||
-            parent.classList.contains('phase-content')) {
-
-            // If the parent is active/visible, recalculate its height
-            // We check for 'active' class (common) or explicit display block/maxHeight for others
-            if (parent.classList.contains('active') || parent.style.maxHeight) {
-                // Adding a small buffer or just re-setting to scrollHeight
-                // Note: scrollHeight includes padding, but maxHeight does not if box-sizing is content-box. 
-                // Assuming border-box (standard reset).
-                parent.style.maxHeight = parent.scrollHeight + 'px';
-            }
-        }
-        parent = parent.parentElement;
-    }
+    // No recursive update needed if parents are overflow: visible / height: auto
 }
