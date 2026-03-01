@@ -322,7 +322,8 @@ function togglePhase(header) {
     content.classList.toggle('active');
 
     if (isOpening) {
-        icon.textContent = '-';
+        if (icon.textContent.trim() === '+') icon.textContent = '−';
+        if (icon.textContent.trim() === '▼') icon.textContent = '▲';
 
         // 1. Set explicit height for animation
         content.style.height = content.scrollHeight + "px"; // Use height instead of max-height for smoother transition if possible, but existing CSS uses max-height. let's stick to max-height as per CSS.
@@ -339,7 +340,8 @@ function togglePhase(header) {
         }, 500); // Matches CSS transition duration roughly
 
     } else {
-        icon.textContent = '+';
+        if (icon.textContent.trim() === '−' || icon.textContent.trim() === '-') icon.textContent = '+';
+        if (icon.textContent.trim() === '▲') icon.textContent = '▼';
 
         // 1. Set explicit height (from 'none') to enable transition
         content.style.maxHeight = content.scrollHeight + "px";
@@ -361,7 +363,8 @@ function toggleCollapsible(header) {
     body.classList.toggle('active');
 
     if (isOpening) {
-        span.textContent = '-';
+        if (span.textContent.trim() === '+') span.textContent = '−'; // minus sign
+        if (span.textContent.trim() === '▼') span.textContent = '▲';
 
         // 1. Animate Open
         body.style.maxHeight = body.scrollHeight + "px";
@@ -376,7 +379,8 @@ function toggleCollapsible(header) {
         }, 500);
 
     } else {
-        span.textContent = '+';
+        if (span.textContent.trim() === '−' || span.textContent.trim() === '-') span.textContent = '+';
+        if (span.textContent.trim() === '▲') span.textContent = '▼';
 
         // 1. Prepare to close (restore explicit height)
         body.style.maxHeight = body.scrollHeight + "px";

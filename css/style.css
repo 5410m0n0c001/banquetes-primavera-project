@@ -1635,8 +1635,10 @@ img {
 
 .collapsible-body.active {
   padding: 20px;
-  /* max-height handled by JS */
+  /* max-height handled by JS, but we ensure it doesn't clip children after opening */
   opacity: 1;
+  max-height: none !important;
+  overflow: visible !important;
 }
 
 /* Utility Boxes */
