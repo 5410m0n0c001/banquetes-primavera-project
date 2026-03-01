@@ -4023,7 +4023,8 @@
                                                 hora antes del evento</p>
                                             <p style="font-size: 0.9em; margin-bottom: 8px;">
                                                 <strong>Estándares:</strong> Servicio por derecha | Retiro por izquierda
-                                                | Charola mano izquierda máx 6 platos | Cristalería por base/tallo</p>
+                                                | Charola mano izquierda máx 6 platos | Cristalería por base/tallo
+                                            </p>
                                             <p style="font-size: 0.9em; margin-bottom: 0;"><strong>KPIs:</strong> 100%
                                                 puntualidad | 0 quejas individuales | 0 roturas por negligencia | >8/10
                                                 evaluación capitán</p>
@@ -4960,10 +4961,11 @@
                     if (!isDragging) return;
                     const currentX = e.touches[0].clientX;
                     const diff = startX - currentX;
-             f (Math.abs(diff) > 50) {
+                    if (Math.abs(diff) > 50) {
                         if (diff > 0) {
                             nextBtn.click();
-                                             prevBtn.click();
+                        } else {
+                            prevBtn.click();
                         }
                         isDragging = false;
                     }
@@ -5138,12 +5140,16 @@
                     btn.querySelector('.rac-icon').textContent = '+';
                     section.classList.remove('rac-open');
                     content.addEventListener('transitionend', function handler() {
-                        if .style.maxHeight === '0px') content.hidden = true;
-                        content.removeEvet            nend', handler)                          });
+                        if (content.style.maxHeight === '0px') content.hidden = true;
+                        content.removeEventListener('transitionend', handler);
+                    });
                 }
-                function                                    if (                en || content.style.maxHeight                 penPanel(); else closePanel();                     }
-                               tListener('click', tog                          btn.addEventListe                    unction (e) {
-                                      'Enter' || e.key === ' ') { e.preve                        ); }
+                function toggle() {
+                    if (content.hidden || content.style.maxHeight === '0px') openPanel(); else closePanel();
+                }
+                btn.addEventListener('click', toggle);
+                btn.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
                 });
             })();
         </script>
@@ -5245,8 +5251,8 @@
             const minTime = 1500; // 1.5s
             const startTime = Date.now();
             let domReady = false;
-            let timedOut = e;
-   ction hidePreloader() {
+            let timedOut = false;
+            function hidePreloader() {
                 if (domReady && timedOut) {
                     preloader.classList.add('hidden');
                     setTimeout(() => {
@@ -5302,7 +5308,7 @@
                         // Fallback: Copy to clipboard
                         try {
                             await navigator.clipboard.writeText(`${title}\n${text}\n${finalUrl}`);
-                 const originalText = btn.textContent;
+                            const originalText = btn.textContent;
                             btn.textContent = '✅ Enlace copiado!';
                             setTimeout(() => {
                                 btn.textContent = originalText;
