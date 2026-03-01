@@ -664,8 +664,18 @@ img {
 }
 
 .analysis-content.open {
-  max-height: 3000px;
+  max-height: 20000px;
   opacity: 1;
+}
+
+/* Fix for nested `<details>` triangles (Estado General etc.) */
+.analysis-content details summary span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.analysis-content details[open] summary span {
+  transform: rotate(180deg);
 }
 
 .analysis-grid {
