@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primavera Events Group · Master Intelligence Dashboard · Abril 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+    <style>
+        :root {
+            --primary: #1B5E20; 
+            --primary-light: #2E7D32;
+            --accent: #C9A84C;   
+            --accent-dark: #AF913B;
+            --bg-dark: #0F1923;  
+            --bg-sidebar: #0A1218;
+            --bg-card: rgba(255, 255, 255, 0.05);
+            --text-light: #FAFCFA;
+            --text-muted: rgba(250, 252, 250, 0.6);
+            --border: rgba(255, 255, 255, 0.1);
+            --success: #4CAF50;
+            --warning: #FFC107;
+            --error: #FF5252;
+            --radius: 12px;
+            --shadow: 0 8px 32px rgba(0,0,0,0.3);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --sidebar-width: 260px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+        body { font-family: 'DM Sans', sans-serif; background: var(--bg-dark); color: var(--text-light); -webkit-font-smoothing: antialiased; }
+
+        /* ─── SCROLLBAR ─── */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+
+        /* ─── SIDEBAR ─── */
+        .layout { display: flex; min-height: 100vh; }
+        
+        aside {
+            width: var(--sidebar-width);
+            background: var(--bg-sidebar);
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: 2rem 1.5rem;
+            border-right: 1px solid var(--border);
+            z-index: 100;
+            overflow-y: auto;
+        }
+
+        .side-logo { margin-bottom: 3rem; display: flex; align-items: center; gap: 12px; }
+        .logo-b { width: 35px; height: 35px; background: var(--accent); color: var(--primary); display: flex; align-items: center; justify-content: center; border-radius: 8px; font-weight: 700; font-family: 'Playfair Display', serif; }
+        
+        .nav-menu { list-style: none; }
+        .nav-link { 
+            display: block; padding: 12px 16px; margin-bottom: 6px; border-radius: 8px; color: var(--text-muted); 
+            text-decoration: none; font-size: 0.9rem; transition: var(--transition); font-weight: 500;
+        }
+        .nav-link:hover { background: rgba(201, 168, 76, 0.1); color: var(--accent); }
+        .nav-link.active { background: var(--accent); color: var(--primary); font-weight: 700; }
+
+        /* ─── MAIN CONTENT ─── */
+        main { flex: 1; margin-left: var(--sidebar-width); padding: 3rem; position: relative; }
+
+        .header-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4rem; flex-wrap: wrap; gap: 20px; }
+        .badge { background: rgba(76, 175, 80, 0.1); color: var(--success); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; border: 1px solid var(--success); text-transform: uppercase; }
+
+        h1 { font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1.1; margin-bottom: 1rem; color: #fff; }
+        .subheading { font-family: 'Inter', sans-serif; color: var(--text-muted); max-width: 800px; font-size: 1.1rem; }
+
+        @media (max-width: 1024px) {
+            aside { 
+                transform: translateX(-101%); 
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                display: block; 
+                box-shadow: 20px 0 50px rgba(0,0,0,0.5);
+                opacity: 0;
+            }
+            aside.open { transform: translateX(0); opacity: 1; }
+            main { margin-left: 0; padding: 6rem 1.25rem 2rem; }
+            
+            .mobile-nav { 
+                display: flex; position: fixed; top: 0; left: 0; right: 0; height: 70px; 
+                background: rgba(10, 18, 24, 0.82); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+                z-index: 99; padding: 0 1.5rem; align-items: center; justify-content: space-between;
+                border-bottom: 1px solid var(--border);
+            }
+            .burger { width: 30px; height: 20px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer; z-index: 110; }
+            .burger span { display: block; height: 2px; width: 100%; background: var(--accent); border-radius: 2px; transition: 0.3s; }
+            .burger.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+            .burger.open span:nth-child(2) { opacity: 0; }
+            .burger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+        }
+
+        @media (min-width: 1025px) {
+            .mobile-nav { display: none; }
+            aside { opacity: 1; transform: none; }
+        }
+
+        /* ─── TABLES ─── */
+        .table-wrap { overflow-x: auto; margin: 1.5rem 0; border: 1px solid var(--border); border-radius: 8px; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        th { background: rgba(255,255,255,0.03); text-align: left; padding: 14px 18px; color: var(--accent); font-weight: 700; border-bottom: 1px solid var(--border); }
+        td { padding: 14px 18px; border-bottom: 1px solid var(--border); color: var(--text-light); border-right: 1px solid var(--border); }
+        tr:last-child td { border-bottom: 0; }
+        
+        .status-pill { padding: 3px 10px; border-radius: 4px; font-weight: 700; font-size: 0.7rem; text-transform: uppercase; }
+        .pill-exec { background: rgba(76, 175, 80, 0.1); color: var(--success); }
+        .pill-init { background: rgba(255, 193, 7, 0.1); color: var(--warning); }
+        .pill-next { background: rgba(33, 150, 243, 0.1); color: #2196F3; }
+
+        /* ─── ALERTS ─── */
+        .insight { background: rgba(201, 168, 76, 0.05); border-left: 4px solid var(--accent); padding: 1.5rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
+        .insight strong { color: var(--accent); display: block; margin-bottom: 8px; font-size: 1rem; }
+
+        .warning-box { background: rgba(255, 82, 82, 0.05); border-left: 4px solid var(--error); padding: 1rem; font-size: 0.85rem; margin-top: 1rem; }
+
+        /* ─── ROADMAP ─── */
+        .roadmap-container { display: flex; gap: 1rem; margin-top: 2rem; }
+        .roadmap-step { flex: 1; min-width: 200px; padding: 1.5rem; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 8px; position: relative; }
+        .roadmap-step::after { content: '→'; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); color: var(--accent); font-size: 1.5rem; }
+        .roadmap-step:last-child::after { display: none; }
+        .step-tag { font-family: 'Playfair Display', serif; font-size: 2rem; opacity: 0.1; position: absolute; top: 10px; right: 10px; }
+        .step-title { font-weight: 700; color: var(--accent); margin-bottom: 10px; font-family: 'DM Sans', sans-serif; }
+        
+        /* ─── RATING ─── */
+        .rating-dots { display: flex; gap: 4px; }
+        .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); }
+        .dot.fill { background: var(--success); }
+        .dot.fill-partial { background: var(--warning); }
+
+    </style>
+</head>
+<body>
+
+    <div class="layout">
+        <!-- SIDEBAR -->
+        <aside>
+            <div class="side-logo">
+                <div class="logo-b">P</div>
+                <div>
+                    <div style="font-weight: 700; font-family: 'Playfair Display', serif; font-size: 1.1rem;">Primavera HQ</div>
+                    <div style="font-size: 0.65rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Master Dashboard</div>
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 2rem; padding: 0 1rem;">
+                <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px;">Contexto Activo</div>
+                <div style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: 8px; border: 1px solid var(--border);">
+                    <div style="font-size: 0.85rem; font-weight: 700;">Fase 2: Marketing</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">Periodo: Abril 2026</div>
+                </div>
+            </div>
+
+            <nav>
+                <div style="font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; padding-left: 1rem;">Navegación</div>
+                <ul class="nav-menu">
+                    <li><a href="#summary" class="nav-link active"><span>🏠</span> Resumen Ejecutivo</a></li>
+                    <li><a href="#benchmark" class="nav-link"><span>🚀</span> Benchmark de Valor</a></li>
+                    <li><a href="#facebook" class="nav-link"><span>📱</span> Canal: Facebook</a></li>
+                    <li><a href="#multiplatform" class="nav-link"><span>🌐</span> Multiplataforma</a></li>
+                    <li><a href="#web" class="nav-link"><span>📊</span> Inteligencia Web</a></li>
+                    <li><a href="#logs" class="nav-link"><span>📋</span> Bitácora Operativa</a></li>
+                    <li><a href="#venues" class="nav-link"><span>🎬</span> Locaciones & Videos</a></li>
+                    <li><a href="#roadmap" class="nav-link"><span>🗺️</span> Estrategia & IMPI</a></li>
+                    <li><a href="#rating" class="nav-link"><span>⭐</span> Evaluación Final</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- MAIN -->
+        <main>
+            <div class="header-top">
+                <div>
+                    <span class="badge">Semanas 1-2 · Abril 2026</span>
+                    <h1>Marketing & Business Dashboard</h1>
+                    <p class="subheading">Master Intelligence Report: Análisis consolidado de 17 páginas de analítica, gestión de contenido y pipeline de ventas orgánico.</p>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-weight: 700; color: var(--accent);">Primavera Events Group</div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted);">Digital Manager: Alex Ramz Ortega</div>
+                </div>
+            </div>
+
+            <!-- GLOBAL KPIs -->
+            <div class="kpi-wrapper" id="summary" style="margin-bottom: 5rem;">
+                <!-- FB VIEWS -->
+                <div class="kpi-box" style="background: linear-gradient(145deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%); border: 1px solid rgba(255,255,255,0.1); position: relative; overflow: hidden;">
+                    <div style="position: absolute; right: -10px; top: -10px; font-size: 5rem; opacity: 0.05; pointer-events: none;">👁️</div>
+                    <div class="kpi-lbl" style="color: var(--accent); letter-spacing: 2px;">Visualizaciones FB</div>
+                    <div class="kpi-val" style="font-size: 3rem; font-family: 'Playfair Display', serif; color: #fff;">8,076</div>
+                    <div style="display: flex; align-items: center; gap: 6px; margin-top: 10px;">
+                        <span style="background: var(--success); color: #fff; font-size: 0.65rem; padding: 2px 8px; border-radius: 4px; font-weight: 800;">↑ 100% ORGÁNICO</span>
+                        <span style="font-size: 0.7rem; color: var(--text-muted);">Sin pauta pagada</span>
+                    </div>
+                </div>
+
+                <!-- SHARES -->
+                <div class="kpi-box" style="background: linear-gradient(145deg, rgba(201, 168, 76, 0.1) 0%, rgba(255,255,255,0.03) 100%); border: 1px solid rgba(201, 168, 76, 0.2); position: relative; overflow: hidden;">
+                    <div style="position: absolute; right: -10px; top: -10px; font-size: 5rem; opacity: 0.1; pointer-events: none;">🔄</div>
+                    <div class="kpi-lbl" style="color: var(--text-light); letter-spacing: 1px;">Contenidos Compartidos</div>
+                    <div class="kpi-val" style="font-size: 3rem; font-family: 'Playfair Display', serif; color: var(--accent);">2,053</div>
+                    <div style="margin-top: 12px;">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.7rem; margin-bottom: 6px; font-weight: 700; color: var(--warning);">
+                            <span>TOPE MÁXIMO META</span>
+                            <span>100%</span>
+                        </div>
+                        <div style="height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;">
+                            <div style="width: 100%; height: 100%; background: linear-gradient(90deg, var(--accent) 0%, var(--warning) 100%); box-shadow: 0 0 10px var(--accent);"></div>
+                        </div>
+                        <p style="font-size: 0.6rem; color: var(--text-muted); margin-top: 6px;">Límite de distribución orgánica alcanzado</p>
+                    </div>
+                </div>
+
+                <!-- LEADS -->
+                <div class="kpi-box" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); position: relative; overflow: hidden;">
+                    <div style="position: absolute; right: -10px; top: -10px; font-size: 5rem; opacity: 0.05; pointer-events: none;">💬</div>
+                    <div class="kpi-lbl" style="letter-spacing: 1px;">Leads Proactivos</div>
+                    <div class="kpi-val" style="font-size: 3rem; font-family: 'Playfair Display', serif; color: #fff;">70</div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 8px 12px; border-radius: 6px; margin-top: 10px;">
+                        <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent);">Comentarios / Pipeline</div>
+                        <div style="font-size: 0.65rem; color: var(--text-muted);">Usuarios con alta intención detectados</div>
+                    </div>
+                </div>
+
+                <!-- CONTENT PIECES -->
+                <div class="kpi-box" style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); position: relative; overflow: hidden;">
+                    <div style="position: absolute; right: -10px; top: -10px; font-size: 5rem; opacity: 0.05; pointer-events: none;">🎬</div>
+                    <div class="kpi-lbl" style="letter-spacing: 1px;">Piezas de Contenido</div>
+                    <div class="kpi-val" style="font-size: 3rem; font-family: 'Playfair Display', serif; color: #fff;">56</div>
+                    <div style="display: flex; align-items: center; gap: 8px; margin-top: 12px;">
+                        <div style="width: 8px; height: 8px; background: var(--success); border-radius: 50%; box-shadow: 0 0 5px var(--success);"></div>
+                        <div style="font-size: 0.8rem; font-weight: 600;">Total 14 días</div>
+                    </div>
+                    <p style="font-size: 0.65rem; color: var(--text-muted); margin-top: 4px;">FB, IG, TikTok, YouTube</p>
+                </div>
+            </div>
+
+            <!-- CHAPTER 1: RESUMEN EJECUTIVO (PDF p. 2) -->
+            <section>
+                <span class="section-tag">Capítulo 01</span>
+                <h2>Resumen Ejecutivo & Ciclo de Madurez</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <p style="margin-bottom: 1.5rem;">Toda la actividad ha sido ejecutada de forma <strong>100% orgánica</strong>, sin inversión en pauta. El objetivo actual es construir <strong>Conciencia de Marca</strong> mientras se madura el algoritmo para futuras campañas.</p>
+                        <div class="table-wrap">
+                            <table>
+                                <thead><tr><th>Fase</th><th>Duración</th><th>Objetivo</th><th>Estatus</th></tr></thead>
+                                <tbody>
+                                    <tr><td>1. Conciencia</td><td>Sem 1-4</td><td>Visibilidad</td><td><span class="status-pill pill-exec">En Ejecución</span></td></tr>
+                                    <tr><td>2. Consideración</td><td>Sem 4-12</td><td>Leads / Citas</td><td><span class="status-pill pill-init">Iniciando</span></td></tr>
+                                    <tr><td>3. Conversión</td><td>Mes 3+</td><td>Cerrar Ventas</td><td><span class="status-pill pill-next">Próxima Etapa</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div style="font-weight: 700; color: var(--accent); margin-bottom: 1rem;">🎯 Prueba de Tracción Real</div>
+                        <ul style="list-style: none; font-size: 0.95rem;">
+                            <li style="margin-bottom: 15px; display: flex; gap: 10px;"><span>✅</span> <strong>Evento CERRADO:</strong> Ángela / Villa Leona (Cierre impulsado y apoyado por el incentivo digital; agente contribuyente clave).</li>
+                            <li style="margin-bottom: 15px; display: flex; gap: 10px;"><span>✅</span> <strong>Cotización Don Bosco:</strong> 45 vistas, 36 sesiones en página específica.</li>
+                            <li style="margin-bottom: 15px; display: flex; gap: 10px;"><span>✅</span> <strong>Pipeline:</strong> 70 comentarios proactivos en grupos de Facebook recolectando datos de interesados.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHAPTER 2: BENCHMARK (PDF p. 4) -->
+            <section id="benchmark">
+                <span class="section-tag">Capítulo 02</span>
+                <h2>Benchmark Estratégico de Valor</h2>
+                <div class="card">
+                    <div style="margin-bottom: 1.5rem; color: var(--text-muted);">Comparativa: Agencia de Marketing Digital Nivel Medio vs. Gestión Alex Ramz (Abril 2026).</div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>Actividad (2 semanas)</th><th>Agencia Estándar</th><th>Realizado Primavera Events</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Publicaciones Totales</td><td>8 - 14 piezas</td><td style="color:var(--success);font-weight:700">56 piezas (FB + IG simultáneas)</td></tr>
+                                <tr><td>Plataformas Activas</td><td>1 - 2 (FB/IG)</td><td style="color:var(--success);font-weight:700">4: FB, IG, TikTok, YouTube</td></tr>
+                                <tr><td>Videos / Reels TikTok</td><td>0 - 4 videos</td><td style="color:var(--success);font-weight:700">15 videos publicados</td></tr>
+                                <tr><td>Videos YouTube</td><td>No incluido</td><td style="color:var(--success);font-weight:700">14 publicaciones / videos</td></tr>
+                                <tr><td>Grupos de Facebook</td><td>0 - 5 grupos</td><td style="color:var(--success);font-weight:700">87 grupos afiliados</td></tr>
+                                <tr><td>Interacción Leads</td><td>Solo reactiva</td><td style="color:var(--success);font-weight:700">70 comentarios proactivos en grupos</td></tr>
+                                <tr><td>Video Locación</td><td>No incluido</td><td style="color:var(--success);font-weight:700">1 video CC Presidente + 4 activas</td></tr>
+                                <tr><td>Piezas Diseño Extra</td><td>2 - 3 flyers</td><td style="color:var(--success);font-weight:700">2 flyers CC + 5 pág. menús + Invitación</td></tr>
+                                <tr><td>Herramienta Digital Premium</td><td>No incluido</td><td style="color:var(--success);font-weight:700">Demo invitación digital RSVP+QR</td></tr>
+                                <tr><td>Evento Cerrado Fase 1</td><td>No aplica</td><td style="color:var(--success);font-weight:700">1 cierre: Villa Leona</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHAPTER 3: FACEBOOK (PDF p. 5-7) -->
+            <section id="facebook">
+                <span class="section-tag">Capítulo 03</span>
+                <h2>Auditoría de Canal: Facebook</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <div class="kpi-wrapper" style="grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem;">
+                            <!-- VIEWS 3S -->
+                            <div class="kpi-box" style="background: rgba(201, 168, 76, 0.05); border: 1px solid rgba(201, 168, 76, 0.3); padding: 20px;">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                    <div>
+                                        <div class="kpi-val" style="font-size: 2.2rem; font-family: 'Playfair Display', serif; color: var(--accent);">1,113</div>
+                                        <div class="kpi-lbl" style="font-size: 0.7rem; color: #fff; font-weight: 700;">Reproducciones 3s</div>
+                                    </div>
+                                    <span style="font-size: 1.5rem; opacity: 0.6;">⚡</span>
+                                </div>
+                                <div style="font-size: 0.65rem; color: var(--text-muted); margin-top: 5px;">Métrica de Retención Tembrilla (Stop-Scroll)</div>
+                            </div>
+                            <!-- FOLLOWERS -->
+                            <div class="kpi-box" style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); padding: 20px;">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                    <div>
+                                        <div class="kpi-val" style="font-size: 2.2rem; font-family: 'Playfair Display', serif; color: #fff;">1,904</div>
+                                        <div class="kpi-lbl" style="font-size: 0.7rem; color: var(--text-muted); font-weight: 700;">Seguidores Actuales</div>
+                                    </div>
+                                    <span style="font-size: 1.5rem; opacity: 0.4;">👥</span>
+                                </div>
+                                <div style="font-size: 0.65rem; color: var(--success); margin-top: 5px; font-weight: 700;">Comunidad en Crecimiento</div>
+                            </div>
+                        </div>
+                        <div class="insight">
+                            <strong>📊 Mix de Contenido Estratégico:</strong>
+                            <div style="height: 200px;"><canvas id="chartFB"></canvas></div>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem;">
+                            El 68% de Reels es la decisión estratégica correcta: Meta prioriza el video corto en 2026.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div style="font-weight: 700; color: var(--accent); margin-bottom: 1rem;">📦 Límite de Compartidos - Meta</div>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Meta restringe el número de veces que un usuario puede compartir contenido orgánico para orillar a la pauta pagada.</p>
+                        <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: 8px;">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 5px;"><span>Consumo de cuota orgánica</span><span>100%</span></div>
+                            <div style="height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px;"><div style="width: 100%; height: 100%; background: var(--accent); border-radius: 2px;"></div></div>
+                        </div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem;">Se alcanzaron los 2,053 compartidos: tope máximo permitido → Máximo aprovechamiento del canal gratuito.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHAPTER 4: MULTIPLATFORM (PDF p. 7-8) -->
+            <section id="multiplatform">
+                <span class="section-tag">Capítulo 04</span>
+                <h2>Dinámica Multiplataforma (IG / TikTok / YT)</h2>
+                <div class="card">
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th>Plataforma</th><th>Métrica Principal</th><th>Valor</th><th>Estatus</th><th>Próxima Acción</th></tr></thead>
+                            <tbody>
+                                <tr><td>Instagram</td><td>Seguidores</td><td>562</td><td><span class="status-pill pill-exec">Activa</span></td><td>Mantener parrilla sincronizada</td></tr>
+                                <tr><td>Instagram</td><td>Publicaciones</td><td>27</td><td><span class="status-pill pill-exec">Simultáneas</span></td><td>Probar Reels exclusivos de IG</td></tr>
+                                <tr><td>TikTok</td><td>Videos publicados</td><td>15</td><td><span class="status-pill pill-exec">Activa</span></td><td>Aumentar a 1 video/día</td></tr>
+                                <tr><td>TikTok</td><td>Visualizaciones</td><td>1,829</td><td><span style="color:var(--success)">↑ >999%</span></td><td>Analizar videos con mayor retención</td></tr>
+                                <tr><td>TikTok</td><td>Visitas al perfil</td><td>17</td><td><span class="status-pill pill-init">Creciendo</span></td><td>Optimizar bio con link a web</td></tr>
+                                <tr><td>YouTube</td><td>Publicaciones / Shorts</td><td>14</td><td><span class="status-pill pill-exec">Activa</span></td><td>Agregar descripciones SEO</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="insight">
+                        <strong>🎵 Contexto TikTok:</strong> Los porcentajes >999% reflejan el arranque desde cero. Es el comportamiento matemático esperado. La métrica estratégica a vigilar ahora es el "Segundo promedio visto" (Retención).
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHAPTER 5: WEB INTEL (PDF p. 8-9) -->
+            <section id="web">
+                <span class="section-tag">Capítulo 05</span>
+                <h2>Inteligencia Web & User Behavior</h2>
+                <div class="card">
+                    <p style="margin-bottom: 1rem; color: var(--text-muted);">El tráfico web es correlato directo de la actividad en redes. Los usuarios en Venues e Invitación muestran alta intención de contratación.</p>
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th>Página</th><th>Vistas</th><th>Cesiones</th><th>Engagement</th><th>Duración Media</th><th>Señal</th></tr></thead>
+                            <tbody>
+                                <tr><td>Home</td><td>103</td><td>81</td><td>64.2%</td><td>3min 18s</td><td>Buena entrada</td></tr>
+                                <tr><td>Paquetes Primavera</td><td>84</td><td>59</td><td><span style="color:var(--success)">72.9% ★</span></td><td>1min 58s</td><td>Engagement alto</td></tr>
+                                <tr><td>Richard Hernandez</td><td>81</td><td>72</td><td>44.4%</td><td>2min 5s</td><td>Tráfico de redes</td></tr>
+                                <tr><td>Don Bosco (Graduación)</td><td>45</td><td>36</td><td>38.9%</td><td>1min 51s</td><td>Cotización activa</td></tr>
+                                <tr><td>Nuestros Menús</td><td>32</td><td>19</td><td>47.4%</td><td>2min 46s</td><td>Retención post-diseño</td></tr>
+                                <tr><td>Invitación Digital</td><td>26</td><td>20</td><td>35%</td><td><span style="color:var(--accent);font-weight:700">4min 11s ★</span></td><td>Interés Producto</td></tr>
+                                <tr><td>Venues (Locaciones)</td><td>25</td><td>22</td><td>40.9%</td><td><span style="color:var(--accent);font-weight:700">4min 32s ★</span></td><td>Intención de compra</td></tr>
+                                <tr><td>Contacto</td><td>24</td><td>22</td><td>63.6%</td><td>1min 45s</td><td>Conversión directa</td></tr>
+                                <tr><td>Paquete Glow Elite</td><td>24</td><td>21</td><td>33.3%</td><td><span style="color:var(--error)">40s ■</span></td><td>Mejorar página</td></tr>
+                                <tr><td>Paquete Linaje Pura Sangre</td><td>20</td><td>18</td><td>38.9%</td><td>1min 50s</td><td>Tráfico cualificado</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="grid-2">
+                        <div class="insight">
+                            <strong>💡 Insights Accionables:</strong>
+                            <ul style="font-size: 0.85rem; padding-left: 20px;">
+                                <li><strong>VENUES + INVITACIÓN:</strong> Sesiones >4min. Son el "final del funnel". Enviar más tráfico de redes aquí.</li>
+                                <li><strong>PAQUETES:</strong> El 72.9% de engagement indica que la información es relevante. Priorizar links en bio.</li>
+                                <li><strong>GLOW ELITE:</strong> Solo 40s de duración. Requiere enriquecer con fotos/video para retener al visitante.</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <canvas id="engagementChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHAPTER 6 & 7: LOGS & CLOSING (PDF p. 10-12) -->
+            <section id="logs">
+                <span class="section-tag">Capítulo 06 & 07</span>
+                <h2>Bitácora Operativa & Estrategia de Cierre</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <div style="font-weight: 700; color: var(--accent); margin-bottom: 1rem;">🗓️ Semana 1: Lanzamiento</div>
+                        <ul style="font-size: 0.9rem; list-style-type: '→ '; padding-left: 10px; color: var(--text-muted);">
+                            <li style="margin-bottom: 8px;">Invitación digital personalizada (Cierre Villa Leona).</li>
+                            <li style="margin-bottom: 8px;">Distribución masiva (2,053 compartidos).</li>
+                            <li style="margin-bottom: 8px;">Afiliación a 87 grupos especializados en Morelos.</li>
+                            <li style="margin-bottom: 8px;">70 comentarios proactivos detectando leads.</li>
+                        </ul>
+                        <div style="font-weight: 700; color: var(--accent); margin: 1.5rem 0 1rem;">🗓️ Semana 2: Producción</div>
+                        <ul style="font-size: 0.9rem; list-style-type: '→ '; padding-left: 10px; color: var(--text-muted);">
+                            <li style="margin-bottom: 8px;">Video CC Presidente producido al 100%.</li>
+                            <li style="margin-bottom: 8px;">5 páginas de menús diagramadas (Buffet, Gourmet, etc.).</li>
+                            <li style="margin-bottom: 8px;">Demo de invitación digital premium interactiva.</li>
+                            <li style="margin-bottom: 8px;">Optimización de catálogo web.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div style="font-weight: 700; color: var(--accent); margin-bottom: 1rem;">🔐 Why "Invitación Gratis" works?</div>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">El caso Villa Leona demostró que el incentivo digital es una <strong>Palanca de Cierre</strong> definitiva.</p>
+                        <ul style="font-size: 0.85rem; color: var(--text-muted);">
+                            <li style="margin-bottom: 10px;">💎 <strong>Valor Percibido:</strong> El cliente siente que ahorra entre $4k-$8k MXN.</li>
+                            <li style="margin-bottom: 10px;">❤️ <strong>Compromiso Emocional:</strong> RSVP y Galería crean anticipación.</li>
+                            <li style="margin-bottom: 10px;">📈 <strong>Viralidad Orgánica:</strong> Cada invitado ve la marca Primavera.</li>
+                            <li style="margin-bottom: 10px;">⬇️ <strong>Menos Fricción:</strong> 'Gana algo' antes de pagar el banquete.</li>
+                        </ul>
+                        <div class="warning-box">
+                            <strong>RECOMENDACIÓN:</strong> Ofrecer este incentivo en TODAS las cotizaciones del Q2 2026.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHAPTER 8: VENUES (PDF p. 12-13) -->
+            <section id="venues">
+                <span class="section-tag">Capítulo 08</span>
+                <h2>Inventario de Video & Locaciones</h2>
+                <div class="card">
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th>Locación</th><th>Estatus Video</th><th>Prioridad</th><th>Acción Recomendada</th></tr></thead>
+                            <tbody>
+                                <tr><td>Jardín Yolomécatl</td><td><span style="color:var(--success)">✅ Listo</span></td><td>Activa</td><td>Publicar en rotación semanal</td></tr>
+                                <tr><td>Quinta Zarabanda</td><td><span style="color:var(--success)">✅ Listo</span></td><td>Activa</td><td>Publicar en rotación semanal</td></tr>
+                                <tr><td>C.C. Presidente</td><td><span style="color:var(--success)">✅ Listo</span></td><td>Activa + Extra</td><td>2 flyers adicionales generados</td></tr>
+                                <tr><td>Jardín Tsu Nuun</td><td><span style="color:var(--success)">✅ Listo</span></td><td>Activa</td><td>Publicar en rotación semanal</td></tr>
+                                <tr><td>Jardín La Flor</td><td><span style="color:var(--error)">❌ Pendiente</span></td><td>ALTA</td><td>Programar producción — Semana 3</td></tr>
+                                <tr><td>Rancho Los Potrillos</td><td><span style="color:var(--error)">❌ Pendiente</span></td><td>ALTA</td><td>Programar producción — Semana 3</td></tr>
+                                <tr><td>Los Caballos</td><td><span style="color:var(--error)">❌ Pendiente</span></td><td>MEDIA</td><td>Programar producción — Semana 4</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHAPTER 9 & 10: ROADMAP & LEGAL (PDF p. 13-15) -->
+            <section id="roadmap">
+                <span class="section-tag">Capítulo 09 & 10</span>
+                <h2>Plan Maestro & Estatus Institucional</h2>
+                <div class="roadmap-container">
+                    <div class="roadmap-step">
+                        <div class="step-tag">01</div>
+                        <div class="step-title">Corto Plazo (Sem 3-4)</div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">Consolidar presencia. Completar videos pendientes. Activar reposteo perfil Richard Hernandez (+1,500 seg).</p>
+                    </div>
+                    <div class="roadmap-step">
+                        <div class="step-tag">02</div>
+                        <div class="step-title">Mediano Plazo (Mes 2-3)</div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">Generar pipeline sólido. 4-5 posts/semana. Escalar comentarios proactivos a 150+.</p>
+                    </div>
+                    <div class="roadmap-step">
+                        <div class="step-tag">03</div>
+                        <div class="step-title">Largo Plazo (Mes 3+)</div>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">Lanzar Meta Ads ($3k-$5k MXN). Segmentación bodas/empresas. Retargeting web.</p>
+                    </div>
+                </div>
+
+                <div class="grid-2" style="margin-top: 3rem;">
+                    <div class="card" style="border-left: 4px solid var(--warning);">
+                        <div style="font-weight: 700; color: var(--warning); margin-bottom: 1rem;">🏢 Registro SECTUR / VisitMorelos</div>
+                        <ul style="font-size: 0.85rem; color: var(--text-muted);">
+                            <li><strong>Responsable:</strong> Richard Hernandez.</li>
+                            <li><strong>Requisito 1:</strong> Situación Fiscal con nombre 'Primavera Events Group'.</li>
+                            <li><strong>Requisito 2:</strong> ID Oficial + Comprobante domicilio.</li>
+                        </ul>
+                        <div class="warning-box" style="border-left-color: var(--warning); color: var(--warning);">
+                            Pendiente acción del contribuyente para validación institucional.
+                        </div>
+                    </div>
+                    <div class="card" style="border-left: 4px solid var(--success);">
+                        <div style="font-weight: 700; color: var(--success); margin-bottom: 1rem;">reg; Registro de Marca IMPI</div>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Estado: <strong>Sin notificaciones pendientes</strong>. Anteriormente 'Banquetes Primavera'. 'Primavera Events Group' es viable.</p>
+                        <div class="insight" style="margin-top: 1rem; border-left-color: var(--success);"><strong>95%</strong> Probabilidad de éxito estimada.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHAPTER 11: RATING (PDF p. 16) -->
+            <section id="rating">
+                <span class="section-tag">Capítulo 11</span>
+                <h2>Evaluación Final del Periodo</h2>
+                <div class="card">
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th>Área Evaluada</th><th>Estatus del Periodo</th><th>Calificación</th></tr></thead>
+                            <tbody>
+                                <tr><td>Contenido Generado</td><td>56 piezas en 4 plataformas</td><td><div class="rating-dots"><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div></div> <span>Excelente</span></td></tr>
+                                <tr><td>Alcance Orgánico</td><td>9,905 vistas combinadas</td><td><div class="rating-dots"><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div></div> <span>Excelente</span></td></tr>
+                                <tr><td>Pipeline de Leads</td><td>70 contactos + cotizaciones</td><td><div class="rating-dots"><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div><div class="dot"></div></div> <span>Muy Bueno</span></td></tr>
+                                <tr><td>Venta Cerrada</td><td>1 evento (Villa Leona)</td><td><div class="rating-dots"><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div><div class="dot"></div></div> <span>Muy Bueno</span></td></tr>
+                                <tr><td>Herramientas Digitales</td><td>Invitación Premium Funcional</td><td><div class="rating-dots"><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div></div> <span>Excelente</span></td></tr>
+                                <tr><td>Base para Campañas</td><td>Cuenta publicitaria lista</td><td><div class="rating-dots"><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div></div> <span>Excelente</span></td></tr>
+                                <tr><td>Mensajes Directos</td><td>En maduración algorítmica</td><td><div class="rating-dots"><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div><div class="dot"></div><div class="dot"></div></div> <span>En crecimiento</span></td></tr>
+                                <tr><td>Registro SECTUR</td><td>Pendiente documentación cliente</td><td><div class="rating-dots"><div class="dot fill-partial"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div> <span>Pendiente</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <footer style="margin-top: 4rem; padding: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 0.8rem;">
+                <p>Reporte elaborado por Alex Ramz Ortega · Marketing Digital Senior & Business Strategist</p>
+                <p style="margin-top: 5px;">Confidencial · Primavera Events Group © 2026</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // CHART: FB Content Mix
+            const fbCtx = document.getElementById('chartFB').getContext('2d');
+            new Chart(fbCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Reel', 'Foto', 'Texto', 'Link', 'Otro'],
+                    datasets: [{
+                        data: [68, 17, 9.3, 4.3, 1.4],
+                        backgroundColor: ['#1B5E20', '#C9A84C', '#E65100', '#546E7A', '#B0BEC5'],
+                        borderWidth: 0
+                    }]
+                },
+                options: { 
+                    responsive: true, maintainAspectRatio: false, cutout: '70%',
+                    plugins: { legend: { position: 'right', labels: { color: '#ccc', font: { size: 10 } } } }
+                }
+            });
+
+            // CHART: Engagement Matrix (Simplified)
+            const webCtx = document.getElementById('engagementChart').getContext('2d');
+            new Chart(webCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Home', 'Paquetes', 'Venues', 'Invitación', 'Richard'],
+                    datasets: [{
+                        label: 'Engagement %',
+                        data: [64, 73, 41, 35, 44],
+                        backgroundColor: '#C9A84C'
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: {
+                        y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#888' } },
+                        x: { grid: { display: false }, ticks: { color: '#888' } }
+                    },
+                    plugins: { legend: { display: false } }
+                }
+            });
+
+            // Navegación Sidebar Activa
+            const links = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 150) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                links.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // BURGER MENU TOGGLE
+            const burger = document.getElementById('burgerToggle');
+            const aside = document.querySelector('aside');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            if (burger && aside) {
+                burger.addEventListener('click', () => {
+                    burger.classList.toggle('open');
+                    aside.classList.toggle('open');
+                });
+
+                // Close menu when clicking a link (mobile)
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        burger.classList.remove('open');
+                        aside.classList.remove('open');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
