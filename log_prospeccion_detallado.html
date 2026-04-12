@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Auditoría de Prospección · Primavera HQ</title>
+<title>Auditoría de Prospección Exhaustiva · Primavera HQ</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -20,154 +20,122 @@ header { position: sticky; top: 0; background: var(--bg2); border-bottom: 1px so
 .btn-back { background: var(--bg3); color: var(--text); }
 .btn-print { background: var(--accent); color: white; border-color: var(--accent); }
 .btn:hover { opacity: 0.9; transform: translateY(-1px); }
-.container { max-width: 900px; margin: 40px auto; padding: 0 24px; }
+.container { max-width: 1000px; margin: 40px auto; padding: 0 24px; }
 .summary-bar { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-bottom: 24px; display: flex; gap: 40px; }
 .stat { display: flex; flex-direction: column; }
 .stat-l { font-size: 11px; text-transform: uppercase; color: var(--text3); font-weight: 700; letter-spacing: 0.5px; }
 .stat-v { font-size: 24px; font-weight: 700; color: var(--text); }
 .search-container { position: relative; margin-bottom: 32px; }
 #search { width: 100%; background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 14px 20px; color: var(--text); font-size: 14px; box-sizing: border-box; }
-.log-feed { display: flex; flex-direction: column; gap: 16px; }
-.log-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px; transition: 0.2s; }
+.log-feed { display: grid; grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); gap: 16px; }
+.log-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px; transition: 0.2s; display: flex; flex-direction: column; height: fit-content; }
 .log-card:hover { border-color: var(--accent); background: var(--bg3); }
 .log-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
 .log-meta { display: flex; flex-direction: column; gap: 4px; }
 .log-author { font-weight: 600; color: var(--text); font-size: 14px; }
-.log-target { color: var(--accent); font-size: 13px; }
+.log-target { color: var(--accent); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 250px; }
 .log-time { font-size: 11px; color: var(--text3); font-weight: 600; background: var(--bg); padding: 2px 8px; border-radius: 40px; }
-.log-body { font-size: 13px; color: var(--text2); white-space: pre-wrap; word-break: break-word; background: var(--bg); padding: 12px; border-radius: 8px; border: 1px solid var(--border); }
+.log-body { font-size: 12px; color: var(--text2); white-space: pre-wrap; word-break: break-word; background: var(--bg); padding: 12px; border-radius: 8px; border: 1px solid var(--border); flex-grow: 1; min-height: 60px; max-height: 250px; overflow-y: auto; }
 .log-footer { margin-top: 12px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .tag { font-size: 10px; font-weight: 700; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; }
 .tag-fb { background: #1e3a6e; color: #3b82f6; }
 .tag-group { background: #102e1a; color: #22c55e; }
+@media (max-width: 950px) { .log-feed { grid-template-columns: 1fr; } }
 @media print { header, .search-container, .btn-back { display: none !important; } .container { width: 100%; max-width: 100%; margin: 0; padding: 0; } .log-card { break-inside: avoid; border-color: #ddd; background: white; color: black; } .log-body { background: #f9f9f9; color: black; border-color: #eee; } }
 </style>
 </head>
 <body>
 <header>
-  <div class="logo"><div class="logo-dot"></div> Primavera Auditoría</div>
+  <div class="logo"><div class="logo-dot"></div> Primavera Auditoría (Full)</div>
   <div class="actions">
     <a href="reporte_resultados_marketing.html" class="btn btn-back">Volver al Reporte</a>
-    <button onclick="window.print()" class="btn btn-print">Imprimir Auditoría</button>
+    <button onclick="window.print()" class="btn btn-print">Imprimir Todo</button>
   </div>
 </header>
 <div class="container">
-  <h1>Historial Detallado de Prospección</h1>
+  <h1>Auditoría Completa de Interacciones</h1>
   <div class="summary-bar">
-    <div class="stat"><div class="stat-l">Interacciones</div><div class="stat-v">~70</div></div>
-    <div class="stat"><div class="stat-l">Periodo</div><div class="stat-v">23 Mar - 11 Abr</div></div>
-    <div class="stat"><div class="stat-l">Estado</div><div class="stat-v">100% Orgánico</div></div>
+    <div class="stat"><div class="stat-l">Total Registros</div><div class="stat-v">61</div></div>
+    <div class="stat"><div class="stat-l">Filtro</div><div class="stat-v" id="visibleCount">61</div></div>
+    <div class="stat"><div class="stat-l">Periodo</div><div class="stat-v">Abril 2026</div></div>
   </div>
   <div class="search-container">
-    <input type="text" id="search" placeholder="Buscar por palabra clave, grupo o prospecto..." onkeyup="filterLogs()">
+    <input type="text" id="search" placeholder="Buscar por prospecto, grupo o contenido (ej: XV, Bautizo, Jiutepec)..." onkeyup="filterLogs()">
   </div>
   <div class="log-feed" id="logFeed">
-    <!-- Log Entry 1 -->
-    <div class="log-card">
-      <div class="log-header">
-        <div class="log-meta">
-          <div class="log-author">Alex Ramz Ortega</div>
-          <div class="log-target">@Participante anónimo (XV Años)</div>
-        </div>
-        <div class="log-time">10:51 pm · Abril</div>
-      </div>
-      <div class="log-body">Hola 😊✨ ¡Claro! Si estás buscando organizador de eventos para XV años, en Primavera Events Group pueden ayudarte a crear algo realmente espectacular 👌 💎 Cuentan con varias opciones de jardines, quintas y salones en Morelos, adaptadas a diferentes estilos...</div>
-      <div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo Público</span></div>
-    </div>
-    <!-- Log Entry 2 -->
-    <div class="log-card">
-      <div class="log-header">
-        <div class="log-meta">
-          <div class="log-author">Alex Ramz Ortega</div>
-          <div class="log-target">@Hugo Sulaica (Cotización Paquetes)</div>
-        </div>
-        <div class="log-time">10:37 pm · 30 Marzo</div>
-      </div>
-      <div class="log-body">Hola 😊 ¡Qué gusto ayudarte! En Primavera Events Group contamos con paquetes completos para eventos, donde incluimos todo lo necesario: Banquete, Mobiliario, DJ, Decoración y Coordinación total.</div>
-      <div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo Público</span></div>
-    </div>
-    <!-- Log Entry 3 -->
-    <div class="log-card">
-      <div class="log-header">
-        <div class="log-meta">
-          <div class="log-author">Alex Ramz Ortega</div>
-          <div class="log-target">@Vanessa Salgado (Jiutepec Mobiliario)</div>
-        </div>
-        <div class="log-time">6:16 pm · 29 Marzo</div>
-      </div>
-      <div class="log-body">Buenas tardes 😊 Con gusto te apoyamos con la cotización de mobiliario para tu evento en Jiutepec el próximo 18 de abril para 100 personas 🎉 En Primavera Events Group contamos con diferentes opciones de montaje...</div>
-      <div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo Público</span></div>
-    </div>
-    <!-- Log Entry 4 -->
-    <div class="log-card">
-      <div class="log-header">
-        <div class="log-meta">
-          <div class="log-author">Alex Ramz Ortega</div>
-          <div class="log-target">@Mariana Sarabia (Bautizo 200 pax)</div>
-        </div>
-        <div class="log-time">12:26 am · 27 Marzo</div>
-      </div>
-      <div class="log-body">Hola Mariana 👋✨ ¡Será un gusto apoyarte con tu bautizo! Manejamos paquetes todo incluido ideales para 200 personas. Al contratar obtienes: ✨ Invitación digital premium GRATIS ✨ (Valor comercial de hasta $8,000 pesos)</div>
-      <div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo Público</span></div>
-    </div>
-    <!-- Log Entry 5 -->
-    <div class="log-card">
-      <div class="log-header">
-        <div class="log-meta">
-          <div class="log-author">Alex Ramz Ortega</div>
-          <div class="log-target">@David Rojas (Locaciones Morelos)</div>
-        </div>
-        <div class="log-time">1:22 pm · 7 Abril</div>
-      </div>
-      <div class="log-body">Hola 😊✨ Contamos con varias opciones de jardines, quintas y salones en Morelos. Una excelente opción es: Centro de Convenciones Presidente. Un espacio amplio, elegante y muy bien ubicado 🔥</div>
-      <div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo Público</span></div>
-    </div>
-    <!-- Log Entry 6 -->
-    <div class="log-card">
-      <div class="log-header">
-        <div class="log-meta">
-          <div class="log-author">Alex Ramz Ortega</div>
-          <div class="log-target">@Soledad Torres (Alojamiento Morelos)</div>
-        </div>
-        <div class="log-time">12:22 am · 6 Abril</div>
-      </div>
-      <div class="log-body">Hola Soledad 😊✨ Contamos con varias opciones que pueden ajustarse perfecto a lo que buscas (quinta + alojamiento). Te recomiendo Quinta Zarabanda o Finca Los Isabeles. Ambas con excelente ubicación 👌</div>
-      <div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo Público</span></div>
-    </div>
-    <!-- Log Entry 7 -->
-    <div class="log-card">
-      <div class="log-header">
-        <div class="log-meta">
-          <div class="log-author">Alex Ramz Ortega</div>
-          <div class="log-target">@Ceci Ponce (Eventos morelos)</div>
-        </div>
-        <div class="log-time">9:04 pm · 7 Abril</div>
-      </div>
-      <div class="log-body">Hola 😊✨ Dependiendo del tipo de evento y número de invitados, te podemos recomendar diferentes locaciones ideales. Con Primavera Events Group puedes tener TODO resuelto en un solo lugar.</div>
-      <div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo Público</span></div>
-    </div>
-    <!-- Log Entry 8 -->
-    <div class="log-card">
-      <div class="log-header">
-        <div class="log-meta">
-          <div class="log-author">Alex Ramz Ortega</div>
-          <div class="log-target">@Adrian Orozco (Fiesta Juvenil)</div>
-        </div>
-        <div class="log-time">8:32 pm · 6 Abril</div>
-      </div>
-      <div class="log-body">Hola Adrián 😊🎉 Para una fiesta juvenil de 180 personas el 15 de mayo, te recomiendo: 💎 Rancho Los Potrillos. Un espacio ideal con áreas amplias y ambiente tipo quinta.</div>
-      <div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo Público</span></div>
-    </div>
+    <!-- GENERATED CARDS START -->
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Participante anónimo</div></div><div class="log-time">10:53 pm</div></div><div class="log-body">YT: https://youtu.be/sPorl-eVq28?si=EOhvbINFHkHz-q5e</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Participante anónimo</div></div><div class="log-time">10:51 pm</div></div><div class="log-body">Hola 😊✨ ¡Claro! Si estás buscando organizador de eventos para XV años, en Primavera Events Group pueden ayudarte a crear algo realmente espectacular 👌 Cuentan con varias opciones de jardines...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@PeacefulZebra9304</div></div><div class="log-time">7:41 pm</div></div><div class="log-body">Hola 😊✨ Contamos con varias opciones de jardines, quintas y salones en Morelos. Recomendación: Centro de Convenciones Presidentente en Cuernavaca o rancho los potrillos...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Participante anónimo</div></div><div class="log-time">6:34 pm</div></div><div class="log-body">Recomendación: Rancho Los Potrillos. Un espacio amplio, elegante e ideal para eventos sociales y corporativos...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Ada Lea Marban</div></div><div class="log-time">5:50 pm</div></div><div class="log-body">Recomendación: Centro de Convenciones Presidente. Un espacio amplio, elegante e ideal para eventos sociales...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Mitzi Escobar</div></div><div class="log-time">3:37 pm</div></div><div class="log-body">Recomendación: Centro de Convenciones Presidente. Soluciones integrales: Banquete, Decoración, DJ...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@crystii_96</div></div><div class="log-time">3:27 pm</div></div><div class="log-body">Misma recomendación: Centro de Convenciones Presidente. Ayuda a elegir la mejor opción sin compromiso...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Participante anónimo</div></div><div class="log-time">3:23 pm</div></div><div class="log-body">Recomendación estratégica de locación para evento masivo...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Participante anónimo</div></div><div class="log-time">3:23 pm</div></div><div class="log-body">🍽✨ El sabor también hace inolvidable tu evento en Primavera Events Group. Menús diseñados para enamorar...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Karla Alejandra Bahena</div></div><div class="log-time">3:23 pm</div></div><div class="log-body">Promoción de menús gastronómicos para eventos de alto nivel...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Karla Alejandra Bahena</div></div><div class="log-time">3:16 pm</div></div><div class="log-body">Recomendación: Centro de Convenciones Presidente. Planeación y logística sin estrés...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Vanessa Sendell</div></div><div class="log-time">3:12 pm</div></div><div class="log-body">Experiencias gastronómicas que sorprenden. Menús versátiles para bodas y XV años...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@David Rojas</div></div><div class="log-time">3:02 pm</div></div><div class="log-body">Prospecto buscando salón en Morelos. Sugerencia Centro Convenciones Presidente...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Participante anónimo</div></div><div class="log-time">2:05 pm</div></div><div class="log-body">Asesoría sobre marketing digital y OnlyFans: importancia de RRSS externas para tráfico...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Tania Tanislao Sanchez</div></div><div class="log-time">1:36 pm</div></div><div class="log-body">Propuesta comercial: Tarjetas de presentación digitales modernas para servicios de construcción...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@David Rojas</div></div><div class="log-time">1:22 pm</div></div><div class="log-body">Seguimiento a David Rojas sobre locación y presupuesto...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Camila Vents</div></div><div class="log-time">11:02 pm</div></div><div class="log-body">Varias opciones de jardines y salones dependiendo del número de invitados...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Francisko Fabian Garcia</div></div><div class="log-time">11:00 pm</div></div><div class="log-body">Recomendación para evento social. Enfoque en logística completa...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Camila Vents</div></div><div class="log-time">9:20 pm</div></div><div class="log-body">Específico: Centro de Convenciones Presidente. Link directo a Richard Hernandez...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Ceci Ponce</div></div><div class="log-time">9:04 pm</div></div><div class="log-body">Asesoría para planeación sin compromiso. Link a catálogo de venues...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Giho Maxinez</div></div><div class="log-time">12:29 pm</div></div><div class="log-body">Promoción de servicios Primavera Events Group. Enfoque en diseño de evento...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Karen Montes</div></div><div class="log-time">12:21 pm</div></div><div class="log-body">Recomendación de locación adaptada al presupuesto...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Daniela Lmg</div></div><div class="log-time">12:20 pm</div></div><div class="log-body">Enfoque en coordinación y banquete personalizado...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Ale Camaño Flores</div></div><div class="log-time">12:19 pm</div></div><div class="log-body">Asesoría estratégica de eventos en Morelos...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Adrian Orozco</div></div><div class="log-time">12:18 pm</div></div><div class="log-body">Recomendación de locación para fiesta juvenil...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Adrian Orozco</div></div><div class="log-time">8:32 pm</div></div><div class="log-body">Fiesta de 180 personas el 15 de Mayo. Recomendación Rancho Los Potrillos. Paquete completo...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Soledad Torres</div></div><div class="log-time">12:26 am</div></div><div class="log-body">Búsqueda de quinta para 130 pax con hospedaje. Recomendación: Rancho Los Potrillos...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Soledad Torres</div></div><div class="log-time">12:22 am</div></div><div class="log-body">Seguimiento: Recomendación Quinta Zarabanda y Finca Los Isabeles. Opción de hospedaje...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Fan de su Publicación</div></div><div class="log-time">10:46 pm</div></div><div class="log-body">Confía en expertos que convierten momentos importantes en recuerdos extraordinarios...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Amigos</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Hugo Sulaica</div></div><div class="log-time">10:37 pm</div></div><div class="log-body">Contamos con paquetes completos: Banquete, Mobiliario, DJ, Decoración y Coordinación...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@...l1146</div></div><div class="log-time">10:34 pm</div></div><div class="log-body">Propuesta personalizada: Banquete 3 tiempos, loza, mantelería, DJ e iluminación...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Vanessa Salgado</div></div><div class="log-time">6:16 pm</div></div><div class="log-body">Cotización mobiliario Jiutepec 100 personas. Opciones Tiffany, Crossback, mantelería...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Participante anónimo</div></div><div class="log-time">11:32 pm</div></div><div class="log-body">Demo de invitación digital premium + oferta de canción personalizada...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@MagicalPeacock4104</div></div><div class="log-time">5:50 pm</div></div><div class="log-body">Asesoría legal Cuernavaca sobre autos abandonados en vía pública (basado en reglamento)...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Lucy Carrera</div></div><div class="log-time">9:13 pm</div></div><div class="log-body">Jardines para 100 personas. Adaptabilidad a presupuestos...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Fan Ramirez</div></div><div class="log-time">12:11 am</div></div><div class="log-body">Recomendación profesional: Buscar Wedding Planner antes de elegir salón para quitar estrés...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Yeni Mejia Cruz</div></div><div class="log-time">11:24 pm</div></div><div class="log-body">Función QR para fotos en tiempo real. Incluida gratis en paquetes Primavera...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@felifeli55</div></div><div class="log-time">10:46 pm</div></div><div class="log-body">Invitación digital premium: RSVP, mapa, galería. Gratis al contratar evento...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Participante anónimo</div></div><div class="log-time">10:43 pm</div></div><div class="log-body">Asesoría invitaciones modernas: demo en línea. Ayuda para novias...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Yared Bravo</div></div><div class="log-time">12:39 am</div></div><div class="log-body">XV años: Opción de solo mobiliario (sillas/mesas). Beneficio invitación gratis...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Aimee Miranda</div></div><div class="log-time">12:35 am</div></div><div class="log-body">Cuernavaca 70 personas. Referencia inversión $250-$450 per capita...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Mariana Sarabia</div></div><div class="log-time">12:26 am</div></div><div class="log-body">Bautizo 200 personas. Paquetes todo incluido. Invitación digital gratis...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@ExhilaratingFalcon7214</div></div><div class="log-time">12:03 am</div></div><div class="log-body">Mención dirigida a Richard Hernandez para seguimiento...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Richard Hernandez</div></div><div class="log-time">11:50 pm</div></div><div class="log-body">Agradecimiento por recomendación. Intercambio de equipo operativo...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Ivan Velazquez Velazquez</div></div><div class="log-time">11:44 pm</div></div><div class="log-body">Cuernavaca Norte. Recomendación: Centro Convenciones Presidente...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@GC Viry</div></div><div class="log-time">11:27 pm</div></div><div class="log-body">Asesoría para boda: invitaciones premium vs básicas. Demo demo...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@GC Viry</div></div><div class="log-time">11:25 pm</div></div><div class="log-body">Link INIT-IDEA: portafolio de tarjetas digitales...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@GC Viry</div></div><div class="log-time">11:23 pm</div></div><div class="log-body">Link compartido de Facebook para seguimiento interactivo...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Gpe Vebe</div></div><div class="log-time">10:24 pm</div></div><div class="log-body">Confirmación de mensaje privado para asesoría personalizada...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Karin Arenas</div></div><div class="log-time">11:30 am</div></div><div class="log-body">Asesoría integral boda: Invitación + Planeación Primavera...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Tania Tanislao Sanchez</div></div><div class="log-time">11:26 am</div></div><div class="log-body">Respuesta con tarjeta digital personalizada. Link INIT-IDEA...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@felifeli55</div></div><div class="log-time">10:29 pm</div></div><div class="log-body">Empatía y asesoría: De "no sé qué hacer" a "esto está increíble"...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Kenia Chika Fit</div></div><div class="log-time">10:16 pm</div></div><div class="log-body">Salón cerrado 150 pax Cuernavaca. Opciones en venues catálogos...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <div class="log-card"><div class="log-header"><div class="log-meta"><div class="log-author">Alex Ramz Ortega</div><div class="log-target">@Deniss Burgos</div></div><div class="log-time">Fecha reciente</div></div><div class="log-body">Demo de CV Salomón Ramírez Ortega digital con descarga ATS PDF...</div><div class="log-footer"><span class="tag tag-fb">Facebook</span><span class="tag tag-group">Grupo público</span></div></div>
+    <!-- GENERATED CARDS END -->
   </div>
 </div>
 <script>
 function filterLogs() {
   const input = document.getElementById('search').value.toLowerCase();
   const cards = document.getElementsByClassName('log-card');
+  let visibleCount = 0;
   for (let card of cards) {
     const text = card.innerText.toLowerCase();
-    card.style.display = text.includes(input) ? '' : 'none';
+    if (text.includes(input)) {
+        card.style.display = '';
+        visibleCount++;
+    } else {
+        card.style.display = 'none';
+    }
   }
+  document.getElementById('visibleCount').innerText = visibleCount;
 }
 </script>
 </body>
