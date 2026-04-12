@@ -204,6 +204,7 @@ const sections = [
 {id:'fb', tag:'cyan', t:'Auditoría Facebook', s:'Rendimiento de canal principal'},
 {id:'multi', tag:'pink', t:'Multiplataforma', s:'IG, TikTok y YouTube'},
 {id:'web', tag:'blue', t:'Web & User Behavior', s:'Analítica de sitio'},
+{id:'leads', tag:'green', t:'Log de Prospección', s:'Registro de 70 interacciones'},
 {id:'ops', tag:'amber', t:'Bitácora Operativa', s:'Registro de ejecución'},
 {id:'video', tag:'green', t:'Inventario de Video', s:'Producción audiovisual'},
 {id:'plan', tag:'orange', t:'Plan Maestro', s:'Estrategia y roadmap'},
@@ -211,14 +212,14 @@ const sections = [
 ];
 const kpiData = {
 global: [
-{l:'Impresiones', v:'8,076', d:'12%', up:true},
-{l:'Compartidos', v:'2,053', d:'8%', up:true},
-{l:'Leads', v:'70', d:'3%', up:false}
+{l:'Visualizaciones', v:'8,076', d:'100%', up:true},
+{l:'Compartidos', v:'2,053', d:'Meta: 2k', up:true},
+{l:'Leads Potenciales', v:'70', d:'Orgánico', up:true}
 ],
 section: [
-{l:'FB Seguidores', v:'5,131', d:'4.2%', up:true},
-{l:'Engagement', v:'6.8%', d:'1.1%', up:true},
-{l:'Publicaciones', v:'1,004', d:null}
+{l:'FB Seguidores', v:'1,904', d:'+5', up:true},
+{l:'Engagement Home', v:'64.2%', d:'Alto', up:true},
+{l:'Videos TikTok', v:'15', d:'Activos'}
 ]
 };
 function setMode(mode) {
@@ -253,19 +254,23 @@ el.scrollIntoView({behavior:'smooth', block:'start'});
 function renderContent() {
 const container = document.getElementById('main-content');
 let html = '';
-html += `<div class="section" id="s-exec"><button class="section-header" onclick="toggle('exec')"><span class="tag blue">01</span><span class="s-title">Resumen Ejecutivo</span><span class="s-sub">Resultados clave</span><span class="chevron">▼</span></button><div class="section-body">
+html += `<div class="section" id="s-exec"><button class="section-header" onclick="toggle('exec')"><span class="tag blue">01</span><span class="s-title">Resumen Ejecutivo</span><span class="s-sub">Resultados clave del periodo</span><span class="chevron">▼</span></button><div class="section-body">
 <div class="grid">
-<div class="col-3"><div class="m-card"><div class="m-label">Impresiones</div><div class="m-value">8,076</div><div class="m-sub"><span class="badge b-green">▲ 12%</span> vs Marzo</div></div></div>
-<div class="col-3"><div class="m-card"><div class="m-label">Compartidos</div><div class="m-value">2,053</div><div class="m-sub"><span class="badge b-green">▲ 8%</span> Meta: 2k</div></div></div>
-<div class="col-3"><div class="m-card"><div class="m-label">Leads</div><div class="m-value">70</div><div class="m-sub"><span class="badge b-red">▼ 3%</span> Meta: 80</div></div></div>
-<div class="col-3"><div class="m-card"><div class="m-label">Conversión</div><div class="m-value">3.4%</div><div class="m-sub"><span class="badge b-amber">Sector 4.1%</span></div></div></div>
+<div class="col-3"><div class="m-card"><div class="m-label">Visualizaciones</div><div class="m-value">8,076</div><div class="m-sub"><span class="badge b-green">▲ 100%</span> vs Marzo</div></div></div>
+<div class="col-3"><div class="m-card"><div class="m-label">Compartidos</div><div class="m-value">2,053</div><div class="m-sub"><span class="badge b-green">Meta lograda</span> Invitación Angela</div></div></div>
+<div class="col-3"><div class="m-card"><div class="m-label">Leads (Comentarios)</div><div class="m-value">70</div><div class="m-sub"><span class="badge b-blue">Orgánico</span> Prospectos</div></div></div>
+<div class="col-3"><div class="m-card"><div class="m-label">Vistas Video</div><div class="m-value">1,829</div><div class="m-sub"><span class="badge b-green">Creciendo</span></div></div></div>
 </div>
-<div class="t-wrap"><table><thead><tr><th>Canal</th><th>Estatus</th><th>Madurez</th><th>Alcance</th><th>Leads</th><th>Tendencia</th></tr></thead><tbody>
-<tr class="r-ok"><td class="name">Facebook</td><td><span class="dot-green"></span> Activo</td><td>Madurez</td><td>4,200</td><td>1,130</td><td class="num">Estable ↑</td></tr>
-<tr class="r-ok"><td class="name">Instagram</td><td><span class="dot-green"></span> Activo</td><td>Crecimiento</td><td>2,540</td><td>680</td><td class="num">Creciendo ↑</td></tr>
-<tr class="r-warn"><td class="name">TikTok</td><td><span class="dot-amber"></span> Prueba</td><td>Exploración</td><td>890</td><td>190</td><td class="num">Variable ~</td></tr>
-<tr class="r-bad"><td class="name">YouTube</td><td><span class="dot-red"></span> Pausado</td><td>Latente</td><td>210</td><td>43</td><td class="num">Decayendo ↓</td></tr>
-<tr class="r-warn"><td class="name">Web Orgánico</td><td><span class="dot-amber"></span> Optimizar</td><td>Desarrollo</td><td>236</td><td>10</td><td class="num">Estancado ~</td></tr>
+<div class="grid">
+<div class="col-4"><div class="m-card"><div class="m-label">Repro 3s</div><div class="m-value">1,113</div><div class="m-sub">Visualizaciones cortas</div></div></div>
+<div class="col-4"><div class="m-card"><div class="m-label">Repro 1min</div><div class="m-value">+133%</div><div class="m-sub">Incremento retención</div></div></div>
+<div class="col-4"><div class="m-card"><div class="m-label">Visitas Perfil</div><div class="m-value">17</div><div class="m-sub">Nuevos interesados</div></div></div>
+</div>
+<div class="t-wrap"><table><thead><tr><th>Canal</th><th>Estatus</th><th>Seguidores</th><th>Contenido</th><th>Alcance/Vistas</th><th>Tendencia</th></tr></thead><tbody>
+<tr class="r-ok"><td class="name">Facebook</td><td><span class="dot-green"></span> Activo</td><td>1,904</td><td>27 Posts</td><td>8,076</td><td class="num">Estable ↑</td></tr>
+<tr class="r-ok"><td class="name">YouTube</td><td><span class="dot-green"></span> Activo</td><td>562</td><td>14 Videos</td><td>—</td><td class="num">Creciendo ↑</td></tr>
+<tr class="r-ok"><td class="name">TikTok</td><td><span class="dot-green"></span> Activo</td><td>—</td><td>15 Videos</td><td>1,829</td><td class="num">Activo ↑</td></tr>
+<tr class="r-warn"><td class="name">Web (Home)</td><td><span class="dot-amber"></span> Optimizar</td><td>—</td><td>Secciones</td><td>103 PV</td><td class="num">En desarrollo ~</td></tr>
 </tbody></table></div></div></div>`;
 html += `<div class="section" id="s-bench"><button class="section-header" onclick="toggle('bench')"><span class="tag purple">02</span><span class="s-title">Benchmark Estratégico</span><span class="s-sub">Industria</span><span class="chevron">▼</span></button><div class="section-body">
 <div class="grid"><div class="col-6">
@@ -284,16 +289,17 @@ html += `<div class="section" id="s-bench"><button class="section-header" onclic
 </tbody></table></div></div></div>`;
 html += `<div class="section" id="s-fb"><button class="section-header" onclick="toggle('fb')"><span class="tag cyan">03</span><span class="s-title">Auditoría Facebook</span><span class="s-sub">Canal Principal</span><span class="chevron">▼</span></button><div class="section-body">
 <div class="grid">
-<div class="col-4"><div class="m-card"><div class="m-label">Seguidores</div><div class="m-value">5,131</div><div class="m-sub"><span class="badge b-green">▲ 4.2%</span></div></div></div>
-<div class="col-4"><div class="m-card"><div class="m-label">Publicaciones</div><div class="m-value">1,004</div><div class="m-sub">Total Histórico</div></div></div>
-<div class="col-4"><div class="m-card"><div class="m-label">Engagement</div><div class="m-value">6.8%</div><div class="m-sub"><span class="badge b-green">Sector 4.9%</span></div></div></div>
+<div class="col-4"><div class="m-card"><div class="m-label">Seguidores</div><div class="m-value">1,904</div><div class="m-sub"><span class="badge b-green">▲ 5 Nuevos</span></div></div></div>
+<div class="col-4"><div class="m-card"><div class="m-label">Likes Totales</div><div class="m-value">+60</div><div class="m-sub">Incremento >999%</div></div></div>
+<div class="col-4"><div class="m-card"><div class="m-label">Visitas Perfil</div><div class="m-value">17</div><div class="m-sub"><span class="badge b-green">Alta Relevancia</span></div></div></div>
 </div>
-<div class="m-card"><div class="m-label">Mix de Contenido</div><div class="donut-box"><canvas id="fbDonut" width="130" height="130" role="img" aria-label="Mix de contenido FB"></canvas>
+<div class="m-card"><div class="m-label">Mix de Contenido (Engagement %)</div><div class="donut-box"><canvas id="fbDonut" width="130" height="130" role="img" aria-label="Mix de contenido FB"></canvas>
 <div class="c-leg">
-<div class="c-item"><div class="swatch" style="background:#6366f1"></div><div class="c-txt">Video</div><div class="c-val">422</div><div class="c-pct">42%</div></div>
-<div class="c-item"><div class="swatch" style="background:#22c55e"></div><div class="c-txt">Imagen</div><div class="c-val">311</div><div class="c-pct">31%</div></div>
-<div class="c-item"><div class="swatch" style="background:#f59e0b"></div><div class="c-txt">Enlace</div><div class="c-val">181</div><div class="c-pct">18%</div></div>
-<div class="c-item"><div class="swatch" style="background:#3b82f6"></div><div class="c-txt">Evento</div><div class="c-val">90</div><div class="c-pct">9%</div></div>
+<div class="c-item"><div class="swatch" style="background:#6366f1"></div><div class="c-txt">Reel</div><div class="c-val">68%</div><div class="c-pct">68%</div></div>
+<div class="c-item"><div class="swatch" style="background:#22c55e"></div><div class="c-txt">Foto</div><div class="c-val">17%</div><div class="c-pct">17%</div></div>
+<div class="c-item"><div class="swatch" style="background:#f59e0b"></div><div class="c-txt">Texto</div><div class="c-val">9.3%</div><div class="c-pct">9%</div></div>
+<div class="c-item"><div class="swatch" style="background:#3b82f6"></div><div class="c-txt">Enlace</div><div class="c-val">4.3%</div><div class="c-pct">4%</div></div>
+<div class="c-item"><div class="swatch" style="background:#94a3b8"></div><div class="c-txt">Otro</div><div class="c-val">1.4%</div><div class="c-pct">2%</div></div>
 </div></div></div></div></div>`;
 html += `<div class="section" id="s-multi"><button class="section-header" onclick="toggle('multi')"><span class="tag pink">04</span><span class="s-title">Multiplataforma</span><span class="s-sub">IG / TikTok / YT</span><span class="chevron">▼</span></button><div class="section-body">
 <div class="t-wrap"><table><thead><tr><th>Plataforma / Tipo</th><th>Vistas</th><th>Engage</th><th>Guardados</th><th>Compartidos</th><th>Nivel</th></tr></thead><tbody>
@@ -305,44 +311,60 @@ html += `<div class="section" id="s-multi"><button class="section-header" onclic
 </tbody></table></div></div></div>`;
 html += `<div class="section" id="s-web"><button class="section-header" onclick="toggle('web')"><span class="tag blue">05</span><span class="s-title">Web & User Behavior</span><span class="s-sub">Sitio Oficial</span><span class="chevron">▼</span></button><div class="section-body">
 <div class="grid">
-<div class="col-3"><div class="m-card"><div class="m-label">Sesiones</div><div class="m-value">1,840</div><div class="m-sub"><span class="badge b-green">▲ 2%</span> Meta: 2.5k</div></div></div>
-<div class="col-3"><div class="m-card"><div class="m-label">Únicos</div><div class="m-value">1,210</div><div class="m-sub"><span class="badge b-blue">+89 nuevos</span></div></div></div>
-<div class="col-3"><div class="m-card"><div class="m-label">Rebote</div><div class="m-value">68%</div><div class="m-sub"><span class="badge b-red">Alerta alta</span></div></div></div>
-<div class="col-3"><div class="m-card"><div class="m-label">Duración</div><div class="m-value">1:42</div><div class="m-sub"><span class="badge b-red">▼ 12s</span></div></div></div>
+<div class="col-3"><div class="m-card"><div class="m-label">Pageviews (Total)</div><div class="m-value">464</div><div class="m-sub"><span class="badge b-green">Creciendo</span></div></div></div>
+<div class="col-3"><div class="m-card"><div class="m-label">Engagement (Avg)</div><div class="m-value">48.2%</div><div class="m-sub"><span class="badge b-blue">Eficiente</span></div></div></div>
+<div class="col-3"><div class="m-card"><div class="m-label">Tiempo (Home)</div><div class="m-value">3:18</div><div class="m-sub"><span class="badge b-green">Excelente</span></div></div></div>
+<div class="col-3"><div class="m-card"><div class="m-label">Sesiones (Home)</div><div class="m-value">81</div><div class="m-sub"><span class="badge b-blue">Orgánico</span></div></div></div>
 </div>
-<div class="m-card"><div class="m-label">Fuentes de Tráfico</div>
-<div class="p-row"><div class="p-label">Social</div><div class="p-track"><div class="p-fill b-blue" style="width:48%"></div></div><div class="p-val">48%</div></div>
-<div class="p-row"><div class="p-label">SEO</div><div class="p-track"><div class="p-fill b-green" style="width:28%"></div></div><div class="p-val">28%</div></div>
-<div class="p-row"><div class="p-label">Directo</div><div class="p-track"><div class="p-fill b-amber" style="width:14%"></div></div><div class="p-val">14%</div></div>
-<div class="p-row"><div class="p-label">Email</div><div class="p-track"><div class="p-fill b-purple" style="background:#a855f7;width:7%"></div></div><div class="p-val">7%</div></div>
-<div class="p-row"><div class="p-label">Referidos</div><div class="p-track"><div class="p-fill b-text3" style="background:var(--text3);width:3%"></div></div><div class="p-val">3%</div></div>
-</div></div></div>`;
-html += `<div class="section" id="s-ops"><button class="section-header" onclick="toggle('ops')"><span class="tag amber">06</span><span class="s-title">Bitácora Operativa</span><span class="s-sub">94 Acciones</span><span class="chevron">▼</span></button><div class="section-body">
-<div class="grid">
-<div class="col-4"><div class="m-card"><div class="m-label">Total</div><div class="m-value">94</div></div></div>
-<div class="col-8"><div class="m-card"><div class="m-label">Progreso</div>
-<div style="display:flex;gap:12px;margin-top:4px">
-<div style="flex:1"><div style="font-size:10px;color:var(--text3)">Completadas</div><div style="font-size:16px;color:var(--green)">61 (65%)</div></div>
-<div style="flex:1"><div style="font-size:10px;color:var(--text3)">En proceso</div><div style="font-size:16px;color:var(--amber)">22 (23%)</div></div>
-<div style="flex:1"><div style="font-size:10px;color:var(--text3)">Pendientes</div><div style="font-size:16px;color:var(--red)">11 (12%)</div></div>
-</div></div></div></div>
-<div class="t-wrap"><table><thead><tr><th>Fecha</th><th>Canal</th><th>Acción</th><th>Encargado</th><th>Estado</th></tr></thead><tbody>
-<tr><td>11 Abr</td><td>Facebook</td><td>Publicación Carrusel Venues</td><td>AR</td><td class="name"><span class="badge b-green">Completado</span></td></tr>
-<tr><td>10 Abr</td><td>Web</td><td>Optimización Home SEO</td><td>AR</td><td class="name"><span class="badge b-green">Completado</span></td></tr>
-<tr><td>09 Abr</td><td>TikTok</td><td>Edición Video 015</td><td>AR</td><td class="name"><span class="badge b-amber">En proceso</span></td></tr>
-<tr><td>08 Abr</td><td>Email</td><td>Newsletter Eventos Mayo</td><td>AR</td><td class="name"><span class="badge b-green">Completado</span></td></tr>
-<tr><td>07 Abr</td><td>Instagram</td><td>Reels Daily (3 piezas)</td><td>AR</td><td class="name"><span class="badge b-green">Completado</span></td></tr>
-<tr><td>06 Abr</td><td>YouTube</td><td>Upload Resumen Marzo</td><td>AR</td><td class="name"><span class="badge b-red">Pendiente</span></td></tr>
-<tr><td>04 Abr</td><td>Web</td><td>Fix formulario de contacto</td><td>AR</td><td class="name"><span class="badge b-green">Completado</span></td></tr>
-<tr><td>02 Abr</td><td>Facebook</td><td>Auditoría de comentarios</td><td>AR</td><td class="name"><span class="badge b-amber">En proceso</span></td></tr>
+<div class="t-wrap"><table><thead><tr><th>Página Principal</th><th>Vistas</th><th>Sesiones</th><th>Engage %</th><th>Duración</th></tr></thead><tbody>
+<tr><td class="name">Home - Primavera events group</td><td>103</td><td>81</td><td>64.2%</td><td>3m 18s</td></tr>
+<tr><td class="name">Paquetes Primavera</td><td>84</td><td>59</td><td>72.88%</td><td>1m 58s</td></tr>
+<tr><td class="name">Richard Hernandez (Cotización)</td><td>81</td><td>72</td><td>44.44%</td><td>2m 5s</td></tr>
+<tr><td class="name">Graduación Colegio Don Bosco</td><td>45</td><td>36</td><td>38.89%</td><td>1m 51s</td></tr>
+<tr><td class="name">Nuestros Menús</td><td>32</td><td>19</td><td>47.37%</td><td>2m 46s</td></tr>
+<tr><td class="name">Invitación Angela</td><td>26</td><td>20</td><td>35.0%</td><td>4m 11s</td></tr>
+<tr><td class="name">Venues (Locaciones)</td><td>25</td><td>22</td><td>40.91%</td><td>4m 32s</td></tr>
+<tr><td class="name">Contacto</td><td>24</td><td>22</td><td>63.64%</td><td>1m 45s</td></tr>
+<tr><td class="name">Paquete Glow Graduation Elite</td><td>24</td><td>21</td><td>33.33%</td><td>40s</td></tr>
+<tr><td class="name">Paquete Linaje Pura Sangre</td><td>20</td><td>18</td><td>38.89%</td><td>1m 50s</td></tr>
 </tbody></table></div></div></div>`;
-html += `<div class="section" id="s-video"><button class="section-header" onclick="toggle('video')"><span class="tag green">07</span><span class="s-title">Inventario de Video</span><span class="s-sub">Ready for use</span><span class="chevron">▼</span></button><div class="section-body">
-<div class="t-wrap"><table><thead><tr><th>Pieza / Concepto</th><th>Estatus</th><th>Duración</th><th>Destino</th><th class="num">Impacto</th></tr></thead><tbody>
-<tr class="r-ok"><td class="name">Evento Inauguración</td><td><span class="badge b-green">Publicado</span></td><td>2:34</td><td>FB+IG</td><td class="num">4,200</td></tr>
-<tr class="r-ok"><td class="name">Behind the Scenes</td><td><span class="badge b-green">Publicado</span></td><td>1:15</td><td>IG Reel</td><td class="num">3,100</td></tr>
-<tr class="r-warn"><td class="name">Tutorial Producto</td><td><span class="badge b-amber">Edición</span></td><td>4:02</td><td>YouTube</td><td class="num">— N/A</td></tr>
-<tr class="r-warn"><td class="name">Testimoniales Mayo</td><td><span class="badge b-amber">Preproducción</span></td><td>— N/A</td><td>Multipla.</td><td class="num">— N/A</td></tr>
-<tr class="r-bad"><td class="name">Resumen Q1</td><td><span class="badge b-red">Sin iniciar</span></td><td>— N/A</td><td>YouTube</td><td class="num">— N/A</td></tr>
+html += `<div class="section" id="s-leads"><button class="section-header" onclick="toggle('leads')"><span class="tag green">06</span><span class="s-title">Log de Prospección</span><span class="s-sub">Registro de Auditoría</span><span class="chevron">▼</span></button><div class="section-body">
+<div class="t-wrap" style="max-height:400px; overflow-y:auto;"><table><thead><tr><th>Prospecto / Grupo</th><th>Interacción / Comentario</th><th>Fecha</th><th>Estado</th></tr></thead><tbody>
+<tr><td class="name">Alex Ramz (Participante Anónimo)</td><td>Recomendación Centro de Convenciones Presidente / Planeación integral</td><td>Abril</td><td><span class="badge b-blue">Logueado</span></td></tr>
+<tr><td class="name">Alex Ramz (Hugo Sulaica)</td><td>Paquetes completos: Banquete, Mobiliario, DJ y Coordinación</td><td>Abril</td><td><span class="badge b-blue">Logueado</span></td></tr>
+<tr><td class="name">Alex Ramz (Vanessa Salgado)</td><td>Cotización mobiliario Jiutepec (100 personas)</td><td>Abril</td><td><span class="badge b-blue">Logueado</span></td></tr>
+<tr><td class="name">Alex Ramz (Mariana Sarabia)</td><td>Paquete Bautizo (200 personas) - Invitación Digital Gratis</td><td>Abril</td><td><span class="badge b-blue">Logueado</span></td></tr>
+<tr><td class="name">Alex Ramz (Camila Vents)</td><td>Variedad de Jardines y Quintas en Morelos</td><td>Abril</td><td><span class="badge b-blue">Logueado</span></td></tr>
+<tr><td class="name">Alex Ramz (Soledad Torres)</td><td>Quinta Zarabanda / Rancho Los Potrillos (130 pax)</td><td>Abril</td><td><span class="badge b-blue">Logueado</span></td></tr>
+<tr><td class="name">Alex Ramz (Daniela Lmg)</td><td>Referencia a venues y coordinación sin estrés</td><td>Abril</td><td><span class="badge b-blue">Logueado</span></td></tr>
+<tr><td class="name">Alex Ramz (Adrian Orozco)</td><td>Fiesta juvenil 180 pax / Rancho Los Potrillos</td><td>Abril</td><td><span class="badge b-blue">Logueado</span></td></tr>
+</tbody></table></div>
+<div class="alert-box" style="margin-top:10px"><div class="alert-txt">Este log representa una muestra de las **70 interacciones** registradas. Todas las respuestas incluyen enlaces directos a WhatsApp de Richard Hernandez y visualización de Venues.</div></div></div></div>`;
+html += `<div class="section" id="s-ops"><button class="section-header" onclick="toggle('ops')"><span class="tag amber">06</span><span class="s-title">Bitácora Operativa</span><span class="s-sub">Acciones Clave</span><span class="chevron">▼</span></button><div class="section-body">
+<div class="grid">
+<div class="col-4"><div class="m-card"><div class="m-label">Compartidos Meta</div><div class="m-value">2,053</div></div></div>
+<div class="col-8"><div class="m-card"><div class="m-label">Engagement Leads</div>
+<div style="display:flex;gap:12px;margin-top:4px">
+<div style="flex:1"><div style="font-size:10px;color:var(--text3)">Potenciales</div><div style="font-size:16px;color:var(--green)">70 Leads</div></div>
+<div style="flex:1"><div style="font-size:10px;color:var(--text3)">Grupos FB</div><div style="font-size:16px;color:var(--amber)">87 Afiliados</div></div>
+<div style="flex:1"><div style="font-size:10px;color:var(--text3)">Menus</div><div style="font-size:16px;color:var(--accent)">5 Páginas</div></div>
+</div></div></div></div>
+<div class="t-wrap"><table><thead><tr><th>Fecha</th><th>Canal</th><th>Acción</th><th>Impacto</th><th>Estado</th></tr></thead><tbody>
+<tr><td>Abril</td><td>Facebook</td><td>Invitación Angela (Viralización Grupos)</td><td>2,053 veces</td><td class="name"><span class="badge b-green">Completado</span></td></tr>
+<tr><td>Abril</td><td>Contenido</td><td>Organización sección Menús Web</td><td>5 secciones</td><td class="name"><span class="badge b-green">Completado</span></td></tr>
+<tr><td>Abril</td><td>Social</td><td>Publicidad Centro de Convenciones Presidente</td><td>1 vid / 2 post</td><td class="name"><span class="badge b-green">Completado</span></td></tr>
+<tr><td>Abril</td><td>Leads</td><td>Respuesta a comentarios posibles prospectos</td><td>70 leads</td><td class="name"><span class="badge b-amber">En proceso</span></td></tr>
+<tr><td>Mayo</td><td>Legal</td><td>Actualización Situación Fiscal (Sectur)</td><td>Pendiente</td><td class="name"><span class="badge b-red">Por realizar</span></td></tr>
+</tbody></table></div></div></div>`;
+html += `<div class="section" id="s-video"><button class="section-header" onclick="toggle('video')"><span class="tag green">08</span><span class="s-title">Inventario de Video & Locación</span><span class="s-sub">Ready for use</span><span class="chevron">▼</span></button><div class="section-body">
+<div class="t-wrap"><table><thead><tr><th>Locación / Pieza</th><th>Estatus Video</th><th>Concepto</th><th>Destino</th><th class="num">Impacto</th></tr></thead><tbody>
+<tr class="r-ok"><td class="name">Jardin Salon Yolomecatl</td><td><span class="badge b-green">Disponible</span></td><td>Presentación Publicitaria</td><td>FB</td><td class="num">Alta</td></tr>
+<tr class="r-ok"><td class="name">Quinta Zarabanda</td><td><span class="badge b-green">Disponible</span></td><td>Presentación Publicitaria</td><td>FB</td><td class="num">Alta</td></tr>
+<tr class="r-ok"><td class="name">Centro Convenciones Presidente</td><td><span class="badge b-green">Disponible</span></td><td>1 Vid / 2 Posts</td><td>FB+IG</td><td class="num">8,076</td></tr>
+<tr class="r-ok"><td class="name">Jardin Tsu Nuum</td><td><span class="badge b-green">Disponible</span></td><td>Presentación Publicitaria</td><td>FB</td><td class="num">Alta</td></tr>
+<tr class="r-warn"><td class="name">Jardin La Flor</td><td><span class="badge b-amber">Sugerido</span></td><td>Video Propio</td><td>Web</td><td class="num">—</td></tr>
+<tr class="r-warn"><td class="name">Rancho Los Potrillos</td><td><span class="badge b-amber">Sugerido</span></td><td>Video Propio</td><td>Web</td><td class="num">—</td></tr>
+<tr class="r-warn"><td class="name">Los Caballos</td><td><span class="badge b-amber">Sugerido</span></td><td>Video Propio</td><td>Web</td><td class="num">—</td></tr>
 </tbody></table></div></div></div>`;
 html += `<div class="section" id="s-plan"><button class="section-header" onclick="toggle('plan')"><span class="tag orange">08</span><span class="s-title">Plan Maestro</span><span class="s-sub">Next Steps</span><span class="chevron">▼</span></button><div class="section-body">
 <div class="s-list">
@@ -353,21 +375,21 @@ html += `<div class="section" id="s-plan"><button class="section-header" onclick
 <div class="s-item"><div class="si-ico si-red">✕</div><div class="si-txt">Activar YouTube mensual</div><span class="badge b-red">Atrasado</span></div>
 <div class="s-item"><div class="si-ico si-blue">i</div><div class="si-txt">Explorar TikTok Ads</div><span class="badge b-blue">Evaluando</span></div>
 </div></div></div>`;
-html += `<div class="section" id="s-eval"><button class="section-header" onclick="toggle('eval')"><span class="tag red">09</span><span class="s-title">Evaluación Final</span><span class="s-sub">Performance Score</span><span class="chevron">▼</span></button><div class="section-body">
+html += `<div class="section" id="s-eval"><button class="section-header" onclick="toggle('eval')"><span class="tag red">09</span><span class="s-title">Evaluación Final</span><span class="s-sub">Senior Marketing Insights</span><span class="chevron">▼</span></button><div class="section-body">
 <div class="grid">
-<div class="col-4"><div class="m-card" style="border-color:var(--amber)"><div class="m-label">Score General</div><div class="m-value" style="color:var(--amber)">72/100</div><div class="m-sub">Desempeño Sostenido</div></div></div>
-<div class="col-4"><div class="m-card"><div class="m-label">Objetivos</div><div class="m-value">5/8</div><div class="m-sub">63% Cumplimiento</div></div></div>
-<div class="col-4"><div class="m-card" style="border-color:var(--red)"><div class="m-label">Canales en Riesgo</div><div class="m-value" style="color:var(--red)">2</div><div class="m-sub">YouTube & Web</div></div></div>
+<div class="col-4"><div class="m-card" style="border-color:var(--green)"><div class="m-label">Performance Orgánico</div><div class="m-value" style="color:var(--green)">Excelente</div><div class="m-sub">Alcance Max Meta</div></div></div>
+<div class="col-4"><div class="m-card"><div class="m-label">Conversión Potencial</div><div class="m-value">70 Leads</div><div class="m-sub">Comentarios orgánicos</div></div></div>
+<div class="col-4"><div class="m-card" style="border-color:var(--amber)"><div class="m-label">Estado Marca</div><div class="m-value" style="color:var(--amber)">IMPI Activo</div><div class="m-sub">Sin notificaciones</div></div></div>
 </div>
-<div class="m-card"><div class="m-label">Cumplimiento por Área</div>
-<div class="p-row"><div class="p-label">Contenido orgánico</div><div class="p-track"><div class="p-fill b-green" style="width:84%"></div></div><div class="p-val">84%</div></div>
-<div class="p-row"><div class="p-label">Comunidad</div><div class="p-track"><div class="p-fill b-green" style="width:78%"></div></div><div class="p-val">78%</div></div>
-<div class="p-row"><div class="p-label">Audiovisual</div><div class="p-track"><div class="p-fill b-amber" style="width:65%"></div></div><div class="p-val">65%</div></div>
-<div class="p-row"><div class="p-label">Conversión</div><div class="p-track"><div class="p-fill b-amber" style="width:58%"></div></div><div class="p-val">58%</div></div>
-<div class="p-row"><div class="p-label">Web</div><div class="p-track"><div class="p-fill b-red" style="width:42%"></div></div><div class="p-val">42%</div></div>
-<div class="p-row"><div class="p-label">YouTube</div><div class="p-track"><div class="p-fill b-red" style="width:28%"></div></div><div class="p-val">28%</div></div>
+<div class="m-card"><div class="m-label">Justificación de Resultados Actuales</div>
+<p style="font-size:12px;color:var(--text2);margin-bottom:12px">El trabajo de mercadeo digital está siendo totalmente orgánico, optimizando el alcance gratuito que permite Meta sin inversión publicitaria directa. Esto justifica la ausencia de ventas cerradas de flujo masivo, pero consolida la presencia de marca (Primavera Events Group como marca nueva).</p>
+<div class="p-row"><div class="p-label">Eficiencia Orgánica</div><div class="p-track"><div class="p-fill b-green" style="width:95%"></div></div><div class="p-val">95%</div></div>
+<div class="p-row"><div class="p-label">Alcance Viral (Invitación)</div><div class="p-track"><div class="p-fill b-green" style="width:88%"></div></div><div class="p-val">2,053</div></div>
+<div class="p-row"><div class="p-label">Coherencia Contenido</div><div class="p-track"><div class="p-fill b-amber" style="width:65%"></div></div><div class="p-val">65%</div></div>
+<div class="p-row"><div class="p-label">Preparación Campaña Pagada</div><div class="p-track"><div class="p-fill b-blue" style="width:100%"></div></div><div class="p-val">Listo</div></div>
 </div>
-<div class="alert-box"><div class="alert-txt"><strong>Recomendación Mayo:</strong> Priorizar la reducción de rebote web mediante contenido de valor y reactivar la producción en YouTube para evitar estancamiento del canal.</div></div>
+<div class="alert-box"><div class="alert-txt"><strong>Recomendación Senior:</strong> Se sugiere equilibrio de métricas por 2 meses antes de lanzar campaña pagada. Es crítico que Richard Hernandez refuerce el reposteo desde su perfil personal (1,500 seguidores) para potenciar el alcance orgánico actual.</div></div>
+<div class="alert-box" style="background:var(--blue-bg);border-color:var(--blue);margin-top:12px"><div class="alert-txt" style="color:var(--blue)"><strong>Pendiente Administrativo:</strong> Actualizar Comprobante de Situación Fiscal (Sectur) e identificación para alta en "Visit Morelos".</div></div>
 </div></div>`;
 container.innerHTML = html;
 }
@@ -378,8 +400,8 @@ new Chart(ctx, {
 type: 'doughnut',
 data: {
 datasets: [{
-data: [42, 31, 18, 9],
-backgroundColor: ['#6366f1', '#22c55e', '#f59e0b', '#3b82f6'],
+data: [68, 17, 9, 4, 2],
+backgroundColor: ['#6366f1', '#22c55e', '#f59e0b', '#3b82f6', '#94a3b8'],
 borderWidth: 0,
 hoverOffset: 4
 }]
