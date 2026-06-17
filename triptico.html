@@ -418,22 +418,19 @@
         /* --- CONTENIDO CARA INTERIOR (Amenidades) --- */
         /* Ajustar los contenedores sobre la imagen 2 */
         .interior-card-1 {
-            margin-top: 130px;
-            margin-bottom: 90px;
-            height: calc(100% - 220px);
+            margin-top: 140px;
+            height: 380px;
         }
 
         .interior-card-2 {
-            margin-top: 250px;
-            margin-bottom: 80px;
-            height: calc(100% - 330px);
+            margin-top: 155px; /* Ajustada para no encimar el título superior ni el texto inferior "NOSOTROS NOS OCUPAMOS..." */
+            height: 350px;
             background: rgba(255, 255, 255, 0.88) !important;
         }
 
         .interior-card-3 {
-            margin-top: 40px;
-            margin-bottom: 250px;
-            height: calc(100% - 290px);
+            margin-top: 360px; /* Desplazada hacia abajo para liberar por completo el título "más importante" */
+            height: 340px;
             background: rgba(255, 255, 255, 0.88) !important;
         }
 
@@ -836,21 +833,45 @@
                         </p>
 
                         <!-- Contacto Richard -->
-                        <div class="contact-card">
-                            <span class="contact-name">Richard Hernández</span>
-                            <div class="contact-role">Director Creativo & Planner</div>
-                            <a href="tel:7774587923" class="contact-phone">
-                                <i class="fa-solid fa-phone"></i> 777 458 7923
-                            </a>
+                        <div class="contact-card" style="display: flex; align-items: center; justify-content: space-between; gap: 15px;">
+                            <div style="flex: 1;">
+                                <span class="contact-name">Richard Hernández</span>
+                                <div class="contact-role">Director Creativo & Planner</div>
+                                <a href="tel:7774587923" class="contact-phone">
+                                    <i class="fa-solid fa-phone"></i> 777 458 7923
+                                </a>
+                            </div>
+                            <div class="qr-box">
+                                <img src="TRIPTICO/richardqr.jpeg" alt="QR Richard" style="width: 55px; height: 55px; border-radius: 4px; border: 1px solid var(--color-gold);">
+                            </div>
                         </div>
 
                         <!-- Contacto Jessy -->
-                        <div class="contact-card">
-                            <span class="contact-name">Jessy Rodríguez</span>
-                            <div class="contact-role">Fundadora & Lead Planner</div>
-                            <a href="tel:7775032733" class="contact-phone">
-                                <i class="fa-solid fa-phone"></i> 777 503 2733
-                            </a>
+                        <div class="contact-card" style="display: flex; align-items: center; justify-content: space-between; gap: 15px;">
+                            <div style="flex: 1;">
+                                <span class="contact-name">Jessy Rodríguez</span>
+                                <div class="contact-role">Fundadora & Lead Planner</div>
+                                <a href="tel:7775032733" class="contact-phone">
+                                    <i class="fa-solid fa-phone"></i> 777 503 2733
+                                </a>
+                            </div>
+                            <div class="qr-box">
+                                <img src="TRIPTICO/jessyqr.jpeg" alt="QR Jessy" style="width: 55px; height: 55px; border-radius: 4px; border: 1px solid var(--color-gold);">
+                            </div>
+                        </div>
+
+                        <!-- Catálogo de Venues -->
+                        <div class="contact-card" style="display: flex; align-items: center; justify-content: space-between; gap: 15px;">
+                            <div style="flex: 1;">
+                                <span class="contact-name">Nuestros Venues</span>
+                                <div class="contact-role" style="color: var(--color-primary-pink);">Escanea para ver catálogo</div>
+                                <span style="font-size: 11px; color: var(--color-grey); display: flex; align-items: center; gap: 4px; margin-top: 5px;">
+                                    <i class="fa-solid fa-qrcode"></i> Directorio digital
+                                </span>
+                            </div>
+                            <div class="qr-box">
+                                <img src="TRIPTICO/venuesqr.jpeg" alt="QR Venues" style="width: 55px; height: 55px; border-radius: 4px; border: 1px solid var(--color-gold);">
+                            </div>
                         </div>
 
                         <!-- Info General -->
@@ -960,11 +981,15 @@
                     <!-- Panel Central (Base trasera) -->
                     <div class="panel-3d exterior panel-center-3d">
                         <!-- Contenido contacto en el medio de la cara exterior -->
-                        <div style="padding: 20px; margin-top: 100px; display: flex; flex-direction: column; gap: 15px; background: rgba(255,255,255,0.92); border-radius: 8px; border: var(--border-gold-light); font-size: 11px;">
-                            <b style="font-family: var(--font-title); font-size: 13px; border-bottom: 1px solid var(--color-gold); padding-bottom: 4px; display: block;">CONTACTO</b>
-                            <span><b>Richard Hernández:</b> 777 458 7923</span>
-                            <span><b>Jessy Rodríguez:</b> 777 503 2733</span>
-                            <span>contacto@primaveraeventsgroup.com</span>
+                        <div style="padding: 15px; margin-top: 100px; display: flex; flex-direction: column; gap: 10px; background: rgba(255,255,255,0.92); border-radius: 8px; border: var(--border-gold-light); font-size: 10px;">
+                            <b style="font-family: var(--font-title); font-size: 12px; border-bottom: 1px solid var(--color-gold); padding-bottom: 4px; display: block;">CONTACTO & QR</b>
+                            <span><b>Richard H:</b> 777 458 7923</span>
+                            <span><b>Jessy R:</b> 777 503 2733</span>
+                            <div style="display: flex; gap: 8px; justify-content: center; margin-top: 5px;">
+                                <img src="TRIPTICO/richardqr.jpeg" style="width: 35px; height: 35px; border-radius: 2px;">
+                                <img src="TRIPTICO/jessyqr.jpeg" style="width: 35px; height: 35px; border-radius: 2px;">
+                                <img src="TRIPTICO/venuesqr.jpeg" style="width: 35px; height: 35px; border-radius: 2px;">
+                            </div>
                         </div>
                     </div>
                     <!-- Panel Izquierdo (Se dobla sobre el centro) -->
