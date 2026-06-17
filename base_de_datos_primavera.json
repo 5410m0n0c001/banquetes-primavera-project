@@ -1258,7 +1258,7 @@
       "name": "Organización y Diseño de Eventos de Quinceañeras (XV Años)",
       "url": "https://primaveraeventsgroup.com/quinceaneras-primavera/",
       "description": "Servicio exclusivo para transformar los XV años en una noche mágica con temáticas juveniles y modernas. Enfoque vibrante en la pista de baile, ambientación LED y espectáculos interactivos.",
-      "features: [
+      "features": [
         "Montajes temáticos elegantes e iluminados con letras gigantes y alfombra roja",
         "Shows en pista de baile: robots LED, cabezones sorpresa, inflables gigantes interactivos",
         "Cabina Espejo y Cámara 360 con tomas de videos dinámicos para compartir en redes",
@@ -1270,7 +1270,7 @@
       "id": "graduaciones",
       "name": "Producción y Coordinación de Graduaciones Escolares y Universitarias",
       "url": "https://primaveraeventsgroup.com/graduaciones-primavera/",
-      "description: "Producción integral y gala de graduación para colegios y universidades, garantizando orden absoluto, emotividad y una noche de fiesta inolvidable para alumnos y familias.",
+      "description": "Producción integral y gala de graduación para colegios y universidades, garantizando orden absoluto, emotividad y una noche de fiesta inolvidable para alumnos y familias.",
       "features": [
         "Diseño y logística para el último pase de lista solemne en escenario",
         "Cena de gala formal de 3 o 4 tiempos servida por meseros calificados",
@@ -1329,7 +1329,7 @@
     },
     {
       "cliente": "XV Años Antonio (Propuesta Premium)",
-      "recinto: "Selección a elegir (ccPresidente, Los Potrillos, Los Caballos, La Flor, Yolomecatl)",
+      "recinto": "Selección a elegir (ccPresidente, Los Potrillos, Los Caballos, La Flor, Yolomecatl)",
       "precio_por_persona": "$950.00 MXN (Total: $123,500.00 MXN)",
       "minimo_invitados": 130,
       "inclusiones": [
