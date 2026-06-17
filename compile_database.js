@@ -704,21 +704,7 @@ const database = {
         "Baños múltiples de lujo para damas y caballeros"
       ]
     },
-    {
-      id: "quinta-san-francisco",
-      name: "Quinta San Francisco",
-      url: "https://primaveraeventsgroup.com/quinta-san-francisco/",
-      location: "Cuernavaca, Morelos",
-      capacity: "Especializado en bodas exclusivas de media y alta escala",
-      style: "Quinta histórica colonial mexicana de gran lujo y elegancia",
-      features: [
-        "Espacios de jardín con frondosa vegetación morelense ideal para bodas al aire libre",
-        "Espectacular área de ceremonias o bodas destino",
-        "Servicios de diseño floral premium in-house coordinados por la planner Jessy",
-        "Maquillaje profesional integrado y suites de preparación exclusivas",
-        "Patios coloniales elegantes para banquetes de autor"
-      ]
-    },
+
     {
       id: "quinta-zarabanda",
       name: "Quinta Zarabanda",
@@ -1261,7 +1247,7 @@ let md = `# 📂 Base de Conocimiento RAG - Primavera Events Group
 * **Nombre Comercial**: Primavera Events Group (Banquetes Primavera)
 * **Oficina Central**: Av. Defensa Nacional #8, Col. Chamilpa, 62210 Cuernavaca, Morelos.
 * **Directores y Planners**:
-  * **Jessy** (Founder & Lead Planner) - Tel: \`777 301 2421\`
+  * **Jessy** (Founder & Lead Planner) - Tel: \`777 503 2733\`
   * **Richard Hernández** (Creative Director & Planner) - Tel: \`777 458 7923\`
   * **Rubí Alvarado** (Gerente del Centro de Convenciones Presidente) - Tel: \`271 114 8997\`
 * **Contacto**: contacto@primaveraeventsgroup.com | Tel. +52 777 458 7923

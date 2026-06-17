@@ -383,7 +383,7 @@ A continuación se detalla toda la información comercial estructurada por **blo
     Los precios NO incluyen impuestos. Se aplican tarifas adicionales por servicios extra.
 
 *   **Nota Final**
-    Al firmar el contrato: Degustación exclusiva (4 personas), diseño de montaje de acuerdo a la paleta de colores, croquis de distribución detallada de invitados, minuto a minuto (cronograma detallado del evento) y chat exclusivo de comunicación directa. Planner Richard Hernández y C.P. Jessica Rodríguez (Tels: 7774587923 - 7773012421).
+    Al firmar el contrato: Degustación exclusiva (4 personas), diseño de montaje de acuerdo a la paleta de colores, croquis de distribución detallada de invitados, minuto a minuto (cronograma detallado del evento) y chat exclusivo de comunicación directa. Planner Richard Hernández y C.P. Jessica Rodríguez (Tels: 7774587923 - 7775032733).
 
 ---
 
@@ -490,7 +490,7 @@ A continuación se detalla toda la información comercial estructurada por **blo
     Los precios NO incluyen impuestos. Se aplican tarifas adicionales por servicios extra.
 
 *   **Nota Final**
-    Al firmar el contrato: Degustación exclusiva (4 personas), diseño de montaje de acuerdo a la paleta de colores, croquis de distribución, minuto a minuto (cronograma detallado) y chat exclusivo de comunicación. Responsables: Jessy y Richard (Tels: 7774587923 - 7773012421).
+    Al firmar el contrato: Degustación exclusiva (4 personas), diseño de montaje de acuerdo a la paleta de colores, croquis de distribución, minuto a minuto (cronograma detallado) y chat exclusivo de comunicación. Responsables: Jessy y Richard (Tels: 7774587923 - 7775032733).
 
 ---
 
@@ -595,7 +595,7 @@ A continuación se detalla toda la información comercial estructurada por **blo
     Precios NO incluyen impuestos (IVA). Se aplican tarifas adicionales por servicios extra.
 
 *   **Nota Final**
-    Al firmar el contrato: Degustación exclusiva (4 personas), diseño de montaje de acuerdo a la paleta de colores, croquis de distribución detallada de invitados, minuto a minuto y chat exclusivo de coordinación directa. Planner Richard Hernández y W.P. Jessica Rodríguez (Tels: 7774587923 / 7773012421).
+    Al firmar el contrato: Degustación exclusiva (4 personas), diseño de montaje de acuerdo a la paleta de colores, croquis de distribución detallada de invitados, minuto a minuto y chat exclusivo de coordinación directa. Planner Richard Hernández y W.P. Jessica Rodríguez (Tels: 7774587923 / 7775032733).
 
 ---
 
@@ -1129,7 +1129,7 @@ A continuación se detalla toda la información comercial estructurada por **blo
     Precios NO incluyen impuestos (IVA). Se aplican tarifas adicionales por servicios extra.
 
 *   **Nota Final**
-    Al firmar el contrato: Degustación exclusiva (4 personas), diseño de montaje de acuerdo a la paleta de colores, croquis de distribución detallada de invitados, minuto a minuto y chat exclusivo de coordinación directa. Planner Richard Hernández y W.P. Jessica Rodríguez (Tels: 7774587923 / 7773012421).
+    Al firmar el contrato: Degustación exclusiva (4 personas), diseño de montaje de acuerdo a la paleta de colores, croquis de distribución detallada de invitados, minuto a minuto y chat exclusivo de coordinación directa. Planner Richard Hernández y W.P. Jessica Rodríguez (Tels: 7774587923 / 7775032733).
 
 ---
 

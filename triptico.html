@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tríptico Oficial - Primavera Events Group</title>
+    <!-- Google Fonts: Playfair Display para títulos elegantes y Montserrat para texto legible -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome para íconos elegantes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --color-primary-pink: #F65C7A;
+            --color-light-pink: #FF8FA3;
+            --color-gold: #C9A96E;
+            --color-gold-hover: #bda065;
+            --color-grey: #6D6D6D;
+            --color-dark: #1F1F1F;
+            --color-glass-bg: rgba(255, 255, 255, 0.85);
+            --color-glass-dark: rgba(31, 31, 31, 0.03);
+            --font-title: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --shadow-premium: 0 15px 35px rgba(0, 0, 0, 0.1);
+            --border-gold-light: 1px solid rgba(201, 169, 110, 0.35);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: #f7f5f2;
+            color: var(--color-dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            padding-bottom: 50px;
+        }
+
+        /* --- Header de la Aplicación --- */
+        header {
+            width: 100%;
+            background: white;
+            padding: 20px 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #eae5df;
+            margin-bottom: 30px;
+            z-index: 10;
+        }
+
+        .brand-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .brand-logo-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-primary-pink), var(--color-light-pink));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: var(--font-title);
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid var(--color-gold);
+            box-shadow: 0 4px 10px rgba(246, 92, 122, 0.2);
+        }
+
+        .brand-text h1 {
+            font-family: var(--font-title);
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--color-dark);
+            letter-spacing: 0.5px;
+        }
+
+        .brand-text p {
+            font-size: 11px;
+            color: var(--color-grey);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            background-color: white;
+            border: 1.5px solid var(--color-gold);
+            color: var(--color-dark);
+            padding: 10px 20px;
+            font-family: var(--font-body);
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn:hover {
+            background-color: var(--color-gold);
+            color: white;
+            border-color: var(--color-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(201, 169, 110, 0.3);
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary-pink);
+            border-color: var(--color-primary-pink);
+            color: white;
+            box-shadow: 0 4px 10px rgba(246, 92, 122, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: #e04b67;
+            border-color: #e04b67;
+            color: white;
+            box-shadow: 0 6px 15px rgba(246, 92, 122, 0.35);
+        }
+
+        .btn.active {
+            background-color: var(--color-dark);
+            color: white;
+            border-color: var(--color-dark);
+        }
+
+        /* --- Contenedor Principal del Tríptico --- */
+        .workspace {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        /* Estilo para vista plana (Lado a Lado) */
+        .flat-view {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .triptico-page {
+            width: 1056px; /* 11 inches at 96dpi */
+            height: 816px; /* 8.5 inches at 96dpi */
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+            border-radius: 8px;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        #exterior-side {
+            background-image: url('TRIPTICO/1.png');
+        }
+
+        #interior-side {
+            background-image: url('TRIPTICO/2.png');
+        }
+
+        /* Cada una de las 3 columnas del tríptico */
+        .panel {
+            width: 33.333%;
+            height: 100%;
+            position: relative;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Línea guía que simula el pliegue (solo en pantalla, no en impresión) */
+        .fold-line-left::after,
+        .fold-line-right::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.01), rgba(0,0,0,0.06) 20%, rgba(0,0,0,0.06) 80%, rgba(0,0,0,0.01));
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .fold-line-left::after {
+            right: 0;
+            box-shadow: -1px 0 3px rgba(0,0,0,0.03);
+        }
+
+        .fold-line-right::after {
+            left: 0;
+            box-shadow: 1px 0 3px rgba(0,0,0,0.03);
+        }
+
+        /* --- Tarjeta Glassmorphic Premium --- */
+        .glass-card {
+            background: var(--color-glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 12px;
+            border: var(--border-gold-light);
+            padding: 25px 20px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.06);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            box-shadow: 0 12px 40px rgba(201, 169, 110, 0.15);
+            border-color: rgba(201, 169, 110, 0.6);
+            transform: translateY(-2px);
+        }
+
+        /* --- CONTENIDO PANEL VENUES (Exterior Izquierda) --- */
+        .venues-container {
+            margin-top: 105px; /* Comienza abajo del título Venues */
+            height: 520px; /* Termina antes de los zapatos */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .venues-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .venue-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 8px 10px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(201, 169, 110, 0.15);
+            transition: all 0.2s ease;
+        }
+
+        .venue-item:hover {
+            background: white;
+            border-color: var(--color-gold);
+            transform: translateX(4px);
+        }
+
+        .venue-icon-box {
+            color: var(--color-primary-pink);
+            font-size: 14px;
+            margin-top: 2px;
+            width: 15px;
+            text-align: center;
+        }
+
+        .venue-details {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .venue-name {
+            font-family: var(--font-body);
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--color-dark);
+            line-height: 1.2;
+        }
+
+        .venue-meta {
+            font-size: 10.5px;
+            color: var(--color-grey);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .venue-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .meta-divider {
+            color: #d1c8bd;
+        }
+
+        .parking-yes {
+            color: #2e7d32;
+            font-weight: 500;
+        }
+
+        .parking-maybe {
+            color: #b76e00;
+            font-weight: 500;
+        }
+
+        /* --- CONTENIDO PANEL CONTACTO (Exterior Centro) --- */
+        .contact-container {
+            margin-top: 110px;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+        .contact-intro {
+            font-size: 12px;
+            line-height: 1.5;
+            color: var(--color-grey);
+            text-align: center;
+            font-style: italic;
+            border-bottom: 1px dashed rgba(201, 169, 110, 0.3);
+            padding-bottom: 12px;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.65);
+            border-left: 3px solid var(--color-gold);
+            padding: 12px 15px;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.2s ease;
+        }
+
+        .contact-card:hover {
+            background: white;
+            border-left-color: var(--color-primary-pink);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+
+        .contact-name {
+            font-family: var(--font-title);
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--color-dark);
+        }
+
+        .contact-role {
+            font-size: 10.5px;
+            color: var(--color-primary-pink);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+            margin-top: 2px;
+        }
+
+        .contact-phone {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--color-dark);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+        }
+
+        .contact-phone i {
+            color: var(--color-gold);
+            font-size: 12px;
+        }
+
+        .general-info-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(201, 169, 110, 0.2);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+            color: var(--color-dark);
+            text-decoration: none;
+        }
+
+        .info-item i {
+            color: var(--color-primary-pink);
+            width: 16px;
+            text-align: center;
+        }
+
+        /* --- CONTENIDO CARA INTERIOR (Amenidades) --- */
+        /* Ajustar los contenedores sobre la imagen 2 */
+        .interior-card-1 {
+            margin-top: 130px;
+            margin-bottom: 90px;
+            height: calc(100% - 220px);
+        }
+
+        .interior-card-2 {
+            margin-top: 250px;
+            margin-bottom: 80px;
+            height: calc(100% - 330px);
+            background: rgba(255, 255, 255, 0.88) !important;
+        }
+
+        .interior-card-3 {
+            margin-top: 40px;
+            margin-bottom: 250px;
+            height: calc(100% - 290px);
+            background: rgba(255, 255, 255, 0.88) !important;
+        }
+
+        .panel-title {
+            font-family: var(--font-title);
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--color-dark);
+            border-bottom: 2px solid var(--color-gold);
+            padding-bottom: 6px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .panel-title i {
+            color: var(--color-primary-pink);
+            font-size: 15px;
+        }
+
+        .amenities-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            height: 100%;
+            justify-content: space-around;
+        }
+
+        .amenity-detail-box {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .amenity-name {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--color-dark);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .amenity-name::before {
+            content: '✦';
+            color: var(--color-gold);
+            font-size: 10px;
+        }
+
+        .amenity-desc {
+            font-size: 11px;
+            color: var(--color-grey);
+            line-height: 1.4;
+            padding-left: 14px;
+        }
+
+        /* Ajustes específicos para el texto que ya viene impreso en la plantilla 2 */
+        .disfruta-label-mock {
+            position: absolute;
+            bottom: 40px;
+            left: 30px;
+            font-family: var(--font-title);
+            font-size: 14px;
+            font-style: italic;
+            color: var(--color-dark);
+        }
+
+        /* --- MOCKUP INTERACTIVO 3D --- */
+        .interactive-container {
+            display: none;
+            width: 100%;
+            height: 700px;
+            justify-content: center;
+            align-items: center;
+            perspective: 2000px;
+            margin-top: 20px;
+        }
+
+        .brochure-3d {
+            width: 352px; /* width of 1 panel */
+            height: 700px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s ease-in-out;
+        }
+
+        .brochure-3d.open {
+            transform: rotateX(10deg) rotateY(-15deg);
+        }
+
+        .brochure-3d.closed {
+            transform: rotateX(15deg) rotateY(-35deg);
+        }
+
+        .panel-3d {
+            position: absolute;
+            width: 352px;
+            height: 100%;
+            top: 0;
+            transform-style: preserve-3d;
+            transition: transform 1s ease-in-out;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            background-size: 1056px 700px; /* Total width across 3 panels */
+            background-repeat: no-repeat;
+        }
+
+        /* Cara Exterior */
+        .panel-3d.exterior {
+            background-image: url('TRIPTICO/1.png');
+        }
+
+        /* Cara Interior */
+        .panel-3d.interior {
+            background-image: url('TRIPTICO/2.png');
+        }
+
+        /* Panel Central (Back Cover / Base) */
+        .panel-center-3d {
+            left: 0;
+            transform: translateZ(0);
+            background-position: -352px 0; /* Middle panel background */
+            z-index: 2;
+        }
+
+        /* Panel Izquierdo (Solapa interior) */
+        .panel-left-3d {
+            left: -352px;
+            transform-origin: right center;
+            background-position: 0 0;
+            z-index: 3;
+        }
+
+        .brochure-3d.closed .panel-left-3d {
+            transform: rotateY(175deg); /* Folds inside */
+        }
+
+        .brochure-3d.open .panel-left-3d {
+            transform: rotateY(0deg);
+        }
+
+        /* Panel Derecho (Portada / Front Cover) */
+        .panel-right-3d {
+            left: 352px;
+            transform-origin: left center;
+            background-position: -704px 0;
+            z-index: 4;
+        }
+
+        .brochure-3d.closed .panel-right-3d {
+            transform: rotateY(-178deg); /* Folds over the left panel */
+        }
+
+        .brochure-3d.open .panel-right-3d {
+            transform: rotateY(0deg);
+        }
+
+        /* --- Footer Info --- */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--color-grey);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        footer a {
+            color: var(--color-primary-pink);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- ESTILOS DE IMPRESIÓN (PRINT READY) --- */
+        @media print {
+            @page {
+                margin: 0;
+                size: landscape;
+            }
+            body {
+                background-color: white;
+                padding: 0;
+                margin: 0;
+            }
+
+            header, .controls, footer, .interactive-container {
+                display: none !important;
+            }
+
+            .workspace {
+                padding: 0;
+                margin: 0;
+                max-width: none;
+            }
+
+            .flat-view {
+                display: block;
+                gap: 0;
+            }
+
+            .triptico-page {
+                width: 11in;
+                height: 8.5in;
+                box-shadow: none;
+                border-radius: 0;
+                margin: 0;
+                page-break-after: always;
+                page-break-inside: avoid;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .fold-line-left::after,
+            .fold-line-right::after {
+                display: none !important;
+            }
+
+            .glass-card {
+                box-shadow: none;
+                background: rgba(255, 255, 255, 0.9); /* Mayor opacidad en impresión */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabecera de la Aplicación -->
+    <header>
+        <div class="brand-info">
+            <div class="brand-logo-circle">P</div>
+            <div class="brand-text">
+                <h1>PRIMAVERA EVENTS GROUP</h1>
+                <p>Estudio de Diseño Comercial & Tríptico de Locaciones</p>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="btn active" id="btn-flat" onclick="setView('flat')">
+                <i class="fa-solid fa-map"></i> Vista Plana (Imprimible)
+            </button>
+            <button class="btn" id="btn-3d" onclick="setView('3d')">
+                <i class="fa-solid fa-book-open"></i> Vista Interactiva 3D
+            </button>
+            <button class="btn btn-primary" onclick="window.print()">
+                <i class="fa-solid fa-print"></i> Exportar / Imprimir PDF
+            </button>
+        </div>
+    </header>
+
+    <!-- Área de Trabajo Principal -->
+    <div class="workspace">
+
+        <!-- VISTA PLANA: Para leer, editar e imprimir -->
+        <div class="flat-view" id="view-flat">
+            
+            <!-- PÁGINA 1: CARA EXTERIOR -->
+            <div class="triptico-page" id="exterior-side">
+                
+                <!-- Panel Izquierdo: Lista de Venues -->
+                <div class="panel fold-line-left">
+                    <div class="venues-container">
+                        <ul class="venues-list">
+                            
+                            <li class="venue-item">
+                                <div class="venue-icon-box"><i class="fa-solid fa-hotel"></i></div>
+                                <div class="venue-details">
+                                    <span class="venue-name">C.C. Presidente</span>
+                                    <span class="venue-meta">
+                                        <span><i class="fa-solid fa-location-dot"></i> Cuernavaca</span>
+                                        <span class="meta-divider">|</span>
+                                        <span class="parking-yes"><i class="fa-solid fa-square-parking"></i> Sí (35 autos)</span>
+                                    </span>
+                                </div>
+                            </li>
+
+
+
+                            <li class="venue-item">
+                                <div class="venue-icon-box"><i class="fa-solid fa-house-chimney"></i></div>
+                                <div class="venue-details">
+                                    <span class="venue-name">Quinta Zarabanda</span>
+                                    <span class="venue-meta">
+                                        <span><i class="fa-solid fa-location-dot"></i> Temixco</span>
+                                        <span class="meta-divider">|</span>
+                                        <span class="parking-yes"><i class="fa-solid fa-square-parking"></i> Sí (Valet Parking)</span>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="venue-item">
+                                <div class="venue-icon-box"><i class="fa-solid fa-tree-city"></i></div>
+                                <div class="venue-details">
+                                    <span class="venue-name">Finca Las Isabeles</span>
+                                    <span class="venue-meta">
+                                        <span><i class="fa-solid fa-location-dot"></i> Xochitepec</span>
+                                        <span class="meta-divider">|</span>
+                                        <span class="parking-yes"><i class="fa-solid fa-square-parking"></i> Sí (Propio)</span>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="venue-item">
+                                <div class="venue-icon-box"><i class="fa-solid fa-leaf"></i></div>
+                                <div class="venue-details">
+                                    <span class="venue-name">Jardín La Flor</span>
+                                    <span class="venue-meta">
+                                        <span><i class="fa-solid fa-location-dot"></i> Morelos</span>
+                                        <span class="meta-divider">|</span>
+                                        <span class="parking-yes"><i class="fa-solid fa-square-parking"></i> Sí (Propio)</span>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="venue-item">
+                                <div class="venue-icon-box"><i class="fa-solid fa-wheat-awn"></i></div>
+                                <div class="venue-details">
+                                    <span class="venue-name">Salón Los Potrillos</span>
+                                    <span class="venue-meta">
+                                        <span><i class="fa-solid fa-location-dot"></i> Morelos</span>
+                                        <span class="meta-divider">|</span>
+                                        <span class="parking-yes"><i class="fa-solid fa-square-parking"></i> Sí (Propio)</span>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="venue-item">
+                                <div class="venue-icon-box"><i class="fa-solid fa-circle-nodes"></i></div>
+                                <div class="venue-details">
+                                    <span class="venue-name">Jardín Tsu Nuum</span>
+                                    <span class="venue-meta">
+                                        <span><i class="fa-solid fa-location-dot"></i> Morelos</span>
+                                        <span class="meta-divider">|</span>
+                                        <span class="parking-yes"><i class="fa-solid fa-square-parking"></i> Sí (Privado)</span>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="venue-item">
+                                <div class="venue-icon-box"><i class="fa-solid fa-building-columns"></i></div>
+                                <div class="venue-details">
+                                    <span class="venue-name">Salón Los Caballos</span>
+                                    <span class="venue-meta">
+                                        <span><i class="fa-solid fa-location-dot"></i> Morelos</span>
+                                        <span class="meta-divider">|</span>
+                                        <span class="parking-yes"><i class="fa-solid fa-square-parking"></i> Sí (Masivo)</span>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="venue-item">
+                                <div class="venue-icon-box"><i class="fa-solid fa-campground"></i></div>
+                                <div class="venue-details">
+                                    <span class="venue-name">Jardín Yolomecatl</span>
+                                    <span class="venue-meta">
+                                        <span><i class="fa-solid fa-location-dot"></i> Temixco</span>
+                                        <span class="meta-divider">|</span>
+                                        <span class="parking-yes"><i class="fa-solid fa-square-parking"></i> Sí (Propio)</span>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="venue-item">
+                                <div class="venue-icon-box"><i class="fa-solid fa-dungeon"></i></div>
+                                <div class="venue-details">
+                                    <span class="venue-name">Villa Di Fiori</span>
+                                    <span class="venue-meta">
+                                        <span><i class="fa-solid fa-location-dot"></i> Xochitepec</span>
+                                        <span class="meta-divider">|</span>
+                                        <span class="parking-yes"><i class="fa-solid fa-square-parking"></i> Sí (Cerrado)</span>
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li class="venue-item">
+                                <div class="venue-icon-box"><i class="fa-solid fa-certificate"></i></div>
+                                <div class="venue-details">
+                                    <span class="venue-name">Jardín Solaire</span>
+                                    <span class="venue-meta">
+                                        <span><i class="fa-solid fa-location-dot"></i> Cuernavaca</span>
+                                        <span class="meta-divider">|</span>
+                                        <span class="parking-yes"><i class="fa-solid fa-square-parking"></i> Sí (Privado)</span>
+                                    </span>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Panel Central: Información de Contacto -->
+                <div class="panel fold-line-left fold-line-right">
+                    <div class="contact-container">
+                        <p class="contact-intro">
+                            "Diseñamos eventos únicos y memorables. Planificación experta y banquetes de alta gama en el estado de Morelos."
+                        </p>
+
+                        <!-- Contacto Richard -->
+                        <div class="contact-card">
+                            <span class="contact-name">Richard Hernández</span>
+                            <div class="contact-role">Director Creativo & Planner</div>
+                            <a href="tel:7774587923" class="contact-phone">
+                                <i class="fa-solid fa-phone"></i> 777 458 7923
+                            </a>
+                        </div>
+
+                        <!-- Contacto Jessy -->
+                        <div class="contact-card">
+                            <span class="contact-name">Jessy Rodríguez</span>
+                            <div class="contact-role">Fundadora & Lead Planner</div>
+                            <a href="tel:7775032733" class="contact-phone">
+                                <i class="fa-solid fa-phone"></i> 777 503 2733
+                            </a>
+                        </div>
+
+                        <!-- Info General -->
+                        <div class="general-info-box">
+                            <a href="mailto:contacto@primaveraeventsgroup.com" class="info-item">
+                                <i class="fa-solid fa-envelope"></i> contacto@primaveraeventsgroup.com
+                            </a>
+                            <a href="https://primaveraeventsgroup.com" target="_blank" class="info-item">
+                                <i class="fa-solid fa-globe"></i> primaveraeventsgroup.com
+                            </a>
+                            <div class="info-item">
+                                <i class="fa-solid fa-clock"></i> Lun - Vie: 9:00 - 21:00 hrs
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel Derecho: Portada (Folleto Cerrado) -->
+                <!-- La plantilla 1.png ya tiene la portada completamente diseñada -->
+                <div class="panel">
+                    <!-- Espacio en blanco reservado. Se muestra el fondo de la portada oficial -->
+                </div>
+            </div>
+
+            <!-- PÁGINA 2: CARA INTERIOR (Amenidades de Izquierda a Derecha) -->
+            <div class="triptico-page" id="interior-side">
+                
+                <!-- Panel Izquierdo: Amenidades de Planeación y Base -->
+                <div class="panel fold-line-left">
+                    <div class="glass-card interior-card-1">
+                        <h3 class="panel-title">
+                            <i class="fa-solid fa-clipboard-list"></i> Planeación & Base
+                        </h3>
+                        <ul class="amenities-list">
+                            <li class="amenity-detail-box">
+                                <span class="amenity-name">Planner Certificado</span>
+                                <span class="amenity-desc">Coordinación general, wedding planner in-house y apoyo constante durante la planeación.</span>
+                            </li>
+                            <li class="amenity-detail-box">
+                                <span class="amenity-name">Degustación de Gala</span>
+                                <span class="amenity-desc">Degustación exclusiva para 4 personas al firmar tu contrato para afinar el menú perfecto.</span>
+                            </li>
+                            <li class="amenity-detail-box">
+                                <span class="amenity-name">Logística y Tiempos</span>
+                                <span class="amenity-desc">Elaboración de croquis de distribución de invitados y cronograma "minuto a minuto".</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Panel Central: Amenidades de Gastronomía y Mobiliario -->
+                <div class="panel fold-line-left fold-line-right">
+                    <div class="glass-card interior-card-2">
+                        <h3 class="panel-title">
+                            <i class="fa-solid fa-utensils"></i> Banquete & Mobiliario
+                        </h3>
+                        <ul class="amenities-list">
+                            <li class="amenity-detail-box">
+                                <span class="amenity-name">Banquete Premium</span>
+                                <span class="amenity-desc">Menús formales a 3 o 4 tiempos elaborados por chefs, o menús buffet de autor.</span>
+                            </li>
+                            <li class="amenity-detail-box">
+                                <span class="amenity-name">Mobiliario de Gala</span>
+                                <span class="amenity-desc">Variedad de sillas (Tiffany, Crossback, Lotus, Boss) y mesas de madera o tipo mármol.</span>
+                            </li>
+                            <li class="amenity-detail-box">
+                                <span class="amenity-name">Barra de Mezcladores</span>
+                                <span class="amenity-desc">Mezcladores sin límite: Coca-Cola, hielo purificado, agua natural, limones y sal.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Panel Derecho: Amenidades de Producción y Cortesías -->
+                <div class="panel">
+                    <div class="glass-card interior-card-3">
+                        <h3 class="panel-title">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Producción & Cortesías
+                        </h3>
+                        <ul class="amenities-list">
+                            <li class="amenity-detail-box">
+                                <span class="amenity-name">Audio & DJ Profesional</span>
+                                <span class="amenity-desc">DJ profesional, cabinas iluminadas, audio e iluminación robótica con máquina de humo.</span>
+                            </li>
+                            <li class="amenity-detail-box">
+                                <span class="amenity-name">Cortesías Exclusivas</span>
+                                <span class="amenity-desc">Letras gigantes (XV/LOVE), corazón iluminado, alfombra roja de gala y chisperos.</span>
+                            </li>
+                            <li class="amenity-detail-box">
+                                <span class="amenity-name">Equipo de Servicio</span>
+                                <span class="amenity-desc">Personal completo de servicio: Capitán de meseros, meseros, baristas y personal de tocador.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- VISTA INTERACTIVA 3D: Animación tridimensional del folleto plegable -->
+        <div class="interactive-container" id="view-3d-container">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                <button class="btn btn-primary" onclick="toggleBrochure()" id="btn-toggle-fold">
+                    <i class="fa-solid fa-folder-open"></i> Abrir Tríptico
+                </button>
+                <div class="brochure-3d closed" id="my-brochure">
+                    <!-- Panel Central (Base trasera) -->
+                    <div class="panel-3d exterior panel-center-3d">
+                        <!-- Contenido contacto en el medio de la cara exterior -->
+                        <div style="padding: 20px; margin-top: 100px; display: flex; flex-direction: column; gap: 15px; background: rgba(255,255,255,0.92); border-radius: 8px; border: var(--border-gold-light); font-size: 11px;">
+                            <b style="font-family: var(--font-title); font-size: 13px; border-bottom: 1px solid var(--color-gold); padding-bottom: 4px; display: block;">CONTACTO</b>
+                            <span><b>Richard Hernández:</b> 777 458 7923</span>
+                            <span><b>Jessy Rodríguez:</b> 777 503 2733</span>
+                            <span>contacto@primaveraeventsgroup.com</span>
+                        </div>
+                    </div>
+                    <!-- Panel Izquierdo (Se dobla sobre el centro) -->
+                    <div class="panel-3d exterior panel-left-3d">
+                        <!-- Miniatura de lista de venues en el panel izquierdo exterior -->
+                        <div style="padding: 15px; margin-top: 100px; background: rgba(255,255,255,0.92); border-radius: 8px; border: var(--border-gold-light); font-size: 9px; line-height: 1.4;">
+                            <b style="font-family: var(--font-title); font-size: 11px; border-bottom: 1px solid var(--color-gold); padding-bottom: 4px; display: block; margin-bottom: 5px;">NUESTROS VENUES</b>
+                            • C.C. Presidente (Cuernavaca)<br>
+                            • Quinta Zarabanda (Temixco)<br>
+                            • Finca Las Isabeles (Xochitepec)<br>
+                            • Jardín Solaire (Cuernavaca)<br>
+                            <span style="color: var(--color-primary-pink); font-weight: 500; font-size: 8px; margin-top: 4px; display: block;">*Estacionamiento incluido en todos los venues</span>
+                        </div>
+                    </div>
+                    <!-- Panel Derecho (Portada - Se dobla sobre el izquierdo) -->
+                    <div class="panel-3d exterior panel-right-3d">
+                        <!-- La portada ya viene pre-diseñada en la imagen -->
+                    </div>
+                </div>
+                <p style="font-size: 12px; color: var(--color-grey); text-align: center; max-width: 300px; margin-top: 15px; line-height: 1.4;">
+                    <i class="fa-solid fa-info-circle"></i> Haz clic en <b>"Abrir Tríptico"</b> para simular la apertura física del folleto y apreciar la portada y la contraportada.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>© 2026 Primavera Events Group. Todos los derechos reservados.</p>
+        <p>Diseño corporativo premium para bodas, XV años y graduaciones en Morelos. | <a href="https://primaveraeventsgroup.com" target="_blank">Visitar Sitio Web</a></p>
+    </footer>
+
+    <!-- Lógica de Control de Vistas -->
+    <script>
+        function setView(viewType) {
+            const btnFlat = document.getElementById('btn-flat');
+            const btn3d = document.getElementById('btn-3d');
+            const viewFlatDiv = document.getElementById('view-flat');
+            const view3dDiv = document.getElementById('view-3d-container');
+
+            if (viewType === 'flat') {
+                btnFlat.classList.add('active');
+                btn3d.classList.remove('active');
+                viewFlatDiv.style.display = 'flex';
+                view3dDiv.style.display = 'none';
+            } else {
+                btn3d.classList.add('active');
+                btnFlat.classList.remove('active');
+                viewFlatDiv.style.display = 'none';
+                view3dDiv.style.display = 'flex';
+            }
+        }
+
+        let isBrochureOpen = false;
+        function toggleBrochure() {
+            const brochure = document.getElementById('my-brochure');
+            const btnToggle = document.getElementById('btn-toggle-fold');
+            
+            if (isBrochureOpen) {
+                brochure.classList.remove('open');
+                brochure.classList.add('closed');
+                btnToggle.innerHTML = '<i class="fa-solid fa-folder-open"></i> Abrir Tríptico';
+                isBrochureOpen = false;
+            } else {
+                brochure.classList.remove('closed');
+                brochure.classList.add('open');
+                btnToggle.innerHTML = '<i class="fa-solid fa-folder"></i> Cerrar Tríptico';
+                isBrochureOpen = true;
+            }
+        }
+    </script>
+</body>
+</html>

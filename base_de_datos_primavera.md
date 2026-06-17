@@ -25,7 +25,7 @@
 * **Nombre Comercial**: Primavera Events Group (Banquetes Primavera)
 * **Oficina Central**: Av. Defensa Nacional #8, Col. Chamilpa, 62210 Cuernavaca, Morelos.
 * **Directores y Planners**:
-  * **Jessy** (Founder & Lead Planner) - Tel: `777 301 2421`
+  * **Jessy** (Founder & Lead Planner) - Tel: `777 503 2733`
   * **Richard Hernández** (Creative Director & Planner) - Tel: `777 458 7923`
   * **Rubí Alvarado** (Gerente del Centro de Convenciones Presidente) - Tel: `271 114 8997`
 * **Contacto**: contacto@primaveraeventsgroup.com | Tel. +52 777 458 7923
@@ -755,21 +755,6 @@
 - Escenario o templete amplio para DJ, grupos musicales u orquestas.
 - Área de cocina profesional, amplia y adaptada para banquetes masivos.
 - Baños múltiples de lujo para damas y caballeros.
-
----
-
-### 🏛️ Quinta San Francisco
-* **Ubicación**: Cuernavaca, Morelos
-* **Capacidad Máxima**: **Especializado en bodas exclusivas de media y alta escala**
-* **Estilo Arquitectónico**: Quinta histórica colonial mexicana de gran lujo y elegancia.
-* **Página de Referencia**: [Enlace al sitio](https://primaveraeventsgroup.com/quinta-san-francisco/)
-
-#### 🌳 Características y Facilidades del Recinto:
-- Espacios de jardín con frondosa vegetación morelense ideal para bodas al aire libre.
-- Espectacular área de ceremonias o bodas destino.
-- Servicios de diseño floral premium in-house coordinados por la planner Jessy.
-- Maquillaje profesional integrado y suites de preparación exclusivas.
-- Patios coloniales elegantes para banquetes de autor.
 
 ---
 
