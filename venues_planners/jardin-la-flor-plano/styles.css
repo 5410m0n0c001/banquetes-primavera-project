@@ -1,0 +1,1492 @@
+/*
+ * styles.css
+ * Diseño visual premium, moderno y con estética glassmorphic para la app Salón Jardín La Flor.
+ */
+
+/* ==========================================
+   1. VARIABLES DE DISEÑO & CONFIGURACIÓN
+   ========================================== */
+:root {
+  --font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Paleta de Colores de Alta Gama (Oscuro Premium + Acentos Dorados y Esmeraldas) */
+  --bg-dark: #0f172a;       /* Azul pizarra extremadamente oscuro */
+  --bg-card: rgba(30, 41, 59, 0.7); /* Transparente para glassmorphism */
+  --bg-sidebar: rgba(15, 23, 42, 0.85);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(212, 175, 55, 0.3);
+  
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  
+  /* Colores de Acento */
+  --color-gold: #d4af37;       /* Dorado Metálico */
+  --color-gold-hover: #bfa030;
+  --color-emerald: #10b981;    /* Esmeralda Jardín */
+  --color-accent: #3b82f6;     /* Azul interactivo */
+  --color-danger: #ef4444;     /* Rojo */
+  --color-info: #06b6d4;       /* Turquesa */
+  
+  /* Sombras y Filtros */
+  --shadow-premium: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+  --glass-glow: 0 0 15px rgba(212, 175, 55, 0.1);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  --header-height: 70px;
+  --footer-height: 40px;
+}
+
+/* ==========================================
+   2. REGLAS GENERALES Y RESET
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar Personalizado */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
+
+/* ==========================================
+   3. ESTRUCTURA DEL CONTENEDOR (LAYOUT)
+   ========================================== */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Header Superior */
+.app-header {
+  height: var(--header-height);
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  z-index: 100;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  background: linear-gradient(135deg, var(--color-emerald), var(--color-gold));
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-dark);
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+.logo-text h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: linear-gradient(to right, #ffffff, var(--color-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-text span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: block;
+}
+
+/* Controles de vista y acciones */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.view-toggle-group {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 4px;
+  border-radius: 8px;
+  display: flex;
+  border: 1px solid var(--border-color);
+}
+
+.btn-toggle {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 8px 16px;
+  font-family: var(--font-family);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+}
+
+.btn-toggle:hover {
+  color: var(--text-main);
+}
+
+.btn-toggle.active {
+  background: linear-gradient(135deg, var(--color-gold), #bfa030);
+  color: #000;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--border-color);
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-action {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 8px 14px;
+  font-family: var(--font-family);
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-smooth);
+}
+
+.btn-action:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-action.active {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.btn-success {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #34d399;
+}
+
+.btn-success:hover {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: var(--color-emerald);
+}
+
+.btn-danger {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #f87171;
+}
+
+.btn-danger:hover {
+  background: rgba(239, 68, 68, 0.25);
+  border-color: var(--color-danger);
+}
+
+.btn-warning {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.35);
+  color: #fbbf24;
+}
+
+.btn-warning:hover {
+  background: rgba(245, 158, 11, 0.25);
+  border-color: #f59e0b;
+}
+
+
+/* ==========================================
+   4. CUERPO Y COMPONENTES PRINCIPALES
+   ========================================== */
+.app-body {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - var(--header-height) - var(--footer-height));
+  position: relative;
+}
+
+/* Sidebars (Laterales) */
+.sidebar {
+  width: 280px;
+  background: var(--bg-sidebar);
+  backdrop-filter: blur(15px);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  box-shadow: var(--shadow-premium);
+  transition: var(--transition-smooth);
+}
+
+.sidebar-right {
+  border-right: none;
+  border-left: 1px solid var(--border-color);
+}
+
+.sidebar-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-header i {
+  color: var(--color-gold);
+  font-size: 1.1rem;
+}
+
+.sidebar-header h2 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-main);
+}
+
+.sidebar-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* ==========================================
+   5. CAJA DE HERRAMIENTAS (TOOLBOX)
+   ========================================== */
+.toolbox-group {
+  margin-bottom: 24px;
+}
+
+.toolbox-group h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.group-desc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.toolbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.tool-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.tool-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tool-item i {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  transition: var(--transition-smooth);
+}
+
+.tool-item:hover i {
+  color: var(--color-gold);
+}
+
+.tool-item span {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+/* Instrucciones en Sidebar */
+.instructions-card {
+  background: rgba(212, 175, 55, 0.03);
+  border: 1px dashed rgba(212, 175, 55, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.instructions-card h3 {
+  color: var(--color-gold);
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.instructions-card ul {
+  list-style: none;
+}
+
+.instructions-card li {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.instructions-card li strong {
+  color: var(--text-main);
+}
+
+/* ==========================================
+   6. ESPACIO DE TRABAJO (WORKSPACE)
+   ========================================== */
+.workspace {
+  flex: 1;
+  background-color: #111827; /* Fondo oscuro liso */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvas-container {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.canvas-container.active {
+  display: block;
+}
+
+/* Contenedor SVG y envoltorio para centrado y escala */
+.canvas-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#svg-canvas {
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #181d28;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Estilos de elementos SVG */
+.svg-wall-outline {
+  stroke: #4b5563;
+  stroke-width: 4;
+}
+
+/* Clase para elementos arrastrables */
+.draggable {
+  cursor: grab;
+  pointer-events: all;
+  transition: filter 0.2s;
+}
+
+.draggable:active {
+  cursor: grabbing;
+}
+
+.draggable.selected {
+  filter: drop-shadow(0px 0px 8px rgba(212, 175, 55, 0.7));
+}
+
+.draggable:hover {
+  filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.4));
+}
+
+/* Estilos de los textos y cotas del plano */
+.dimensions-labels text {
+  font-family: var(--font-family);
+  user-select: none;
+  pointer-events: none;
+}
+
+.label-element {
+  font-family: var(--font-family);
+  font-size: 8px;
+  font-weight: 700;
+  fill: #ffffff;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  pointer-events: none;
+  user-select: none;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.chair-svg {
+  fill: #4b5563;
+  stroke: rgba(0, 0, 0, 0.4);
+  stroke-width: 0.5;
+}
+
+.table-glass {
+  stroke: rgba(255, 255, 255, 0.15);
+  stroke-width: 1;
+}
+
+/* HUD / Paneles flotantes informativos en Canvas */
+.canvas-hud {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.hud-scale, .hud-coords {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hud-btn {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  color: var(--color-gold);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-family: var(--font-family);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: auto;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hud-btn:hover {
+  background: var(--color-gold);
+  color: #000;
+  border-color: var(--color-gold);
+  transform: translateY(-1px);
+}
+
+.hud-zoom-controls {
+  display: flex;
+  gap: 6px;
+  pointer-events: auto;
+}
+
+.hud-btn-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  color: var(--color-gold);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hud-btn-circle:hover {
+  background: var(--color-gold);
+  color: #000;
+  border-color: var(--color-gold);
+  transform: scale(1.05);
+}
+
+.hud-btn-circle:active {
+  transform: scale(0.95);
+}
+
+/* ==========================================
+   7. INSPECTOR DE PROPIEDADES (DERECHA)
+   ========================================== */
+.no-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.no-sel-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+  font-size: 1.3rem;
+  border: 1px solid var(--border-color);
+}
+
+.no-selection p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Formulario de Propiedades */
+.inspector-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.input-row .input-group {
+  flex: 1;
+}
+
+label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+}
+
+input[type="text"], input[type="number"] {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: var(--text-main);
+  font-family: var(--font-family);
+  font-size: 0.85rem;
+  transition: var(--transition-smooth);
+  width: 100%;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+  border-color: var(--color-gold);
+  outline: none;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.15);
+}
+
+/* Slider de rotación */
+.rotation-slider-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rotation-slider-wrapper input[type="range"] {
+  flex: 1;
+  accent-color: var(--color-gold);
+}
+
+#rotation-val {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  min-width: 32px;
+  text-align: right;
+}
+
+.rotation-quick-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.btn-rotate-quick {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.btn-rotate-quick:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+  border-color: var(--color-gold);
+}
+
+/* Selector de forma de mesa */
+.shape-toggle-group {
+  display: flex;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.btn-shape-toggle {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: var(--transition-smooth);
+}
+
+.btn-shape-toggle:hover {
+  color: var(--text-main);
+}
+
+.btn-shape-toggle.active {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--color-gold);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Color Picker */
+.color-picker-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.color-picker-wrapper input[type="color"] {
+  border: none;
+  background: none;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.color-picker-wrapper input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+.color-picker-wrapper input[type="color"]::-webkit-color-swatch {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
+/* Botones verticales del inspector */
+.action-buttons-vertical {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-inspector-action {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  font-family: var(--font-family);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+}
+
+.btn-info {
+  background: rgba(6, 182, 212, 0.12);
+  border-color: rgba(6, 182, 212, 0.3);
+  color: #22d3ee;
+}
+.btn-info:hover {
+  background: rgba(6, 182, 212, 0.2);
+  border-color: var(--color-info);
+}
+
+.btn-inspector-action.btn-danger {
+  width: 100%;
+}
+
+/* ==========================================
+   8. FOOTER / BARRA DE ESTADO
+   ========================================== */
+.app-footer {
+  height: var(--footer-height);
+  background-color: #0b0f19;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  z-index: 10;
+}
+
+.footer-segment {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.65rem;
+}
+
+.badge-primary {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  color: var(--color-gold);
+}
+
+.badge-accent {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: var(--color-emerald);
+}
+
+/* ==========================================
+   9. ADAPTABILIDAD & RESPONSIVE (MEDIA QUERIES)
+   ========================================== */
+.hide-desktop {
+  display: none !important;
+}
+
+/* Estilos de botones de alternancia en Header (Móvil) */
+.btn-mobile-toggle {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-family: var(--font-family);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-smooth);
+}
+
+.btn-mobile-toggle:hover {
+  background: var(--color-gold);
+  color: #000;
+}
+
+/* Capa de overlay difuminada */
+.sidebar-overlay {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: var(--footer-height);
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 85;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: auto;
+}
+
+.sidebar-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Estilos para el panel de acciones móviles dentro del Drawer */
+.mobile-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-action-mobile {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 10px;
+  font-family: var(--font-family);
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+}
+
+.btn-action-mobile:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.btn-action-mobile.active {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.btn-success-mobile {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.25);
+  color: #34d399;
+}
+.btn-success-mobile:hover {
+  background: rgba(16, 185, 129, 0.25);
+}
+
+.btn-danger-mobile {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.25);
+  color: #f87171;
+}
+.btn-danger-mobile:hover {
+  background: rgba(239, 68, 68, 0.25);
+}
+
+.btn-info-mobile {
+  background: rgba(6, 182, 212, 0.12);
+  border-color: rgba(6, 182, 212, 0.25);
+  color: #22d3ee;
+}
+.btn-info-mobile:hover {
+  background: rgba(6, 182, 212, 0.25);
+}
+
+.btn-warning-mobile {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.25);
+  color: #fbbf24;
+}
+.btn-warning-mobile:hover {
+  background: rgba(245, 158, 11, 0.25);
+}
+
+
+.divider-horizontal {
+  height: 1px;
+  background: var(--border-color);
+  margin: 16px 0 10px 0;
+}
+
+/* Botones de Acción Flotantes (FABs) */
+.fab-mobile {
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(212, 175, 55, 0.2);
+  z-index: 75;
+  pointer-events: auto;
+  transition: var(--transition-smooth);
+}
+
+.fab-mobile:hover {
+  background: var(--color-gold);
+  color: #000;
+  transform: scale(1.05);
+}
+
+.fab-mobile:active {
+  transform: scale(0.95);
+}
+
+#fab-tools {
+  left: 16px;
+  bottom: 75px;
+}
+
+#fab-properties {
+  right: 16px;
+  bottom: 75px;
+}
+
+/* Efecto de brillo de pulso dorado para selección activa */
+#fab-properties.pulse-glow {
+  animation: fab-pulse 2s infinite;
+  border-color: #34d399; /* Cambiar a esmeralda/verde al seleccionar */
+  color: #34d399;
+}
+
+@keyframes fab-pulse {
+  0% {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 0px rgba(52, 211, 153, 0.4);
+  }
+  70% {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(52, 211, 153, 0.8);
+  }
+  100% {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 0px rgba(52, 211, 153, 0.4);
+  }
+}
+
+/* ==========================================
+   13. RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================== */
+
+/* Optimizaciones para pantallas de escritorio medianas/pequeñas (1200px a 1420px) */
+@media (max-width: 1420px) {
+  #btn-grid span,
+  #btn-export span,
+  #btn-import-trigger span,
+  #btn-share span,
+  #btn-print span,
+  #btn-reset span {
+    display: none !important;
+  }
+  .header-controls {
+    gap: 12px;
+  }
+  .action-buttons {
+    gap: 6px;
+  }
+}
+
+/* Ocultar todos los textos de acciones en el header para pantallas estrechas (950px a 1200px) */
+@media (max-width: 1200px) {
+  .action-buttons .btn-action span {
+    display: none !important;
+  }
+  .header-controls {
+    gap: 8px;
+  }
+  .action-buttons {
+    gap: 4px;
+  }
+}
+
+@media (max-width: 950px) {
+  .app-header {
+    padding: 0 12px;
+  }
+  
+  /* Ocultar barra redundante y divisor en móvil (se accede desde el menú lateral drawer) */
+  .header-controls .action-buttons,
+  .header-controls .divider {
+    display: none !important;
+  }
+  
+  .hide-desktop {
+    display: flex !important;
+  }
+  
+  .sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 280px;
+    z-index: 90;
+    transform: translateX(-100%);
+    box-shadow: 10px 0 30px rgba(0,0,0,0.5);
+  }
+  
+  .sidebar-left {
+    left: 0;
+    border-right: 1px solid var(--border-color);
+  }
+  
+  .sidebar-right {
+    right: 0;
+    left: auto;
+    border-left: 1px solid var(--border-color);
+    transform: translateX(100%);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .hide-mobile {
+    display: none !important;
+  }
+
+  /* Optimizar visualización a pantalla completa en móviles */
+  .canvas-wrapper {
+    padding: 6px;
+  }
+  
+  .hud-scale, .hud-coords {
+    font-size: 0.65rem;
+    padding: 4px 10px;
+  }
+  
+  .canvas-hud {
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-text span {
+    display: none;
+  }
+  
+  .logo-area {
+    gap: 8px;
+  }
+  
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+  
+  .logo-text h1 {
+    font-size: 1.05rem;
+  }
+  
+  .btn-action span, .btn-toggle span, .btn-mobile-toggle span {
+    display: none !important;
+  }
+  
+  .btn-action i, .btn-toggle i, .btn-mobile-toggle i {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  
+  .btn-action, .btn-toggle, .btn-mobile-toggle {
+    padding: 8px 10px;
+  }
+  
+  .header-controls {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo-text {
+    display: none;
+  }
+}
+
+/* ==========================================
+   14. ESTILOS DE COMPARTIR Y NOTIFICACIÓN TOAST
+   ========================================== */
+
+/* Botón de Compartir en Escritorio */
+.btn-share {
+  background: rgba(59, 130, 246, 0.12) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  color: #60a5fa !important;
+}
+
+.btn-share:hover {
+  background: rgba(59, 130, 246, 0.22) !important;
+  border-color: #3b82f6 !important;
+  color: #93c5fd !important;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+}
+
+/* Botón de Compartir en Móvil (Grid de Acciones) */
+.btn-share-mobile {
+  grid-column: span 2;
+  background: rgba(59, 130, 246, 0.15) !important;
+  border-color: rgba(59, 130, 246, 0.25) !important;
+  color: #60a5fa !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.3px;
+}
+
+.btn-share-mobile:hover {
+  background: rgba(59, 130, 246, 0.25) !important;
+  border-color: #3b82f6 !important;
+  color: #93c5fd !important;
+}
+
+/* Notificación Toast Premium Estilo Glassmorphic */
+.toast-notification {
+  position: fixed;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translate(-50%, 100px);
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  color: #f8fafc;
+  padding: 12px 28px;
+  border-radius: 50px;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(59, 130, 246, 0.15);
+  font-family: var(--font-family);
+  font-size: 0.88rem;
+  font-weight: 600;
+  z-index: 10000;
+  pointer-events: none;
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  letter-spacing: 0.2px;
+}
+
+.toast-notification.show {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+.toast-notification i {
+  font-size: 1.05rem;
+}
+
+/* ==========================================
+   15. DIRECTIVAS DE IMPRESIÓN Y PDF DE ALTA CALIDAD
+   ========================================== */
+@media print {
+  /* Ocultar elementos de interfaz, navegación, HUD, notificaciones y controles */
+  .app-header,
+  .sidebar,
+  .app-footer,
+  .canvas-hud,
+  .fab-mobile,
+  .sidebar-overlay,
+  #toast,
+  .hud-zoom-controls,
+  #btn-reset-cam-3d,
+  .hud-btn-circle {
+    display: none !important;
+  }
+
+  /* Ajustar contenedor y página para impresión */
+  html, body {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #000000 !important;
+    overflow: visible !important;
+    height: auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .app-container,
+  .app-body,
+  .workspace,
+  .canvas-container,
+  .canvas-wrapper {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    position: static !important;
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Forzar visualización de 2D en lugar de 3D */
+  #container-3d {
+    display: none !important;
+  }
+  
+  #container-2d {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Estilos del Canvas SVG interactivo */
+  #svg-canvas {
+    background-color: #ffffff !important;
+    box-shadow: none !important;
+    border: 1px solid #cbd5e1 !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 100% !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  /* Modificar capas y colores de fondo del plano SVG */
+  #canvas-bg {
+    fill: #ffffff !important;
+  }
+
+  #canvas-border {
+    stroke: #94a3b8 !important;
+    stroke-width: 1px !important;
+  }
+
+  #canvas-grid {
+    opacity: 0.5 !important;
+  }
+
+  #grid-pattern path {
+    stroke: rgba(0, 0, 0, 0.08) !important;
+  }
+
+  #salon-techado-boundary {
+    fill: rgba(0, 0, 0, 0.01) !important;
+    stroke: #bfa030 !important;
+    stroke-width: 3px !important;
+  }
+
+  /* Textos informativos de cotas y etiquetas generales */
+  .dimensions-labels line {
+    stroke: #bfa030 !important;
+  }
+  
+  .dimensions-labels rect {
+    fill: #ffffff !important;
+    stroke: #bfa030 !important;
+  }
+
+  .dimensions-labels text {
+    fill: #bfa030 !important;
+  }
+
+  /* Textos de los elementos del plano (alta legibilidad) */
+  .label-element {
+    fill: #0f172a !important;
+    text-shadow: none !important;
+  }
+
+  /* Estilos específicos de elementos del plano en impresión (Ink-Friendly) */
+  
+  /* 1. Jardín */
+  .garden rect {
+    fill: #f0fdf4 !important; /* verde esmeralda muy tenue */
+    stroke: #15803d !important;
+    stroke-width: 2px !important;
+    stroke-dasharray: none !important;
+  }
+  .garden text {
+    fill: #15803d !important;
+  }
+  .garden circle {
+    fill: #16a34a !important;
+    opacity: 0.8 !important;
+  }
+
+  /* 2. Barra / Cocina */
+  .kitchen-bar rect {
+    fill: #efebe9 !important; /* Madera clara (contraste para impresión) */
+    stroke: #78350f !important;
+    stroke-width: 2px !important;
+  }
+  .kitchen-bar text {
+    fill: #78350f !important;
+  }
+  .kitchen-bar rect + rect {
+    fill: #ffffff !important; /* Encimera blanca contrastante */
+  }
+  .kitchen-bar g rect {
+    fill: #cfd8dc !important; /* Fregadero plateado */
+    stroke: #78909c !important;
+    stroke-width: 1.5px !important;
+  }
+
+  /* 3. Pista de baile */
+  .dancefloor rect {
+    fill: #fffbeb !important; /* madera/crema cálida */
+    stroke: #b45309 !important;
+    stroke-width: 2px !important;
+    filter: none !important;
+  }
+  .dancefloor text {
+    fill: #78350f !important;
+  }
+  .dancefloor line {
+    stroke: rgba(180, 83, 9, 0.25) !important;
+  }
+
+  /* 4. Área DJ */
+  .dj rect {
+    fill: #f8fafc !important; /* gris claro */
+    stroke: #475569 !important;
+    stroke-width: 2px !important;
+  }
+  .dj text {
+    fill: #1e293b !important;
+  }
+  .dj rect + rect {
+    fill: #e2e8f0 !important;
+  }
+
+  /* 5. Mesas */
+  .table > rect, .table > circle {
+    fill: #ffffff !important;
+    stroke: #334155 !important;
+    stroke-width: 1px !important;
+  }
+  .table text {
+    fill: #0f172a !important;
+  }
+  .chair-svg {
+    fill: #64748b !important;
+    stroke: rgba(0, 0, 0, 0.3) !important;
+  }
+  .table-glass {
+    stroke: rgba(0, 0, 0, 0.3) !important;
+    fill: #f1f5f9 !important;
+  }
+
+  /* 6. Elementos Exteriores Adicionales (Capilla, Baños, Parking, etc.) */
+  .parking rect,
+  .chapel rect,
+  .bathrooms rect,
+  .entrance rect,
+  .exit rect,
+  .reception rect,
+  .second_bar rect,
+  .second_dj rect,
+  .lounge rect {
+    fill: #f8fafc !important;
+    stroke: #475569 !important;
+    stroke-width: 1.5px !important;
+    stroke-dasharray: 4,4 !important;
+    filter: none !important;
+  }
+  
+  .parking text,
+  .chapel text,
+  .bathrooms text,
+  .entrance text,
+  .exit text,
+  .reception text,
+  .second_bar text,
+  .second_dj text,
+  .lounge text {
+    fill: #1e293b !important;
+  }
+
+  /* Quitar efectos de selección activa */
+  .draggable.selected {
+    filter: none !important;
+  }
+  .draggable:hover {
+    filter: none !important;
+  }
+}
+
+
+
