@@ -1,0 +1,13 @@
+{
+  "name": "peg-rag-ingesta",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pipeline de ingesta RAG para el cerebro de Primavera Events Group",
+  "main": "pipeline_ingesta.js",
+  "scripts": {
+    "ingest": "node pipeline_ingesta.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0"
+  }
+}

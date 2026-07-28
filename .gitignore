@@ -1,3 +1,6 @@
 # Ignorar carpetas temporales de clones de repositorios
 scratch/clones/
 scratch/parsed_logs.txt
+
+# Dependencias de node (regenerables via npm install)
+rag/node_modules/

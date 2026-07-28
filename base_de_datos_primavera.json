@@ -1,9 +1,9 @@
 {
   "metadata": {
     "title": "Base de Datos de Primavera Events Group",
-    "version": "1.1",
+    "version": "1.0",
     "last_updated": "2026-06-01",
-    "author": "Antigravity AI Pair Programmer"
+    "author": "Web Scraper Subagent"
   },
   "packages": [
     {
@@ -52,7 +52,7 @@
         {
           "guests": "150 - 199 personas",
           "price_per_person": "$849.00 MXN",
-          "details": "Incluye degustación and decoración básica"
+          "details": "Incluye degustación y decoración básica"
         },
         {
           "guests": "200 - 299 personas",
@@ -110,7 +110,7 @@
       "menu_structure": {
         "type": "4 Tiempos",
         "details": [
-          "Primer Tiempo: Entradas (crepas deliciosas, ensaladas frescas o cremas cremosas)",
+          "Primer Tiempo: Entradas (crepas deliciosas, ensaladas frescas o sopas cremosas)",
           "Segundo Tiempo: Plato Fuerte (pollo o cerdo con 2 guarniciones, pan y chiles)",
           "Tercer Tiempo: Postre (selección de repostería fina o de autor)",
           "Cuarto Tiempo: Tornafiesta (barra de esquites o chilaquiles servidos en desechables)"
@@ -1030,24 +1030,6 @@
   ],
   "venues": [
     {
-      "id": "centro-de-convenciones-presidente",
-      "name": "Centro de Convenciones Presidente",
-      "url": "https://primaveraeventsgroup.com/centro-de-convenciones-presidente/",
-      "location": "Avenida Defensa Nacional #8, Col. Chamilpa, 62210 Cuernavaca, Morelos",
-      "capacity": "Desde 100 hasta 500 personas máximo",
-      "style": "Arquitectónico modernista, elegante e industrial con amplias alturas",
-      "features": [
-        "Gran salón techado climatizado con excelentes acabados y acústica",
-        "Área de jardín delantero con fuente artificial iluminada en la entrada principal",
-        "Área infantil integrada con juegos múltiples infantiles fijos y seguros",
-        "Estacionamiento privado interno y seguro para 35 vehículos compactos",
-        "Escenario o templete amplio para DJ, grupos musicales u orquestas",
-        "Área de cocina profesional, amplia y adaptada para banquetes masivos",
-        "Baños múltiples de lujo para damas y caballeros"
-      ]
-    },
-
-    {
       "id": "quinta-zarabanda",
       "name": "Quinta Zarabanda",
       "url": "https://primaveraeventsgroup.com/quinta-zarabanda/",
@@ -1142,21 +1124,15 @@
         "Capilla consagrada dentro de la locación para bodas religiosas",
         "Jardines extensos y salón techado modernista con columnas decoradas",
         "Entorno cerrado de gran privacidad y fácil acceso en Temixco"
-      ]
-    },
-    {
-      "id": "villa-di-fiori",
-      "name": "Villa Di Fiori",
-      "url": "https://primaveraeventsgroup.com/venues/villa-di-fiori/",
-      "location": "Xochitepec, Morelos",
-      "capacity": "Desde 100 hasta 350 invitados",
-      "style": "Villa toscana campestre elegante con hermosos arcos de cantera",
-      "features": [
-        "Jardines de diseño paisajista europeo con abundante flora exótica",
-        "Estructuras y portales de cantera tallada ideales para sesiones de fotos premium",
-        "Suite de preparación exclusiva y privada para anfitriones",
-        "Gran capacidad logística y estacionamiento cerrado"
-      ]
+      ],
+      "nota_precios": {
+        "fuente_oficial_verificada": "https://primaveraeventsgroup.com/paquete-destino-yolomecatl/ (verificado en vivo 2026-07-28, coincide con packages.Paquete Destino Yolomecatl)",
+        "renta_solo_jardin_historica": {
+          "2023": 16250,
+          "2024": 17000,
+          "nota": "Renta de jardin sin banquete, no es la tarifa de paquete completo"
+        }
+      }
     },
     {
       "id": "salon-solaire",
@@ -1170,7 +1146,293 @@
         "Mobiliario de autor rústico elegante (sillas Crossback y mesas de madera sólida)",
         "Cascada o caída de agua monumental iluminada",
         "Área consagrada para ceremonias religiosas o civiles al aire libre"
-      ]
+      ],
+      "metadata": {
+        "tarifario_renta_2026": [
+          {
+            "nombre": "Boda en Solaire",
+            "capacidad": "Hasta 180 personas",
+            "duracion": "8 hrs",
+            "precio_locacion": "$32,000 MXN",
+            "precio_banquete_desde": "$850 p/p",
+            "detalles": "Alta estética y personalización total."
+          },
+          {
+            "nombre": "Evento Social",
+            "capacidad": "Hasta 100 personas",
+            "duracion": "8 hrs",
+            "precio_locacion": "$30,000 MXN",
+            "precio_banquete_desde": "$900 p/p",
+            "detalles": "Incluye mobiliario de casa (mix parota y vintage)."
+          },
+          {
+            "nombre": "Evento Petite (Mobiliario Campirano)",
+            "capacidad": "Hasta 80 personas",
+            "precio_locacion": "$28,000 MXN",
+            "precio_banquete_completo": "$1,050 p/p",
+            "inclusiones_especificas": [
+              "Mesas de madera sólida estilo campirano",
+              "Sillas Crossback de diseño",
+              "Vajilla a un tiempo: Plato trinche, cubiertos y vaso",
+              "Camino de mesa a tono de su elección"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "repo_origen": "https://github.com/5410m0n0c001/villa-di-fiori-",
+        "archivo_origen": "index.html",
+        "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+        "estado": "completo",
+        "nota": "precio_referencia $850/persona (cotizacion cliente Erasmo, no tarifa de lista verificada)"
+      },
+      "nombre_venue": "Villa Di Fiori",
+      "name": "Villa Di Fiori",
+      "cliente": "Señor Erasmo",
+      "tipo_evento": "Paquete Premium Completo (XV Años / Boda)",
+      "invitados_estimados": 120,
+      "precio_por_persona": "$850.00 MXN",
+      "inclusiones": [
+        "Montaje elegante y Decoración (Letras Iniciales Iluminadas, decoración floral, templete de madera, centro floral natural)",
+        "Banquete a 3 tiempos (Primer Tiempo: Entradas; Segundo Tiempo: Plato Fuerte de pollo o cerdo con 2 guarniciones, pan y chiles; Tercer Tiempo: Tornafiesta de chilaquiles o esquites)",
+        "Cóctel de bienvenida con periqueras altas, salas lounge, margaritas sin alcohol, piñadas, mojitos y aguas frescas",
+        "Personal Especializado (Meseros uniformados, cocina, stewards, Hostess, Capitán de Meseros y Coordinador General)",
+        "Música y Entretenimiento (DJ profesional con cabina, audio/iluminación, pista de baile 5x5)",
+        "Comodidades Exclusivas (9 horas de servicio continuo y estacionamiento)"
+      ],
+      "locaciones_disponibles": [
+        "Centro de Convenciones Presidente",
+        "Salón Los Potrillos",
+        "Salón Los Caballos"
+      ],
+      "imagenes": [
+        "portada.png",
+        "los caballos.webp",
+        "rancho los potrillos.webp"
+      ],
+      "url": "https://primaveraeventsgroup.com/venues/villa-di-fiori/",
+      "location": "Xochitepec, Morelos"
+    },
+    {
+      "id": "centro-de-convenciones-presidente",
+      "name": "Centro de Convenciones Presidente",
+      "url": "https://primaveraeventsgroup.com/centro-de-convenciones-presidente/",
+      "location": "Avenida Defensa Nacional #8, Col. Chamilpa, 62210 Cuernavaca, Morelos",
+      "capacity": "Desde 100 hasta 500 personas máximo",
+      "style": "Arquitectónico modernista, elegante e industrial con amplias alturas",
+      "features": [
+        "Gran salón techado climatizado con excelentes acabados y acústica",
+        "Área de jardín delantero con fuente artificial iluminada en la entrada principal",
+        "Área infantil integrada con juegos múltiples infantiles fijos y seguros",
+        "Estacionamiento privado interno y seguro para 35 vehículos compactos",
+        "Escenario o templete amplio para DJ, grupos musicales u orquestas",
+        "Área de cocina profesional, amplia y adaptada para banquetes masivos",
+        "Baños múltiples de lujo para damas y caballeros"
+      ],
+      "nota_precios": {
+        "fuente_oficial_verificada": "https://primaveraeventsgroup.com/paquete-presidente/ y /paquete-gobernador/ (verificado en vivo 2026-07-28)",
+        "regla": "El precio de referencia SIEMPRE es el del sitio web oficial (paquetes 'Paquete Presidente' y 'Paquete Gobernador', ya en la seccion packages). Los descuentos se aplican por cotizacion individual, no se guardan como tarifa base.",
+        "precios_historicos_encontrados_NO_usar_como_referencia": "Documentos internos de 2024-2025 mostraban precios promocionales mas bajos ($282-445/persona) para eventos especificos — son promociones puntuales, no la tarifa vigente."
+      }
+    },
+    {
+      "name": "Jardín Manzanares",
+      "location": "Manzanares",
+      "url": null,
+      "capacity": null,
+      "style": null,
+      "features": [],
+      "metadata": {
+        "fuente": "respaldo_lenovo_extraccion_fase2_jardines.md",
+        "sitio_oficial": false
+      },
+      "tarifario_2026": {
+        "UVA_basico_1_tiempo": {
+          "100px": 320,
+          "150px": 310,
+          "200px": 300,
+          "250px": 300
+        },
+        "FRESA_2_tiempos": {
+          "100px": 369,
+          "150px": 359,
+          "200px": 329,
+          "250px": 329
+        },
+        "MANZANARES_VIP_3_tiempos": {
+          "100px": 499,
+          "150px": 469,
+          "200px": 429,
+          "250px": 400
+        }
+      }
+    },
+    {
+      "name": "Jardín Los Amates",
+      "location": "Calle Río Tlazala #12, Col. Benito Juárez, Xochitepec, Morelos",
+      "url": null,
+      "capacity": 250,
+      "style": null,
+      "features": [],
+      "metadata": {
+        "fuente": "respaldo_lenovo_extraccion_fase2_jardines.md",
+        "sitio_oficial": false
+      },
+      "precio_referencia": {
+        "total": 150000,
+        "px": 250,
+        "precio_por_persona_aprox": 600,
+        "sin_iva": true,
+        "fecha": "2024-01-27"
+      }
+    },
+    {
+      "name": "Jardín Los Reyes",
+      "location": null,
+      "url": null,
+      "capacity": 50,
+      "style": null,
+      "features": [],
+      "metadata": {
+        "fuente": "respaldo_lenovo_extraccion_fase2_jardines.md",
+        "sitio_oficial": false
+      },
+      "precio_referencia": {
+        "total": 23000,
+        "px": 50,
+        "precio_por_persona_aprox": 460,
+        "duracion_hrs": 6,
+        "fecha": "2023-02-04"
+      }
+    },
+    {
+      "name": "Jardín Portal del Sol",
+      "location": "Galeana",
+      "url": null,
+      "capacity": 110,
+      "style": null,
+      "features": [],
+      "metadata": {
+        "fuente": "respaldo_lenovo_extraccion_fase2_jardines.md",
+        "sitio_oficial": false
+      },
+      "precio_referencia": {
+        "total": 49999,
+        "px": 110,
+        "fecha": "2024-04-20"
+      }
+    },
+    {
+      "name": "Jardín La Palapa",
+      "location": null,
+      "url": null,
+      "capacity": null,
+      "style": null,
+      "features": [],
+      "metadata": {
+        "fuente": "respaldo_lenovo_extraccion_fase2_jardines.md",
+        "sitio_oficial": false
+      },
+      "precio_referencia": {
+        "total": 21999,
+        "tipo": "paquete integral (bautizo)",
+        "fecha": "2023-04-02"
+      }
+    },
+    {
+      "name": "La Finca Oaxtepec",
+      "location": "C. Moctezuma 26, Centro, CP 62738 Oaxtepec, Morelos",
+      "url": null,
+      "capacity": 132,
+      "style": null,
+      "features": [],
+      "metadata": {
+        "fuente": "respaldo_lenovo_extraccion_fase2_jardines.md",
+        "nombre_carpeta_original": "Quinta Oaxtepec",
+        "sitio_oficial": false
+      },
+      "precio_referencia": {
+        "precio_por_persona": 750,
+        "sin_iva": true,
+        "total": 99000,
+        "px": 132,
+        "fecha": "2026-01-10"
+      },
+      "adicionales": {
+        "valet_parking_por_persona": 850,
+        "copa_extra": 10,
+        "hora_extra": 2500,
+        "carpa_10x15": 7350,
+        "menu_personal": 150
+      }
+    },
+    {
+      "name": "Quinta Aguamiel",
+      "location": null,
+      "url": null,
+      "capacity": 150,
+      "style": null,
+      "features": [],
+      "metadata": {
+        "fuente": "respaldo_lenovo_extraccion_fase2_jardines.md",
+        "nombre_carpeta_original": "Quinta San Francisco",
+        "sitio_oficial": false
+      },
+      "precio_referencia": {
+        "total": 65000,
+        "px_minimo": 150,
+        "precio_por_persona_aprox": 433,
+        "duracion_hrs": 7,
+        "fecha": "2023-01-28"
+      },
+      "adicionales": {
+        "pista_pixel": 3500,
+        "robot_leds": 2500,
+        "cabina_fotografica_2hrs": 3500,
+        "espejo_magico_2hrs": 4500,
+        "ceremonia_religiosa": 6500,
+        "mariachi_hora": 3500,
+        "banda_hora": 5000,
+        "hora_extra": 4000
+      }
+    },
+    {
+      "name": "Jardín Sol y Luna",
+      "location": "Privada Ingeniero Pedro Salcedo, Temixco, Morelos",
+      "url": null,
+      "capacity": 150,
+      "style": null,
+      "features": [],
+      "metadata": {
+        "fuente": "respaldo_lenovo_extraccion_fase2_jardines.md",
+        "sitio_oficial": false
+      },
+      "precio_referencia": {
+        "precio_por_persona": 399,
+        "duracion_hrs": 8,
+        "fecha": "2023-12-10"
+      }
+    },
+    {
+      "name": "Jardín Solaris",
+      "location": null,
+      "url": null,
+      "capacity": null,
+      "style": null,
+      "features": [],
+      "metadata": {
+        "fuente": "respaldo_lenovo_extraccion_fase2_jardines.md",
+        "sitio_oficial": false,
+        "ADVERTENCIA": "NO se asume que sea el mismo lugar que 'Salon & Jardin Solaire' (que si tiene pagina oficial). Nombres distintos (Solaris vs Solaire) — confirmar con Salo si son el mismo venue o dos lugares distintos antes de fusionar."
+      },
+      "precio_referencia": {
+        "total": 107550,
+        "px_minimo": 50,
+        "precio_por_persona_aprox": 2151,
+        "tipo": "paquete premium todo incluido"
+      }
     }
   ],
   "services": [
@@ -1203,7 +1465,7 @@
       "id": "staffing",
       "name": "Servicio de Staffing y Personal Profesional de Eventos",
       "url": "https://primaveraeventsgroup.com/staffing/",
-      "description": "Provisión de personal altamente capacitado, uniformado y con amplia vocación de servicio para la operation de bodas, XV años, graduaciones y eventos corporativos.",
+      "description": "Provisión de personal altamente capacitado, uniformado y con amplia vocación de servicio para la operación de bodas, XV años, graduaciones y eventos corporativos.",
       "features": [
         "Coordinador General y Wedding Planners certificados (Jessy y Richard)",
         "Capitanes de meseros y Meseros profesionales uniformados con atención de mesa",
@@ -1314,26 +1576,6 @@
       ]
     },
     {
-      "cliente": "XV Años Antonio (Propuesta Premium)",
-      "recinto": "Selección a elegir (ccPresidente, Los Potrillos, Los Caballos, La Flor, Yolomecatl)",
-      "precio_por_persona": "$950.00 MXN (Total: $123,500.00 MXN)",
-      "minimo_invitados": 130,
-      "inclusiones": [
-        "Estructura interactiva premium (3 marcas, música al entrar 'marcasonora.mp3', preloader interactivo con video)",
-        "20 inclusiones en la propuesta digital con imágenes descriptivas animadas",
-        "Video de buffet y estación gastronómica interactiva ('menu_antonio.mp4')",
-        "Mobiliario elegante, mantelería fina, loza, plaque y cristalería fina",
-        "DJ profesional con torres robóticas, luces wash, máquina de humo y pista de baile 5x5m",
-        "Coordinador VIP, hostess, staff de meseros capacitados, bartender profesional",
-        "Cortesías incluidas: Degustación exclusiva (4px), letras gigantes, corazón iluminado, mesas de pastel/regalos, 2 chisperos, alfombra roja, espejo selfie y barra mix con 12 toppings",
-        "8 horas de servicio continuo y cierre cinematográfico con video de firma interactivo ('firma.mp4')"
-      ],
-      "cortesias": [
-        "Publicidad contextual activa integrada para la Expo Boda y 15 Años en ccPresidente",
-        "Menú flotante rápido (FAB) con links a redes oficiales y botón de compartir"
-      ]
-    },
-    {
       "cliente": "Banquete Señor Erasmo (Villa Di Fiori)",
       "recinto": "Villa Di Fiori (Estilo toscano-elegante, Xochitepec, Morelos)",
       "precio_por_persona": "$850.00 MXN (Total: $102,000.00 MXN)",
@@ -1430,6 +1672,212 @@
         "DJ profesional con cabina LED, luces móviles y pista de baile 5x5m",
         "Mesa principal de honor y letras decorativas gigantes 'XV' iluminadas"
       ]
+    },
+    {
+      "metadata": {
+        "repo_origen": "https://github.com/5410m0n0c001/antonio-cotizacion",
+        "archivo_origen": "index.html",
+        "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+        "estado": "completo"
+      },
+      "cliente": "XV Años Antonio (Propuesta Premium)",
+      "recinto": "Selección a elegir (ccPresidente, Los Potrillos, Los Caballos, La Flor, Yolomecatl)",
+      "precio_por_persona": "$950.00 MXN",
+      "total_inversion": "$123,500.00 MXN",
+      "minimo_invitados": 130,
+      "fecha": "Marzo 2027",
+      "tipo_evento": "XV Años",
+      "inclusiones": [
+        "Mobiliario Elegante: Montaje de gala con mesas de mármol y sillas Tiffany",
+        "Banquete Exquisito: Menú gourmet a 3 tiempos con coctel de bienvenida y tornafiesta",
+        "Personal de Servicio: Coordinador, capitán, meseros, barra, stewarts, Hostess",
+        "Música y Audio: DJ profesional, iluminación robótica, pista 5x5, chisperos",
+        "Cortesías: Letras gigantes iluminadas, corazón rojo, espejo selfie, barra mix con toppings"
+      ]
+    },
+    {
+      "metadata": {
+        "repo_origen": "https://github.com/5410m0n0c001/banquetes-primavera-project",
+        "archivo_origen": "cotizacion_ccpresidente_bautizo_anito/index.html",
+        "fecha_extraccion": "2026-07-24 13:57:00 UTC",
+        "estado": "completo"
+      },
+      "cliente": "Richard Hernández & Jessica Patricia Sandoval (Añito)",
+      "recinto": "Centro de Convenciones Presidente",
+      "precio_por_persona": "$84.90 MXN",
+      "total_inversion": "$8,490.00 MXN",
+      "minimo_invitados": 100,
+      "fecha": "3 de Octubre",
+      "tipo_evento": "Primer Añito",
+      "inclusiones": [
+        "Personal: 5 meseros profesionales uniformados por 5 horas de servicio",
+        "Personal de Barra: 1 barman calificado para servicio de bebidas",
+        "Vajilla / Losa básica: 100 juegos (tenedor, cuchillo, plato ancho, vaso cubero, servilleta de tela)",
+        "Servilletas extra: 100 piezas de servilletas de tela adicionales",
+        "Mantelería: 10 manteles color beige de gala",
+        "Caminos de mesa: 10 caminos color rosa palo elegantes",
+        "Alimentos (Tornamesa): 60 porciones de chilaquiles tradicionales servidos en chafing dishes",
+        "Nota Aclaratoria: El reparto de invitados, mobiliario y personal al 50/50 entre Bautizo y Añito es un supuesto de trabajo sujeto a reajuste según confirmación final del cliente."
+      ]
+    },
+    {
+      "metadata": {
+        "repo_origen": "https://github.com/5410m0n0c001/banquetes-primavera-project",
+        "archivo_origen": "cotizacion_ccpresidente_bautizo_anito/index.html",
+        "fecha_extraccion": "2026-07-24 13:57:00 UTC",
+        "estado": "completo"
+      },
+      "cliente": "Richard Hernández & Jessica Patricia Sandoval (Bautizo)",
+      "recinto": "Centro de Convenciones Presidente",
+      "precio_por_persona": "$84.90 MXN",
+      "total_inversion": "$8,490.00 MXN",
+      "minimo_invitados": 100,
+      "fecha": "3 de Octubre",
+      "tipo_evento": "Bautizo",
+      "inclusiones": [
+        "Personal: 5 meseros profesionales uniformados por 5 horas de servicio",
+        "Personal de Barra: 1 barman calificado para servicio de bebidas",
+        "Vajilla / Losa básica: 100 juegos (tenedor, cuchillo, plato ancho, vaso cubero, servilleta de tela)",
+        "Servilletas extra: 100 piezas de servilletas de tela adicionales",
+        "Mantelería: 10 manteles color beige de gala",
+        "Caminos de mesa: 10 caminos color rosa palo elegantes",
+        "Alimentos (Tornamesa): 60 porciones de chilaquiles tradicionales servidos en chafing dishes",
+        "Nota Aclaratoria: El reparto de invitados, mobiliario y personal al 50/50 entre Bautizo y Añito is un supuesto de trabajo sujeto a reajuste según confirmación final del cliente."
+      ]
+    },
+    {
+      "metadata": {
+        "repo_origen": "https://github.com/5410m0n0c001/banquetes-primavera-project",
+        "archivo_origen": "cotizacion_ccpresidente_bautizo_anito/index.html",
+        "fecha_extraccion": "2026-07-24 13:57:00 UTC",
+        "estado": "completo"
+      },
+      "cliente": "Richard Hernández & Jessica Patricia Sandoval (Paquete Bautizo + Añito)",
+      "recinto": "Centro de Convenciones Presidente",
+      "precio_por_persona": "$84.90 MXN",
+      "total_inversion": "$16,980.00 MXN",
+      "minimo_invitados": 200,
+      "fecha": "3 de Octubre",
+      "tipo_evento": "Bautizo + Primer Añito",
+      "inclusiones": [
+        "Personal: 10 meseros profesionales uniformados por 5 horas de servicio",
+        "Personal de Barra: 2 barmans calificados para servicio de bebidas",
+        "Vajilla / Losa básica: 200 juegos (tenedor, cuchillo, plato ancho, vaso cubero, servilleta de tela)",
+        "Servilletas extra: 200 piezas de servilletas de tela adicionales",
+        "Mantelería: 20 manteles color beige de gala",
+        "Caminos de mesa: 20 caminos color rosa palo elegantes",
+        "Alimentos (Tornamesa): 120 porciones de chilaquiles tradicionales servidos en chafing dishes",
+        "Nota Aclaratoria: El reparto de invitados, mobiliario y personal al 50/50 entre Bautizo y Añito es un supuesto de trabajo sujeto a reajuste según confirmación final del cliente."
+      ]
+    },
+    {
+      "metadata": {
+        "repo_origen": "https://github.com/5410m0n0c001/cotizaci-n-DIF",
+        "archivo_origen": "index.html",
+        "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+        "estado": "completo"
+      },
+      "cliente": "Sistema DIF / Lic. Claudia López",
+      "recinto": "Centro de Convenciones Presidente",
+      "precio_por_persona": "$260.00 MXN",
+      "total_inversion": "$32,500.00 MXN",
+      "minimo_invitados": 125,
+      "fecha": "13 de Mayo",
+      "tipo_evento": "Desayuno Tipo Taquiza",
+      "inclusiones": [
+        "Mobiliario Completo: Mesa redonda o cuadrada con silla Tiffany, mantelería fina (mantel y cubre mantel)",
+        "Cristaleria y Vajilla: Montaje elegante con vajilla completa y cristalería de primera calidad",
+        "Menú Selecto: Taquiza tradicional con variedad de guisados a su elección",
+        "Bebidas Ilimitadas: Servicio continuo de refrescos de la línea Coca-Cola y aguas de sabores de fruta natural",
+        "Personal de Servicio: Meseros profesionales uniformados, personal de cocina y barra para atención",
+        "Tiempo de servicio: 5 horas continuas"
+      ]
+    },
+    {
+      "metadata": {
+        "repo_origen": "https://github.com/5410m0n0c001/cotizaci-n-edie",
+        "archivo_origen": "index.html",
+        "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+        "estado": "completo"
+      },
+      "cliente": "Edimael Becerra",
+      "recinto": "Locación campestre / A convenir",
+      "precio_por_persona": "$125.00 MXN",
+      "minimo_invitados": 100,
+      "tipo_evento": "Taquiza Especial",
+      "inclusiones": [
+        "Taquiza Variada: Pastor, Longaniza y Campechano preparados al momento en el evento",
+        "Agua Fresca: Deliciosa agua fresca de sabor ilimitada",
+        "Complementos: Pepinos, cebolla, cilantro, salsas caseras y limones",
+        "Servicio: Platos desechables, servilletas y personal para despachar la taquiza"
+      ]
+    },
+    {
+      "metadata": {
+        "repo_origen": "https://github.com/5410m0n0c001/-Sra.-Sandra-cotizaci-n",
+        "archivo_origen": "index.html",
+        "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+        "estado": "completo"
+      },
+      "cliente": "Sra. Sandra",
+      "recinto": "Salón / Jardín A convenir",
+      "precio_por_persona": "$590.00 MXN",
+      "total_inversion": "$47,200.00 MXN",
+      "minimo_invitados": 80,
+      "fecha": "Sábado 20 de Junio",
+      "tipo_evento": "Paquete Taquiza Premium XV Años",
+      "inclusiones": [
+        "Mobiliario Completo: Mesa redonda o cuadrada con mantelería fina (mantel y cubre mantel) a su elección, sillas Tiffany",
+        "Menú de Taquiza: Variedad especial a elegir de carnes (Pastor, Bistec, Campechano y Longaniza) con tortillas y salsas",
+        "Loza y Bebidas: Vajilla de loza blanca incluida, bebidas de línea Coca-Cola o agua de sabor en servicio continuo",
+        "Servicio de DJ: DJ profesional con cabina iluminada, audio e iluminación robótica de alta gama",
+        "Personal de Servicio: Coordinador, meseros, stewards y cocineros",
+        "Cortesías: Alfombra roja de bienvenida, chisperos de pirotecnia fría para momento estelar, mesas de regalos/pastel"
+      ]
+    },
+    {
+      "metadata": {
+        "repo_origen": "https://github.com/5410m0n0c001/cotizacion-viky-solaire",
+        "archivo_origen": "index.html",
+        "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+        "estado": "completo"
+      },
+      "cliente": "Viky (Propuesta Premium Solaire)",
+      "recinto": "Jardín Solaire",
+      "precio_por_persona": "$1,199.00 MXN",
+      "minimo_invitados": 120,
+      "fecha": "27 de Junio 2026",
+      "tipo_evento": "Boda / Social Premium",
+      "inclusiones": [
+        "Mobiliario de Lujo: Mesas de madera vintage y sillas Crossback o Lotus",
+        "Banquete Gourmet a 3 tiempos, coctel de bienvenida con salas lounge y sombrillas, barra de mixología",
+        "Personal completo de servicio: Coordinación, hostess, meseros uniformados, cocina, stewards, cantineros",
+        "DJ profesional con iluminación robótica, cabina de cristal, pista de baile de madera 5x5, cabina 360",
+        "Cortesías: Detonación de pirotecnia fría, espejo de firmas iluminado, decoración de ceremonia civil"
+      ]
+    },
+    {
+      "metadata": {
+        "repo_origen": "https://github.com/5410m0n0c001/viviana-cotizaci-n-",
+        "archivo_origen": "index.html",
+        "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+        "estado": "completo"
+      },
+      "cliente": "Aniversario Viviana (Propuesta Premium)",
+      "recinto": "Salón Los Potrillos",
+      "precio_por_persona": "$690.00 MXN",
+      "total_inversion": "$62,100.00 MXN",
+      "minimo_invitados": 90,
+      "fecha": "18 Julio 2026",
+      "tipo_evento": "Aniversario de Bodas",
+      "inclusiones": [
+        "Mobiliario Elegante: Montaje de gala con mobiliario de diseño (Tiffany, Crossback, Lotus o Boss)",
+        "Menú a 3 tiempos con coctel de bienvenida y mezcladores completos",
+        "Personal Profesional: Coordinador general, hostess, meseros uniformados, personal de cocina, stewards, barman",
+        "DJ profesional con cabina, audio, iluminación y pista de baile 5x5",
+        "Cortesías: Espejo selfie de bienvenida, barra de mixología con toppings, letras gigantes iluminadas",
+        "Tiempo de servicio: 9 horas de servicio continuo"
+      ]
     }
   ],
   "constantes_interaccion": {
@@ -1472,7 +1920,17 @@
       "Fotografía y Video: Requieren un depósito de apartado del 10%. El saldo restante debe liquidarse obligatoriamente el día del evento.",
       "Incumplimiento de Pago: Genera una sanción económica automática de $1,500.00 MXN (paquetes clásicos) a $2,500.00 MXN (paquetes de gama alta como Royal Cinematic) o la retención/eliminación definitiva del material digital capturado.",
       "Viáticos de Sesión: Sesiones de fotos o videos previas realizadas fuera del estado de Morelos causan cargos de viáticos para el equipo de producción a cuenta del cliente."
-    ]
+    ],
+    "cancelacion_y_reembolsos": {
+      "fuente": "respaldo_lenovo_extraccion_fase1.md (carpeta contratos/, CONTRATO ACTUAL.pdf)",
+      "cancelacion_sin_motivo_cliente": "Se reintegra solo el 10% de lo acumulado a la fecha, a las 48 horas del dia solicitado.",
+      "penalizacion_contratos_banquete_grandes": "50% del valor total del contrato si el contratante cancela.",
+      "plazo_liquidacion_total": "A mas tardar 30 dias naturales antes del evento; si no se cubre, el prestador puede cancelar sin responsabilidad.",
+      "hora_extra_banquete": "$6,000.00 MXN por hora extra o fraccion (contratos de banquete grandes).",
+      "garantia_efectivo": "$2,000.00 MXN, devuelta a las 48h post-evento (clausula presente solo en CONTRATO ACTUAL.pdf, la plantilla mas reciente; no aparece en contratos 2022-2023).",
+      "caso_fortuito": "Se reintegra lo abonado o se reprograma el evento.",
+      "nota": "Contratos de proveedores individuales (DJ, vocalista) tienen sus propias clausulas mas ligeras, no aplican estos porcentajes de banquete grande."
+    }
   },
   "entradas_blog": [
     {
@@ -1618,6 +2076,2675 @@
       {
         "nombre": "Drive de Carga de Media Kits por Marca (Aliados)",
         "url": "https://drive.google.com/drive/folders/1WDpTEL5nAeHbUzz63820Z-bZr0GOe3AC?usp=sharing"
+      },
+      {
+        "nombre": "Enlace de Opiniones y Reseñas en Google",
+        "url": "https://g.page/r/CRYo3lgLK8NEEBM/review"
+      }
+    ],
+    "campana_organica_post_evento": {
+      "enlaces_oficiales": {
+        "paquetes": "https://primaveraeventsgroup.com/paquetes-primavera/",
+        "menus": "https://primaveraeventsgroup.com/nuestros-menus/",
+        "venues": "https://primaveraeventsgroup.com/venues/",
+        "demo_invitacion": "https://5410m0n0c001.github.io/invitacion-demo/",
+        "planner_richard": "https://primaveraeventsgroup.com/richard-hernandez/",
+        "planner_jessy": "https://primaveraeventsgroup.com/jessy/",
+        "google_opiniones": "https://g.page/r/CRYo3lgLK8NEEBM/review"
+      },
+      "regla_enlaces_venues": "En cada publicación de video de evento, se debe incluir obligatoriamente el enlace del venue específico donde se realizó el festejo (ej. para los 15 años de Hannah en Jardín La Flor, agregar https://primaveraeventsgroup.com/jardin-la-flor/) además de los enlaces estándar para incentivar las visitas al recinto.",
+      "manual_copywriting_aeo_seo": {
+        "definicion_aeo": "Answer Engine Optimization (Optimización para Motores de Respuestas). El objetivo es estructurar información en lenguaje natural de manera clara y directa para que los motores de IA (como ChatGPT, Gemini o Perplexity) puedan extraer e indexar la información de Primavera Events Group, citando las URLs oficiales de forma directa.",
+        "reglas_por_plataforma": {
+          "facebook": {
+            "estructura": "Dos partes: Versión A (Publicación sin links, alta emoción, llamado a buscar enlaces en comentarios, hashtags selectos al final) y Versión B (Primer comentario con enlaces de texto plano limpios).",
+            "caracteres_optimos": "100-250 palabras en texto principal.",
+            "objetivo": "Alcance orgánico libre de penalización por links externos."
+          },
+          "instagram": {
+            "estructura": "Storytelling inspirador de estilo editorial. CTA claro redirigiendo al link en la bio. Bloque de hashtags al final.",
+            "caracteres_optimos": "100-150 palabras.",
+            "objetivo": "Branding de prestigio y engagement visual."
+          },
+          "tiktok": {
+            "estructura": "Hook fuerte en los primeros 3 segundos. Texto breve y dinámico. CTA claro (Link en bio) y hashtags de tendencia local.",
+            "caracteres_optimos": "Menos de 150 caracteres en el cuerpo de descripción.",
+            "objetivo": "Viralidad y enganche de algoritmo de video corto."
+          },
+          "twitter_x": {
+            "estructura": "Gancho muy directo, 1 solo enlace estratégico (el acortador t.co de Twitter cuenta cualquier link como exactamente 23 caracteres) y 2 hashtags clave. Evitar enlaces redundantes.",
+            "caracteres_optimos": "Estrictamente menos de 280 caracteres reales (contando 23 caracteres por enlace).",
+            "objetivo": "Microblogging rápido y tráfico de un solo clic."
+          },
+          "youtube": {
+            "estructura": "Título de alto impacto (Hook emocional o brecha de curiosidad + Palabra clave de búsqueda) de menos de 70 caracteres. Descripción fluida y conversacional con los enlaces del bloque oficial en las primeras líneas. NUNCA usar capítulos inventados ni hashtags al final.",
+            "caracteres_optimos": "Conversacional y amplio.",
+            "objetivo": "SEO de largo plazo en búsquedas."
+          },
+          "pinterest": {
+            "estructura": "Título con palabras clave, descripción inspiradora orientada a 'ideas para bodas/15 años', enlace de destino directo a la página web del venue o paquete.",
+            "caracteres_optimos": "Menos de 500 caracteres.",
+            "objetivo": "Descubrimiento visual y tráfico calificado."
+          }
+        },
+        "directrices_creatividad": [
+          "Evitar palabras repetitivas y robóticas (no abusar de 'el mejor', 'experiencia sin igual', etc.).",
+          "Escribir siempre textos únicos y personalizados para cada cliente o video (no copiar y pegar plantillas genéricas).",
+          "Adoptar el tono de un Trafficker Senior y Marketer Digital enfocado en persuasión, autoridad de marca y conversión.",
+          "Nunca incluir tecnicismos, indicaciones de formato o metainformación (como 'en texto plano', 'formato limpio', 'sin negritas', etc.) dentro del cuerpo de los copys o respuestas dirigidas al cliente final. Todo texto generado listo para publicar debe ser 100% limpio y natural para el lector.",
+          "Mencionar siempre la Invitación Digital Premium de cortesía al contratar cualquier servicio, incluyendo su enlace demo: https://5410m0n0c001.github.io/invitacion-demo/",
+          "Mencionar siempre el Kit Planner gratuito (un paquete doble que incluye: 1. La plantilla de Excel para control de presupuesto y gastos, y 2. La guía definitiva para organizar tu evento y elegir proveedores). Aclarar que no hay un enlace de descarga directa, sino que deben solicitarlo comentando 'Yo lo quiero' o enviando un mensaje privado para entregárselo por privado.",
+          "Incluir siempre emojis vistosos y estratégicos para suavizar la densidad visual de los textos, dinamizar la lectura y potenciar la fuerza emocional del mensaje.",
+          "Buscar siempre en el sitio web e incluir la URL específica dedicada al tema de la publicación (por ejemplo: /graduaciones-primavera/ para graduaciones, /bodas/ para bodas, /quinceaneras-primavera/ para quinceañeras, /nuestros-menus/ para menús, /montajes-y-mobiliario/ para mobiliario, etc.) para redirigir el tráfico de manera segmentada, además de los enlaces globales requeridos."
+        ]
+      },
+      "estrategia": "Capitalizar el material audiovisual recopilado en la Expo y la pasarela Haute Runway para generar branding de alto prestigio (social proof) y captar prospectos de manera orgánica redirigiendo a los canales oficiales.",
+      "copywriting": {
+        "video_expo": {
+          "titulo": "Expo Boda y 15 Años 2026 - Resumen Oficial y Agradecimiento (4.5 min)",
+          "meta_sin_enlaces": "¡Qué gran fin de semana vivimos en la Expo Boda y 15 Años 2026! 🌸✨\n\nQueremos expresar nuestro más sincero agradecimiento a cada uno de los expositores, marcas aliadas y profesionales de la industria que llenaron el Centro de Convenciones Presidente de magia, creatividad e innovación. Su talento es el motor que hace posible transformar sueños en realidades inolvidables.\n\nA las parejas y familias que nos acompañaron: gracias por confiar en Primavera Events Group para dar el primer paso en la planificación de sus momentos más importantes. La excelencia y los detalles hacen la diferencia, y estamos listos para acompañarlos en cada paso del camino.\n\nDisfruta de este resumen de los mejores momentos y dinos en los comentarios: ¿Cuál fue tu stand favorito? 👇\n\n✨ Te dejamos los enlaces de acceso directo a nuestros paquetes, menús y asesoría gratuita en el primer comentario de esta publicación.\n\n#ExpoBoda2026 #PrimaveraEvents #WeddingPlanner #15Años #BodasCuernavaca #CentroDeConvencionesPresidente #EventosPremium",
+          "meta_comentarios": "¡Hola! Aquí tienes los accesos rápidos para planificar tu gran día con nosotros:\n\n📦 NUESTROS PAQUETES INTEGRALES:\n🔗 https://primaveraeventsgroup.com/paquetes-primavera/\n\n🍽️ NUESTROS MENÚS:\n🔗 https://primaveraeventsgroup.com/nuestros-menus/\n\n🏛️ NUESTROS VENUES:\n🔗 https://primaveraeventsgroup.com/venues/\n\n---\n🎁 PRUEBA LA DEMO DE NUESTRA INVITACIÓN DIGITAL PREMIUM (Gratis al contratar):\n🔗 https://5410m0n0c001.github.io/invitacion-demo/\n\n---\n📲 AGENDA ASESORÍA PERSONALIZADA CON NUESTROS PLANNERS:\n🤵 Richard Hernández (Planner & Director Creativo):\n🔗 https://primaveraeventsgroup.com/richard-hernandez/\n👩💼 Jessy Sandoval (Planner & Fundadora):\n🔗 https://primaveraeventsgroup.com/jessy/",
+          "tiktok": "POV: Buscas a los mejores proveedores para tu boda o 15 años en un solo lugar. 💍✨ Así se vivió la Expo Boda y 15 Años 2026. Un agradecimiento enorme a todos los expositores que lo hicieron posible. ¿Lista para crear tu día soñado? Link en bio para asesoría gratuita y paquetes integrales. 🌸 #ExpoBoda2026 #PrimaveraEvents #WeddingPlanner #15Años #Boda #Cuernavaca #EventosPremium",
+          "twitter": "¡Éxito total en la Expo Boda y 15 Años 2026! 🌸 Agradecemos profundamente a expositores, patrocinadores y familias por hacer de este encuentro un referente de la industria. Diseñemos juntos tu próximo gran evento. Toda la información en el enlace de nuestra biografía. 👇 #PrimaveraEvents",
+          "youtube": "Expo Boda y 15 Años 2026 - Resumen Oficial y Agradecimiento\n\nRevive los mejores momentos de la Expo Boda y 15 Años 2026 en el Centro de Convenciones Presidente. Queremos agradecer a los expositores, marcas colaboradoras y a todas las familias que nos visitaron para planificar sus eventos. En Primavera Events Group nos apasiona crear experiencias mágicas con el más alto estándar de calidad.\n\nCapítulos del Video:\n0:00 - Introducción y Bienvenidos\n1:15 - Recorrido por Stands de Expositores\n2:30 - Entrevistas y Experiencias de Clientes\n3:45 - Coordinación y Agradecimientos Finales\n\nInformación y Contacto:\n📦 NUESTROS PAQUETES INTEGRALES:\n🔗 https://primaveraeventsgroup.com/paquetes-primavera/\n\n🍽️ NUESTROS MENÚS:\n🔗 https://primaveraeventsgroup.com/nuestros-menus/\n\n🏛️ NUESTROS VENUES:\n🔗 https://primaveraeventsgroup.com/venues/\n\n---\n🎁 PRUEBA LA DEMO DE NUESTRA INVITACIÓN DIGITAL PREMIUM (Gratis al contratar):\n🔗 https://5410m0n0c001.github.io/invitacion-demo/\n\n---\n📲 AGENDA ASESORÍA PERSONALIZADA CON NUESTROS PLANNERS:\n🤵 Richard Hernández (Planner & Director Creativo):\n🔗 https://primaveraeventsgroup.com/richard-hernandez/\n👩💼 Jessy Sandoval (Planner & Fundadora):\n🔗 https://primaveraeventsgroup.com/jessy/"
+        },
+        "video_runway": {
+          "titulo": "Primavera Haute Runway 2026 - Pasarela y Performance de Alta Costura (3.5 min)",
+          "meta_sin_enlaces": "¿Y si tus 15 años o tu boda no fueran solo una fiesta, sino un espectáculo inolvidable? 👑✨\n\nEn la pasarela Primavera Haute Runway 2026 redefinimos por completo lo que significa celebrar. No fue solo un desfile de alta costura; fue un performance lleno de arte, energía y emociones en vivo diseñado para inspirar a cada quinceañera y novia a convertir su gran día en un show único y memorable.\n\nDesde la música y la iluminación escénica hasta las coreografías y la espectacular puesta en escena... demostramos que tu día especial merece ser vivido con la máxima pasión y estilo. ¡Tú eres la estrella y el escenario es tuyo! 🌸💃\n\nMira este video, déjate inspirar por el performance and dinos: ¿Cómo te imaginas tu propia entrada triunfal? 👇\n\n✨ Te dejamos los enlaces de acceso directo a nuestros paquetes, menús y asesoría gratuita en el primer comentario de esta publicación.\n\n#HauteRunway #AltaCostura #ModaQuinceañeras #Novias2026 #ReviveTuGranDía #PrimaveraEvents #PasarelaPerformance",
+          "meta_comentarios": "¡Hola! Aquí tienes los accesos rápidos para planificar tu gran día con nosotros:\n\n📦 NUESTROS PAQUETES INTEGRALES:\n🔗 https://primaveraeventsgroup.com/paquetes-primavera/\n\n🍽️ NUESTROS MENÚS:\n🔗 https://primaveraeventsgroup.com/nuestros-menus/\n\n🏛️ NUESTROS VENUES:\n🔗 https://primaveraeventsgroup.com/venues/\n\n---\n🎁 PRUEBA LA DEMO DE NUESTRA INVITACIÓN DIGITAL PREMIUM (Gratis al contratar):\n🔗 https://5410m0n0c001.github.io/invitacion-demo/\n\n---\n📲 AGENDA ASESORÍA PERSONALIZADA CON NUESTROS PLANNERS:\n🤵 Richard Hernández (Planner & Director Creativo):\n🔗 https://primaveraeventsgroup.com/richard-hernandez/\n👩💼 Jessy Sandoval (Planner & Fundadora):\n🔗 https://primaveraeventsgroup.com/jessy/",
+          "tiktok": "Tus 15 años o boda merecen ser un performance espectacular, no solo una fiesta ordinaria. 👑✨ Así se vivió la magia y la energía en la pasarela Primavera Haute Runway 2026. ¡Haz de tu día una obra de arte con nuestro equipo de planners! Link en bio para asesoría gratis y paquetes. 🌸 #HauteRunway #15Años #Boda #Performance #WeddingPlanner #PasarelaModa #PrimaveraEvents",
+          "twitter": "Más que una pasarela, una experiencia multisensorial. En Primavera Haute Runway 2026 demostramos cómo transformar tus 15 años o boda en un performance inolvidable. Inspírate y diseña tu show con nosotros. Info y asesoría gratuita en el link de la bio. 👑✨ #PrimaveraEvents",
+          "youtube": "Primavera Haute Runway 2026 - Inspira tu Evento con Alta Costura y Performance\n\n¿Estás lista para revivir y soñar con tu gran día de una forma totalmente diferente? Presentamos el resumen oficial de la pasarela Primavera Haute Runway 2026, una fusión única de alta costura, música, coreografía y performance interactivo. En Primavera Events Group no creamos fiestas comunes; diseñamos espectáculos donde tú eres la absoluta protagonista. Agradecemos a los diseñadores, modelos, bailarines y a todo el equipo de producción por crear esta increíble puesta en escena.\n\nCapítulos del Video:\n0:00 - Introducción y Apertura Artística\n0:50 - Pasarela Haute Costure: Novias y Diseños Exclusivos\n1:45 - Performance en Vivo y Coreografía 15 Años\n2:55 - Tendencias de Iluminación y Efectos Especiales\n3:20 - Cierre y Cómo Planificar tu Espectáculo Personalizado\n\nInformación y Contacto:\n📦 NUESTROS PAQUETES INTEGRALES:\n🔗 https://primaveraeventsgroup.com/paquetes-primavera/\n\n🍽️ NUESTROS MENÚS:\n🔗 https://primaveraeventsgroup.com/nuestros-menus/\n\n🏛️ NUESTROS VENUES:\n🔗 https://primaveraeventsgroup.com/venues/\n\n---\n🎁 PRUEBA LA DEMO DE NUESTRA INVITACIÓN DIGITAL PREMIUM (Gratis al contratar):\n🔗 https://5410m0n0c001.github.io/invitacion-demo/\n\n---\n📲 AGENDA ASESORÍA PERSONALIZADA CON NUESTROS PLANNERS:\n🤵 Richard Hernández (Planner & Director Creativo):\n🔗 https://primaveraeventsgroup.com/richard-hernandez/\n👩💼 Jessy Sandoval (Planner & Fundadora):\n🔗 https://primaveraeventsgroup.com/jessy/"
+        },
+        "post_graduaciones_julio": {
+          "titulo": "Apertura de Agenda Julio - Eventos de Graduaciones Escolares y Universitarias",
+          "meta_sin_enlaces": "¡El gran día está más cerca de lo que imaginas! 🎓✨ Sabemos que cada desvelada, cada examen y cada esfuerzo han valido la pena. ¡Es hora de celebrar tu graduación como te lo mereces! 🥂👑\n\nEn Primavera Events Group abrimos oficialmente la agenda de Julio para eventos de graduación. Queremos que tu gala sea una noche inolvidable, llena de elegancia, orden absoluto y la máxima diversión para ti, tus compañeros y tu familia.\n\nDesde espectaculares letras gigantes iluminadas, alfombras rojas con back fotográfico, pirotecnia fría para el brindis, hasta nuestro increíble carrito de shots y pistas Pixel LED de última tecnología... ¡Cuidamos cada detalle para crear una experiencia inolvidable! 📸💥\n\n🎁 ¡Y tenemos una sorpresa de graduación! Al reservar tu fecha con nosotros, te regalamos tu Invitación Digital Premium con confirmación de asistencia en tiempo real. Además, si quieres empezar a planificar desde hoy, tenemos de regalo nuestro Kit Planner de Excel para el control del presupuesto de tu generación.\n\n¿Listos para planear la mejor fiesta de su vida? Dejamos los enlaces de contacto y el demo de la invitación en el primer comentario de esta publicación. 👇\n\n#GraduacionesPrimavera #Graduacion2026 #EventosPremium #BanquetesPrimavera #InvitacionDigital #GalaDeGraduacion #MorelosEventos",
+          "meta_comentarios": "¡Hola graduados! 🎓 Aquí tienes los accesos rápidos para planificar su gran noche:\n\n🎓 NUESTRA PÁGINA DE GRADUACIONES:\n🔗 https://primaveraeventsgroup.com/graduaciones-primavera/\n\n📦 PAQUETE GLOW GRADUATION ELITE:\n🔗 https://primaveraeventsgroup.com/paquete-glow-graduation-elite/\n\n🍽️ NUESTROS MENÚS GOURMET Y JUVENILES:\n🔗 https://primaveraeventsgroup.com/nuestros-menus/\n\n---\n\n🎁 PRUEBA LA DEMO DE NUESTRA INVITACIÓN DIGITAL PREMIUM (¡Gratis al contratar!):\n🔗 https://5410m0n0c001.github.io/invitacion-demo/\n\n---\n\n💬 ¡SOLICITA TU KIT PLANNER GRATUITO!\nComenta 'Yo lo quiero' o envíanos un mensaje privado para enviarte la plantilla de Excel para el control de gastos de tu graduación y la guía de organización por mensaje directo. 📈\n\n📲 AGENDA TU ASESORÍA PERSONALIZADA CON NUESTROS PLANNERS:\n🤵 Richard Hernández (Planner & Director Creativo):\n🔗 https://primaveraeventsgroup.com/richard-hernandez/\n👩💼 Jessy Sandoval (Planner & Fundadora):\n🔗 https://primaveraeventsgroup.com/jessy/",
+          "tiktok": "🎓 ¡Abrimos agenda de Julio para graduaciones! 🥂 Celebra tu gran logro con producción premium y banquetes de lujo. Link en bio para paquetes e invitación digital premium gratis. 👑✨ #Graduaciones #FiestaDeGraduacion #Banquetes #Graduados #PrimaveraEvents",
+          "twitter": "🎓 ¡Abrimos agenda de Julio para graduaciones! 🥂 Diseñamos galas espectaculares con producción premium, banquetes de gala y la mejor música. Agenda tu fecha y llévate tu invitación digital premium gratis. 👑✨ Info aquí: https://primaveraeventsgroup.com/graduaciones-primavera/ #Graduacion #Graduados"
+        }
+      }
+    }
+  },
+  "croquis_y_planos": {
+    "yolomecatl": {
+      "metadata": {
+        "repo_origen": "https://github.com/5410m0n0c001/yolomecatl-croquis-",
+        "archivo_origen": "3d_modeling_manual.md",
+        "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+        "estado": "completo"
+      },
+      "nombre_recinto": "Jardín Salón Yolomecatl (Acatlipa, Temixco, Morelos)",
+      "dimensiones_terreno": "100.0 m × 98.0 m",
+      "escala_SVG": "10 unidades SVG = 1.0 metro",
+      "estructuras_y_elevaciones": {
+        "salon_principal": "48.0m x 62.0m | Altura muros: 6.50m | Muros de carga: 0.30m",
+        "escenario_dj": "20.0m ancho x 6.0m fondo | Altura: +0.60m | Escaleras laterales de 3 peldaños",
+        "techo": "Dos aguas con vigas de acero/madera | Cumbrera central: 8.20m en X:510",
+        "cocina_y_barra": "21.0m x 23.0m | Altura muros: 3.50m | Barra de mármol negro y nogal de 1.20m x 1.10m alto",
+        "banos": "20.0m x 6.0m | Altura muros: 3.00m",
+        "recepcion_lobby": "48.0m x 5.5m | Altura: 3.20m | Pasillo peatonal: 48m x 3m",
+        "alberca": "25.0m x 11.0m | Profundidad: -0.60m (niños) a -1.60m (hondo) | Borde: 0.40m ancho, +0.05m alto",
+        "capilla": "17.0m x 12.0m | Pabellón abierto con columnas de cantera (3.20m alto) | Techo teja dos aguas (cumbrera 4.50m) | Altar: 1.80m x 0.90m x 0.60m",
+        "cascada_agua": "Pileta de 3.0m x 25.0m (profundidad -0.40m) | Muro de piedra volcánica de 25m x 4.0m alto"
+      },
+      "mobiliario": {
+        "mesa_cuadrada": "1.60m x 1.60m | Altura: 0.75m | Sillas Tiffany/Avant Garde a 0.10m de distancia",
+        "mesa_imperial": "2.20m ancho x 48.0m largo (módulos continuos) | Capacidad: 50 comensales (paso de 0.75m entre comensales)"
+      },
+      "materiales_pbr": [
+        {
+          "elemento": "Piso del Salón",
+          "material": "Parquet de Madera Noble Oscura, semibrillante"
+        },
+        {
+          "elemento": "Pista de Baile",
+          "material": "Mármol Pulido Blanco / Negro Geométrico, reflejo espejo"
+        },
+        {
+          "elemento": "Muros del Salón",
+          "material": "Estuco Liso Blanco Roto / Navy Mate"
+        },
+        {
+          "elemento": "Muro de la Cascada",
+          "material": "Laja de Piedra Volcánica Negra texturizada con efecto mojado"
+        },
+        {
+          "elemento": "Piso del Jardín",
+          "material": "Césped Denso de 0.04 m de longitud"
+        },
+        {
+          "elemento": "Agua Alberca",
+          "material": "Líquido Transparente Dinámico IOR 1.333, celeste claro"
+        },
+        {
+          "elemento": "Mostradores",
+          "material": "Mármol Arabescato y Madera Nogal"
+        }
+      ],
+      "iluminacion_y_render": {
+        "HDRI": "Sunset tardío o Night Blue de baja intensidad",
+        "candelabros": "6 candelabros cálidos a Z: 4.80m alineados en X:510",
+        "uplights": "Spots IES de color Rosa Coral Primavera (#F05A7E) en la base de las columnas",
+        "alberca": "Luces subacuáticas color Azul cian (#00f0ff) a Z: -0.20m",
+        "camara": "24mm (tomas amplias) o 50mm (mesas) | Diafragma f/2.8 o f/4 para efecto bokeh"
+      }
+    },
+    "centro_presidente": {
+      "metadata": {
+        "repo_origen": "https://github.com/5410m0n0c001/centro-de-convenciones-presidente-croquis",
+        "archivo_origen": "layout.json",
+        "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+        "estado": "completo"
+      },
+      "nombre_recinto": "Centro de Convenciones Presidente Layout Croquis",
+      "elementos_iniciales": [
+        {
+          "id": "dancefloor-main",
+          "type": "dancefloor",
+          "name": "Pista de Baile",
+          "x": 28.3,
+          "y": 40.6,
+          "w": 8,
+          "h": 6,
+          "shape": "rectangle",
+          "rotation": 0,
+          "color": "#820ad1",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "dj-main",
+          "type": "dj",
+          "name": "Cabina DJ",
+          "x": 28,
+          "y": 56,
+          "w": 4,
+          "h": 1.5,
+          "shape": "rectangle",
+          "rotation": 0,
+          "color": "#0d0c1d",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table-1",
+          "type": "table",
+          "name": "Mesa 1",
+          "x": 23.6,
+          "y": 48.2,
+          "w": 1.6,
+          "h": 1.6,
+          "shape": "circle",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#b45309",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table-2",
+          "type": "table",
+          "name": "Mesa 2",
+          "x": 34,
+          "y": 47.9,
+          "w": 1.6,
+          "h": 1.6,
+          "shape": "circle",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#b45309",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "stand-1781814932001",
+          "type": "stand",
+          "name": "corona music",
+          "x": 14.6,
+          "y": 15.8,
+          "w": 7.7,
+          "h": 6,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#065f46",
+          "editable": true,
+          "removable": true,
+          "exhibitor": "Nuevo Expositor"
+        },
+        {
+          "id": "stand-1781817132343",
+          "type": "stand",
+          "name": "Maquillaje",
+          "x": 40.4,
+          "y": 16.4,
+          "w": 7.9,
+          "h": 6.1,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#065f46",
+          "editable": true,
+          "removable": true,
+          "exhibitor": "Nuevo Expositor"
+        },
+        {
+          "id": "stand-1781817244397",
+          "type": "stand",
+          "name": "Kataleya florist ",
+          "x": 14.7,
+          "y": 25.8,
+          "w": 7.4,
+          "h": 5.4,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#065f46",
+          "editable": true,
+          "removable": true,
+          "exhibitor": "Nuevo Expositor"
+        },
+        {
+          "id": "stand-clone-1781817359780",
+          "type": "stand",
+          "name": "Dulces ",
+          "x": 41.1,
+          "y": 25.5,
+          "w": 7.4,
+          "h": 5.4,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#065f46",
+          "editable": true,
+          "removable": true,
+          "exhibitor": "Nuevo Expositor"
+        },
+        {
+          "id": "e1",
+          "type": "door",
+          "name": "E1",
+          "x": 46,
+          "y": 22,
+          "w": 2,
+          "h": 0.3,
+          "shape": "rectangle",
+          "rotation": 270,
+          "color": "#C9A96E",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "e2",
+          "type": "door",
+          "name": "E2 (Rampa)",
+          "x": 45.8,
+          "y": 55.9,
+          "w": 4,
+          "h": 0.3,
+          "shape": "rectangle",
+          "rotation": 270,
+          "color": "#C9A96E",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "e3",
+          "type": "door",
+          "name": "E3",
+          "x": 38.4,
+          "y": 70.1,
+          "w": 2,
+          "h": 0.3,
+          "shape": "rectangle",
+          "rotation": 180,
+          "color": "#C9A96E",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "e4",
+          "type": "door",
+          "name": "E4",
+          "x": 27,
+          "y": 69.9,
+          "w": 2,
+          "h": 0.3,
+          "shape": "rectangle",
+          "rotation": 180,
+          "color": "#C9A96E",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "e5",
+          "type": "door",
+          "name": "E5",
+          "x": 16.3,
+          "y": 69.6,
+          "w": 2,
+          "h": 0.3,
+          "shape": "rectangle",
+          "rotation": 180,
+          "color": "#C9A96E",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "e6",
+          "type": "door",
+          "name": "E6",
+          "x": 10,
+          "y": 54,
+          "w": 2,
+          "h": 0.3,
+          "shape": "rectangle",
+          "rotation": 90,
+          "color": "#C9A96E",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "e7",
+          "type": "door",
+          "name": "E7",
+          "x": 10,
+          "y": 22,
+          "w": 2,
+          "h": 0.3,
+          "shape": "rectangle",
+          "rotation": 90,
+          "color": "#C9A96E",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "salon-main",
+          "type": "salon",
+          "name": "Salón Techado",
+          "x": 27.6,
+          "y": 40.6,
+          "w": 36,
+          "h": 58,
+          "shape": "rectangle",
+          "rotation": 0,
+          "color": "#1e293b",
+          "editable": true,
+          "removable": false
+        },
+        {
+          "id": "garden-main",
+          "type": "garden",
+          "name": "Área de Jardín",
+          "x": 53.9,
+          "y": 33.1,
+          "w": 14.2,
+          "h": 40,
+          "shape": "rectangle",
+          "rotation": 0,
+          "color": "#166534",
+          "editable": true,
+          "removable": false
+        },
+        {
+          "id": "entrance-main",
+          "type": "entrance",
+          "name": "Entrada y Rampa",
+          "x": 58,
+          "y": 62,
+          "w": 24,
+          "h": 16,
+          "shape": "rectangle",
+          "rotation": 0,
+          "color": "#475569",
+          "editable": true,
+          "removable": false
+        },
+        {
+          "id": "bathroom-left",
+          "type": "bathroom",
+          "name": "WC Izquierdo",
+          "x": 9,
+          "y": 14,
+          "w": 2,
+          "h": 4,
+          "shape": "rectangle",
+          "rotation": 0,
+          "color": "#334155",
+          "editable": true,
+          "removable": false
+        },
+        {
+          "id": "bathroom-right",
+          "type": "bathroom",
+          "name": "WC Derecho",
+          "x": 47,
+          "y": 14,
+          "w": 2,
+          "h": 4,
+          "shape": "rectangle",
+          "rotation": 0,
+          "color": "#334155",
+          "editable": true,
+          "removable": false
+        },
+        {
+          "id": "stage-main",
+          "type": "stage",
+          "name": "Escenario y Pasarela",
+          "x": 28,
+          "y": 21,
+          "w": 14,
+          "h": 18,
+          "shape": "rectangle",
+          "rotation": 0,
+          "color": "#5c3d2e",
+          "editable": true,
+          "removable": false
+        },
+        {
+          "id": "stand-clone-1781821822355",
+          "type": "stand",
+          "name": "Primavera Events Group",
+          "x": 14.5,
+          "y": 32.5,
+          "w": 7.4,
+          "h": 5.4,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#065f46",
+          "editable": true,
+          "removable": true,
+          "exhibitor": "Nuevo Expositor"
+        },
+        {
+          "id": "stand-clone-1781821916252",
+          "type": "stand",
+          "name": "fotografia",
+          "x": 41.4,
+          "y": 32.1,
+          "w": 7.4,
+          "h": 5.4,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#065f46",
+          "editable": true,
+          "removable": true,
+          "exhibitor": "Licky Bout Photo"
+        },
+        {
+          "id": "stand-clone-1781822072846",
+          "type": "stand",
+          "name": "Notaria",
+          "x": 41.6,
+          "y": 39.8,
+          "w": 7.4,
+          "h": 5.4,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#065f46",
+          "editable": true,
+          "removable": true,
+          "exhibitor": "n°1"
+        },
+        {
+          "id": "stand-clone-1781822225330",
+          "type": "stand",
+          "name": "Licores",
+          "x": 42.6,
+          "y": 64.3,
+          "w": 6.8,
+          "h": 9.6,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#065f46",
+          "editable": true,
+          "removable": true,
+          "exhibitor": "Tequila Presonalizado Don Ramón"
+        },
+        {
+          "id": "stand-clone-1781822991638",
+          "type": "stand",
+          "name": "Decoraciones ",
+          "x": 27.3,
+          "y": 66.9,
+          "w": 7.4,
+          "h": 5.4,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#065f46",
+          "editable": true,
+          "removable": true,
+          "exhibitor": "Abidecora"
+        },
+        {
+          "id": "photobooth-1781823030696",
+          "type": "photobooth",
+          "name": "Cabina boo",
+          "x": 19.4,
+          "y": 66.8,
+          "w": 4.3,
+          "h": 4.5,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#1e3a8a",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "stand-1781823113914",
+          "type": "stand",
+          "name": "Letras Gigantes",
+          "x": 13.2,
+          "y": 66.5,
+          "w": 4.2,
+          "h": 4.7,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#065f46",
+          "editable": true,
+          "removable": true,
+          "exhibitor": "LG"
+        },
+        {
+          "id": "photobooth-clone-1781823306852",
+          "type": "photobooth",
+          "name": "Cabina de Fotos inflable",
+          "x": 13.6,
+          "y": 59.9,
+          "w": 4.3,
+          "h": 4.5,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#1e3a8a",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "photobooth-clone-1781823910700",
+          "type": "photobooth",
+          "name": "Cabina de Fotos 360",
+          "x": 13.9,
+          "y": 52.9,
+          "w": 4.3,
+          "h": 4.5,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#1e3a8a",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "stand-1781824275089",
+          "type": "stand",
+          "name": "Triki",
+          "x": 49.1,
+          "y": 16.4,
+          "w": 4,
+          "h": 3,
+          "shape": "rectangle",
+          "rotation": 270,
+          "chairs": 0,
+          "color": "#065f46",
+          "editable": true,
+          "removable": true,
+          "exhibitor": "Nuevo Expositor"
+        },
+        {
+          "id": "stand-clone-1781824312895",
+          "type": "stand",
+          "name": "Paletas ",
+          "x": 48.4,
+          "y": 25.4,
+          "w": 4,
+          "h": 3,
+          "shape": "rectangle",
+          "rotation": 270,
+          "chairs": 0,
+          "color": "#065f46",
+          "editable": true,
+          "removable": true,
+          "exhibitor": "La Princesa"
+        },
+        {
+          "id": "bar_stool-1781824374956",
+          "type": "bar_stool",
+          "name": "Mesa Periquera",
+          "x": 33.5,
+          "y": 67.6,
+          "w": 2,
+          "h": 1,
+          "shape": "circle",
+          "rotation": 0,
+          "chairs": 4,
+          "color": "#b45309",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "stand-1781824491276",
+          "type": "stand",
+          "name": "Coreografo",
+          "x": 34,
+          "y": 67.2,
+          "w": 4,
+          "h": 3,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#065f46",
+          "editable": true,
+          "removable": true,
+          "exhibitor": "Dance Queens"
+        },
+        {
+          "id": "giant_letters-1781824638586",
+          "type": "giant_letters",
+          "name": "Letras Gigantes",
+          "x": 57.2,
+          "y": 49.4,
+          "w": 7.2,
+          "h": 3.3,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#f59e0b",
+          "editable": true,
+          "removable": true,
+          "text": "LOVE"
+        },
+        {
+          "id": "umbrella-1781824748914",
+          "type": "umbrella",
+          "name": "Mesa con Sombrilla",
+          "x": 54.1,
+          "y": 43.1,
+          "w": 2.2,
+          "h": 2.2,
+          "shape": "circle",
+          "rotation": 0,
+          "chairs": 6,
+          "color": "#0369a1",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "umbrella-1781824761783",
+          "type": "umbrella",
+          "name": "Mesa con Sombrilla",
+          "x": 53.9,
+          "y": 19.1,
+          "w": 2.2,
+          "h": 2.2,
+          "shape": "circle",
+          "rotation": 0,
+          "chairs": 6,
+          "color": "#0369a1",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "lounge-1781824771323",
+          "type": "lounge",
+          "name": "Sala Lounge",
+          "x": 49,
+          "y": 31.8,
+          "w": 2.5,
+          "h": 2.5,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#be185d",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "lounge-1781824780270",
+          "type": "lounge",
+          "name": "Sala Lounge",
+          "x": 59,
+          "y": 31.8,
+          "w": 2.5,
+          "h": 2.5,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#be185d",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table_square-1781824885259",
+          "type": "table",
+          "name": "Mesa Imperial/Cuadrada",
+          "x": 19.5,
+          "y": 20.6,
+          "w": 1.6,
+          "h": 1.6,
+          "shape": "square",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#78350f",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table_square-1781824902711",
+          "type": "table",
+          "name": "Mesa Imperial/Cuadrada",
+          "x": 19.6,
+          "y": 25.8,
+          "w": 1.6,
+          "h": 1.6,
+          "shape": "square",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#78350f",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table_square-1781824914845",
+          "type": "table",
+          "name": "Mesa Imperial/Cuadrada",
+          "x": 19.6,
+          "y": 30,
+          "w": 1.6,
+          "h": 1.6,
+          "shape": "square",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#78350f",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table_square-1781824921730",
+          "type": "table",
+          "name": "Mesa Imperial/Cuadrada",
+          "x": 19.9,
+          "y": 34.4,
+          "w": 1.6,
+          "h": 1.6,
+          "shape": "square",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#78350f",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "stand-clone-1781925451748",
+          "type": "stand",
+          "name": "Servicios de emergencia medica",
+          "x": 14.6,
+          "y": 39.9,
+          "w": 7.4,
+          "h": 5.4,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 0,
+          "color": "#065f46",
+          "editable": true,
+          "removable": true,
+          "exhibitor": "RED"
+        }
+      ]
+    },
+    "jardin_la_flor": {
+      "metadata": {
+        "repo_origen": "https://github.com/5410m0n0c001/jardin-la-flor-plano",
+        "archivo_origen": "elements.js",
+        "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+        "estado": "completo"
+      },
+      "nombre_recinto": "Jardín La Flor Plano Layout",
+      "canvas_dimensiones": {
+        "width": 40,
+        "height": 40
+      },
+      "salon_posicionamiento": {
+        "x": 12,
+        "y": 10,
+        "width": 16,
+        "height": 20
+      },
+      "elementos_iniciales": [
+        {
+          "id": "garden-1",
+          "type": "garden",
+          "name": "Jardín Lateral",
+          "x": 13.75,
+          "y": 20,
+          "w": 2.5,
+          "h": 19,
+          "shape": "rectangle",
+          "rotation": 0,
+          "color": "#2e7d32",
+          "editable": true,
+          "removable": false
+        },
+        {
+          "id": "bar-1",
+          "type": "bar",
+          "name": "Cocina / Barra",
+          "x": 20.5,
+          "y": 11.25,
+          "w": 9,
+          "h": 1.5,
+          "shape": "rectangle",
+          "rotation": 0,
+          "color": "#8d6e63",
+          "editable": true,
+          "removable": false
+        },
+        {
+          "id": "dancefloor-1",
+          "type": "dancefloor",
+          "name": "Pista de Baile (AP)",
+          "x": 21,
+          "y": 23,
+          "w": 5.5,
+          "h": 5,
+          "shape": "rectangle",
+          "rotation": 0,
+          "color": "#a78bfa",
+          "editable": true,
+          "removable": false
+        },
+        {
+          "id": "dj-1",
+          "type": "dj",
+          "name": "Área de DJ",
+          "x": 21,
+          "y": 27.5,
+          "w": 5,
+          "h": 1.5,
+          "shape": "rectangle",
+          "rotation": 0,
+          "color": "#1e1b4b",
+          "editable": true,
+          "removable": false
+        },
+        {
+          "id": "table-xv",
+          "type": "table",
+          "name": "XV - Mesa de Honor",
+          "x": 26.5,
+          "y": 23,
+          "w": 1.2,
+          "h": 3.5,
+          "shape": "rectangle",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#f472b6",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table-1",
+          "type": "table",
+          "name": "Mesa 1",
+          "x": 16.8,
+          "y": 14.5,
+          "w": 1.4,
+          "h": 1.4,
+          "shape": "square",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#d97706",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table-2",
+          "type": "table",
+          "name": "Mesa 2",
+          "x": 18.8,
+          "y": 14.5,
+          "w": 1.4,
+          "h": 1.4,
+          "shape": "square",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#d97706",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table-3",
+          "type": "table",
+          "name": "Mesa 3",
+          "x": 20.8,
+          "y": 14.5,
+          "w": 1.4,
+          "h": 1.4,
+          "shape": "square",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#d97706",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table-4",
+          "type": "table",
+          "name": "Mesa 4",
+          "x": 22.8,
+          "y": 14.5,
+          "w": 1.4,
+          "h": 1.4,
+          "shape": "square",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#d97706",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table-5",
+          "type": "table",
+          "name": "Mesa 5",
+          "x": 24.8,
+          "y": 14.5,
+          "w": 1.4,
+          "h": 1.4,
+          "shape": "square",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#d97706",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table-6",
+          "type": "table",
+          "name": "Mesa 6",
+          "x": 16.2,
+          "y": 17.2,
+          "w": 1.4,
+          "h": 1.4,
+          "shape": "square",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#d97706",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table-7",
+          "type": "table",
+          "name": "Mesa 7",
+          "x": 17.9,
+          "y": 17.2,
+          "w": 1.4,
+          "h": 1.4,
+          "shape": "square",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#d97706",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table-8",
+          "type": "table",
+          "name": "Mesa 8",
+          "x": 19.6,
+          "y": 17.2,
+          "w": 1.4,
+          "h": 1.4,
+          "shape": "square",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#d97706",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table-9",
+          "type": "table",
+          "name": "Mesa 9",
+          "x": 21.3,
+          "y": 17.2,
+          "w": 1.4,
+          "h": 1.4,
+          "shape": "square",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#d97706",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table-10",
+          "type": "table",
+          "name": "Mesa 10",
+          "x": 23,
+          "y": 17.2,
+          "w": 1.4,
+          "h": 1.4,
+          "shape": "square",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#d97706",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table-11",
+          "type": "table",
+          "name": "Mesa 11",
+          "x": 24.7,
+          "y": 17.2,
+          "w": 1.4,
+          "h": 1.4,
+          "shape": "square",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#d97706",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table-12",
+          "type": "table",
+          "name": "Mesa 12",
+          "x": 16.8,
+          "y": 21.5,
+          "w": 1.4,
+          "h": 1.4,
+          "shape": "square",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#d97706",
+          "editable": true,
+          "removable": true
+        },
+        {
+          "id": "table-13",
+          "type": "table",
+          "name": "Mesa 13",
+          "x": 16.8,
+          "y": 24.5,
+          "w": 1.4,
+          "h": 1.4,
+          "shape": "square",
+          "rotation": 0,
+          "chairs": 10,
+          "color": "#d97706",
+          "editable": true,
+          "removable": true
+        }
+      ]
+    }
+  },
+  "expo_boda_2026": {
+    "metadata": {
+      "repo_origen": "https://github.com/5410m0n0c001/expo-boda-y-15-a-os",
+      "archivo_origen": "multiple_files",
+      "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+      "estado": "completo"
+    },
+    "evento": {
+      "nombre": "Expo Boda & 15 Años 2026",
+      "fecha": "21 de Junio de 2026",
+      "lugar": "Centro de Convenciones Presidente (Córdoba, Veracruz)",
+      "slogan_campana": "2026 es un año para casarse"
+    },
+    "manual_colaboracion": {
+      "colaboradores_y_roles": [],
+      "colores_branding": [],
+      "hashtags": [
+        "#ch11",
+        "#FCFBF7",
+        "#FFFDF8",
+        "#ch10",
+        "#PrimaveraEventsGroup",
+        "#PrimaveraHauteRunway",
+        "#CentroDeConvencionesPresidente",
+        "#ff6b6b",
+        "#FFFFFF",
+        "#ch8",
+        "#XV2026",
+        "#XVMorelos",
+        "#ExpoBodaTuMarca",
+        "#ch6",
+        "#ExpoBoda15Presidente",
+        "#C9A96E",
+        "#ch4",
+        "#F8F6F4",
+        "#d94f6f",
+        "#6D6D6D",
+        "#FFF5F6",
+        "#ch3",
+        "#1F1F1F",
+        "#ch9",
+        "#ReviveTuGranDia",
+        "#FFF0F2",
+        "#FFFDFB",
+        "#WeddingPlannerMexico",
+        "#Quinceañeras",
+        "#ch12",
+        "#1e7e34",
+        "#25D366",
+        "#ch2",
+        "#FAF4F5",
+        "#ch1",
+        "#EFE7E1",
+        "#ch7",
+        "#BodasCuernavaca",
+        "#bd2130",
+        "#f05a7e",
+        "#ch5",
+        "#f78da7",
+        "#FFFDF9"
+      ]
+    },
+    "estrategia_marketing": {
+      "password_plan": "No encontrada",
+      "enlaces_drive": []
+    },
+    "leads_capturados": [
+      {
+        "id": "L001",
+        "name": "Elena García Lucero",
+        "email": "Garcia-LuceroElena44@outlook.com",
+        "phone": "",
+        "eventType": "15 años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L002",
+        "name": "Sara López",
+        "email": "",
+        "phone": "7773771550",
+        "eventType": "15 años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L003",
+        "name": "Dalia Ramírez Carreón",
+        "email": "Rafica21@hotmail.com",
+        "phone": "7771334014",
+        "eventType": "15 años",
+        "location": "Emiliano Zapata",
+        "status": "Pending"
+      },
+      {
+        "id": "L004",
+        "name": "Catherine Cabrera",
+        "email": "katherynecabrerab@gmail.com",
+        "phone": "5513034217",
+        "eventType": "Boda",
+        "location": "Jiutepec",
+        "status": "Pending"
+      },
+      {
+        "id": "L005",
+        "name": "Sonia Gómez Salinas",
+        "email": "soniagomezsalinas@gmail.com",
+        "phone": "",
+        "eventType": "Boda (5 Dic)",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L006",
+        "name": "Gabriela López Ortiz",
+        "email": "emirak16@hotmail.com",
+        "phone": "5517636258",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L007",
+        "name": "Silvia",
+        "email": "seic90@hotmail.com",
+        "phone": "7772571518",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L008",
+        "name": "Pablo Garcia",
+        "email": "pg318156@gmail.com",
+        "phone": "7352160868",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L009",
+        "name": "Olga Cárdenas",
+        "email": "angiecardenas396@gmail.com",
+        "phone": "7776232363",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L010",
+        "name": "Feli Lira",
+        "email": "liramejiafelipa@gmail.com",
+        "phone": "7352595868",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L011",
+        "name": "Enrique Resonico Buenavides",
+        "email": "resonico.enrique@gmail.com",
+        "phone": "5576868863",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L012",
+        "name": "Esther Gallegos",
+        "email": "flacagallegos1954@gmail.com",
+        "phone": "7711655630",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L013",
+        "name": "Moisés Gallardo",
+        "email": "unmoisesgallardofuentes@gmail.com",
+        "phone": "7352101408",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L014",
+        "name": "Herlinda López",
+        "email": "herlindalopez63316@gmail.com",
+        "phone": "7471436334",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L015",
+        "name": "Keny Mancebo",
+        "email": "kennrosas@gmail.com",
+        "phone": "7351448670",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L016",
+        "name": "Victor Rojo",
+        "email": "vrojo539@gmail.com",
+        "phone": "7352058452",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L017",
+        "name": "Leo Gálvez",
+        "email": "leonorg1@yahoo.com.mx",
+        "phone": "7775654712",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L019",
+        "name": "Daniel Munguia Diaz",
+        "email": "",
+        "phone": "",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L020",
+        "name": "Yelitza Hoyos",
+        "email": "",
+        "phone": "",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L021",
+        "name": "Camila Acosta",
+        "email": "camilaacosta1234@icloud.com",
+        "phone": "7341133410",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L022",
+        "name": "Aby Vian RE",
+        "email": "vianeromero90@gmail.com",
+        "phone": "5518960173",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L023",
+        "name": "Fermin Estrada",
+        "email": "ortizdenovaefrain66@gmail.com",
+        "phone": "7779685906",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L024",
+        "name": "Veronica Sánchez",
+        "email": "",
+        "phone": "",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L025",
+        "name": "Maylin Yarani",
+        "email": "",
+        "phone": "",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L026",
+        "name": "Fabi Maya",
+        "email": "",
+        "phone": "",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L027",
+        "name": "Katteryne BM",
+        "email": "",
+        "phone": "",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L028",
+        "name": "Michelle Gimenez",
+        "email": "",
+        "phone": "",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L029",
+        "name": "Juana Iris De Medina",
+        "email": "",
+        "phone": "",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L030",
+        "name": "Colibrí Amcra",
+        "email": "",
+        "phone": "",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L031",
+        "name": "Mld Allhyy",
+        "email": "",
+        "phone": "",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L032",
+        "name": "Av. Vicente Guerrero 777, Cuernavaca.",
+        "email": "",
+        "phone": "7773114631",
+        "eventType": "Boda / 15 Años",
+        "location": "Av. Vicente Guerrero 777, Cuernavaca",
+        "status": "Pending"
+      },
+      {
+        "id": "L033",
+        "name": "Av. Miguel Hidalgo 109, Ocotepec, Cuernavaca.",
+        "email": "",
+        "phone": "7772436200",
+        "eventType": "Boda / 15 Años",
+        "location": "Ocotepec, Cuernavaca",
+        "status": "Pending"
+      },
+      {
+        "id": "L034",
+        "name": "Paseo del Conquistador 55, Cuernavaca.",
+        "email": "",
+        "phone": "7771012570",
+        "eventType": "Boda / 15 Años",
+        "location": "Paseo del Conquistador 55, Cuernavaca",
+        "status": "Pending"
+      },
+      {
+        "id": "L035",
+        "name": "Calle Galeana 125, Las Palmas, Cuernavaca.",
+        "email": "",
+        "phone": "7773103929",
+        "eventType": "Boda / 15 Años",
+        "location": "Las Palmas, Cuernavaca",
+        "status": "Pending"
+      },
+      {
+        "id": "L036",
+        "name": "Comonfort 10, Centro, Cuernavaca.",
+        "email": "",
+        "phone": "7773103142",
+        "eventType": "Boda / 15 Años",
+        "location": "Centro, Cuernavaca",
+        "status": "Pending"
+      },
+      {
+        "id": "L037",
+        "name": "Del Hueso 112, Buena Vista, Cuernavaca.",
+        "email": "",
+        "phone": "7773133880",
+        "eventType": "Boda / 15 Años",
+        "location": "Buena Vista, Cuernavaca",
+        "status": "Pending"
+      },
+      {
+        "id": "L038",
+        "name": "Miguel Hidalgo 109, Ocotepec, Cuernavaca.",
+        "email": "",
+        "phone": "7772436200",
+        "eventType": "Boda / 15 Años",
+        "location": "Ocotepec, Cuernavaca",
+        "status": "Pending"
+      },
+      {
+        "id": "L039",
+        "name": "Av. Emiliano Zapata 601, Tlaltenango, Cuernavaca.",
+        "email": "",
+        "phone": "7771012570",
+        "eventType": "Boda / 15 Años",
+        "location": "Tlaltenango, Cuernavaca",
+        "status": "Pending"
+      },
+      {
+        "id": "L040",
+        "name": "Calzada de los Estrada 22, Vista Hermosa, Cuernavaca.",
+        "email": "",
+        "phone": "7773166219",
+        "eventType": "Boda / 15 Años",
+        "location": "Vista Hermosa, Cuernavaca",
+        "status": "Pending"
+      },
+      {
+        "id": "L041",
+        "name": "Herradura de Plata 27, Cuernavaca.",
+        "email": "",
+        "phone": "7772952996",
+        "eventType": "Boda / 15 Años",
+        "location": "Herradura de Plata 27, Cuernavaca",
+        "status": "Pending"
+      },
+      {
+        "id": "L042",
+        "name": "Cuernavaca, Morelos.",
+        "email": "radio@uaem.mx",
+        "phone": "7773297911",
+        "eventType": "Boda / 15 Años",
+        "location": "Morelos",
+        "status": "Pending"
+      },
+      {
+        "id": "L043",
+        "name": "Avenida Morelos Sur 134, Cuernavaca.",
+        "email": "",
+        "phone": "7773121356",
+        "eventType": "Boda / 15 Años",
+        "location": "Avenida Morelos Sur 134, Cuernavaca",
+        "status": "Pending"
+      },
+      {
+        "id": "L044",
+        "name": "Av. Río Mayo 1417-C, Vista Hermosa, Cuernavaca.",
+        "email": "",
+        "phone": "7773720494",
+        "eventType": "Boda / 15 Años",
+        "location": "Vista Hermosa, Cuernavaca",
+        "status": "Pending"
+      },
+      {
+        "id": "L045",
+        "name": "Av. Universidad 153, Chamilpa, Cuernavaca, Morelos.",
+        "email": "",
+        "phone": "7773117326",
+        "eventType": "Boda / 15 Años",
+        "location": "Morelos",
+        "status": "Pending"
+      },
+      {
+        "id": "L046",
+        "name": "Av. Morelos 309, Centro, Cuernavaca.",
+        "email": "",
+        "phone": "7772455900",
+        "eventType": "Boda / 15 Años",
+        "location": "Centro, Cuernavaca",
+        "status": "Pending"
+      },
+      {
+        "id": "L047",
+        "name": "José María Morelos 132, Chipitlán, Cuernavaca.",
+        "email": "",
+        "phone": "7773620220",
+        "eventType": "Boda / 15 Años",
+        "location": "Chipitlán, Cuernavaca",
+        "status": "Pending"
+      },
+      {
+        "id": "L048",
+        "name": "Val Ponce",
+        "email": "",
+        "phone": "",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L049",
+        "name": "Alex Ramz Ortega",
+        "email": "",
+        "phone": "",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L050",
+        "name": "Gustavo Garduño",
+        "email": "",
+        "phone": "",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L051",
+        "name": "José De Jesús González Zepeda",
+        "email": "",
+        "phone": "",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L052",
+        "name": "Yuriana Calleja",
+        "email": "yeseniayuriana5@hotmail.com",
+        "phone": "7774516311",
+        "eventType": "Boda / 15 Años",
+        "location": "",
+        "status": "Pending"
+      },
+      {
+        "id": "L055",
+        "name": "Yazmin Montesinos",
+        "email": "yazminmontesinos88@gmail.com",
+        "phone": "6648234936",
+        "eventType": "Boda",
+        "location": "Cuernavaca",
+        "status": "Pending"
+      }
+    ],
+    "proveedores_expositores": [
+      {
+        "archivo": "aby_decora.html",
+        "nombre_comercial": "Aby decora | Directorio de Proveedores",
+        "texto_completo": "Aby decora | Directorio de Proveedores Volver al Directorio Inicio Aby decora Decoración y Globos Titular: Abigail Jimenez Sandoval Horarios: Durante el día completo Decoraciones de globos para eventos Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: Bouquete de globos con el número 15. Condiciones: Válido al contratar en la Expo. Catálogo de Servicios y Paquetes Paquete 1 Básico Guirnalda de globos con bouquete de número de cumpleaños. Precio Especial Expo $2,500.00 MXN Disponibilidad: Abierta Políticas: Zona Requisitos: 50% de anticipo Paquete 2 Básico Arco de globos, bouquete con número y fondo (shimer, cortinas, etc) Precio Especial Expo $3,000.00 MXN Disponibilidad: Abierta Políticas: Zona Requisitos: 50% de anticipo Paquete 3 Medio 2 mamparas, bouquete con numero, fondo (lona, shimer, etc.) Precio Especial Expo $4,500.00 MXN Disponibilidad: Abierta Políticas: Zona Requisitos: 50% anticipo Paquete 4 VIP 2 mamparas, shimer, bouquete con número, mesa pastel personal Precio Especial Expo $5,000.00 MXN Disponibilidad: Abierta Políticas: Zona Requisitos: 50% anticipo"
+      },
+      {
+        "archivo": "academia_de_baile_dance_queens.html",
+        "nombre_comercial": "Academia de Baile Dance Queens | Directorio de Proveedores",
+        "texto_completo": "Academia de Baile Dance Queens | Directorio de Proveedores Volver al Directorio Inicio Academia de Baile Dance Queens Danza y Performance Titular: HUMBERTO CARRANZA NUÑEZ Horarios: 2:00 pm a 8:00 pm Nuestra academia se rige por el compromiso,la responsabilidad y el desmotrar de que estamos hechos, el brindar un servicio de calidad a todos nuestros clientes. Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: Se le regalará un juego de copas decoradas para su evento, pirotecnia extra y un descuento del 10% o 15% en su contratación. Condiciones: Al contratar el paquete basico se llebara los dos primeros premios. y el segundo premio se otorgara al contratar el paquete vip. siempre y cuando mecionen que bienen de la expo boda y xv años de PRIMAVER EVETS GROUP. Catálogo de Servicios y Paquetes 1.0 Basico Contiene 6 temas en todo su vals como son: presentacion, vals, coronacion, brindis, salida y moderna Precio Especial Expo $6,500.00 MXN Disponibilidad: Durante los soguientes meses del año 2026 Requisitos: Mensionar que asistieron a la expo boda y xv años 2.0 V.I.P Contiene 9 temas en todo su vals como son:Entrada al salon, Presentacion, Vals 1 y 2 temas , Coronacion, Brindis simbolico (brindis de fuego ù bolita de hidrogel con cuvo let), Brindis tradicional, Salida. Moderna. Precio Especial Expo $9,500.00 MXN Disponibilidad: Durante los soguientes meses del año 2026 Requisitos: Mensionar que asistieron a la expo boda y xv años"
+      },
+      {
+        "archivo": "andrea_lozano_beauty_salon.html",
+        "nombre_comercial": "Andrea Lozano Beauty Salon | Directorio de Proveedores",
+        "texto_completo": "Andrea Lozano Beauty Salon | Directorio de Proveedores Volver al Directorio Inicio Andrea Lozano Beauty Salon Belleza y Maquillaje Titular: Andrea Lozano López Horarios: Previa Cita Servicios profesionales de maquillaje aerógrafo, tradicional y peinado para novias e invitadas. Con más de 20 años de experiencia en el sector nupcial, garantizando técnicas de larga duración, maquillaje blindado y las últimas tendencias para hacer de tu boda un día inolvidable. Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: Ampolleta de lifting de obsequio en la contratación de cualquier paquete. Condiciones: Válido al apartar tu fecha el día del evento de la Expo. Catálogo de Servicios y Precios Lista de Precios Catálogo Visual (Imágenes) Novias VIP Paquete Plus (Novias) Servicio de máximo lujo que incluye: Maquillaje aerógrafo ojos/rostro (Prueba) Maquillaje aerógrafo (Día del evento) Pestaña natural 3D (Prueba y Evento) Preparación profunda de piel con sueros/mascarilla Ampolleta de lifting & Contour highlight Peinado profesional & puesta de tocado/velo Precio Especial $8,900.00 MXN Novias Premium Paquete Power (Novias) Servicio intermedio de gran durabilidad: Maquillaje aerógrafo (Prueba y Evento) Pestaña natural 3D (Prueba y Evento) Diseño de ceja (Prueba y Evento) Preparación de piel, sueros y mascarilla Ampolleta de lifting & Contour highlight Peinado profesional & puesta de tocado/velo Precio Especial $7,700.00 MXN Novias Básico Paquete Básico (Novias) Servicio esencial tradicional de cobertura completa: Maquillaje tradicional (Prueba y Evento) 2 tiras de pestañas de pelo natural Diseño de ceja (Prueba y 1 día antes) Preparación de piel con primer, sueros y mascarilla Contour highlight & Sellador Makeup Peinado tradicional & puesta de tocado/velo Precio Especial $7,200.00 MXN Servicios Individuales Novias Individuales Servicios a domicilio por separado: Maquillaje Aerógrafo: $2,530.00 MXN Maquillaje Tradicional: $2,420.00 MXN Peinado de Novia (tocado/velo): $2,100.00 MXN *No incluye pruebas. Invitadas & Damas Servicios para Invitadas Paquetes y servicios individuales para acompañantes: Paquete Peinado + Aero: $2,450.00 MXN Paquete Peinado + Tradicional: $2,200.00 MXN Maquillaje Aerógrafo: $1,500.00 MXN Maquillaje Tradicional: $1,350.00 MXN Peinado Invitadas: $1,100.00 MXN *Pestañas naturales incluidas en maquillaje. Servicios Extras Cuidado Facial y Cejas Adicionales para lucir una piel radiante: Servicio Facial Hidratante: $1,800.00 MXN Diseño de Cejas (Perfilación): $605.00 MXN Ampolleta de Lifting: $250.00 MXN *Recomendados previos al maquillaje. Políticas de Servicio a Domicilio El servicio a domicilio requiere de un mínimo de Novia + 2 invitadas contratando paquete de maquillaje y peinado. Todos los productos utilizados son de calidad profesional de alta gama para asegurar una cobertura blindada y de larga duración para tu evento. 1. Portada del Catálogo 2. Preparativos 3. Paquete Básico 4. Paquete Power 5. Paquete Plus 6. Maquillaje Novia 7. Peinado Novia 8. Paquete Invitadas 9. Maquillaje Invitadas 10. Peinado Invitadas 11. Servicios Faciales 12. Políticas Domicilio 13. Contacto y Redes &times;"
+      },
+      {
+        "archivo": "corona_music.html",
+        "nombre_comercial": "corona music | Directorio de Proveedores",
+        "texto_completo": "corona music | Directorio de Proveedores Volver al Directorio Inicio corona music Música y Audio Titular: DIEGO CORONA VEGA Horarios: SIEMPRE ABIERTO SERVICIO DE MUSICALISACIÓN E ILUMINACIÓN PARA EVENTOS SOCIALES Guardar en Contactos Chat WhatsApp Visitar Sitio Web Regalo Privilege Regalo: 6 detonaciones de pirotecnia en frío durante el evento contratado. Condiciones: CONTRATANDO EL DIA DE LA EXPO Catálogo de Servicios y Paquetes MEDIANO DJ AUDIO E ILUMINACIÓN Y PANTALLA DE PROYECCIÓN Precio Especial Expo $9,000.00 MXN Políticas: DURANTE LA EXPO Requisitos: AUTORIZANDO CONTRATO VIP DJ AUDIO E ILUMINACIÓN, CABEZONES Y PISTA DE BAILE ILUMINADA Precio Especial Expo $16,000.00 MXN Políticas: DURANTE LA EXPO Requisitos: AUTORIZANDO CONTRATO"
+      },
+      {
+        "archivo": "kataleya_florist.html",
+        "nombre_comercial": "kataleya florist | Directorio de Proveedores",
+        "texto_completo": "kataleya florist | Directorio de Proveedores Volver al Directorio Inicio kataleya florist Florería y Decoración Titular: Isabel Santibáñez alanis Horarios: 8 am 8 pm somos una empresa comprometida con lo que afresemos Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: Ramo de novia premium. Condiciones: Válido al contratar en la Expo. Catálogo Personalizado Este proveedor maneja cotizaciones personalizadas según las necesidades del evento. Solicita una cotización directamente por sus canales de contacto."
+      },
+      {
+        "archivo": "la_princesa_paleteria.html",
+        "nombre_comercial": "La princesa Paleteria | Directorio de Proveedores",
+        "texto_completo": "La princesa Paleteria | Directorio de Proveedores Volver al Directorio Inicio La princesa Paleteria Alimentos y Bebidas Titular: Griselda Anaid Villanueva Bailon Horarios: Lunes a Viernes de 08:00 a 17:00 hrs Paletería la Princesa de Tocumbo es un concepto que combina la elaboración tradicional artesanal de helados y paletas directamente de Tocubo Michoacan (cuna de la paletería y heladería mexicana) con la innovación en el mercado de paletas y helados, nuestros productos son elaborados 100% de fruta natural, lo que los hace un manjar que satisface los paladares más exigentes. Nuestros valores se basan en el respeto por las personas, honestidad y confianza. Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: En caso de liquidación del 100% del servicio, se aplicará un 10% de descuento sobre el Precio Exclusivo. Condiciones: El gasto de envío (en caso de aplicar) no entra en el descuento de 10%. Catálogo de Servicios y Paquetes Paquete 1 mini paletas Premium Servicio por 2 horas 150 mini paletas Sabores a elegir Carrito paletero personalizado Precio Especial Expo $1,700.00 MXN Disponibilidad: De acuerdo a agenda Políticas: 50% de anticipo para la reservación de la fecha y liquidación un día antes del servicio El costo incluido aplica para eventos en Cuernavaca, se podrá aplicar gastos de envío en caso de que el evento sea fuera de Cuernavaca En caso de cancelación del evento el anticipo no será devuelto, en caso de reprogramación el servicio quedará sujeto a disponibilidad de la nueva fecha. Requisitos: Los sabores deberán ser elegidos con al menos 30 días de anticipación a la fecha del evento. El diseño de personalización tendrá opción a 3 modificaciones. El diseño será aprobado por el cliente. Paquete 2 Nieve/Helado Premium Servicio por 2 horas Nieve/helado para 100 personas, servido en cono o vaso Carrito paletero personalizado Precio Especial Expo $3,600.00 MXN Disponibilidad: De acuerdo a agenda Políticas: 50% de anticipo para la reservación de la fecha y liquidación un día antes del servicio El costo incluido aplica para eventos en Cuernavaca, se podrá aplicar gastos de envío en caso de que el evento sea fuera de Cuernavaca En caso de cancelación del evento el anticipo no será devuelto, en caso de reprogramación el servicio quedará sujeto a disponibilidad de la nueva fecha. Requisitos: Los sabores deberán ser elegidos con al menos 30 días de anticipación a la fecha del evento. El diseño de personalización tendrá opción a 3 modificaciones. El diseño será aprobado por el cliente. Paquete 3 Mixto Premium Servicio por 2 horas 75 mini paletas Sabores a elegir Helado/nieve para 50 personas servido en vaso o cono Carrito paletero personalizado Precio Especial Expo $2,600.00 MXN Disponibilidad: De acuerdo a agenda Políticas: 50% de anticipo para la reservación de la fecha y liquidación un día antes del servicio El costo incluido aplica para eventos en Cuernavaca, se podrá aplicar gastos de envío en caso de que el evento sea fuera de Cuernavaca En caso de cancelación del evento el anticipo no será devuelto, en caso de reprogramación el servicio quedará sujeto a disponibilidad de la nueva fecha. Requisitos: Los sabores deberán ser elegidos con al menos 30 días de anticipación a la fecha del evento. El diseño de personalización tendrá opción a 3 modificaciones. El diseño será aprobado por el cliente."
+      },
+      {
+        "archivo": "licky_baut_photo.html",
+        "nombre_comercial": "licky baut photo | Directorio de Proveedores",
+        "texto_completo": "licky baut photo | Directorio de Proveedores Volver al Directorio Inicio licky baut photo Fotografía y Video Titular: Licky Baut Fotografía y cine para eventos especiales Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: 1 hora extra de lo contratado. Condiciones: Válido al contratar en la Expo. Catálogo de Servicios y Paquetes Fotografía y video Precio Especial Expo variante"
+      },
+      {
+        "archivo": "mariachi_xiuhtepetl.html",
+        "nombre_comercial": "Mariachi xiuhtepetl | Directorio de Proveedores",
+        "texto_completo": "Mariachi xiuhtepetl | Directorio de Proveedores Volver al Directorio Inicio Mariachi xiuhtepetl Música en Vivo Titular: Renata Salazar Horarios: 24/7 los 365 días del año (sujeto a disponibilidad). Atención telefónica: Lun-sáb 9 am a 9 pm. Dom 10 am a 9 pm. Mariachi de calidad, originario de Jiutepec. Integrado por músicos con experiencia y amplia trayectoria. Contamos ocn arpa en vivo y equipo de audio propio. Disponible para todo tipo de evento. Contamos con diferentes colores de vestuario. Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: Descuentos especiales a clientes recurrentes y en eventos entre semana. Condiciones: I. Ser cliente recurrente o haber contratado al menos una vez. II. Se considera entre semana de lunes a jueves Catálogo de Servicios y Paquetes Dos horas de servicio Dos horas 120 minutos de música en vivo Precio Especial Expo $9,500.00 MXN Disponibilidad: Sujeto a Políticas: Dentro de la zona Jiutepec, Zapata y Cuernavaca. Las dos horas deben de ser continuas, sin intermedio. Requisitos: Anticipo significativo de $300 para liquidar en efectivo el día del evento. Si desea liquidar con transferencia, ésta deberá realizarse antes de comenzar el servicio y se generará una comisión del 10% sobre el monto a transferir, por cuestiones fiscales. Una hora de servicio Hora 60 minutos de música en vivo Precio Especial Expo $5,000.00 MXN Disponibilidad: Sujeto a Políticas: Dentro de la zona Jiutepec, Zapata y Cuernavaca Requisitos: Anticipo significativo de $300 para liquidar en efectivo el día del evento. Si desea liquidar con transferencia, ésta deberá realizarse antes de comenzar el servicio y se generará una comisión del 10% sobre el monto a transferir, por cuestiones fiscales. Set de 45 minutos Set 45 45 minutos de música en vivo Precio Especial Expo $4,500.00 MXN Disponibilidad: Sujeto a Políticas: Dentro de la zona Jiutepec, Zapata y Cuernavaca Requisitos: Anticipo significativo de $300 para liquidar en efectivo el día del evento. Si desea liquidar con transferencia, ésta deberá realizarse antes de comenzar el servicio y se generará una comisión del 10% sobre el monto a transferir, por cuestiones fiscales. Serenata Serenata 7 canciones Precio Especial Expo $4,000.00 MXN Disponibilidad: Sujeto a Políticas: Dentro de la zona Jiutepec, Zapata y Cuernavaca Requisitos: Anticipo significativo de $300 para liquidar en efectivo el día del evento. Si desea liquidar con transferencia, ésta deberá realizarse antes de comenzar el servicio y se generará una comisión del 10% sobre el monto a transferir, por cuestiones fiscales. Serenata de 5 canciones Serenata económica 5 canciones Precio Especial Expo $3,500.00 MXN Disponibilidad: Sujeto a Políticas: Dentro de la zona Jiutepec, Zapata y Cuernavaca Requisitos: Anticipo significativo de $300 para liquidar en efectivo el día del evento. Si desea liquidar con transferencia, ésta deberá realizarse antes de comenzar el servicio y se generará una comisión del 10% sobre el monto a transferir, por cuestiones fiscales."
+      },
+      {
+        "archivo": "primavera_events_group.html",
+        "nombre_comercial": "Primavera Events Group | Servicios y Venues",
+        "texto_completo": "Primavera Events Group | Servicios y Venues Volver al Directorio Inicio Primavera Events Group Organizador Principal Richard & Jessy La firma organizadora y holding detrás de la producción general de la Expo. Brindamos servicios integrales de banquete y planeación en locaciones y venues del más alto nivel. Guardar en Contactos Chat WhatsApp Nuestros Principales Servicios Wedding & Event Planning Diseñamos y coordinamos bodas y eventos de destino que reflejan fielmente la visión de nuestros clientes. Jessy & Richard trabajan con un equipo experto para guiar la planificación paso a paso, gestionando el presupuesto, proveedores y la producción el gran día. Información General Jessica Sandoval Richard Hernández Banquetes Primavera Servicio exclusivo de banquetes, catering y mixología fina para eventos sociales. Fusionamos la alta cocina con presentaciones de mesa de postres personalizadas, flores de gala, mantelería y mobiliario de lujo. Banquetes Oficial Facebook Oficial Locaciones y Venues Oficiales Nuestros paquetes todo incluido se pueden realizar en las locaciones más exclusivas del estado. Explora todos los venues oficiales disponibles en nuestro sitio web oficial. Ver Todos los Venues Oficiales"
+      },
+      {
+        "archivo": "scanner_dj.html",
+        "nombre_comercial": "scanner dj | Directorio de Proveedores",
+        "texto_completo": "scanner dj | Directorio de Proveedores Volver al Directorio Inicio scanner dj Música y Audio Titular: ISMAEL CUEVAS Horarios: SIEMPRE ABIERTO SOMOS UNA EMPRESA SERIA DEDICADA A LA SONORIZACION ILUMINACION Y AMBIENTACION DE EVENTOS SOCIALES Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: PRECIO ESPECIAL EN NUESTROS PAQUETES DE SERVICIO. Condiciones: CONTRATANDO DENTRO DE LA EXPO Catálogo de Servicios y Paquetes BASICO DJ, AUDIO E ILUMINACIÓN Precio Especial Expo $10,000.00 MXN Disponibilidad: SUJETO A Políticas: CONTRATAR DURANTE LA EXPO Requisitos: APARTADO 20% INTERMEDIO DJ, AUDIO, ILUMINACION CON PANTALLA LED Precio Especial Expo $15,000.00 MXN Disponibilidad: SUJETO A Políticas: CONTRATAR DURANTE LA EXPO Requisitos: APARTADO 20% COMPLETO DJ, AUDIO, ILUMINACION , PANTALLA LED, ROBOT LED Y CABEZONES Precio Especial Expo $20,000.00 MXN Disponibilidad: SUJETO A Políticas: CONTRATAR DURANTE LA EXPO Requisitos: APARTADO 20%"
+      },
+      {
+        "archivo": "tequila_personalizado_don_ramon.html",
+        "nombre_comercial": "Tequila personalizado don Ramón | Directorio de Proveedores",
+        "texto_completo": "Tequila personalizado don Ramón | Directorio de Proveedores Volver al Directorio Inicio Tequila personalizado don Ramón Alimentos y Bebidas Titular: Carlos Arturo Sánchez Chávez Horarios: 8 am a 8 pm Transformamos una botella de Tequila Don Ramón en un recuerdo único e inolvidable. Cada pieza es personalizada mediante la técnica corte diamante, mediante la cuál podemos plasmar nombres, fechas, logotipos, siluetas de fotografías y mensajes especiales. Ideal para bodas, XV años, bautizos, graduaciones, aniversarios, reconocimientos empresariales y cualquier ocasión que merezca ser recordada para siempre. Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: 30% de descuento en la línea Punta Diamante Plata, Reposado y Añejo Cristalino. Condiciones: Firmar contrato el dia del evento y liquidar antes del 26 de Junio asi como mandar su disiño a mas tardar 5 dias despuede de realizar su pago Catálogo de Productos y Precios Lista de Precios Catálogo Visual (Imagen PDF) Arte Legendario Arte Legendario de México Botellas exclusivas decoradas artesanalmente: Tierra, Fuego, Éter, Alma, Aire y Agua. Presentación: 750 ml Precio Especial $7,515.00 MXN Cerámica Premium Línea Cerámica Luis Miguel Diseño de gala en cerámica fina: Plata: $5,500.00 MXN Reposado: $6,380.00 MXN Añejo: $7,480.00 MXN Presentación: 750 ml Cristales Genuinos Edición Limitada Swarovski Decoradas con auténticos cristales Swarovski: Plata: $8,175.00 MXN Añejo: $9,165.00 MXN Extra Añejo: $10,705.00 MXN Presentación: 750 ml Edición Limitada Línea Edición Limitada Colecciones exclusivas y añejados únicos: Añejo \"Dark\": $4,235.00 MXN Plata: $4,970.00 MXN Añejo: $6,120.00 MXN Extra Añejo: $7,270.00 MXN Presentación: 750 ml Platinium Línea Platinium Botellas estilizadas y de gran elegancia: Plata (700 ml): $750.00 MXN Reposado (700 ml): $865.00 MXN Añejo (700 ml): $1,040.00 MXN Añejo Cristalino (1.75 L): $2,185.00 MXN Varios Tamaños Punta Diamante Línea Punta Diamante La línea insignia de corte diamante: Plata/Reposado (50 ml): $155.00 MXN Plata/Reposado (200 ml): $285.00 MXN Añejo Cristalino (200 ml): $320.00 MXN Plata (750 ml): $445.00 MXN Reposado (750 ml): $465.00 MXN Añejo Cristalino (750 ml): $740.00 MXN Tahona (750 ml): $638.00 MXN Varios Tamaños Tradicional Línea Clásica El sabor original en todas sus presentaciones: Tamarindo (750 ml): $405.00 MXN Reposado (750 ml): $445.00 MXN Reposado (1 L): $530.00 MXN Plata (1.75 L): $925.00 MXN Reposado (1.75 L): $940.00 MXN Reposado (3 L): $1,610.00 MXN Varios Tamaños Mezcal Artesanal Línea Mezcales Mezcales premium de agaves selectos: Salmiana (750 ml): $1,040.00 MXN Espadín (750 ml): $1,090.00 MXN Tobalá (750 ml): $1,145.00 MXN Presentación: 750 ml Haz clic sobre la imagen para expandir en tamaño completo. Descargar Catálogo PDF Completo"
+      }
+    ]
+  },
+  "agentes_conversacionales": {
+    "metadata": {
+      "repo_origen": "https://github.com/5410m0n0c001/primavera-events-group-agente-sofia-",
+      "archivo_origen": "ninguno",
+      "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+      "estado": "descartado"
+    },
+    "agente": "Agente Sofía",
+    "comentario": "El repositorio de origen está vacío y no contiene archivos ni commits."
+  },
+  "inventario_mobiliario_2026": {
+    "metadata": {
+      "fuente": "Primavera-Events-Group-App2.0- (server/prisma/seeds/inventario.seed.ts + server/prisma/seed-inventory.ts)",
+      "regla_consolidacion": "Cuando el mismo articulo aparece en ambos archivos fuente con precio distinto, se conservo el precio mas alto, por indicacion explicita de Salo (2026-07-27).",
+      "fecha_consolidacion": "2026-07-27",
+      "total_items": 189
+    },
+    "items": [
+      {
+        "nombre": "Exprimidor de limon",
+        "categoria": "Accesorios y Miscelánea",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Jarra de plástico",
+        "categoria": "Accesorios y Miscelánea",
+        "precioRenta": 25
+      },
+      {
+        "nombre": "Licuadora",
+        "categoria": "Accesorios y Miscelánea",
+        "precioRenta": 200
+      },
+      {
+        "nombre": "Pica hielo",
+        "categoria": "Accesorios y Miscelánea",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Salsero",
+        "categoria": "Accesorios y Miscelánea",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Tarja para hielo",
+        "categoria": "Accesorios y Miscelánea",
+        "precioRenta": 150
+      },
+      {
+        "nombre": "Tortillero",
+        "categoria": "Accesorios y Miscelánea",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Vitrolero de cristal pequeño",
+        "categoria": "Accesorios y Miscelánea",
+        "precioRenta": 50
+      },
+      {
+        "nombre": "Vitrolero de plástico grande",
+        "categoria": "Accesorios y Miscelánea",
+        "precioRenta": 80
+      },
+      {
+        "nombre": "ceniceros",
+        "categoria": "Accesorios y Miscelánea",
+        "precioRenta": 5
+      },
+      {
+        "nombre": "rack metálico para platos",
+        "categoria": "Accesorios y Miscelánea",
+        "precioRenta": 120
+      },
+      {
+        "nombre": "Cruz madera ceremonia",
+        "categoria": "Ceremonia",
+        "precioRenta": 150
+      },
+      {
+        "nombre": "Copa de vino ámbar",
+        "categoria": "Cristalería",
+        "precioRenta": 8
+      },
+      {
+        "nombre": "Atril de madera",
+        "categoria": "Decoración",
+        "precioRenta": 120
+      },
+      {
+        "nombre": "Caballete madera",
+        "categoria": "Decoración",
+        "precioRenta": 80
+      },
+      {
+        "nombre": "Carrito de snacks",
+        "categoria": "Decoración",
+        "precioRenta": 200
+      },
+      {
+        "nombre": "Corazón gigante",
+        "categoria": "Decoración",
+        "precioRenta": 350
+      },
+      {
+        "nombre": "Cuadro virgen maría",
+        "categoria": "Decoración",
+        "precioRenta": 200
+      },
+      {
+        "nombre": "Letra gigante XV 1.10m",
+        "categoria": "Decoración",
+        "precioRenta": 300
+      },
+      {
+        "nombre": "Letra gigante XV 1.80m",
+        "categoria": "Decoración",
+        "precioRenta": 450
+      },
+      {
+        "nombre": "Reclinatorio",
+        "categoria": "Decoración",
+        "precioRenta": 150
+      },
+      {
+        "nombre": "alfombra roja",
+        "categoria": "Decoración",
+        "precioRenta": 300
+      },
+      {
+        "nombre": "base metálica para numeración de mesas",
+        "categoria": "Decoración",
+        "precioRenta": 10
+      },
+      {
+        "nombre": "cruz madera para ceremonia",
+        "categoria": "Decoración",
+        "precioRenta": 350
+      },
+      {
+        "nombre": "números de mesa acrilicos",
+        "categoria": "Decoración",
+        "precioRenta": 20
+      },
+      {
+        "nombre": "números para mesa en madera",
+        "categoria": "Decoración",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "back redondo metálico",
+        "categoria": "Estructuras",
+        "precioRenta": 400
+      },
+      {
+        "nombre": "corazon gigante",
+        "categoria": "Estructuras",
+        "precioRenta": 400
+      },
+      {
+        "nombre": "letra gigante E",
+        "categoria": "Estructuras",
+        "precioRenta": 300
+      },
+      {
+        "nombre": "letra gigante L",
+        "categoria": "Estructuras",
+        "precioRenta": 300
+      },
+      {
+        "nombre": "letra gigante O",
+        "categoria": "Estructuras",
+        "precioRenta": 300
+      },
+      {
+        "nombre": "letra gigante V",
+        "categoria": "Estructuras",
+        "precioRenta": 300
+      },
+      {
+        "nombre": "letra gigante XV 1.10 mt",
+        "categoria": "Estructuras",
+        "precioRenta": 600
+      },
+      {
+        "nombre": "letra gigante XV 1.80 mt",
+        "categoria": "Estructuras",
+        "precioRenta": 900
+      },
+      {
+        "nombre": "pieza de templete de madera",
+        "categoria": "Estructuras",
+        "precioRenta": 200
+      },
+      {
+        "nombre": "portería metálica dorada",
+        "categoria": "Estructuras",
+        "precioRenta": 450
+      },
+      {
+        "nombre": "portería metálica negra",
+        "categoria": "Estructuras",
+        "precioRenta": 350
+      },
+      {
+        "nombre": "Plato base chocolate",
+        "categoria": "Loza",
+        "precioRenta": 10
+      },
+      {
+        "nombre": "Plato base gótico",
+        "categoria": "Loza",
+        "precioRenta": 10
+      },
+      {
+        "nombre": "Plato trinche 27cm",
+        "categoria": "Loza",
+        "precioRenta": 8
+      },
+      {
+        "nombre": "Cucharita negra",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 10
+      },
+      {
+        "nombre": "Cuchillos (cocina)",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 20
+      },
+      {
+        "nombre": "copa agua romana",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 20
+      },
+      {
+        "nombre": "copa de agua roja",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 18
+      },
+      {
+        "nombre": "copa de agua transparente",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "copa de vino ambar",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 18
+      },
+      {
+        "nombre": "copa de vino azul",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 18
+      },
+      {
+        "nombre": "copa de vino transparente",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "copa de vino uva",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 18
+      },
+      {
+        "nombre": "copa de vino verde olivo",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 18
+      },
+      {
+        "nombre": "copa flauta",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "copa martinera",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 20
+      },
+      {
+        "nombre": "cuchara sopera dorada",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 12
+      },
+      {
+        "nombre": "cuchara sopera gold rose",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "cuchara sopera negra",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 12
+      },
+      {
+        "nombre": "cuchara sopera plateada",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 8
+      },
+      {
+        "nombre": "cucharita dorada",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 10
+      },
+      {
+        "nombre": "cucharita gold rose",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 12
+      },
+      {
+        "nombre": "cucharita plateada",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 6
+      },
+      {
+        "nombre": "cuchillo dorado",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 14
+      },
+      {
+        "nombre": "cuchillo gold rose",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 16
+      },
+      {
+        "nombre": "cuchillo negro",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 14
+      },
+      {
+        "nombre": "cuchillo plateado",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 10
+      },
+      {
+        "nombre": "plato base concha dorado",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 35
+      },
+      {
+        "nombre": "plato base cristal aperlado",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 35
+      },
+      {
+        "nombre": "plato base plateado",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 25
+      },
+      {
+        "nombre": "plato base romano",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 25
+      },
+      {
+        "nombre": "plato base tipo espiral",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 25
+      },
+      {
+        "nombre": "plato base vintage",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 30
+      },
+      {
+        "nombre": "plato dase chocolate",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 25
+      },
+      {
+        "nombre": "plato entremés blanco",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 10
+      },
+      {
+        "nombre": "plato gotico",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 20
+      },
+      {
+        "nombre": "plato postre",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 10
+      },
+      {
+        "nombre": "plato sopero cuadrado blanco",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 14
+      },
+      {
+        "nombre": "plato sopero negro",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "plato sopero redondo blanco",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 12
+      },
+      {
+        "nombre": "plato trinche 27 cm",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 12
+      },
+      {
+        "nombre": "tenedor dorado carne",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 14
+      },
+      {
+        "nombre": "tenedor dorado ensalada",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 12
+      },
+      {
+        "nombre": "tenedor gold rose carne",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 16
+      },
+      {
+        "nombre": "tenedor gold rose ensalada",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 14
+      },
+      {
+        "nombre": "tenedor negro carne",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 14
+      },
+      {
+        "nombre": "tenedor negro ensalada",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 12
+      },
+      {
+        "nombre": "tenedor plateado carne",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 10
+      },
+      {
+        "nombre": "tenedor plateado ensalada",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 8
+      },
+      {
+        "nombre": "tequilero",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 8
+      },
+      {
+        "nombre": "vaso cubero",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 10
+      },
+      {
+        "nombre": "vaso old fashion",
+        "categoria": "Loza y Cristalería",
+        "precioRenta": 12
+      },
+      {
+        "nombre": "Bambalinas negras para tablon",
+        "categoria": "Mantelería",
+        "precioRenta": 60
+      },
+      {
+        "nombre": "Camino acul turqueza",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino arena",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino azul cielo",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino azul marino",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino azul rey",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino beige",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino caqui",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino champagne",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino chocolate",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino corrugado ivory",
+        "categoria": "Mantelería",
+        "precioRenta": 18
+      },
+      {
+        "nombre": "Camino corrugado verde olivo",
+        "categoria": "Mantelería",
+        "precioRenta": 18
+      },
+      {
+        "nombre": "Camino dorado",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino durazno",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino fuxia",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino hueso",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino lila",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino mexicano",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino morado",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino negro",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino palo de rosa",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino rojo",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino rosa baby",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino rosa blusa",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino rosa brillante",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino salmón",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino shedron",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino verde bandera",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino verde navidad",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Camino verde olivo",
+        "categoria": "Mantelería",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Cubre mantel amarillo",
+        "categoria": "Mantelería",
+        "precioRenta": 35
+      },
+      {
+        "nombre": "Cubre mantel dorado",
+        "categoria": "Mantelería",
+        "precioRenta": 35
+      },
+      {
+        "nombre": "Cubre mantel palo de rosa",
+        "categoria": "Mantelería",
+        "precioRenta": 35
+      },
+      {
+        "nombre": "Cubre mantel rojo",
+        "categoria": "Mantelería",
+        "precioRenta": 35
+      },
+      {
+        "nombre": "Cubre mantel verde",
+        "categoria": "Mantelería",
+        "precioRenta": 35
+      },
+      {
+        "nombre": "Mantel arena cuadrado",
+        "categoria": "Mantelería",
+        "precioRenta": 40
+      },
+      {
+        "nombre": "Mantel azúl marino cuadrado",
+        "categoria": "Mantelería",
+        "precioRenta": 40
+      },
+      {
+        "nombre": "Mantel blanco cuadrado",
+        "categoria": "Mantelería",
+        "precioRenta": 40
+      },
+      {
+        "nombre": "Mantel blanco para tablon",
+        "categoria": "Mantelería",
+        "precioRenta": 45
+      },
+      {
+        "nombre": "Mantel blanco para tablón",
+        "categoria": "Mantelería",
+        "precioRenta": 35
+      },
+      {
+        "nombre": "Mantel blanco tipo macrame",
+        "categoria": "Mantelería",
+        "precioRenta": 60
+      },
+      {
+        "nombre": "Mantel caqui cuadrado",
+        "categoria": "Mantelería",
+        "precioRenta": 40
+      },
+      {
+        "nombre": "Mantel chocolate cuadrado",
+        "categoria": "Mantelería",
+        "precioRenta": 40
+      },
+      {
+        "nombre": "Mantel negro cuadrado",
+        "categoria": "Mantelería",
+        "precioRenta": 40
+      },
+      {
+        "nombre": "mantel blanco redondo",
+        "categoria": "Mantelería",
+        "precioRenta": 45
+      },
+      {
+        "nombre": "Mesa infantil",
+        "categoria": "Mesas",
+        "precioRenta": 50
+      },
+      {
+        "nombre": "Mesa plegable cuadrada",
+        "categoria": "Mesas",
+        "precioRenta": 60
+      },
+      {
+        "nombre": "Mesa rectangular madera miel",
+        "categoria": "Mesas",
+        "precioRenta": 100
+      },
+      {
+        "nombre": "Mesa rectangular madera nogal clásico",
+        "categoria": "Mesas",
+        "precioRenta": 100
+      },
+      {
+        "nombre": "Mesa rectangular tipo mármol",
+        "categoria": "Mesas",
+        "precioRenta": 120
+      },
+      {
+        "nombre": "Mesa redonda",
+        "categoria": "Mesas",
+        "precioRenta": 80
+      },
+      {
+        "nombre": "Mesa tablón",
+        "categoria": "Mesas",
+        "precioRenta": 70
+      },
+      {
+        "nombre": "Banca para novios",
+        "categoria": "Mobiliario",
+        "precioRenta": 200
+      },
+      {
+        "nombre": "Mesa cuadrada de madera",
+        "categoria": "Mobiliario",
+        "precioRenta": 120
+      },
+      {
+        "nombre": "Mesa rectangular tipo marmol",
+        "categoria": "Mobiliario",
+        "precioRenta": 150
+      },
+      {
+        "nombre": "Periquera alta metal",
+        "categoria": "Mobiliario",
+        "precioRenta": 160
+      },
+      {
+        "nombre": "Rueda madera para mesa de coctel",
+        "categoria": "Mobiliario",
+        "precioRenta": 40
+      },
+      {
+        "nombre": "Rueda metálica con repisas de madera",
+        "categoria": "Mobiliario",
+        "precioRenta": 180
+      },
+      {
+        "nombre": "Sala lounge madera",
+        "categoria": "Mobiliario",
+        "precioRenta": 450
+      },
+      {
+        "nombre": "Sillón principal gris Oxford",
+        "categoria": "Mobiliario",
+        "precioRenta": 300
+      },
+      {
+        "nombre": "Sombrilla",
+        "categoria": "Mobiliario",
+        "precioRenta": 150
+      },
+      {
+        "nombre": "banco alto tejido plástico negro",
+        "categoria": "Mobiliario",
+        "precioRenta": 65
+      },
+      {
+        "nombre": "banco madera alto",
+        "categoria": "Mobiliario",
+        "precioRenta": 55
+      },
+      {
+        "nombre": "banco metálico alto",
+        "categoria": "Mobiliario",
+        "precioRenta": 45
+      },
+      {
+        "nombre": "base de madera plegable para mesa",
+        "categoria": "Mobiliario",
+        "precioRenta": 20
+      },
+      {
+        "nombre": "base metalica para mesas",
+        "categoria": "Mobiliario",
+        "precioRenta": 25
+      },
+      {
+        "nombre": "base metálica alta (centro de mesa)",
+        "categoria": "Mobiliario",
+        "precioRenta": 30
+      },
+      {
+        "nombre": "carrito snacks",
+        "categoria": "Mobiliario",
+        "precioRenta": 500
+      },
+      {
+        "nombre": "cojín para silla boss",
+        "categoria": "Mobiliario",
+        "precioRenta": 10
+      },
+      {
+        "nombre": "cojín para silla lotus",
+        "categoria": "Mobiliario",
+        "precioRenta": 10
+      },
+      {
+        "nombre": "cojín para silla tiffany",
+        "categoria": "Mobiliario",
+        "precioRenta": 8
+      },
+      {
+        "nombre": "cubo metálico base",
+        "categoria": "Mobiliario",
+        "precioRenta": 25
+      },
+      {
+        "nombre": "descanso metálico",
+        "categoria": "Mobiliario",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "descansó de madera",
+        "categoria": "Mobiliario",
+        "precioRenta": 20
+      },
+      {
+        "nombre": "mesa de centro",
+        "categoria": "Mobiliario",
+        "precioRenta": 100
+      },
+      {
+        "nombre": "mesa madera blanca ceremonia",
+        "categoria": "Mobiliario",
+        "precioRenta": 200
+      },
+      {
+        "nombre": "mesa rectangular de madera color miel",
+        "categoria": "Mobiliario",
+        "precioRenta": 130
+      },
+      {
+        "nombre": "mesa rectangular de madera color nogal clasico",
+        "categoria": "Mobiliario",
+        "precioRenta": 130
+      },
+      {
+        "nombre": "periquera alta madera",
+        "categoria": "Mobiliario",
+        "precioRenta": 180
+      },
+      {
+        "nombre": "silla Tiffany blanca",
+        "categoria": "Mobiliario",
+        "precioRenta": 28
+      },
+      {
+        "nombre": "silla cross back madera tono miel",
+        "categoria": "Mobiliario",
+        "precioRenta": 65
+      },
+      {
+        "nombre": "silla cross back madera tono nogal",
+        "categoria": "Mobiliario",
+        "precioRenta": 65
+      },
+      {
+        "nombre": "silla metalica boss",
+        "categoria": "Mobiliario",
+        "precioRenta": 50
+      },
+      {
+        "nombre": "silla metálica Lotus",
+        "categoria": "Mobiliario",
+        "precioRenta": 50
+      },
+      {
+        "nombre": "silla tiffany blanca infantil",
+        "categoria": "Mobiliario",
+        "precioRenta": 25
+      },
+      {
+        "nombre": "silla tiffany chocolate",
+        "categoria": "Mobiliario",
+        "precioRenta": 28
+      },
+      {
+        "nombre": "sillón principal beige",
+        "categoria": "Mobiliario",
+        "precioRenta": 300
+      },
+      {
+        "nombre": "sillón principal palo de rosa (alita)",
+        "categoria": "Mobiliario",
+        "precioRenta": 300
+      },
+      {
+        "nombre": "tablon",
+        "categoria": "Mobiliario",
+        "precioRenta": 60
+      },
+      {
+        "nombre": "tapa carrito de snacks(shots)",
+        "categoria": "Mobiliario",
+        "precioRenta": 100
+      },
+      {
+        "nombre": "tapa de carrito snacks( esquites)",
+        "categoria": "Mobiliario",
+        "precioRenta": 100
+      },
+      {
+        "nombre": "unifila madera",
+        "categoria": "Mobiliario",
+        "precioRenta": 60
+      },
+      {
+        "nombre": "Banca larga con respaldo",
+        "categoria": "Sillas",
+        "precioRenta": 90
+      },
+      {
+        "nombre": "Banca larga sin respaldo",
+        "categoria": "Sillas",
+        "precioRenta": 80
+      },
+      {
+        "nombre": "Banco individual puff",
+        "categoria": "Sillas",
+        "precioRenta": 50
+      },
+      {
+        "nombre": "Banco tejido plástico negro",
+        "categoria": "Sillas",
+        "precioRenta": 35
+      },
+      {
+        "nombre": "Silla Cross Back miel",
+        "categoria": "Sillas",
+        "precioRenta": 35
+      },
+      {
+        "nombre": "Silla Cross Back nogal",
+        "categoria": "Sillas",
+        "precioRenta": 35
+      },
+      {
+        "nombre": "Silla metálica Boss",
+        "categoria": "Sillas",
+        "precioRenta": 30
+      },
+      {
+        "nombre": "Silla negra plegable",
+        "categoria": "Sillas",
+        "precioRenta": 15
+      },
+      {
+        "nombre": "Sillón principal palo de rosa",
+        "categoria": "Sillas",
+        "precioRenta": 200
       }
     ]
   }

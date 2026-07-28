@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizador Primavera Events Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-pink: #F65C7A;
+            --primary-light: #FF8FA3;
+            --primary-dark: #1F1F1F;
+            --background-light: #F8F6F4;
+            --white: #FFFFFF;
+            --soft-pink: #FADADD;
+            --beige: #EFE7E1;
+            --gold-accent: #C9A96E;
+            --gray-text: #6D6D6D;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Poppins', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-sans); background: var(--background-light); color: var(--primary-dark); line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: var(--font-serif); }
+
+        .hero {
+            position: relative; min-height: 42vh; overflow: hidden;
+            display: flex; align-items: flex-end; justify-content: center;
+            background: linear-gradient(135deg, #1f1f1f 0%, #2d1422 100%);
+        }
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 60px 20px 50px; color: var(--white); max-width: 800px; }
+        .hero-eyebrow { font-size: 0.8rem; letter-spacing: 5px; text-transform: uppercase; color: var(--gold-accent); font-weight: 600; margin-bottom: 12px; }
+        .hero h1 { font-size: 2.8rem; font-weight: 700; line-height: 1.1; margin-bottom: 10px; }
+        .hero-sub { font-size: 1.05rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 300; color: rgba(255,255,255,0.85); }
+
+        .container { max-width: 1100px; margin: -60px auto 60px; position: relative; z-index: 2; padding: 0 20px; }
+        .quote-card { background: var(--white); border-radius: 30px; box-shadow: 0 30px 60px rgba(31,31,31,0.08); padding: 50px; border: 1px solid var(--beige); }
+
+        /* Selector de venue */
+        .venue-picker { margin-bottom: 40px; }
+        .venue-picker label { display:block; font-size:0.75rem; text-transform:uppercase; letter-spacing:1.5px; font-weight:700; color:var(--gray-text); margin-bottom:10px; }
+        .venue-picker select {
+            width: 100%; padding: 16px 20px; border-radius: 16px; border: 1px solid var(--beige);
+            font-family: var(--font-sans); font-size: 1rem; background: var(--background-light); color: var(--primary-dark); cursor: pointer;
+        }
+
+        .venue-info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 40px; }
+        .venue-info-card { background: var(--background-light); border: 1px solid var(--beige); border-radius: 16px; padding: 20px; text-align: center; }
+        .venue-info-card i { color: var(--primary-pink); font-size: 1.3rem; margin-bottom: 8px; display: block; }
+        .venue-info-card h5 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; color: var(--gray-text); margin-bottom: 5px; }
+        .venue-info-card p { font-size: 0.9rem; font-weight: 600; color: var(--primary-dark); }
+
+        .section-title { color: var(--primary-dark); font-size: 1.6rem; margin: 40px 0 20px; display:flex; align-items:center; gap:10px; border-bottom:1px solid var(--beige); padding-bottom:10px; }
+        .section-title i { color: var(--primary-pink); }
+
+        .paquete-tabs { display:flex; gap:12px; flex-wrap:wrap; margin-bottom: 25px; }
+        .paquete-tab { background: var(--white); border:1px solid var(--beige); color:var(--primary-dark); padding:10px 22px; border-radius:50px; font-size:0.85rem; font-weight:600; cursor:pointer; transition: all .3s; }
+        .paquete-tab.active { background: var(--primary-pink); border-color: var(--primary-pink); color:var(--white); }
+
+        .aforo-selector { display:flex; gap:10px; flex-wrap:wrap; margin-bottom: 25px; }
+        .aforo-btn { background: var(--background-light); border:1px solid var(--beige); color:var(--primary-dark); padding:8px 18px; border-radius:50px; font-size:0.82rem; font-weight:600; cursor:pointer; }
+        .aforo-btn.active { background: var(--gold-accent); border-color: var(--gold-accent); color:var(--primary-dark); }
+
+        .pricing-table-container { margin-bottom: 30px; overflow-x:auto; border-radius:16px; border:1px solid var(--beige); }
+        .pricing-table { width:100%; border-collapse: collapse; text-align:left; font-size:0.9rem; }
+        .pricing-table th { background: var(--primary-pink); color:var(--white); padding:14px 18px; font-weight:600; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; }
+        .pricing-table td { padding:14px 18px; border-bottom:1px solid var(--beige); vertical-align: top; }
+
+        .pricing-section {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #2d1422 100%);
+            border-radius: 24px; padding: 40px; margin-top: 40px; color: var(--white); text-align: center;
+        }
+        .pricing-section h3 { font-size: 1.2rem; color: var(--gold-accent); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px; }
+        .price-hero { font-family: var(--font-serif); font-size: 3.6rem; font-weight: 700; color: var(--white); margin: 12px 0 8px; }
+        .price-hero sup { font-size: 1.5rem; color: var(--gold-accent); }
+        .price-label { font-size: 0.95rem; color: rgba(255,255,255,0.7); }
+
+        .complementos-section { margin-top: 45px; padding-top: 35px; border-top: 1px solid var(--beige); }
+        .complementos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 18px; }
+        .complemento-card { border-radius: 16px; border: 1px solid var(--beige); background: var(--white); padding: 18px; transition: all .3s; }
+        .complemento-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(246,92,122,0.08); border-color: var(--primary-pink); }
+        .complemento-card h4 { font-size: 0.95rem; margin-bottom: 4px; }
+
+        .cta-container { text-align:center; margin-top:45px; padding:35px 20px; background: var(--beige); border-radius:20px; }
+        .btn-wa { background:#25D366; color:white; padding:14px 32px; border-radius:50px; text-decoration:none; display:inline-flex; align-items:center; gap:10px; font-weight:600; }
+
+        .loading-msg, .empty-msg { text-align:center; padding: 40px; color: var(--gray-text); }
+        .price-note { margin-top: 20px; font-size: 0.72rem; color: rgba(255,255,255,0.4); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.9rem; }
+            .quote-card { padding: 28px 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <p class="hero-eyebrow">COTIZADOR EN VIVO</p>
+            <h1 id="heroTitle">Primavera Events Group</h1>
+            <p class="hero-sub" id="heroSub">Elige tu recinto para ver precios reales</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="quote-card">
+
+            <div class="venue-picker">
+                <label for="venueSelect">Selecciona un recinto</label>
+                <select id="venueSelect"><option value="">Cargando recintos...</option></select>
+            </div>
+
+            <div id="venueContent"><div class="empty-msg">Elige un recinto arriba para ver su información y precios.</div></div>
+
+            <div class="cta-container">
+                <p>¿Listo para dar el siguiente paso?</p>
+                <a href="https://wa.me/527774587923" target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Contactar por WhatsApp</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    const SUPABASE_URL = 'https://fwqvkyeydykzleqowgqb.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_z5o9iiif7jSmnG2rLi_seA_BYeKhph8';
+
+    async function sbFetch(table, query) {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/${table}?${query}`, {
+            headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` }
+        });
+        if (!res.ok) throw new Error(`Error consultando ${table}: ${res.status}`);
+        return res.json();
+    }
+
+    let currentPaquetes = [];
+    let currentTabIndex = 0;
+
+    function money(n) {
+        if (n === null || n === undefined) return '—';
+        return '$' + Number(n).toLocaleString('es-MX', { minimumFractionDigits: 2 });
+    }
+
+    function renderVenue(venue, paquetes) {
+        document.getElementById('heroTitle').textContent = venue.nombre;
+        document.getElementById('heroSub').textContent = venue.ubicacion || '';
+
+        const relevantes = paquetes.filter(p => {
+            const v = (p.metadata && p.metadata.venue || '').toLowerCase();
+            return v && v.includes(venue.nombre.toLowerCase());
+        });
+        currentPaquetes = relevantes.length ? relevantes : paquetes;
+
+        let html = `
+            <div class="venue-info-grid">
+                <div class="venue-info-card"><i class="fas fa-map-marker-alt"></i><h5>Ubicación</h5><p>${venue.ubicacion || 'No especificada'}</p></div>
+                <div class="venue-info-card"><i class="fas fa-users"></i><h5>Capacidad</h5><p>${venue.capacidad_max ? 'Hasta ' + venue.capacidad_max + ' invitados' : 'Consultar'}</p></div>
+                <div class="venue-info-card"><i class="fas fa-palette"></i><h5>Estilo</h5><p>${venue.estilo || 'Consultar'}</p></div>
+            </div>
+        `;
+
+        if (venue.inclusiones_generales && venue.inclusiones_generales.length) {
+            html += `<h3 class="section-title"><i class="fas fa-star"></i> Características del recinto</h3><ul style="padding-left:20px; margin-bottom:20px; color:var(--gray-text); font-size:0.9rem;">`;
+            venue.inclusiones_generales.forEach(f => html += `<li style="margin-bottom:6px;">${f}</li>`);
+            html += `</ul>`;
+        }
+
+        if (currentPaquetes.length) {
+            html += `<h3 class="section-title"><i class="fas fa-gift"></i> Paquetes disponibles</h3>`;
+            html += `<div class="paquete-tabs" id="paqueteTabs"></div>`;
+            html += `<div id="paqueteDetalle"></div>`;
+        } else {
+            html += `<div class="empty-msg">Este recinto todavía no tiene paquetes cargados en el sistema — contáctanos directo por WhatsApp para cotizar.</div>`;
+        }
+
+        document.getElementById('venueContent').innerHTML = html;
+
+        if (currentPaquetes.length) {
+            const tabsEl = document.getElementById('paqueteTabs');
+            currentPaquetes.forEach((p, i) => {
+                const btn = document.createElement('button');
+                btn.className = 'paquete-tab' + (i === 0 ? ' active' : '');
+                btn.textContent = p.nombre;
+                btn.onclick = () => { currentTabIndex = i; renderPaquete(); document.querySelectorAll('.paquete-tab').forEach((b,idx)=>b.classList.toggle('active', idx===i)); };
+                tabsEl.appendChild(btn);
+            });
+            currentTabIndex = 0;
+            renderPaquete();
+        }
+    }
+
+    function renderPaquete() {
+        const p = currentPaquetes[currentTabIndex];
+        const escala = Array.isArray(p.precios_escala) ? p.precios_escala : [];
+        let tierIndex = 0;
+
+        function tabla() {
+            let html = `<div class="pricing-table-container"><table class="pricing-table"><thead><tr><th>Invitados</th><th>Precio por persona</th><th>Detalles</th></tr></thead><tbody>`;
+            escala.forEach((t, i) => {
+                html += `<tr style="${i===tierIndex ? 'background:rgba(246,92,122,0.06);' : ''} cursor:pointer;" onclick="window.__seleccionarTier(${i})">
+                    <td><strong>${t.guests || t.px || ''}</strong></td>
+                    <td>${t.price_per_person || t.precio_locacion || t.precio_banquete_desde || '—'}</td>
+                    <td>${t.details || t.detalles || ''}</td>
+                </tr>`;
+            });
+            html += `</tbody></table></div>`;
+            return html;
+        }
+
+        function inclusiones() {
+            if (!p.inclusiones || !p.inclusiones.length) return '';
+            let html = `<h4 style="margin-bottom:10px;">Incluye:</h4><ul style="padding-left:20px; margin-bottom:20px; color:var(--gray-text); font-size:0.88rem;">`;
+            p.inclusiones.forEach(inc => html += `<li style="margin-bottom:5px;">${inc}</li>`);
+            html += `</ul>`;
+            return html;
+        }
+
+        function total() {
+            const t = escala[tierIndex] || {};
+            const precio = t.price_per_person || t.precio_banquete_desde || t.precio_banquete_completo || t.precio_locacion || 'Consultar';
+            return `<div class="pricing-section">
+                <h3>Precio de referencia</h3>
+                <div class="price-hero">${precio}<sup>MXN</sup></div>
+                <div class="price-label">${escala.length ? (escala[tierIndex].guests || escala[tierIndex].px || '') : ''} · Precios sujetos a cambio sin previo aviso, no incluyen impuestos</div>
+                <div class="price-note">* El descuento o ajuste final se aplica en tu cotización personalizada, no está reflejado aquí.</div>
+            </div>`;
+        }
+
+        document.getElementById('paqueteDetalle').innerHTML = escala.length ? (tabla() + inclusiones() + total()) : (inclusiones() + '<div class="empty-msg">Este paquete no tiene tabla de precios cargada — consulta directo.</div>');
+
+        window.__seleccionarTier = (i) => { tierIndex = i; document.getElementById('paqueteDetalle').innerHTML = tabla() + inclusiones() + total(); };
+    }
+
+    async function renderComplementos() {
+        try {
+            const servicios = await sbFetch('complementos_catalogo', 'categoria=eq.servicio_terceros&select=nombre,metadata&limit=8');
+            if (!servicios.length) return;
+            let html = `<div class="complementos-section"><h3 class="section-title"><i class="fas fa-plus-circle"></i> Complementos y servicios adicionales</h3><div class="complementos-grid">`;
+            servicios.forEach(s => {
+                html += `<div class="complemento-card"><h4>${s.nombre}</h4></div>`;
+            });
+            html += `</div></div>`;
+            document.querySelector('.cta-container').insertAdjacentHTML('beforebegin', html);
+        } catch (e) { console.error(e); }
+    }
+
+    async function init() {
+        try {
+            const venues = await sbFetch('venues', 'select=id,slug,nombre,ubicacion,capacidad_max,estilo,url_oficial,inclusiones_generales,metadata&order=nombre.asc');
+            const select = document.getElementById('venueSelect');
+            select.innerHTML = '<option value="">— Selecciona —</option>' + venues.map(v => `<option value="${v.slug}">${v.nombre}</option>`).join('');
+
+            select.addEventListener('change', async () => {
+                if (!select.value) { document.getElementById('venueContent').innerHTML = '<div class="empty-msg">Elige un recinto arriba para ver su información y precios.</div>'; return; }
+                document.getElementById('venueContent').innerHTML = '<div class="loading-msg">Cargando información del recinto...</div>';
+                const venue = venues.find(v => v.slug === select.value);
+                const paquetes = await sbFetch('paquetes_servicios', 'select=nombre,precios_escala,inclusiones,metadata');
+                renderVenue(venue, paquetes);
+                renderComplementos();
+            });
+
+            const params = new URLSearchParams(window.location.search);
+            const preselect = params.get('venue');
+            if (preselect && venues.some(v => v.slug === preselect)) {
+                select.value = preselect;
+                select.dispatchEvent(new Event('change'));
+            }
+        } catch (e) {
+            document.getElementById('venueSelect').innerHTML = '<option value="">Error cargando recintos</option>';
+            document.getElementById('venueContent').innerHTML = `<div class="empty-msg">No se pudo conectar con la base de datos: ${e.message}</div>`;
+        }
+    }
+
+    init();
+    </script>
+</body>
+</html>
