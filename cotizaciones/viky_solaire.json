@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "repo_origen": "https://github.com/5410m0n0c001/cotizacion-viky-solaire",
+    "archivo_origen": "index.html",
+    "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+    "estado": "completo"
+  },
+  "cliente": "Viky (Propuesta Premium Solaire)",
+  "recinto": "Jardín Solaire",
+  "precio_por_persona": "$1,199.00 MXN",
+  "minimo_invitados": 120,
+  "fecha": "27 de Junio 2026",
+  "tipo_evento": "Boda / Social Premium",
+  "inclusiones": [
+    "Mobiliario de Lujo: Mesas de madera vintage y sillas Crossback o Lotus",
+    "Banquete Gourmet a 3 tiempos, coctel de bienvenida con salas lounge y sombrillas, barra de mixología",
+    "Personal completo de servicio: Coordinación, hostess, meseros uniformados, cocina, stewards, cantineros",
+    "DJ profesional con iluminación robótica, cabina de cristal, pista de baile de madera 5x5, cabina 360",
+    "Cortesías: Detonación de pirotecnia fría, espejo de firmas iluminado, decoración de ceremonia civil"
+  ]
+}

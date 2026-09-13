@@ -1,0 +1,159 @@
+[
+  {
+    "archivo": "WhatsApp Image 2026-06-18 at 9.26.38 AM.jpeg",
+    "tipo_contenido": "otro",
+    "servicios": [],
+    "texto_crudo": "Foto de portada: novia y novio abrazados frente a un arco de piedra, con el logo 'AL ANDREA LOZANO' debajo. No contiene precios ni lista de servicios, es una imagen de presentación/portada."
+  },
+  {
+    "archivo": "WhatsApp Image 2026-06-18 at 9.26.38 AM (1).jpeg",
+    "tipo_contenido": "lista_precios",
+    "servicios": [
+      {
+        "nombre": "Maquillaje Aerógrafo",
+        "precio": "$2 530",
+        "notas": "Da una apariencia de porcelana. Larga duración. Maquillaje blindado."
+      },
+      {
+        "nombre": "Maquillaje Tradicional",
+        "precio": "$2 420",
+        "notas": "Es de cobertura completa. Mejora la textura de la piel cuando hay imperfecciones."
+      }
+    ],
+    "texto_crudo": "Maquillaje para novias a domicilio\n\nMaquillaje Aerógrafo\n- Da una apariencia de porcelana.\n- Larga duración.\n- Maquillaje blindado.\n$ 2 530\n\nMaquillaje Tradicional\n- Es de cobertura completa\n- Mejora la textura de la piel cuando hay imperfecciones\n$ 2 420"
+  },
+  {
+    "archivo": "WhatsApp Image 2026-06-18 at 9.26.38 AM (2).jpeg",
+    "tipo_contenido": "lista_precios",
+    "servicios": [
+      {
+        "nombre": "Peinado de novia",
+        "precio": "$2 100",
+        "notas": "Incluye peinado, puesta de tocado y velo."
+      }
+    ],
+    "texto_crudo": "Peinado para novias a domicilio\n\nPeinado de novia\nPeinado\npuesta de tocado y velo\n$ 2 100"
+  },
+  {
+    "archivo": "WhatsApp Image 2026-06-18 at 9.26.39 AM.jpeg",
+    "tipo_contenido": "lista_precios",
+    "servicios": [
+      {
+        "nombre": "Paquete Plus",
+        "precio": "$8 900",
+        "notas": "Incluye: maquillaje profesional aerógrafo en ojos y rostro (prueba); maquillaje profesional aerógrafo en ojos y rostro (día del evento); diseño de ceja día de la prueba (opcional); diseño de ceja día del evento (opcional); tira de pestaña de pelo natural 3D (prueba); tira de pestaña de pelo natural 3D (evento); preparación de la piel, mascarilla hidratante y sueros; contour highlight; ampolleta de lifting; sellador makeup; peinado profesional para novia; puesta de tocado y velo."
+      }
+    ],
+    "texto_crudo": "Paquete Plus\n- Maquillaje profesional aerógrafo en ojos y rostro (prueba)\n- Maquillaje profesional aerógrafo en ojos y rostro (día del evento)\n- Diseño de ceja día de la prueba (opcional)\n- Diseño de ceja día del evento (opcional)\n- tira de pestaña de pelo natural 3D (prueba)\n- tira de pestaña de pelo natural 3D (evento)\n- Preparación de la piel, mascarilla hidratante y sueros\n- Contour highlight\n- Ampolleta de lifting\n- Sellador Makeup\n- peinado profesional para novia\n- Puesta de tocado y velo\n$ 8 900"
+  },
+  {
+    "archivo": "WhatsApp Image 2026-06-18 at 9.26.39 AM (1).jpeg",
+    "tipo_contenido": "lista_precios",
+    "servicios": [
+      {
+        "nombre": "Paquete Power",
+        "precio": "$7 700",
+        "notas": "Incluye: maquillaje profesional aerógrafo (prueba); maquillaje profesional aerógrafo (día del evento); diseño de ceja día de la prueba (opcional); diseño de ceja día del evento (opcional); tira de pestaña de pelo natural 3D (prueba); tira de pestaña de pelo natural 3D (evento); preparación de la piel, mascarilla hidratante y sueros; contour highlight; ampolleta de lifting; sellador makeup; peinado profesional para novia; puesta de tocado y velo. (Sin ampolleta de lifting mencionada explícitamente en esta imagen, pero sí en la lista de bullets)."
+      }
+    ],
+    "texto_crudo": "paquete power\n- Maquillaje profesional aerógrafo (prueba)\n- Maquillaje profesional aerógrafo (día del evento)\n- Diseño de ceja día de la prueba (opcional)\n- Diseño de ceja día del evento (opcional)\n- tira de pestaña de pelo natural 3D (prueba)\n- tira de pestaña de pelo natural 3D (evento)\n- Preparación de la piel, mascarilla hidratante y sueros\n- Contour highlight\n- Ampolleta de lifting\n- Sellador Makeup\n- peinado profesional para novia\n- Puesta de tocado y velo\n$ 7 700"
+  },
+  {
+    "archivo": "WhatsApp Image 2026-06-18 at 9.26.39 AM (2).jpeg",
+    "tipo_contenido": "lista_precios",
+    "servicios": [
+      {
+        "nombre": "Paquete Básico",
+        "precio": "$7 200",
+        "notas": "Incluye: maquillaje profesional tradicional (prueba); maquillaje profesional tradicional (día del evento); diseño de ceja día de la prueba (opcional); diseño de ceja un día antes del evento (opcional); 2 tiras de pestañas de pelo natural; preparación de la piel (primer, mascarilla hidratante y sueros); contour highlight; sellador makeup; peinado; puesta de tocado y velo."
+      }
+    ],
+    "texto_crudo": "Paquete Básico\n- Maquillaje profesional tradicional (prueba)\n- Maquillaje profesional tradicional (día del evento)\n- Diseño de ceja día de la prueba (opcional)\n- Diseño de ceja un día antes del evento (opcional)\n- 2 tiras de pestañas de pelo natural\n- Preparación de la piel (primer, mascarilla hidratante y sueros\n- Contour highlight\n- Sellador Makeup\n- peinado\n- pueste de tocado y velo\n$ 7 200"
+  },
+  {
+    "archivo": "WhatsApp Image 2026-06-18 at 9.26.39 AM (3).jpeg",
+    "tipo_contenido": "otro",
+    "servicios": [],
+    "texto_crudo": "Foto de grupo: novia con damas de honor (vestidos negros) abrazadas, con el logo 'AL ANDREA LOZANO' debajo. No contiene precios ni lista de servicios, es una imagen de presentación."
+  },
+  {
+    "archivo": "WhatsApp Image 2026-06-18 at 9.26.39 AM (4).jpeg",
+    "tipo_contenido": "lista_precios",
+    "servicios": [
+      {
+        "nombre": "Maquillaje aerógrafo invitadas",
+        "precio": "$1 500",
+        "notas": "Incluye: maquillaje profesional aerógrafo; pestañas postizas de pelo natural; preparación de la piel (primer, sueros); contour highlight; sellador makeup."
+      },
+      {
+        "nombre": "Maquillaje tradicional invitadas",
+        "precio": "$1 350",
+        "notas": "Incluye: maquillaje profesional tradicional; pestañas postizas de pelo natural; preparación de la piel (primer, suero, sellador de maquillaje); contour highlight; sellador makeup."
+      }
+    ],
+    "texto_crudo": "Maquillaje aerógrafo invitadas\n- Maquillaje profesional aerógrafo\n- Pestañas postizas de pelo natural\n- Preparación de la piel (primer, sueros)\n- Contour highlight\n- Sellador Makeup\n$ 1 500\n\nMaquillaje tradicional invitadas\n- Maquillaje profesional tradicional\n- Pestañas postizas de pelo natural\n- Preparación de la piel ,( primer , suero, sellador de maquillaje)\n- Contour highlight\n- Sellador Makeup\n$ 1 350"
+  },
+  {
+    "archivo": "WhatsApp Image 2026-06-18 at 9.26.39 AM (5).jpeg",
+    "tipo_contenido": "lista_precios",
+    "servicios": [
+      {
+        "nombre": "Peinado de invitadas",
+        "precio": "$1 100",
+        "notas": ""
+      }
+    ],
+    "texto_crudo": "Peinado de invitadas\n$ 1 100"
+  },
+  {
+    "archivo": "WhatsApp Image 2026-06-18 at 9.26.39 AM (6).jpeg",
+    "tipo_contenido": "lista_precios",
+    "servicios": [
+      {
+        "nombre": "Paquete de peinado y maquillaje aerógrafo para invitadas",
+        "precio": "$2 450",
+        "notas": ""
+      },
+      {
+        "nombre": "Paquete de peinado y maquillaje tradicional para invitadas",
+        "precio": "$2 200",
+        "notas": ""
+      }
+    ],
+    "texto_crudo": "paquete de peinado maquillaje aerógrafo para invitadas\n$ 2 450\n\nPaquete de peinado maquillaje tradicional para invitadas\n$ 2 200"
+  },
+  {
+    "archivo": "WhatsApp Image 2026-06-18 at 9.26.39 AM (7).jpeg",
+    "tipo_contenido": "lista_precios",
+    "servicios": [
+      {
+        "nombre": "Facial",
+        "precio": "$1,800",
+        "notas": "Hidratación profunda. Ayuda a que el maquillaje tenga una larga duración. Mejora la apariencia en la piel. Otorga suavidad y frescura."
+      },
+      {
+        "nombre": "Diseño de cejas",
+        "precio": "$605",
+        "notas": "Perfilación de ceja. Mejora la apariencia del rostro."
+      },
+      {
+        "nombre": "Ampolleta de lifting",
+        "precio": "$250",
+        "notas": "Da hidratación, durabilidad del maquillaje y desvanece arrugas. Producto de marca KUORA (ampolleta flash)."
+      }
+    ],
+    "texto_crudo": "Servicios\n\nFacial\n- Hidratación profunda\n- Ayuda a que el maquillaje tenga una larga duración\n- Mejora la apariencia en la piel\n- Otorga suavidad y frescura\n$ 1,800\n\nDiseño de cejas\n- Perfilación de ceja.\n- Mejora la apariencia del rostro.\n$ 605\n\nAmpolleta de lifting\nDa hidratación, durabilidad del maquillaje y desvanece arrugas\n$ 250"
+  },
+  {
+    "archivo": "WhatsApp Image 2026-06-18 at 9.26.39 AM (8).jpeg",
+    "tipo_contenido": "otro",
+    "servicios": [],
+    "texto_crudo": "Servicio a domicilio\n\nMínimo: Novia + 2 invitadas con paquete de maquillaje y peinado.\n\nNuestros productos son totalmente profesionales, garantizando una mayor cobertura y larga duración.\n\n(Slide de condiciones de servicio, sin precios; fondo negro con logo AL ANDREA LOZANO)"
+  },
+  {
+    "archivo": "WhatsApp Image 2026-06-18 at 9.26.39 AM (9).jpeg",
+    "tipo_contenido": "otro",
+    "servicios": [],
+    "texto_crudo": "Servicios Novia e invitadas\n- Maquillaje aerógrafo\n- Maquillaje tradicional\n- Peinado\n- Diseño de ceja\n- Servicio a domicilio\n- Servicio en nuestras instalaciones\n\nContáctanos\n777 564 04 88\nAv. Palmira # 40- local 6\nandrealozanolopez@icloud.com\nInstagram: Andrea Lozano Beauty Salón\n\n(Slide de cierre con índice de servicios y datos de contacto, sin precios)"
+  }
+]

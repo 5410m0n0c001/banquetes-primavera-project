@@ -38,6 +38,7 @@ Contactos internos: **Jessy** · **Richard Hernández**
 6. Honestidad ante falta de información: invita a contactar al equipo.
 7. Prioriza la información más reciente.
 8. Pregunta por cupones de descuento.
+9. En publicaciones, mensajes y respuestas sobre eventos o servicios específicos, busca e incluye siempre la URL directa correspondiente del sitio web (ej. /graduaciones-primavera/ para graduaciones, /bodas/ para bodas, /quinceaneras-primavera/ para quinceañeras, /nuestros-menus/ para menús, /montajes-y-mobiliario/ para mobiliario, etc.) además de los enlaces generales.
 
 ---
 

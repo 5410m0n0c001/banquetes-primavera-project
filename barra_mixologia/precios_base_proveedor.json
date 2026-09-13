@@ -1,0 +1,63 @@
+{
+  "proveedor": "Barra de Mixología (mojitos artesanales) — capturas WhatsApp recibidas 2026-08-12",
+  "nota": "Precios BASE del proveedor, sin markup. El documento entregable al cliente (index.html) aplica +20%.",
+  "colecciones": [
+    {
+      "nombre": "Clásico",
+      "descripcion": "Ideal para reuniones íntimas, cumpleaños y celebraciones donde cada detalle cuenta.",
+      "incluye": [
+        "3 horas de servicio",
+        "3 cócteles por invitado",
+        "2 sabores a elegir",
+        "Barra móvil premium",
+        "Bartender profesional",
+        "Ayudante",
+        "Montaje",
+        "Desmontaje"
+      ],
+      "precio_por_persona": 125,
+      "tabla_precios": { "50": 8250, "80": 10000, "100": 12500 }
+    },
+    {
+      "nombre": "Premium",
+      "descripcion": "Donde los detalles hacen la diferencia.",
+      "incluye": [
+        "4 horas de servicio",
+        "4 cócteles por invitado",
+        "3 sabores a elegir",
+        "Copas personalizadas con vinil",
+        "Servilletas personalizadas",
+        "Atención personalizada",
+        "Barra premium",
+        "Montaje premium",
+        "Desmontaje"
+      ],
+      "precio_por_persona": 165,
+      "tabla_precios": { "50": 8250, "80": 13200, "100": 16500 }
+    },
+    {
+      "nombre": "Signature",
+      "descripcion": "Nuestra experiencia más exclusiva.",
+      "incluye": [
+        "5 horas de servicio",
+        "5 cócteles por invitado",
+        "4 sabores a elegir",
+        "Copas personalizadas con vinil",
+        "Servilletas personalizadas",
+        "Decoración premium de la barra",
+        "Atención completamente personalizada",
+        "Experiencia diseñada a la medida",
+        "Montaje premium",
+        "Desmontaje"
+      ],
+      "precio_por_persona": 195,
+      "tabla_precios": { "50": 9750, "80": 15600, "100": 19500 }
+    }
+  ],
+  "ejemplo_130_personas_texto_proveedor": {
+    "Signature": 25350,
+    "Premium": 21450,
+    "Clasico": 16250
+  },
+  "descripcion_tecnica_texto_crudo": "Todo se maneja con técnica shaking, utilizamos hierbabuena fresca, fresa fresca, limón y maracuyá. El mojito de maracuyá lo preparamos con jarabe de maracuyá artesanal que nosotros preparamos y lo mezclamos con fruta fresca para la presentación. El de fresa, es con fruta fresca y jugo de arándano que también nosotros preparamos. El clásico mojitos con hierbabuena fresca y limón. Y la creación de la casa que es el mojito de limón con un toque de vodka de mandarina y rodajas de pepino. Todas las bebidas se preparan al momento con fruta 100% fresca nada es congelado. Cristalería utilizamos copa, que en los paquetes signature y premium personalizamos con el nombre de los novios, cumpleañero etc. En el paquete signature podemos cambiar el nombre del cóctel por el nombre de los novios o el cumpleañero. Efectivamente dependiendo el número de persona llevamos el personal necesario para que la experiencia sea rápida y cálida. Por ejemplo para las 130 personas irían dos bartenders y yo como ayudante. Mixología molecular y experimental no la manejamos porque la barra es de mojitos realmente no requiere ese tipo de mixología. Manejamos un contrato que se firma al momento de la contratación donde se especifican todos estos puntos."
+}

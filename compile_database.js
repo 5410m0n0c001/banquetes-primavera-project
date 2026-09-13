@@ -1,9 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const cleanDir = 'C:\\Users\\quant\\.gemini\\antigravity\\brain\\15c1b059-6909-48c0-82ee-fede74c0abd5\\scraped_clean';
-const jsonPath = 'c:\\Users\\quant\\OneDrive\\Desktop\\Banqutes primavera web\\base_de_datos_primavera.json';
-const mdPath = 'c:\\Users\\quant\\OneDrive\\Desktop\\Banqutes primavera web\\base_de_datos_primavera.md';
+const jsonPath = path.join(__dirname, 'base_de_datos_primavera.json');
+const mdPath = path.join(__dirname, 'base_de_datos_primavera.md');
 
 console.log('Compiling Primavera Events Group Database...');
 
@@ -1218,9 +1217,172 @@ database.plan_marketing = {
   password_acceso: "PrimaveraVIP",
   enlaces: [
     { nombre: "Drive de Descargas Oficiales (Media Kit)", url: "https://drive.google.com/drive/folders/168BJ-2D2Ul6qDIBNU9w8oeLHLkVHF5Y5?usp=sharing" },
-    { nombre: "Drive de Carga de Media Kits por Marca (Aliados)", url: "https://drive.google.com/drive/folders/1WDpTEL5nAeHbUzz63820Z-bZr0GOe3AC?usp=sharing" }
-  ]
+    { nombre: "Drive de Carga de Media Kits por Marca (Aliados)", url: "https://drive.google.com/drive/folders/1WDpTEL5nAeHbUzz63820Z-bZr0GOe3AC?usp=sharing" },
+    { nombre: "Enlace de Opiniones y Reseñas en Google", url: "https://g.page/r/CRYo3lgLK8NEEBM/review" }
+  ],
+  campana_organica_post_evento: {
+    enlaces_oficiales: {
+      paquetes: "https://primaveraeventsgroup.com/paquetes-primavera/",
+      menus: "https://primaveraeventsgroup.com/nuestros-menus/",
+      venues: "https://primaveraeventsgroup.com/venues/",
+      demo_invitacion: "https://5410m0n0c001.github.io/invitacion-demo/",
+      planner_richard: "https://primaveraeventsgroup.com/richard-hernandez/",
+      planner_jessy: "https://primaveraeventsgroup.com/jessy/",
+      google_opiniones: "https://g.page/r/CRYo3lgLK8NEEBM/review"
+    },
+    regla_enlaces_venues: "En cada publicación de video de evento, se debe incluir obligatoriamente el enlace del venue específico donde se realizó el festejo (ej. para los 15 años de Hannah en Jardín La Flor, agregar https://primaveraeventsgroup.com/jardin-la-flor/) además de los enlaces estándar para incentivar las visitas al recinto.",
+    manual_copywriting_aeo_seo: {
+      definicion_aeo: "Answer Engine Optimization (Optimización para Motores de Respuestas). El objetivo es estructurar información en lenguaje natural de manera clara y directa para que los motores de IA (como ChatGPT, Gemini o Perplexity) puedan extraer e indexar la información de Primavera Events Group, citando las URLs oficiales de forma directa.",
+      reglas_por_plataforma: {
+        facebook: {
+          estructura: "Dos partes: Versión A (Publicación sin links, alta emoción, llamado a buscar enlaces en comentarios, hashtags selectos al final) y Versión B (Primer comentario con enlaces de texto plano limpios).",
+          caracteres_optimos: "100-250 palabras en texto principal.",
+          objetivo: "Alcance orgánico libre de penalización por links externos."
+        },
+        instagram: {
+          estructura: "Storytelling inspirador de estilo editorial. CTA claro redirigiendo al link en la bio. Bloque de hashtags al final.",
+          caracteres_optimos: "100-150 palabras.",
+          objetivo: "Branding de prestigio y engagement visual."
+        },
+        tiktok: {
+          estructura: "Hook fuerte en los primeros 3 segundos. Texto breve y dinámico. CTA claro (Link en bio) y hashtags de tendencia local.",
+          caracteres_optimos: "Menos de 150 caracteres en el cuerpo de descripción.",
+          objetivo: "Viralidad y enganche de algoritmo de video corto."
+        },
+        twitter_x: {
+          estructura: "Gancho muy directo, 1 solo enlace estratégico (el acortador t.co de Twitter cuenta cualquier link como exactamente 23 caracteres) y 2 hashtags clave. Evitar enlaces redundantes.",
+          caracteres_optimos: "Estrictamente menos de 280 caracteres reales (contando 23 caracteres por enlace).",
+          objetivo: "Microblogging rápido y tráfico de un solo clic."
+        },
+        youtube: {
+          estructura: "Título de alto impacto (Hook emocional o brecha de curiosidad + Palabra clave de búsqueda) de menos de 70 caracteres. Descripción fluida y conversacional con los enlaces del bloque oficial en las primeras líneas. NUNCA usar capítulos inventados ni hashtags al final.",
+          caracteres_optimos: "Conversacional y amplio.",
+          objetivo: "SEO de largo plazo en búsquedas."
+        },
+        pinterest: {
+          estructura: "Título con palabras clave, descripción inspiradora orientada a 'ideas para bodas/15 años', enlace de destino directo a la página web del venue o paquete.",
+          caracteres_optimos: "Menos de 500 caracteres.",
+          objetivo: "Descubrimiento visual y tráfico calificado."
+        }
+      },
+      directrices_creatividad: [
+        "Evitar palabras repetitivas y robóticas (no abusar de 'el mejor', 'experiencia sin igual', etc.).",
+        "Escribir siempre textos únicos y personalizados para cada cliente o video (no copiar y pegar plantillas genéricas).",
+        "Adoptar el tono de un Trafficker Senior y Marketer Digital enfocado en persuasión, autoridad de marca y conversión.",
+        "Nunca incluir tecnicismos, indicaciones de formato o metainformación (como 'en texto plano', 'formato limpio', 'sin negritas', etc.) dentro del cuerpo de los copys o respuestas dirigidas al cliente final. Todo texto generado listo para publicar debe ser 100% limpio y natural para el lector.",
+        "Mencionar siempre la Invitación Digital Premium de cortesía al contratar cualquier servicio, incluyendo su enlace demo: https://5410m0n0c001.github.io/invitacion-demo/",
+        "Mencionar siempre el Kit Planner gratuito (un paquete doble que incluye: 1. La plantilla de Excel para control de presupuesto y gastos, y 2. La guía definitiva para organizar tu evento y elegir proveedores). Aclarar que no hay un enlace de descarga directa, sino que deben solicitarlo comentando 'Yo lo quiero' o enviando un mensaje privado para entregárselo por privado.",
+        "Incluir siempre emojis vistosos y estratégicos para suavizar la densidad visual de los textos, dinamizar la lectura y potenciar la fuerza emocional del mensaje.",
+        "Buscar siempre en el sitio web e incluir la URL específica dedicada al tema de la publicación (por ejemplo: /graduaciones-primavera/ para graduaciones, /bodas/ para bodas, /quinceaneras-primavera/ para quinceañeras, /nuestros-menus/ para menús, /montajes-y-mobiliario/ para mobiliario, etc.) para redirigir el tráfico de manera segmentada, además de los enlaces globales requeridos."
+      ]
+    },
+    estrategia: "Capitalizar el material audiovisual recopilado en la Expo y la pasarela Haute Runway para generar branding de alto prestigio (social proof) y captar prospectos de manera orgánica redirigiendo a los canales oficiales.",
+    copywriting: {
+      video_expo: {
+        titulo: "Expo Boda y 15 Años 2026 - Resumen Oficial y Agradecimiento (4.5 min)",
+        meta_sin_enlaces: "¡Qué gran fin de semana vivimos en la Expo Boda y 15 Años 2026! 🌸✨\n\nQueremos expresar nuestro más sincero agradecimiento a cada uno de los expositores, marcas aliadas y profesionales de la industria que llenaron el Centro de Convenciones Presidente de magia, creatividad e innovación. Su talento es el motor que hace posible transformar sueños en realidades inolvidables.\n\nA las parejas y familias que nos acompañaron: gracias por confiar en Primavera Events Group para dar el primer paso en la planificación de sus momentos más importantes. La excelencia y los detalles hacen la diferencia, y estamos listos para acompañarlos en cada paso del camino.\n\nDisfruta de este resumen de los mejores momentos y dinos en los comentarios: ¿Cuál fue tu stand favorito? 👇\n\n✨ Te dejamos los enlaces de acceso directo a nuestros paquetes, menús y asesoría gratuita en el primer comentario de esta publicación.\n\n#ExpoBoda2026 #PrimaveraEvents #WeddingPlanner #15Años #BodasCuernavaca #CentroDeConvencionesPresidente #EventosPremium",
+        meta_comentarios: "¡Hola! Aquí tienes los accesos rápidos para planificar tu gran día con nosotros:\n\n📦 NUESTROS PAQUETES INTEGRALES:\n🔗 https://primaveraeventsgroup.com/paquetes-primavera/\n\n🍽️ NUESTROS MENÚS:\n🔗 https://primaveraeventsgroup.com/nuestros-menus/\n\n🏛️ NUESTROS VENUES:\n🔗 https://primaveraeventsgroup.com/venues/\n\n---\n🎁 PRUEBA LA DEMO DE NUESTRA INVITACIÓN DIGITAL PREMIUM (Gratis al contratar):\n🔗 https://5410m0n0c001.github.io/invitacion-demo/\n\n---\n📲 AGENDA ASESORÍA PERSONALIZADA CON NUESTROS PLANNERS:\n🤵 Richard Hernández (Planner & Director Creativo):\n🔗 https://primaveraeventsgroup.com/richard-hernandez/\n👩💼 Jessy Sandoval (Planner & Fundadora):\n🔗 https://primaveraeventsgroup.com/jessy/",
+        tiktok: "POV: Buscas a los mejores proveedores para tu boda o 15 años en un solo lugar. 💍✨ Así se vivió la Expo Boda y 15 Años 2026. Un agradecimiento enorme a todos los expositores que lo hicieron posible. ¿Lista para crear tu día soñado? Link en bio para asesoría gratuita y paquetes integrales. 🌸 #ExpoBoda2026 #PrimaveraEvents #WeddingPlanner #15Años #Boda #Cuernavaca #EventosPremium",
+        twitter: "¡Éxito total en la Expo Boda y 15 Años 2026! 🌸 Agradecemos profundamente a expositores, patrocinadores y familias por hacer de este encuentro un referente de la industria. Diseñemos juntos tu próximo gran evento. Toda la información en el enlace de nuestra biografía. 👇 #PrimaveraEvents",
+        youtube: "Expo Boda y 15 Años 2026 - Resumen Oficial y Agradecimiento\n\nRevive los mejores momentos de la Expo Boda y 15 Años 2026 en el Centro de Convenciones Presidente. Queremos agradecer a los expositores, marcas colaboradoras y a todas las familias que nos visitaron para planificar sus eventos. En Primavera Events Group nos apasiona crear experiencias mágicas con el más alto estándar de calidad.\n\nCapítulos del Video:\n0:00 - Introducción y Bienvenidos\n1:15 - Recorrido por Stands de Expositores\n2:30 - Entrevistas y Experiencias de Clientes\n3:45 - Coordinación y Agradecimientos Finales\n\nInformación y Contacto:\n📦 NUESTROS PAQUETES INTEGRALES:\n🔗 https://primaveraeventsgroup.com/paquetes-primavera/\n\n🍽️ NUESTROS MENÚS:\n🔗 https://primaveraeventsgroup.com/nuestros-menus/\n\n🏛️ NUESTROS VENUES:\n🔗 https://primaveraeventsgroup.com/venues/\n\n---\n🎁 PRUEBA LA DEMO DE NUESTRA INVITACIÓN DIGITAL PREMIUM (Gratis al contratar):\n🔗 https://5410m0n0c001.github.io/invitacion-demo/\n\n---\n📲 AGENDA ASESORÍA PERSONALIZADA CON NUESTROS PLANNERS:\n🤵 Richard Hernández (Planner & Director Creativo):\n🔗 https://primaveraeventsgroup.com/richard-hernandez/\n👩💼 Jessy Sandoval (Planner & Fundadora):\n🔗 https://primaveraeventsgroup.com/jessy/"
+      },
+      video_runway: {
+        titulo: "Primavera Haute Runway 2026 - Pasarela y Performance de Alta Costura (3.5 min)",
+        meta_sin_enlaces: "¿Y si tus 15 años o tu boda no fueran solo una fiesta, sino un espectáculo inolvidable? 👑✨\n\nEn la pasarela Primavera Haute Runway 2026 redefinimos por completo lo que significa celebrar. No fue solo un desfile de alta costura; fue un performance lleno de arte, energía y emociones en vivo diseñado para inspirar a cada quinceañera y novia a convertir su gran día en un show único y memorable.\n\nDesde la música y la iluminación escénica hasta las coreografías y la espectacular puesta en escena... demostramos que tu día especial merece ser vivido con la máxima pasión y estilo. ¡Tú eres la estrella y el escenario es tuyo! 🌸💃\n\nMira este video, déjate inspirar por el performance and dinos: ¿Cómo te imaginas tu propia entrada triunfal? 👇\n\n✨ Te dejamos los enlaces de acceso directo a nuestros paquetes, menús y asesoría gratuita en el primer comentario de esta publicación.\n\n#HauteRunway #AltaCostura #ModaQuinceañeras #Novias2026 #ReviveTuGranDía #PrimaveraEvents #PasarelaPerformance",
+        meta_comentarios: "¡Hola! Aquí tienes los accesos rápidos para planificar tu gran día con nosotros:\n\n📦 NUESTROS PAQUETES INTEGRALES:\n🔗 https://primaveraeventsgroup.com/paquetes-primavera/\n\n🍽️ NUESTROS MENÚS:\n🔗 https://primaveraeventsgroup.com/nuestros-menus/\n\n🏛️ NUESTROS VENUES:\n🔗 https://primaveraeventsgroup.com/venues/\n\n---\n🎁 PRUEBA LA DEMO DE NUESTRA INVITACIÓN DIGITAL PREMIUM (Gratis al contratar):\n🔗 https://5410m0n0c001.github.io/invitacion-demo/\n\n---\n📲 AGENDA ASESORÍA PERSONALIZADA CON NUESTROS PLANNERS:\n🤵 Richard Hernández (Planner & Director Creativo):\n🔗 https://primaveraeventsgroup.com/richard-hernandez/\n👩💼 Jessy Sandoval (Planner & Fundadora):\n🔗 https://primaveraeventsgroup.com/jessy/",
+        tiktok: "Tus 15 años o boda merecen ser un performance espectacular, no solo una fiesta ordinaria. 👑✨ Así se vivió la magia y la energía en la pasarela Primavera Haute Runway 2026. ¡Haz de tu día una obra de arte con nuestro equipo de planners! Link en bio para asesoría gratis y paquetes. 🌸 #HauteRunway #15Años #Boda #Performance #WeddingPlanner #PasarelaModa #PrimaveraEvents",
+        twitter: "Más que una pasarela, una experiencia multisensorial. En Primavera Haute Runway 2026 demostramos cómo transformar tus 15 años o boda en un performance inolvidable. Inspírate y diseña tu show con nosotros. Info y asesoría gratuita en el link de la bio. 👑✨ #PrimaveraEvents",
+        youtube: "Primavera Haute Runway 2026 - Inspira tu Evento con Alta Costura y Performance\n\n¿Estás lista para revivir y soñar con tu gran día de una forma totalmente diferente? Presentamos el resumen oficial de la pasarela Primavera Haute Runway 2026, una fusión única de alta costura, música, coreografía y performance interactivo. En Primavera Events Group no creamos fiestas comunes; diseñamos espectáculos donde tú eres la absoluta protagonista. Agradecemos a los diseñadores, modelos, bailarines y a todo el equipo de producción por crear esta increíble puesta en escena.\n\nCapítulos del Video:\n0:00 - Introducción y Apertura Artística\n0:50 - Pasarela Haute Costure: Novias y Diseños Exclusivos\n1:45 - Performance en Vivo y Coreografía 15 Años\n2:55 - Tendencias de Iluminación y Efectos Especiales\n3:20 - Cierre y Cómo Planificar tu Espectáculo Personalizado\n\nInformación y Contacto:\n📦 NUESTROS PAQUETES INTEGRALES:\n🔗 https://primaveraeventsgroup.com/paquetes-primavera/\n\n🍽️ NUESTROS MENÚS:\n🔗 https://primaveraeventsgroup.com/nuestros-menus/\n\n🏛️ NUESTROS VENUES:\n🔗 https://primaveraeventsgroup.com/venues/\n\n---\n🎁 PRUEBA LA DEMO DE NUESTRA INVITACIÓN DIGITAL PREMIUM (Gratis al contratar):\n🔗 https://5410m0n0c001.github.io/invitacion-demo/\n\n---\n📲 AGENDA ASESORÍA PERSONALIZADA CON NUESTROS PLANNERS:\n🤵 Richard Hernández (Planner & Director Creativo):\n🔗 https://primaveraeventsgroup.com/richard-hernandez/\n👩💼 Jessy Sandoval (Planner & Fundadora):\n🔗 https://primaveraeventsgroup.com/jessy/"
+      },
+      post_graduaciones_julio: {
+        titulo: "Apertura de Agenda Julio - Eventos de Graduaciones Escolares y Universitarias",
+        meta_sin_enlaces: "¡El gran día está más cerca de lo que imaginas! 🎓✨ Sabemos que cada desvelada, cada examen y cada esfuerzo han valido la pena. ¡Es hora de celebrar tu graduación como te lo mereces! 🥂👑\n\nEn Primavera Events Group abrimos oficialmente la agenda de Julio para eventos de graduación. Queremos que tu gala sea una noche inolvidable, llena de elegancia, orden absoluto y la máxima diversión para ti, tus compañeros y tu familia.\n\nDesde espectaculares letras gigantes iluminadas, alfombras rojas con back fotográfico, pirotecnia fría para el brindis, hasta nuestro increíble carrito de shots y pistas Pixel LED de última tecnología... ¡Cuidamos cada detalle para crear una experiencia inolvidable! 📸💥\n\n🎁 ¡Y tenemos una sorpresa de graduación! Al reservar tu fecha con nosotros, te regalamos tu Invitación Digital Premium con confirmación de asistencia en tiempo real. Además, si quieres empezar a planificar desde hoy, tenemos de regalo nuestro Kit Planner de Excel para el control del presupuesto de tu generación.\n\n¿Listos para planear la mejor fiesta de su vida? Dejamos los enlaces de contacto y el demo de la invitación en el primer comentario de esta publicación. 👇\n\n#GraduacionesPrimavera #Graduacion2026 #EventosPremium #BanquetesPrimavera #InvitacionDigital #GalaDeGraduacion #MorelosEventos",
+        meta_comentarios: "¡Hola graduados! 🎓 Aquí tienes los accesos rápidos para planificar su gran noche:\n\n🎓 NUESTRA PÁGINA DE GRADUACIONES:\n🔗 https://primaveraeventsgroup.com/graduaciones-primavera/\n\n📦 PAQUETE GLOW GRADUATION ELITE:\n🔗 https://primaveraeventsgroup.com/paquete-glow-graduation-elite/\n\n🍽️ NUESTROS MENÚS GOURMET Y JUVENILES:\n🔗 https://primaveraeventsgroup.com/nuestros-menus/\n\n---\n\n🎁 PRUEBA LA DEMO DE NUESTRA INVITACIÓN DIGITAL PREMIUM (¡Gratis al contratar!):\n🔗 https://5410m0n0c001.github.io/invitacion-demo/\n\n---\n\n💬 ¡SOLICITA TU KIT PLANNER GRATUITO!\nComenta 'Yo lo quiero' o envíanos un mensaje privado para enviarte la plantilla de Excel para el control de gastos de tu graduación y la guía de organización por mensaje directo. 📈\n\n📲 AGENDA TU ASESORÍA PERSONALIZADA CON NUESTROS PLANNERS:\n🤵 Richard Hernández (Planner & Director Creativo):\n🔗 https://primaveraeventsgroup.com/richard-hernandez/\n👩💼 Jessy Sandoval (Planner & Fundadora):\n🔗 https://primaveraeventsgroup.com/jessy/",
+        tiktok: "🎓 ¡Abrimos agenda de Julio para graduaciones! 🥂 Celebra tu gran logro con producción premium y banquetes de lujo. Link en bio para paquetes e invitación digital premium gratis. 👑✨ #Graduaciones #FiestaDeGraduacion #Banquetes #Graduados #PrimaveraEvents",
+        twitter: "🎓 ¡Abrimos agenda de Julio para graduaciones! 🥂 Diseñamos galas espectaculares con producción premium, banquetes de gala y la mejor música. Agenda tu fecha y llévate tu invitación digital premium gratis. 👑✨ Info aquí: https://primaveraeventsgroup.com/graduaciones-primavera/ #Graduacion #Graduados"
+      }
+    }
+  }
 };
+
+// 1.5. Merge dynamic sources (venues, cotizaciones, expo_boda_2026, agentes, croquis)
+const venuesDir = path.join(__dirname, 'venues');
+if (fs.existsSync(venuesDir)) {
+  const vFiles = ['villa_di_fiori.json', 'solaire.json', 'centro_convenciones_presidente.json'];
+  if (!database.venues) database.venues = [];
+  vFiles.forEach(vf => {
+    const fPath = path.join(venuesDir, vf);
+    if (fs.existsSync(fPath)) {
+      try {
+        const vData = JSON.parse(fs.readFileSync(fPath, 'utf8'));
+        const vName = vData.nombre_venue || vData.name;
+        database.venues = database.venues.filter(v => (v.name || v.nombre_venue) !== vName);
+        database.venues.push(vData);
+      } catch (e) {
+        console.error('Error parsing venue JSON:', vf, e.message);
+      }
+    }
+  });
+  
+  // Merge croquis
+  const croquisDir = path.join(venuesDir, 'croquis');
+  if (fs.existsSync(croquisDir)) {
+    database.croquis_y_planos = {};
+    const croqFiles = {
+      yolomecatl: 'yolomecatl_croquis.json',
+      centro_presidente: 'presidente_croquis.json',
+      jardin_la_flor: 'jardin_la_flor_plano.json'
+    };
+    for (const [key, fn] of Object.entries(croqFiles)) {
+      const fPath = path.join(croquisDir, fn);
+      if (fs.existsSync(fPath)) {
+        try {
+          database.croquis_y_planos[key] = JSON.parse(fs.readFileSync(fPath, 'utf8'));
+        } catch (e) {
+          console.error('Error parsing croquis JSON:', fn, e.message);
+        }
+      }
+    }
+  }
+}
+
+const cotsDir = path.join(__dirname, 'cotizaciones');
+if (fs.existsSync(cotsDir)) {
+  try {
+    const cFiles = fs.readdirSync(cotsDir).filter(f => f.endsWith('.json'));
+    cFiles.forEach(cf => {
+      const fPath = path.join(cotsDir, cf);
+      try {
+        const cData = JSON.parse(fs.readFileSync(fPath, 'utf8'));
+        const cClient = cData.cliente;
+        database.cotizaciones_reales = database.cotizaciones_reales.filter(c => c.cliente !== cClient);
+        database.cotizaciones_reales.push(cData);
+      } catch (e) {
+        console.error('Error parsing cotizacion JSON:', cf, e.message);
+      }
+    });
+  } catch (e) {
+    console.error('Error reading cotizaciones directory:', e.message);
+  }
+}
+
+const expoPath = path.join(__dirname, 'expo_boda_2026', 'datos_evento.json');
+if (fs.existsSync(expoPath)) {
+  try {
+    database.expo_boda_2026 = JSON.parse(fs.readFileSync(expoPath, 'utf8'));
+  } catch (e) {
+    console.error('Error parsing expo JSON:', e.message);
+  }
+}
+
+const agentPath = path.join(__dirname, 'agentes', 'sofia_legacy.json');
+if (fs.existsSync(agentPath)) {
+  try {
+    database.agentes_conversacionales = JSON.parse(fs.readFileSync(agentPath, 'utf8'));
+  } catch (e) {
+    console.error('Error parsing agent JSON:', e.message);
+  }
+}
 
 // 2. Save structured JSON database
 fs.writeFileSync(jsonPath, JSON.stringify(database, null, 2), 'utf8');
@@ -1396,7 +1558,8 @@ database.venues.forEach(venue => {
   md += `* **Página de Referencia**: [Enlace al sitio](${venue.url})\n\n`;
   
   md += `#### 🌳 Características y Facilidades del Recinto:\n`;
-  venue.features.forEach(feat => {
+  const features = venue.features || venue.caracteristicas || venue.inclusiones || [];
+  features.forEach(feat => {
     md += `- ${feat}\n`;
   });
   
@@ -1547,6 +1710,166 @@ database.plan_marketing.enlaces.forEach(lnk => {
   md += `- **[${lnk.nombre}](${lnk.url})**\n`;
 });
 md += `\n---\n\n`;
+
+if (database.plan_marketing.campana_organica_post_evento) {
+  const camp = database.plan_marketing.campana_organica_post_evento;
+  md += `## 📈 Campaña Orgánica Post-Evento (Semana de Posicionamiento)\n\n`;
+  md += `* **Estrategia**: ${camp.estrategia}\n`;
+  md += `* **Regla de Publicaciones**: ${camp.regla_enlaces_venues}\n\n`;
+  
+  md += `### 📦 Enlaces Oficiales de Primavera Events Group (Siempre Incluidos):\n\n`;
+  md += `- **Paquetes Integrales**: \`${camp.enlaces_oficiales.paquetes}\`\n`;
+  md += `- **Menús**: \`${camp.enlaces_oficiales.menus}\`\n`;
+  md += `- **Venues**: \`${camp.enlaces_oficiales.venues}\`\n`;
+  md += `- **Demo Invitación Digital**: \`${camp.enlaces_oficiales.demo_invitacion}\`\n`;
+  md += `- **Asesoría Richard Hernández**: \`${camp.enlaces_oficiales.planner_richard}\`\n`;
+  md += `- **Asesoría Jessy Sandoval**: \`${camp.enlaces_oficiales.planner_jessy}\`\n`;
+  md += `- **Enlace de Reseñas en Google**: \`${camp.enlaces_oficiales.google_opiniones}\`\n\n`;
+  
+  md += `### 📝 Copys y Guiones de Redes Sociales:\n\n`;
+  
+  // Video 1
+  md += `#### 🎬 Video 1: ${camp.copywriting.video_expo.titulo}\n\n`;
+  md += `##### 👥 Meta (Facebook & Instagram) - Texto Principal (Sin Enlaces):\n`;
+  md += `\`\`\`text\n${camp.copywriting.video_expo.meta_sin_enlaces}\n\`\`\`\n\n`;
+  md += `##### 💬 Meta (Facebook & Instagram) - Enlace Primer Comentario:\n`;
+  md += `\`\`\`text\n${camp.copywriting.video_expo.meta_comentarios}\n\`\`\`\n\n`;
+  md += `##### 🎵 TikTok:\n`;
+  md += `\`\`\`text\n${camp.copywriting.video_expo.tiktok}\n\`\`\`\n\n`;
+  md += `##### 🐦 Twitter / X:\n`;
+  md += `\`\`\`text\n${camp.copywriting.video_expo.twitter}\n\`\`\`\n\n`;
+  md += `##### 🎥 YouTube (Descripción Oficial):\n`;
+  md += `\`\`\`text\n${camp.copywriting.video_expo.youtube}\n\`\`\`\n\n`;
+  
+  // Video 2
+  md += `#### 🎬 Video 2: ${camp.copywriting.video_runway.titulo}\n\n`;
+  md += `##### 👥 Meta (Facebook & Instagram) - Texto Principal (Sin Enlaces):\n`;
+  md += `\`\`\`text\n${camp.copywriting.video_runway.meta_sin_enlaces}\n\`\`\`\n\n`;
+  md += `##### 💬 Meta (Facebook & Instagram) - Enlace Primer Comentario:\n`;
+  md += `\`\`\`text\n${camp.copywriting.video_runway.meta_comentarios}\n\`\`\`\n\n`;
+  md += `##### 🎵 TikTok:\n`;
+  md += `\`\`\`text\n${camp.copywriting.video_runway.tiktok}\n\`\`\`\n\n`;
+  md += `##### 🐦 Twitter / X:\n`;
+  md += `\`\`\`text\n${camp.copywriting.video_runway.twitter}\n\`\`\`\n\n`;
+  md += `##### 🎥 YouTube (Descripción Oficial):\n`;
+  md += `\`\`\`text\n${camp.copywriting.video_runway.youtube}\n\`\`\`\n\n`;
+
+  // Publicación Graduaciones
+  md += `#### 🎓 Publicación: ${camp.copywriting.post_graduaciones_julio.titulo}\n\n`;
+  md += `##### 👥 Meta (Facebook & Instagram) - Texto Principal (Sin Enlaces):\n`;
+  md += `\`\`\`text\n${camp.copywriting.post_graduaciones_julio.meta_sin_enlaces}\n\`\`\`\n\n`;
+  md += `##### 💬 Meta (Facebook & Instagram) - Enlace Primer Comentario:\n`;
+  md += `\`\`\`text\n${camp.copywriting.post_graduaciones_julio.meta_comentarios}\n\`\`\`\n\n`;
+  md += `##### 🎵 TikTok:\n`;
+  md += `\`\`\`text\n${camp.copywriting.post_graduaciones_julio.tiktok}\n\`\`\`\n\n`;
+  md += `##### 🐦 Twitter / X:\n`;
+  md += `\`\`\`text\n${camp.copywriting.post_graduaciones_julio.twitter}\n\`\`\`\n\n`;
+  
+  md += `\n---\n\n`;
+}
+
+// 14. Add Croquis y Planos to MD
+if (database.croquis_y_planos) {
+  md += `## 📐 Simulación, Croquis y Modelado 3D de Locaciones\n\n`;
+  const yolo = database.croquis_y_planos.yolomecatl;
+  if (yolo) {
+    md += `### 🌿 Planificador y Modelado 3D: ${yolo.nombre_recinto}\n`;
+    md += `* **Dimensiones del Terreno**: \`${yolo.dimensiones_terreno}\`\n`;
+    md += `* **Escala SVG**: ${yolo.escala_SVG}\n\n`;
+    md += `#### 🏢 Estructuras y Alturas (Z-axis):\n`;
+    for (const [k, v] of Object.entries(yolo.estructuras_y_elevaciones || {})) {
+      md += `- **${k.replace(/_/g, ' ').replace(/^\w/, c => c.toUpperCase())}**: ${v}\n`;
+    }
+    md += `\n#### 🛋️ Especificaciones de Mobiliario:\n`;
+    for (const [k, v] of Object.entries(yolo.mobiliario || {})) {
+      md += `- **${k.replace(/_/g, ' ').replace(/^\w/, c => c.toUpperCase())}**: ${v}\n`;
+    }
+    md += `\n#### 🎨 Propiedades de Materiales PBR:\n`;
+    md += `| Elemento | Material Recomendado |\n| --- | --- |\n`;
+    for (const mat of yolo.materiales_pbr || []) {
+      md += `| ${mat.elemento} | ${mat.material} |\n`;
+    }
+    md += `\n#### 💡 Esquema de Iluminación de Gala y Render:\n`;
+    for (const [k, v] of Object.entries(yolo.iluminacion_y_render || {})) {
+      md += `- **${k.replace(/_/g, ' ').replace(/^\w/, c => c.toUpperCase())}**: ${v}\n`;
+    }
+    md += `\n---\n\n`;
+  }
+  const flor = database.croquis_y_planos.jardin_la_flor;
+  if (flor) {
+    md += `### 🌸 Planificador y Plano 2D/3D: ${flor.nombre_recinto}\n`;
+    md += `* **Dimensiones del Lienzo**: \`${flor.canvas_dimensiones?.width}m x ${flor.canvas_dimensiones?.height}m\`\n`;
+    md += `* **Salón Posicionamiento**: Centro (${flor.salon_posicionamiento?.width}m x ${flor.salon_posicionamiento?.height}m)\n\n`;
+    md += `#### 🛋️ Elementos de Distribución Inicial:\n`;
+    md += `| ID | Elemento / Mueble | Coordenadas (X, Y) | Medidas (W x H) | Sillas | Color |\n`;
+    md += `| --- | --- | --- | --- | --- | --- |\n`;
+    for (const el of flor.elementos_iniciales || []) {
+      md += `| \`${el.id}\` | ${el.name} (${el.type}) | (${el.x}, ${el.y}) | ${el.w}m x ${el.h}m | ${el.chairs || 0} | \`${el.color}\` |\n`;
+    }
+    md += `\n---\n\n`;
+  }
+  const pres = database.croquis_y_planos.centro_presidente;
+  if (pres) {
+    md += `### 🏛️ Planificador y Distribución: ${pres.nombre_recinto}\n\n`;
+    md += `#### 🛋️ Elementos y Layout de Stands / Expositores:\n`;
+    md += `| ID | Nombre Elemento | Tipo | Coordenadas (X, Y) | Medidas (W x H) | Expositor |\n`;
+    md += `| --- | --- | --- | --- | --- | --- |\n`;
+    for (const el of pres.elementos_iniciales || []) {
+      const exh = el.exhibitor || 'N/A';
+      md += `| \`${el.id}\` | ${el.name} | ${el.type} | (${el.x}, ${el.y}) | ${el.w}m x ${el.h}m | ${exh} |\n`;
+    }
+    md += `\n---\n\n`;
+  }
+}
+
+// 15. Add Expo to MD
+if (database.expo_boda_2026) {
+  const expo = database.expo_boda_2026;
+  md += `## 📅 Estrategia e Historial de la Expo Boda y 15 Años 2026\n\n`;
+  md += `* **Evento**: ${expo.evento?.nombre} (${expo.evento?.fecha})\n`;
+  md += `* **Locación**: ${expo.evento?.lugar}\n`;
+  md += `* **Contraseña de Comunicación**: \`${expo.estrategia_marketing?.password_plan}\`\n\n`;
+  
+  md += `### 👥 Equipo Colaborador y Roles Oficiales:\n`;
+  for (const member of expo.manual_colaboracion?.colaboradores_y_roles || []) {
+    md += `- **${member.cargo}**: ${member.descripcion}\n`;
+  }
+  md += `\n### 🎨 Paleta de Colores de la Expo:\n`;
+  md += `| Color | Hex |\n| --- | --- |\n`;
+  for (const col of expo.manual_colaboracion?.colores_branding || []) {
+    md += `| **${col.nombre}** | \`${col.hex}\` |\n`;
+  }
+  md += `\n### 🏷️ Hashtags de Campaña: ` + (expo.manual_colaboracion?.hashtags || []).map(h => `\`${h}\``).join(', ') + `\n\n`;
+  
+  md += `### 🔗 Enlaces y Descargas de Medios:\n`;
+  for (const lnk of expo.estrategia_marketing?.enlaces_drive || []) {
+    md += `- **[${lnk.nombre}](${lnk.url})**\n`;
+  }
+  
+  md += `\n### 📈 Prospectos y Leads Capturados (Total: ${expo.leads_capturados?.length || 0} leads):\n`;
+  md += `| ID | Nombre Completo | Teléfono | Correo Electrónico | Evento | Ubicación | Estado |\n`;
+  md += `| --- | --- | --- | --- | --- | --- | --- |\n`;
+  for (const lead of expo.leads_capturados || []) {
+    md += `| \`${lead.id}\` | ${lead.name} | ${lead.phone} | ${lead.email} | ${lead.eventType} | ${lead.location} | ${lead.status} |\n`;
+  }
+  
+  md += `\n### 🏬 Directorio Detallado de Proveedores Expositores:\n`;
+  for (const prov of expo.proveedores_expositores || []) {
+    md += `#### 🏢 Proveedor: ${prov.nombre_comercial} (Archivo: \`${prov.archivo}\`)\n`;
+    md += `${prov.texto_completo}\n\n`;
+  }
+  md += `\n---\n\n`;
+}
+
+// 16. Add Agent Sofia to MD
+if (database.agentes_conversacionales) {
+  const sofia = database.agentes_conversacionales;
+  md += `## 🤖 Historial de Agentes Conversacionales (Sofía Legacy)\n\n`;
+  md += `* **Agente**: ${sofia.agente}\n`;
+  md += `* **Repositorio de Origen**: ${sofia.metadata?.repo_origen}\n`;
+  md += `* **Estado**: ${sofia.metadata?.estado}\n`;
+  md += `* **Comentario**: ${sofia.comentario}\n`;
+}
 
 // Write to MD file
 fs.writeFileSync(mdPath, md, 'utf8');

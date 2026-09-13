@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "repo_origen": "https://github.com/5410m0n0c001/antonio-cotizacion",
+    "archivo_origen": "index.html",
+    "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+    "estado": "completo"
+  },
+  "cliente": "XV Años Antonio (Propuesta Premium)",
+  "recinto": "Selección a elegir (ccPresidente, Los Potrillos, Los Caballos, La Flor, Yolomecatl)",
+  "precio_por_persona": "$950.00 MXN",
+  "total_inversion": "$123,500.00 MXN",
+  "minimo_invitados": 130,
+  "fecha": "Marzo 2027",
+  "tipo_evento": "XV Años",
+  "inclusiones": [
+    "Mobiliario Elegante: Montaje de gala con mesas de mármol y sillas Tiffany",
+    "Banquete Exquisito: Menú gourmet a 3 tiempos con coctel de bienvenida y tornafiesta",
+    "Personal de Servicio: Coordinador, capitán, meseros, barra, stewarts, Hostess",
+    "Música y Audio: DJ profesional, iluminación robótica, pista 5x5, chisperos",
+    "Cortesías: Letras gigantes iluminadas, corazón rojo, espejo selfie, barra mix con toppings"
+  ]
+}

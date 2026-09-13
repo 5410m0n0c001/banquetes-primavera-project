@@ -1,4 +1,4 @@
-﻿# DIRECTIVES — Primavera Events Group
+# DIRECTIVES — Primavera Events Group
 ### Guia Maestra Permanente · Cotizaciones Web y PDF
 Ultima actualizacion: Julio 2026 · Antigravity AI Agent
 
@@ -238,6 +238,17 @@ Planners:  Jessy Sandoval (Founder & Lead Planner)
 6. Servicios NO incluidos -> agregar en Complementos Disponibles
 7. git push -> GitHub Pages -> compartir URL
 8. PDF opcional -> generar con reportlab si se pide
+
+---
+
+## 11. ESTRUCTURA OBLIGATORIA ANTI-SPAM (WHATSAPP & MENSAJERÍA AUTOMÁTICA)
+
+Para proteger la reputación de la cuenta en Meta y evitar bloqueos por marcado de SPAM, **toda respuesta automática, plantilla o mensaje de cotización/seguimiento enviado por WhatsApp a clientes o prospectos nuevos** DEBE seguir esta estructura de 4 partes:
+
+1. **Claridad e Identificación**: Nombre del negocio/equipo desde el inicio.
+2. **Atención de Valor / Información**: Entrega de la cotización o respuesta solicitada.
+3. **Consentimiento (Opt-in)**: Pregunta de validación para recibir promociones/fechas por ese medio.
+4. **Opción de Salida Clara (Opt-out BAJA)**: Cláusula final explícita indicando la palabra clave **BAJA** para cancelar suscripción (evitando el botón de reporte de Meta).
 
 ---
 

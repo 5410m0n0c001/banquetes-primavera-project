@@ -21,6 +21,7 @@
     pendingType: null,
     layers: {
       estructuras:      true,
+      techos:           true,
       accesos:          true,
       mobiliario:       true,
       entretenimiento:  true,
@@ -446,6 +447,18 @@
     if (disp) disp.textContent = (elem.color || '#888888').toUpperCase();
 
     setVal('inspector-chairs', elem.chairs || 0);
+    setVal('inspector-elevation', elem.elevation || 0.0);
+
+    // Salon specific settings
+    var salonSettings = document.getElementById('inspector-salon-settings');
+    if (salonSettings) {
+      if (elem.type === 'salon') {
+        salonSettings.classList.remove('hidden');
+        setVal('inspector-salon-type', elem.salonType || 'muros');
+      } else {
+        salonSettings.classList.add('hidden');
+      }
+    }
 
     // Imperial tablones row (hidden unless imperial table)
     var tablonRow = document.getElementById('mesa-tablones-row');
@@ -555,6 +568,14 @@
     onInpChange('inspector-chairs', function (id, el) {
       var v = parseInt(el.value, 10);
       if (!isNaN(v) && v >= 0) { saveHistory(); updateElement(id, { chairs: v }); updateCounters(); }
+    });
+    onInpChange('inspector-elevation', function (id, el) {
+      var v = parseFloat(el.value);
+      if (!isNaN(v)) { saveHistory(); updateElement(id, { elevation: v }); }
+    });
+    onInpChange('inspector-salon-type', function (id, el) {
+      saveHistory();
+      updateElement(id, { salonType: el.value });
     });
 
     // Imperial tablones
@@ -777,16 +798,19 @@
 
     function setView(view) {
       AppState.activeView = view;
+      var brightnessGroup = document.getElementById('topbar-brightness-group');
       if (view === '2d') {
         if (container2d) container2d.style.display = 'block';
         if (container3d) container3d.style.display = 'none';
         if (btn2d) { btn2d.classList.add('active'); }
         if (btn3d) { btn3d.classList.remove('active'); }
+        if (brightnessGroup) brightnessGroup.style.display = 'none';
       } else {
         if (container2d) container2d.style.display = 'none';
         if (container3d) container3d.style.display = 'block';
         if (btn3d) { btn3d.classList.add('active'); }
         if (btn2d) { btn2d.classList.remove('active'); }
+        if (brightnessGroup) brightnessGroup.style.display = 'flex';
         if (window.Visualizer3D) window.Visualizer3D.sync(AppState.elements);
       }
     }
@@ -818,12 +842,25 @@
     });
   }
 
+  function _wireBrightnessSlider() {
+    var slider = document.getElementById('light-intensity-slider');
+    var valDisp = document.getElementById('light-intensity-val');
+    if (!slider) return;
+    slider.addEventListener('input', function () {
+      var v = parseFloat(slider.value);
+      if (valDisp) valDisp.textContent = v.toFixed(2);
+      if (window.Visualizer3D) {
+        window.Visualizer3D.setExposure(v);
+      }
+    });
+  }
+
   // ══════════════════════════════════════════════════════════
   // LAYER TOGGLES
   // ══════════════════════════════════════════════════════════
   function _wireLayerToggles() {
     var cats = [
-      'estructuras', 'accesos', 'mobiliario', 'entretenimiento', 'decoracion', 'proveedores',
+      'estructuras', 'techos', 'accesos', 'mobiliario', 'entretenimiento', 'decoracion', 'proveedores',
       'flujo_invitados', 'flujo_proveedores', 'flujo_staff'
     ];
     cats.forEach(function (cat) {
@@ -1650,6 +1687,7 @@
     // Wire UI Views & Buttons
     _wireViewSwitcher();
     _wireLighting();
+    _wireBrightnessSlider();
     _wireLayerToggles();
     _wireZoomButtons();
     _wireGridToggle();

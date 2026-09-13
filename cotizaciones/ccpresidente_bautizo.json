@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "repo_origen": "https://github.com/5410m0n0c001/banquetes-primavera-project",
+    "archivo_origen": "cotizacion_ccpresidente_bautizo_anito/index.html",
+    "fecha_extraccion": "2026-07-24 13:57:00 UTC",
+    "estado": "completo"
+  },
+  "cliente": "Richard Hernández & Jessica Patricia Sandoval (Bautizo)",
+  "recinto": "Centro de Convenciones Presidente",
+  "precio_por_persona": "$84.90 MXN",
+  "total_inversion": "$8,490.00 MXN",
+  "minimo_invitados": 100,
+  "fecha": "3 de Octubre",
+  "tipo_evento": "Bautizo",
+  "inclusiones": [
+    "Personal: 5 meseros profesionales uniformados por 5 horas de servicio",
+    "Personal de Barra: 1 barman calificado para servicio de bebidas",
+    "Vajilla / Losa básica: 100 juegos (tenedor, cuchillo, plato ancho, vaso cubero, servilleta de tela)",
+    "Servilletas extra: 100 piezas de servilletas de tela adicionales",
+    "Mantelería: 10 manteles color beige de gala",
+    "Caminos de mesa: 10 caminos color rosa palo elegantes",
+    "Alimentos (Tornamesa): 60 porciones de chilaquiles tradicionales servidos en chafing dishes",
+    "Nota Aclaratoria: El reparto de invitados, mobiliario y personal al 50/50 entre Bautizo y Añito is un supuesto de trabajo sujeto a reajuste según confirmación final del cliente."
+  ]
+}

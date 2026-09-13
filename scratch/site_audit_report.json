@@ -1,0 +1,670 @@
+{
+  "summary": {
+    "total_pages": 61,
+    "total_posts": 6,
+    "total_urls": 67
+  },
+  "non_seo_urls": [
+    {
+      "title": "Contact",
+      "url": "https://primaveraeventsgroup.com/987509816-2/",
+      "slug": "987509816-2",
+      "reason": "Contiene ID numérico genérico o duplicado generado por WordPress (posible error al guardar la página)"
+    },
+    {
+      "title": "Gallery",
+      "url": "https://primaveraeventsgroup.com/987509809-2/",
+      "slug": "987509809-2",
+      "reason": "Contiene ID numérico genérico o duplicado generado por WordPress (posible error al guardar la página)"
+    },
+    {
+      "title": "Services",
+      "url": "https://primaveraeventsgroup.com/987509796-2/",
+      "slug": "987509796-2",
+      "reason": "Contiene ID numérico genérico o duplicado generado por WordPress (posible error al guardar la página)"
+    }
+  ],
+  "thin_content_pages": [],
+  "missing_seo_meta": [
+    {
+      "title": "Regalo",
+      "url": "https://primaveraeventsgroup.com/regalo/",
+      "issues": [
+        "Meta Descripción demasiado corta (78 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "solo responde un par de preguntas y al completar podras disf..."
+    },
+    {
+      "title": "Nuestros Menus",
+      "url": "https://primaveraeventsgroup.com/nuestros-menus/",
+      "issues": [
+        "Meta Descripción demasiado larga (432 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Descubre nuestra propuesta culinaria diseñada para elevar ca..."
+    },
+    {
+      "title": "Parrillada de Cortes",
+      "url": "https://primaveraeventsgroup.com/menu-gourmet/menu-primavera-2026/buffet-mexicano/buffet-pastas-y-pizzas/parrillada-de-cortes-de-carne-y-guarniciones-en-buffet/",
+      "issues": [
+        "Meta Descripción demasiado larga (396 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "PARRILLADA DE CORTES DE CARNE Y GUARNICIONES EN BUFFET2 OPCI..."
+    },
+    {
+      "title": "Buffet Pastas y Pizzas",
+      "url": "https://primaveraeventsgroup.com/menu-gourmet/menu-primavera-2026/buffet-mexicano/buffet-pastas-y-pizzas/",
+      "issues": [
+        "Meta Descripción demasiado larga (385 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "BUFFET PASTAS Y PIZZAS2 OPCIONES DE PASTA:SERVICIO DE BARRA ..."
+    },
+    {
+      "title": "Buffet Mexicano",
+      "url": "https://primaveraeventsgroup.com/menu-gourmet/menu-primavera-2026/buffet-mexicano/",
+      "issues": [
+        "Meta Descripción demasiado larga (359 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "BUFFET MEXICANOPollo5 GUISADOS A ELEGIR, TORTILLAS HECHAS A ..."
+    },
+    {
+      "title": "Menu Primavera 2026",
+      "url": "https://primaveraeventsgroup.com/menu-gourmet/menu-primavera-2026/",
+      "issues": [
+        "Meta Descripción demasiado larga (411 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Menú PRIMAVERA 2026EntradasEnsaladas • ENSALADA MEDITERRANEA..."
+    },
+    {
+      "title": "Yamilet",
+      "url": "https://primaveraeventsgroup.com/yamilet/",
+      "issues": [
+        "Meta Descripción demasiado larga (395 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Descubre cómo Primavera Events Group puede hacer de tu event..."
+    },
+    {
+      "title": "Graduación Colegio Don Bosco",
+      "url": "https://primaveraeventsgroup.com/graduacion-colegio-don-bosco/",
+      "issues": [
+        "Meta Descripción demasiado larga (394 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Descubre cómo Primavera Events Group puede hacer de tu event..."
+    },
+    {
+      "title": "Invitaciones Digitales",
+      "url": "https://primaveraeventsgroup.com/invitaciones-digitales/",
+      "issues": [
+        "Meta Descripción demasiado larga (394 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "✨ Invitaciones Digitales Premium – Primavera Events Group Co..."
+    },
+    {
+      "title": "Paquete Nature’s Majesty Finca las Isabeles",
+      "url": "https://primaveraeventsgroup.com/paquete-natures-majesty/",
+      "issues": [
+        "Meta Descripción demasiado larga (367 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Descubre como Primavera Events Group puede hacer de tu event..."
+    },
+    {
+      "title": "Finca Las Isabeles",
+      "url": "https://primaveraeventsgroup.com/finca-las-isabeles/",
+      "issues": [
+        "Meta Descripción demasiado larga (380 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Finca Las isabelesBienvenidos a Primavera Events Group, dond..."
+    },
+    {
+      "title": "Quinta Zarabanda",
+      "url": "https://primaveraeventsgroup.com/quinta-zarabanda/",
+      "issues": [
+        "Meta Descripción demasiado larga (406 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Quinta ZarabandaBienvenidos a Primavera Events Groupy grupo ..."
+    },
+    {
+      "title": "AVISO DE PRIVACIDAD",
+      "url": "https://primaveraeventsgroup.com/aviso-de-privacidad/",
+      "issues": [
+        "Meta Descripción demasiado larga (377 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "En Primavera Events Group, nos especializamos en crear exper..."
+    },
+    {
+      "title": "TERMINOS Y CONDICIONES",
+      "url": "https://primaveraeventsgroup.com/terminos-y-condiciones/",
+      "issues": [
+        "Meta Descripción demasiado larga (393 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "En Primavera Events Group, nos dedicamos a crear experiencia..."
+    },
+    {
+      "title": "Paquete Vuelo Esmeralda",
+      "url": "https://primaveraeventsgroup.com/paquete-vuelo-esmeralda/",
+      "issues": [
+        "Meta Descripción demasiado larga (356 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Descubre como Primavera Events Group puede hacer de tu event..."
+    },
+    {
+      "title": "Jardin Tsu Nuum",
+      "url": "https://primaveraeventsgroup.com/jardin-tsu-nuum/",
+      "issues": [
+        "Meta Descripción demasiado larga (388 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "JARDIN DE EVENTOS TSU NUUMBienvenidos a Primavera Events Gro..."
+    },
+    {
+      "title": "Paquetes de fotografía y video",
+      "url": "https://primaveraeventsgroup.com/paquetes-de-fotografia-y-video/",
+      "issues": [
+        "Meta Descripción demasiado larga (400 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Explora nuestra selección de paquetes diseñados para crear e..."
+    },
+    {
+      "title": "Paquete Royal Cinematic",
+      "url": "https://primaveraeventsgroup.com/paquete-royal-cinematic/",
+      "issues": [
+        "Meta Descripción demasiado larga (321 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Ofrecemos un photobook personalizado y editado con capacidad..."
+    },
+    {
+      "title": "Paquete Eternal Promise",
+      "url": "https://primaveraeventsgroup.com/paquete-eternal-promise/",
+      "issues": [
+        "Meta Descripción demasiado larga (362 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Captura tus momentos más preciados con nuestro exclusivo paq..."
+    },
+    {
+      "title": "Paquete Cinematic Prestige",
+      "url": "https://primaveraeventsgroup.com/paquete-cinematic-prestige/",
+      "issues": [
+        "Meta Descripción demasiado larga (385 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "En Primavera Events Group, transformamos tus sueños en reali..."
+    },
+    {
+      "title": "Paquete Experiencia Deluxe",
+      "url": "https://primaveraeventsgroup.com/paquete-experiencia-deluxe/",
+      "issues": [
+        "Meta Descripción demasiado larga (376 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Transforma tu celebración de quince años en una experiencia ..."
+    },
+    {
+      "title": "Paquete Memoria Clásica",
+      "url": "https://primaveraeventsgroup.com/paquete-memoria-clasica/",
+      "issues": [
+        "Meta Descripción demasiado larga (389 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Disfruta de un recuerdo inolvidable con nuestro exclusivo pa..."
+    },
+    {
+      "title": "Paquete Armonía",
+      "url": "https://primaveraeventsgroup.com/paquete-armonia/",
+      "issues": [
+        "Meta Descripción demasiado larga (355 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Descubre como Primavera Events Group puede hacer de tu event..."
+    },
+    {
+      "title": "Paquetes Primavera",
+      "url": "https://primaveraeventsgroup.com/paquetes-primavera/",
+      "issues": [
+        "Meta Descripción demasiado larga (457 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Descubre nuestros paquetes integrales diseñados para crear e..."
+    },
+    {
+      "title": "Casate en Morelos",
+      "url": "https://primaveraeventsgroup.com/casate-en-morelos/",
+      "issues": [
+        "Meta Descripción demasiado larga (382 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "CONTÁCTANOS ¡PONTE EN CONTACTO! “Haz clic en el asesor de tu..."
+    },
+    {
+      "title": "Paquete Esencia Floral",
+      "url": "https://primaveraeventsgroup.com/paquete-esencia-floral/",
+      "issues": [
+        "Meta Descripción demasiado larga (387 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Descubre cómo Primavera Events Group puede hacer de tu event..."
+    },
+    {
+      "title": "Paquete Linaje Pura Sangre",
+      "url": "https://primaveraeventsgroup.com/paquete-linaje-pura-sangre/",
+      "issues": [
+        "Meta Descripción demasiado larga (372 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Descubre cómo Primavera Events Group puede hacer de tu event..."
+    },
+    {
+      "title": "Paquete Destino Yolomecatl",
+      "url": "https://primaveraeventsgroup.com/paquete-destino-yolomecatl/",
+      "issues": [
+        "Meta Descripción demasiado larga (392 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Descubre cómo Primavera Events Group puede hacer de tu event..."
+    },
+    {
+      "title": "Paquete Imperial Ecuestre",
+      "url": "https://primaveraeventsgroup.com/paquete-imperial-ecuestre/",
+      "issues": [
+        "Meta Descripción demasiado larga (356 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Descubre cómo Primavera Events Group puede hacer de tu event..."
+    },
+    {
+      "title": "Paquete Gobernador",
+      "url": "https://primaveraeventsgroup.com/paquete-gobernador/",
+      "issues": [
+        "Meta Descripción demasiado larga (392 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Descubre cómo Primavera Events Group puede hacer de tu event..."
+    },
+    {
+      "title": "Paquete Glow Graduation Elite",
+      "url": "https://primaveraeventsgroup.com/paquete-glow-graduation-elite/",
+      "issues": [
+        "Meta Descripción demasiado larga (310 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Primavera Events Group PresentaPor medio de la presente, rec..."
+    },
+    {
+      "title": "Paquete Presidente",
+      "url": "https://primaveraeventsgroup.com/paquete-presidente/",
+      "issues": [
+        "Meta Descripción demasiado larga (392 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Descubre cómo Primavera Events Group puede hacer de tu event..."
+    },
+    {
+      "title": "Quinceañeras primavera",
+      "url": "https://primaveraeventsgroup.com/quinceaneras-primavera/",
+      "issues": [
+        "Meta Descripción demasiado larga (457 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "VXAñerasVestibulum ac diam sit amet quam vehicula elementum ..."
+    },
+    {
+      "title": "Bodas",
+      "url": "https://primaveraeventsgroup.com/bodas/",
+      "issues": [
+        "Meta Descripción demasiado larga (420 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "PresentamosCelebramos historias de amor que merecen ser inol..."
+    },
+    {
+      "title": "Wedding &amp; Event Planning",
+      "url": "https://primaveraeventsgroup.com/987509796-2/wedding-event-planning/",
+      "issues": [
+        "Meta Descripción demasiado larga (366 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Sobre nosotros ¡Hola! Somos Jessy &amp; Richard Wedding &amp..."
+    },
+    {
+      "title": "Banquetes Primavera",
+      "url": "https://primaveraeventsgroup.com/987509796-2/banquetes-primavera/",
+      "issues": [
+        "Meta Descripción demasiado larga (326 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Banquetes &nbsp; Your content goes here. Edit or remove this..."
+    },
+    {
+      "title": "Staffing",
+      "url": "https://primaveraeventsgroup.com/staffing/",
+      "issues": [
+        "Meta Descripción demasiado larga (459 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": " ClaseConfianza.Vestibulum ac diam sit amet quam vehicula el..."
+    },
+    {
+      "title": "Graduaciones Primavera",
+      "url": "https://primaveraeventsgroup.com/graduaciones-primavera/",
+      "issues": [
+        "Meta Descripción demasiado larga (457 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "PresentamosCelebramos logros que marcan una vida. En Graduac..."
+    },
+    {
+      "title": "Clientes Felices",
+      "url": "https://primaveraeventsgroup.com/clientes-felices/",
+      "issues": [
+        "Meta Descripción demasiado larga (391 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "En Primavera Events Group, nos dedicamos a crear experiencia..."
+    },
+    {
+      "title": "Venues",
+      "url": "https://primaveraeventsgroup.com/venues/",
+      "issues": [
+        "Meta Descripción demasiado larga (210 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Explora nuestra selección de venues cuidadosamente elegidos ..."
+    },
+    {
+      "title": "Montajes y Mobiliario",
+      "url": "https://primaveraeventsgroup.com/montajes-y-mobiliario/",
+      "issues": [
+        "Meta Descripción demasiado larga (404 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Primavera Events GroupDiseño,  y estética para cada eventoEs..."
+    },
+    {
+      "title": "Fotografia y Video",
+      "url": "https://primaveraeventsgroup.com/fotografia-y-video/",
+      "issues": [
+        "Meta Descripción demasiado larga (377 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Fotografía &amp; Video para EventosEn Primavera Events Group..."
+    },
+    {
+      "title": "Menu Gourmet",
+      "url": "https://primaveraeventsgroup.com/menu-gourmet/",
+      "issues": [
+        "Meta Descripción demasiado larga (398 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Menú gourmet flexible de 2 a 4 tiempos, elige y combina tus ..."
+    },
+    {
+      "title": "Nuestros Prostres",
+      "url": "https://primaveraeventsgroup.com/nuestros-postres/",
+      "issues": [
+        "Meta Descripción demasiado larga (420 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Postres que Elevan tu EventoPostres artesanales para eventos..."
+    },
+    {
+      "title": "Transportación",
+      "url": "https://primaveraeventsgroup.com/transportacion/",
+      "issues": [
+        "Meta Descripción demasiado larga (424 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Movilidad impecable Eventos sociales, corporativos y celebra..."
+    },
+    {
+      "title": "Quinta San Francisco",
+      "url": "https://primaveraeventsgroup.com/quinta-san-francisco/",
+      "issues": [
+        "Meta Descripción demasiado larga (382 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Quinta San FranciscoBienvenidos a Primavera Events Group, do..."
+    },
+    {
+      "title": "Jessy",
+      "url": "https://primaveraeventsgroup.com/jessy/",
+      "issues": [
+        "Meta Descripción demasiado corta (22 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Hola Soy Jessy! &nbsp;..."
+    },
+    {
+      "title": "Richard Hernandez",
+      "url": "https://primaveraeventsgroup.com/richard-hernandez/",
+      "issues": [
+        "Meta Descripción demasiado corta (17 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Richard Hernandez..."
+    },
+    {
+      "title": "Salón Los Caballos",
+      "url": "https://primaveraeventsgroup.com/salon-los-caballos/",
+      "issues": [
+        "Meta Descripción demasiado larga (391 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "SALON DE EVENTOS LOS CABALLOSBienvenidos a Primavera Events ..."
+    },
+    {
+      "title": "Salón Jardín Yolomecatl",
+      "url": "https://primaveraeventsgroup.com/salon-jardin-yolomecatl/",
+      "issues": [
+        "Meta Descripción demasiado larga (400 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "SALON JARDIN YOLOMECATL &nbsp;Bienvenidos a Primavera Events..."
+    },
+    {
+      "title": "Salón Los Potrillos",
+      "url": "https://primaveraeventsgroup.com/salon-los-potrillos/",
+      "issues": [
+        "Meta Descripción demasiado larga (382 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Rancho Los potrillosBienvenidos a Primavera Events Group, do..."
+    },
+    {
+      "title": "Centro De Convenciones Presidente",
+      "url": "https://primaveraeventsgroup.com/centro-de-convenciones-presidente/",
+      "issues": [
+        "Meta Descripción demasiado larga (395 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "CENTRO DE CONVENCIONES PRESIDENTEBienvenidos a Primavera Eve..."
+    },
+    {
+      "title": "Jardín La Flor",
+      "url": "https://primaveraeventsgroup.com/jardin-la-flor/",
+      "issues": [
+        "Meta Descripción demasiado larga (387 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "JARDIN DE EVENTOS LA FLORBienvenidos a Primavera Events Grou..."
+    },
+    {
+      "title": "Home",
+      "url": "https://primaveraeventsgroup.com/",
+      "issues": [
+        "Meta Descripción demasiado larga (422 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "¡Planificaremos cada detalle de tu boda!Bienvenidos a Primav..."
+    },
+    {
+      "title": "About",
+      "url": "https://primaveraeventsgroup.com/about/",
+      "issues": [
+        "Meta Descripción demasiado larga (401 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "En Primavera Events Group, transformamos tus sueños en event..."
+    },
+    {
+      "title": "Contact",
+      "url": "https://primaveraeventsgroup.com/987509816-2/",
+      "issues": [
+        "Meta Descripción demasiado larga (451 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "CONTÁCTANOS ¡PONTE EN CONTACTO! Haz una consulta o agenda un..."
+    },
+    {
+      "title": "Gallery",
+      "url": "https://primaveraeventsgroup.com/987509809-2/",
+      "issues": [
+        "Meta Descripción demasiado corta (23 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Portfolio Event Gallery..."
+    },
+    {
+      "title": "Services",
+      "url": "https://primaveraeventsgroup.com/987509796-2/",
+      "issues": [
+        "Meta Descripción demasiado larga (427 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Servicios &amp; Paquetes Creamos Experiencias, Cuidamos Cada..."
+    },
+    {
+      "title": "Expo Boda y Quince Años Centro De Convenciones Presidente",
+      "url": "https://primaveraeventsgroup.com/expo-boda-y-quince-anos-centro-de-convenciones-presidente/",
+      "issues": [
+        "Meta Descripción demasiado larga (251 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Descubre todo lo que necesitas para tu evento en un solo lug..."
+    },
+    {
+      "title": "Expo boda y 15 años",
+      "url": "https://primaveraeventsgroup.com/expo-boda-y-15-anos/",
+      "issues": [
+        "Meta Descripción demasiado larga (334 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "✨ Expo Boda y 15 Años en Morelos: Primavera Events Group reú..."
+    },
+    {
+      "title": "Preparativos Finales",
+      "url": "https://primaveraeventsgroup.com/wedding-final-preparation/",
+      "issues": [
+        "Meta Descripción demasiado larga (338 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Introducción La etapa final de la planeación de tu evento es..."
+    },
+    {
+      "title": "Damas y Caballeros de Honor",
+      "url": "https://primaveraeventsgroup.com/wedding-bridesmaids-groomsmen/",
+      "issues": [
+        "Meta Descripción demasiado larga (344 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Introducción Las damas y caballeros de honor cumplen un pape..."
+    },
+    {
+      "title": "Locación de la Boda",
+      "url": "https://primaveraeventsgroup.com/wedding-event-location/",
+      "issues": [
+        "Meta Descripción demasiado larga (325 caracteres, ideal: 120-160)"
+      ],
+      "current_desc": "Introducción Elegir la locación de la boda es una de las dec..."
+    }
+  ],
+  "divi_bloat_pages": [],
+  "pricing_findings": [
+    {
+      "title": "Paquete Nature’s Majesty Finca las Isabeles",
+      "url": "https://primaveraeventsgroup.com/paquete-natures-majesty/",
+      "prices_found": [
+        "$1,799.00",
+        "$1,999.00",
+        "$1,899.00"
+      ]
+    },
+    {
+      "title": "Paquete Vuelo Esmeralda",
+      "url": "https://primaveraeventsgroup.com/paquete-vuelo-esmeralda/",
+      "prices_found": [
+        "$209",
+        "$1,999.00",
+        "$2,199.00"
+      ]
+    },
+    {
+      "title": "Paquete Royal Cinematic",
+      "url": "https://primaveraeventsgroup.com/paquete-royal-cinematic/",
+      "prices_found": [
+        "$11,000.00",
+        "$2,500.00",
+        "$1,900.00"
+      ]
+    },
+    {
+      "title": "Paquete Eternal Promise",
+      "url": "https://primaveraeventsgroup.com/paquete-eternal-promise/",
+      "prices_found": [
+        "$1,500.00"
+      ]
+    },
+    {
+      "title": "Paquete Cinematic Prestige",
+      "url": "https://primaveraeventsgroup.com/paquete-cinematic-prestige/",
+      "prices_found": [
+        "$12,510.00",
+        "$1,500.00",
+        "$1,390.00"
+      ]
+    },
+    {
+      "title": "Paquete Experiencia Deluxe",
+      "url": "https://primaveraeventsgroup.com/paquete-experiencia-deluxe/",
+      "prices_found": [
+        "$1,500.00"
+      ]
+    },
+    {
+      "title": "Paquete Memoria Clásica",
+      "url": "https://primaveraeventsgroup.com/paquete-memoria-clasica/",
+      "prices_found": [
+        "$1,500.00",
+        "$850"
+      ]
+    },
+    {
+      "title": "Paquete Armonía",
+      "url": "https://primaveraeventsgroup.com/paquete-armonia/",
+      "prices_found": [
+        "$1,450.00",
+        "$1,700.00"
+      ]
+    },
+    {
+      "title": "Paquete Esencia Floral",
+      "url": "https://primaveraeventsgroup.com/paquete-esencia-floral/",
+      "prices_found": [
+        "$899.00",
+        "$999.00",
+        "$100"
+      ]
+    },
+    {
+      "title": "Paquete Linaje Pura Sangre",
+      "url": "https://primaveraeventsgroup.com/paquete-linaje-pura-sangre/",
+      "prices_found": [
+        "$699.00",
+        "$649.00",
+        "$749.00",
+        "$799.00"
+      ]
+    },
+    {
+      "title": "Paquete Destino Yolomecatl",
+      "url": "https://primaveraeventsgroup.com/paquete-destino-yolomecatl/",
+      "prices_found": [
+        "$799.00",
+        "$899.00",
+        "$749.00",
+        "$849.00"
+      ]
+    },
+    {
+      "title": "Paquete Imperial Ecuestre",
+      "url": "https://primaveraeventsgroup.com/paquete-imperial-ecuestre/",
+      "prices_found": [
+        "$729.00",
+        "$749",
+        "$699.00"
+      ]
+    },
+    {
+      "title": "Paquete Gobernador",
+      "url": "https://primaveraeventsgroup.com/paquete-gobernador/",
+      "prices_found": [
+        "$749.00",
+        "$899.00",
+        "$849.00",
+        "$100",
+        "$799.00"
+      ]
+    },
+    {
+      "title": "Paquete Glow Graduation Elite",
+      "url": "https://primaveraeventsgroup.com/paquete-glow-graduation-elite/",
+      "prices_found": [
+        "$9.00"
+      ]
+    },
+    {
+      "title": "Paquete Presidente",
+      "url": "https://primaveraeventsgroup.com/paquete-presidente/",
+      "prices_found": [
+        "$749.00",
+        "$899.00",
+        "$849.00",
+        "$100",
+        "$799.00"
+      ]
+    }
+  ]
+}

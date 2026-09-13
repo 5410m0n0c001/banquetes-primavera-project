@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barra de Mixología | Primavera Events Group</title>
+<meta name="description" content="Barra de mixología artesanal a base de mojitos frescos — colecciones Clásico, Premium y Signature. Primavera Events Group.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --primary-pink:#F65C7A;
+    --gold-accent:#C9A96E;
+    --primary-dark:#1F1F1F;
+    --background-light:#F8F6F4;
+    --soft-pink:#FADADD;
+    --beige:#EFE7E1;
+    --gray-text:#6D6D6D;
+    --white:#ffffff;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Poppins',sans-serif;
+    background:var(--background-light);
+    color:var(--primary-dark);
+    line-height:1.6;
+  }
+  h1,h2,h3,h4{font-family:'Playfair Display',serif;}
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+
+  .reveal{opacity:0; transform:translateY(18px); animation:revealIn .8s ease forwards;}
+  @keyframes revealIn{to{opacity:1; transform:translateY(0);}}
+  .d1{animation-delay:.05s;} .d2{animation-delay:.15s;} .d3{animation-delay:.25s;}
+
+  /* HERO */
+  header.hero{
+    background:linear-gradient(135deg,#1A1A1A 0%,#3a2430 100%);
+    color:var(--white);
+    text-align:center;
+    padding:60px 20px 70px;
+  }
+  header.hero img.logo{
+    max-width:160px; margin:0 auto 22px; filter:brightness(0) invert(1);
+  }
+  header.hero .eyebrow{
+    text-transform:uppercase; letter-spacing:4px; font-size:.78rem;
+    color:var(--gold-accent); font-weight:600; margin-bottom:10px;
+  }
+  header.hero h1{font-size:2.6rem; margin-bottom:12px;}
+  header.hero p{color:#e6cdd4; font-weight:300; max-width:560px; margin:0 auto; font-size:1rem;}
+
+  .container{max-width:1080px; margin:0 auto; padding:0 20px;}
+
+  /* INTRO */
+  .intro{
+    background:var(--white);
+    border-radius:24px;
+    box-shadow:0 20px 45px rgba(0,0,0,.06);
+    padding:40px;
+    margin:-40px auto 50px;
+    position:relative;
+    z-index:2;
+    text-align:center;
+  }
+  .intro h2{font-size:1.6rem; margin-bottom:14px;}
+  .intro p{color:var(--gray-text); max-width:720px; margin:0 auto;}
+
+  /* SECTION TITLES */
+  .section-title{
+    text-align:center; font-size:1.9rem; margin:60px 0 10px;
+  }
+  .section-sub{
+    text-align:center; color:var(--gray-text); max-width:640px; margin:0 auto 35px; font-size:.95rem;
+  }
+
+  /* COLLECTION CARDS */
+  .collections{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:26px;
+    margin-bottom:20px;
+  }
+  .collection-card{
+    background:var(--white);
+    border-radius:22px;
+    overflow:hidden;
+    border:1px solid var(--beige);
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+    display:flex;
+    flex-direction:column;
+    transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .collection-card:hover{transform:translateY(-6px); box-shadow:0 20px 40px rgba(0,0,0,.09);}
+  .collection-card.featured{border:2px solid var(--gold-accent);}
+  .collection-head{
+    background:var(--primary-dark);
+    color:var(--white);
+    padding:28px 26px 22px;
+    text-align:center;
+    position:relative;
+  }
+  .collection-head .badge{
+    position:absolute; top:14px; right:14px;
+    background:var(--gold-accent); color:var(--primary-dark);
+    font-size:.65rem; font-weight:700; text-transform:uppercase;
+    letter-spacing:1px; padding:5px 10px; border-radius:20px;
+  }
+  .collection-head .tag{
+    text-transform:uppercase; letter-spacing:3px; font-size:.7rem;
+    color:var(--gold-accent); font-weight:600;
+  }
+  .collection-head h3{font-size:1.9rem; margin:6px 0 12px;}
+  .collection-head p{font-size:.85rem; color:#d8d0cf; font-weight:300;}
+
+  .collection-body{padding:26px; flex-grow:1; display:flex; flex-direction:column;}
+  .check-list{list-style:none; margin-bottom:22px;}
+  .check-list li{
+    display:flex; align-items:flex-start; gap:10px;
+    font-size:.92rem; padding:7px 0; color:var(--primary-dark);
+  }
+  .check-list li i{color:var(--gold-accent); margin-top:3px;}
+
+  .price-table{width:100%; border-collapse:collapse; margin-top:auto; margin-bottom:14px;}
+  .price-table thead th{
+    background:var(--primary-dark); color:var(--white);
+    font-size:.72rem; text-transform:uppercase; letter-spacing:1px;
+    padding:10px 8px; text-align:center;
+  }
+  .price-table thead th:first-child{border-radius:8px 0 0 0;}
+  .price-table thead th:last-child{border-radius:0 8px 0 0;}
+  .price-table td{
+    padding:10px 8px; text-align:center; font-size:.9rem;
+    border-bottom:1px solid var(--beige);
+  }
+  .price-table td:first-child{color:var(--gray-text);}
+  .price-table td:last-child{font-weight:700; color:var(--primary-pink); font-family:'Playfair Display',serif; font-size:1.05rem;}
+
+  .per-person{
+    text-align:center; font-size:.88rem; color:var(--gray-text);
+    padding-top:10px; border-top:1px dashed var(--beige);
+  }
+  .per-person strong{color:var(--primary-dark); font-family:'Playfair Display',serif; font-size:1.1rem;}
+
+  /* SABORES */
+  .flavors-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px; margin-bottom:20px;
+  }
+  .flavor-card{
+    background:var(--white); border:1px solid var(--beige); border-radius:18px;
+    padding:22px; text-align:left;
+  }
+  .flavor-card h4{font-size:1.05rem; margin-bottom:8px; color:var(--primary-dark);}
+  .flavor-card h4 i{color:var(--primary-pink); margin-right:8px;}
+  .flavor-card p{font-size:.88rem; color:var(--gray-text);}
+
+  .note-box{
+    background:var(--soft-pink); border-radius:16px; padding:16px 20px;
+    font-size:.85rem; color:var(--primary-dark); margin-top:8px;
+    display:flex; gap:10px; align-items:flex-start;
+  }
+  .note-box i{color:var(--primary-pink); margin-top:3px;}
+
+  /* DETAILS / PERSONALIZATION */
+  .details-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:22px; margin-bottom:20px;
+  }
+  .detail-card{
+    background:var(--white); border-radius:18px; padding:24px;
+    border:1px solid var(--beige);
+  }
+  .detail-card i{
+    color:var(--primary-pink); font-size:1.4rem; margin-bottom:10px; display:block;
+  }
+  .detail-card h4{font-size:1.05rem; margin-bottom:8px;}
+  .detail-card p{font-size:.88rem; color:var(--gray-text);}
+
+  /* EXAMPLE 130 */
+  .example-section{
+    background:var(--primary-dark); color:var(--white);
+    border-radius:24px; padding:40px; margin:60px 0; text-align:center;
+  }
+  .example-section h3{font-size:1.5rem; margin-bottom:6px; color:var(--white);}
+  .example-section p.lead{color:#cfcfcf; font-size:.9rem; margin-bottom:26px;}
+  .example-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:18px; max-width:700px; margin:0 auto;
+  }
+  .example-item{
+    background:rgba(255,255,255,.06); border:1px solid rgba(201,169,110,.4);
+    border-radius:16px; padding:20px;
+  }
+  .example-item span{
+    display:block; text-transform:uppercase; letter-spacing:1.5px;
+    font-size:.7rem; color:var(--gold-accent); margin-bottom:8px; font-weight:600;
+  }
+  .example-item strong{font-family:'Playfair Display',serif; font-size:1.5rem;}
+
+  /* NOTES */
+  .notes-section{
+    background:var(--white); border:1px solid var(--beige); border-radius:20px;
+    padding:30px 34px; margin-bottom:60px;
+  }
+  .notes-section h4{font-size:1.1rem; margin-bottom:14px;}
+  .notes-section ul{list-style:none;}
+  .notes-section li{
+    font-size:.88rem; color:var(--gray-text); padding:6px 0 6px 22px; position:relative;
+  }
+  .notes-section li::before{
+    content:"—"; position:absolute; left:0; color:var(--gold-accent);
+  }
+
+  /* CTA */
+  .cta-section{
+    text-align:center; padding:20px 20px 70px;
+  }
+  .btn-wa{
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--primary-pink); color:var(--white);
+    padding:16px 34px; border-radius:40px; text-decoration:none;
+    font-weight:600; font-size:.98rem;
+    box-shadow:0 12px 25px rgba(246,92,122,.35);
+    transition:all .3s ease;
+  }
+  .btn-wa:hover{background:#e04b69; transform:translateY(-2px);}
+  .cta-section p{color:var(--gray-text); font-size:.85rem; margin-top:16px;}
+
+  .pdf-btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:transparent; border:1px solid var(--beige); color:var(--primary-dark);
+    padding:10px 20px; border-radius:30px; font-size:.85rem; cursor:pointer;
+    margin-top:16px;
+  }
+  .pdf-btn:hover{border-color:var(--gold-accent);}
+
+  /* FOOTER */
+  footer{
+    background:var(--primary-dark); color:#cfcfcf; text-align:center;
+    padding:36px 20px;
+  }
+  footer img{max-width:110px; margin:0 auto 14px; filter:brightness(0) invert(1); opacity:.9;}
+  footer p{font-size:.8rem; margin:3px 0;}
+  footer a{color:var(--gold-accent); text-decoration:none;}
+
+  @media print{
+    .cta-section, .pdf-btn, footer .pdf-btn{display:none!important;}
+    .collection-card, .example-section, .notes-section{page-break-inside:avoid; break-inside:avoid;}
+    header.hero{background:var(--primary-dark)!important; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+    body{background:#fff;}
+    .reveal{opacity:1!important; transform:none!important; animation:none!important;}
+    *{-webkit-print-color-adjust:exact!important; print-color-adjust:exact!important;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img src="logo_primavera.png" alt="Primavera Events Group" class="logo">
+  <div class="eyebrow">Complemento de Barra</div>
+  <h1>Barra de Mixología</h1>
+  <p>Mojitos artesanales preparados al momento con fruta 100% fresca. Tres colecciones para acompañar tu evento con Primavera Events Group.</p>
+</header>
+
+<div class="container">
+  <div class="intro reveal">
+    <h2>Frescura real, técnica de barra</h2>
+    <p>Cada bebida se prepara con técnica <strong>shaking</strong> y fruta fresca — hierbabuena, fresa, limón y maracuyá — nada congelado. El jarabe de maracuyá y el jugo de arándano para el mojito de fresa son de preparación artesanal propia. La cristalería es copa, y en las colecciones Premium y Signature se personaliza con vinil.</p>
+  </div>
+
+  <h2 class="section-title reveal">Nuestras Colecciones</h2>
+  <p class="section-sub reveal">Elige la experiencia que mejor acompañe tu evento. Precios de inversión para el cliente, IVA no incluido.</p>
+
+  <div class="collections">
+    <!-- CLÁSICO -->
+    <div class="collection-card reveal d1">
+      <div class="collection-head">
+        <div class="tag">Colección</div>
+        <h3>Clásico</h3>
+        <p>Ideal para reuniones íntimas, cumpleaños y celebraciones donde cada detalle cuenta.</p>
+      </div>
+      <div class="collection-body">
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> 3 horas de servicio</li>
+          <li><i class="fa-solid fa-check"></i> 3 cócteles por invitado</li>
+          <li><i class="fa-solid fa-check"></i> 2 sabores a elegir</li>
+          <li><i class="fa-solid fa-check"></i> Barra móvil premium</li>
+          <li><i class="fa-solid fa-check"></i> Bartender profesional</li>
+          <li><i class="fa-solid fa-check"></i> Ayudante</li>
+          <li><i class="fa-solid fa-check"></i> Montaje</li>
+          <li><i class="fa-solid fa-check"></i> Desmontaje</li>
+        </ul>
+        <table class="price-table">
+          <thead><tr><th>Invitados</th><th>Precio total</th></tr></thead>
+          <tbody>
+            <tr><td>50 personas</td><td>$9,900</td></tr>
+            <tr><td>80 personas</td><td>$12,000</td></tr>
+            <tr><td>100 personas</td><td>$15,000</td></tr>
+          </tbody>
+        </table>
+        <div class="per-person">Precio por persona: <strong>$150 MXN</strong></div>
+      </div>
+    </div>
+
+    <!-- PREMIUM -->
+    <div class="collection-card reveal d2">
+      <div class="collection-head">
+        <div class="tag">Colección</div>
+        <h3>Premium</h3>
+        <p>Donde los detalles hacen la diferencia.</p>
+      </div>
+      <div class="collection-body">
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> 4 horas de servicio</li>
+          <li><i class="fa-solid fa-check"></i> 4 cócteles por invitado</li>
+          <li><i class="fa-solid fa-check"></i> 3 sabores a elegir</li>
+          <li><i class="fa-solid fa-check"></i> Copas personalizadas con vinil</li>
+          <li><i class="fa-solid fa-check"></i> Servilletas personalizadas</li>
+          <li><i class="fa-solid fa-check"></i> Atención personalizada</li>
+          <li><i class="fa-solid fa-check"></i> Barra premium</li>
+          <li><i class="fa-solid fa-check"></i> Montaje premium</li>
+          <li><i class="fa-solid fa-check"></i> Desmontaje</li>
+        </ul>
+        <table class="price-table">
+          <thead><tr><th>Invitados</th><th>Precio total</th></tr></thead>
+          <tbody>
+            <tr><td>50 personas</td><td>$9,900</td></tr>
+            <tr><td>80 personas</td><td>$15,840</td></tr>
+            <tr><td>100 personas</td><td>$19,800</td></tr>
+          </tbody>
+        </table>
+        <div class="per-person">Precio por persona: <strong>$198 MXN</strong></div>
+      </div>
+    </div>
+
+    <!-- SIGNATURE -->
+    <div class="collection-card featured reveal d3">
+      <div class="collection-head">
+        <span class="badge">Más exclusiva</span>
+        <div class="tag">Colección</div>
+        <h3>Signature</h3>
+        <p>Nuestra experiencia más exclusiva.</p>
+      </div>
+      <div class="collection-body">
+        <ul class="check-list">
+          <li><i class="fa-solid fa-check"></i> 5 horas de servicio</li>
+          <li><i class="fa-solid fa-check"></i> 5 cócteles por invitado</li>
+          <li><i class="fa-solid fa-check"></i> 4 sabores a elegir</li>
+          <li><i class="fa-solid fa-check"></i> Copas personalizadas con vinil</li>
+          <li><i class="fa-solid fa-check"></i> Servilletas personalizadas</li>
+          <li><i class="fa-solid fa-check"></i> Decoración premium de la barra</li>
+          <li><i class="fa-solid fa-check"></i> Atención completamente personalizada</li>
+          <li><i class="fa-solid fa-check"></i> Experiencia diseñada a la medida</li>
+          <li><i class="fa-solid fa-check"></i> Montaje premium</li>
+          <li><i class="fa-solid fa-check"></i> Desmontaje</li>
+        </ul>
+        <table class="price-table">
+          <thead><tr><th>Invitados</th><th>Precio total</th></tr></thead>
+          <tbody>
+            <tr><td>50 personas</td><td>$11,700</td></tr>
+            <tr><td>80 personas</td><td>$18,720</td></tr>
+            <tr><td>100 personas</td><td>$23,400</td></tr>
+          </tbody>
+        </table>
+        <div class="per-person">Precio por persona: <strong>$234 MXN</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title reveal">Nuestros Sabores</h2>
+  <p class="section-sub reveal">El número de sabores a elegir depende de la colección contratada — de 2 hasta los 4 disponibles.</p>
+  <div class="flavors-grid">
+    <div class="flavor-card reveal">
+      <h4><i class="fa-solid fa-martini-glass-citrus"></i>Mojito de Maracuyá</h4>
+      <p>Preparado con jarabe de maracuyá artesanal de casa, mezclado con fruta fresca para la presentación.</p>
+    </div>
+    <div class="flavor-card reveal">
+      <h4><i class="fa-solid fa-martini-glass-citrus"></i>Mojito de Fresa</h4>
+      <p>Fresa fresca y jugo de arándano de preparación propia.</p>
+    </div>
+    <div class="flavor-card reveal">
+      <h4><i class="fa-solid fa-martini-glass-citrus"></i>Mojito Clásico</h4>
+      <p>Hierbabuena fresca y limón, la receta tradicional.</p>
+    </div>
+    <div class="flavor-card reveal">
+      <h4><i class="fa-solid fa-martini-glass-citrus"></i>Creación de la Casa</h4>
+      <p>Mojito de limón con un toque de vodka de mandarina y rodajas de pepino.</p>
+    </div>
+  </div>
+  <div class="note-box reveal">
+    <i class="fa-solid fa-circle-info"></i>
+    <span>Barra especializada en mojitos artesanales con técnica shaking; no incluye mixología molecular o experimental.</span>
+  </div>
+
+  <h2 class="section-title reveal">Personalización y Servicio</h2>
+  <div class="details-grid">
+    <div class="detail-card reveal">
+      <i class="fa-solid fa-champagne-glasses"></i>
+      <h4>Cristalería con nombre</h4>
+      <p>En Premium y Signature, las copas se personalizan con vinil con el nombre de los novios, cumpleañero(a) o festejado(a).</p>
+    </div>
+    <div class="detail-card reveal">
+      <i class="fa-solid fa-heart"></i>
+      <h4>Cóctel a tu nombre</h4>
+      <p>En la colección Signature, el nombre de cualquiera de los cócteles puede cambiarse por el de los novios o el cumpleañero(a).</p>
+    </div>
+    <div class="detail-card reveal">
+      <i class="fa-solid fa-users"></i>
+      <h4>Personal a escala</h4>
+      <p>El equipo de barra se ajusta al número de invitados para una experiencia rápida y cálida.</p>
+    </div>
+  </div>
+
+  <div class="example-section reveal">
+    <h3>Ejemplo real: evento de 130 invitados</h3>
+    <p class="lead">Para este tamaño de grupo, el servicio se cubre con 2 bartenders + 1 ayudante.</p>
+    <div class="example-grid">
+      <div class="example-item">
+        <span>Clásico</span>
+        <strong>$19,500</strong>
+      </div>
+      <div class="example-item">
+        <span>Premium</span>
+        <strong>$25,740</strong>
+      </div>
+      <div class="example-item">
+        <span>Signature</span>
+        <strong>$30,420</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="notes-section reveal">
+    <h4><i class="fa-solid fa-file-signature" style="color:var(--primary-pink); margin-right:8px;"></i>Notas y condiciones</h4>
+    <ul>
+      <li>Precios de inversión para el cliente. IVA 16% solo aplicable en caso de factura oficial.</li>
+      <li>Todas las bebidas se preparan al momento con fruta 100% fresca; nada es congelado.</li>
+      <li>El servicio se formaliza mediante contrato firmado al momento de la contratación, donde se especifican alcance, insumos y condiciones.</li>
+      <li>Vigencia de esta cotización: 15 días a partir de su emisión.</li>
+      <li>Anticipo del 50% para reservar la fecha · 50% restante un día antes del evento.</li>
+    </ul>
+  </div>
+
+  <div class="cta-section">
+    <a class="btn-wa" href="https://wa.me/527774587923" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> Agendar esta barra por WhatsApp
+    </a>
+    <br>
+    <button class="pdf-btn" onclick="window.print()"><i class="fa-solid fa-file-pdf"></i> Descargar / imprimir PDF</button>
+    <p>Primavera Events Group · Cuernavaca, Morelos</p>
+  </div>
+</div>
+
+<footer>
+  <img src="logo_primavera.png" alt="Primavera Events Group">
+  <p>Primavera Events Group</p>
+  <p><a href="https://primaveraeventsgroup.com">primaveraeventsgroup.com</a> · <a href="mailto:contacto@primaveraeventsgroup.com">contacto@primaveraeventsgroup.com</a></p>
+  <p>WhatsApp +52 777 458 7923 · Cuernavaca, Morelos, México</p>
+</footer>
+
+</body>
+</html>

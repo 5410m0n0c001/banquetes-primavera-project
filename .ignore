@@ -1,0 +1,15 @@
+# Exclusion de archivos pesados para acelerar la latencia del Agente (Antigravity/ripgrep)
+.venv/
+live-moments-album-primavera/
+scratch/
+image_bank/
+reconocimientos/
+identificadores_mesa/
+identificadores_mesa_resenas/
+cotizacion_ccpresidente_bautizo_anito/
+*.png
+*.jpg
+*.jpeg
+*.mp3
+*.mp4
+*.pdf

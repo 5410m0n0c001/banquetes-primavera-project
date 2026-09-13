@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "repo_origen": "https://github.com/5410m0n0c001/cotizaci-n-DIF",
+    "archivo_origen": "index.html",
+    "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+    "estado": "completo"
+  },
+  "cliente": "Sistema DIF / Lic. Claudia López",
+  "recinto": "Centro de Convenciones Presidente",
+  "precio_por_persona": "$260.00 MXN",
+  "total_inversion": "$32,500.00 MXN",
+  "minimo_invitados": 125,
+  "fecha": "13 de Mayo",
+  "tipo_evento": "Desayuno Tipo Taquiza",
+  "inclusiones": [
+    "Mobiliario Completo: Mesa redonda o cuadrada con silla Tiffany, mantelería fina (mantel y cubre mantel)",
+    "Cristaleria y Vajilla: Montaje elegante con vajilla completa y cristalería de primera calidad",
+    "Menú Selecto: Taquiza tradicional con variedad de guisados a su elección",
+    "Bebidas Ilimitadas: Servicio continuo de refrescos de la línea Coca-Cola y aguas de sabores de fruta natural",
+    "Personal de Servicio: Meseros profesionales uniformados, personal de cocina y barra para atención",
+    "Tiempo de servicio: 5 horas continuas"
+  ]
+}

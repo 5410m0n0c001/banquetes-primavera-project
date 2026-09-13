@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "repo_origen": "https://github.com/5410m0n0c001/yolomecatl-croquis-",
+    "archivo_origen": "3d_modeling_manual.md",
+    "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+    "estado": "completo"
+  },
+  "nombre_recinto": "Jardín Salón Yolomecatl (Acatlipa, Temixco, Morelos)",
+  "dimensiones_terreno": "100.0 m × 98.0 m",
+  "escala_SVG": "10 unidades SVG = 1.0 metro",
+  "estructuras_y_elevaciones": {
+    "salon_principal": "48.0m x 62.0m | Altura muros: 6.50m | Muros de carga: 0.30m",
+    "escenario_dj": "20.0m ancho x 6.0m fondo | Altura: +0.60m | Escaleras laterales de 3 peldaños",
+    "techo": "Dos aguas con vigas de acero/madera | Cumbrera central: 8.20m en X:510",
+    "cocina_y_barra": "21.0m x 23.0m | Altura muros: 3.50m | Barra de mármol negro y nogal de 1.20m x 1.10m alto",
+    "banos": "20.0m x 6.0m | Altura muros: 3.00m",
+    "recepcion_lobby": "48.0m x 5.5m | Altura: 3.20m | Pasillo peatonal: 48m x 3m",
+    "alberca": "25.0m x 11.0m | Profundidad: -0.60m (niños) a -1.60m (hondo) | Borde: 0.40m ancho, +0.05m alto",
+    "capilla": "17.0m x 12.0m | Pabellón abierto con columnas de cantera (3.20m alto) | Techo teja dos aguas (cumbrera 4.50m) | Altar: 1.80m x 0.90m x 0.60m",
+    "cascada_agua": "Pileta de 3.0m x 25.0m (profundidad -0.40m) | Muro de piedra volcánica de 25m x 4.0m alto"
+  },
+  "mobiliario": {
+    "mesa_cuadrada": "1.60m x 1.60m | Altura: 0.75m | Sillas Tiffany/Avant Garde a 0.10m de distancia",
+    "mesa_imperial": "2.20m ancho x 48.0m largo (módulos continuos) | Capacidad: 50 comensales (paso de 0.75m entre comensales)"
+  },
+  "materiales_pbr": [
+    {
+      "elemento": "Piso del Salón",
+      "material": "Parquet de Madera Noble Oscura, semibrillante"
+    },
+    {
+      "elemento": "Pista de Baile",
+      "material": "Mármol Pulido Blanco / Negro Geométrico, reflejo espejo"
+    },
+    {
+      "elemento": "Muros del Salón",
+      "material": "Estuco Liso Blanco Roto / Navy Mate"
+    },
+    {
+      "elemento": "Muro de la Cascada",
+      "material": "Laja de Piedra Volcánica Negra texturizada con efecto mojado"
+    },
+    {
+      "elemento": "Piso del Jardín",
+      "material": "Césped Denso de 0.04 m de longitud"
+    },
+    {
+      "elemento": "Agua Alberca",
+      "material": "Líquido Transparente Dinámico IOR 1.333, celeste claro"
+    },
+    {
+      "elemento": "Mostradores",
+      "material": "Mármol Arabescato y Madera Nogal"
+    }
+  ],
+  "iluminacion_y_render": {
+    "HDRI": "Sunset tardío o Night Blue de baja intensidad",
+    "candelabros": "6 candelabros cálidos a Z: 4.80m alineados en X:510",
+    "uplights": "Spots IES de color Rosa Coral Primavera (#F05A7E) en la base de las columnas",
+    "alberca": "Luces subacuáticas color Azul cian (#00f0ff) a Z: -0.20m",
+    "camara": "24mm (tomas amplias) o 50mm (mesas) | Diafragma f/2.8 o f/4 para efecto bokeh"
+  }
+}

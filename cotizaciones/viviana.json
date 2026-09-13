@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "repo_origen": "https://github.com/5410m0n0c001/viviana-cotizaci-n-",
+    "archivo_origen": "index.html",
+    "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+    "estado": "completo"
+  },
+  "cliente": "Aniversario Viviana (Propuesta Premium)",
+  "recinto": "Salón Los Potrillos",
+  "precio_por_persona": "$690.00 MXN",
+  "total_inversion": "$62,100.00 MXN",
+  "minimo_invitados": 90,
+  "fecha": "18 Julio 2026",
+  "tipo_evento": "Aniversario de Bodas",
+  "inclusiones": [
+    "Mobiliario Elegante: Montaje de gala con mobiliario de diseño (Tiffany, Crossback, Lotus o Boss)",
+    "Menú a 3 tiempos con coctel de bienvenida y mezcladores completos",
+    "Personal Profesional: Coordinador general, hostess, meseros uniformados, personal de cocina, stewards, barman",
+    "DJ profesional con cabina, audio, iluminación y pista de baile 5x5",
+    "Cortesías: Espejo selfie de bienvenida, barra de mixología con toppings, letras gigantes iluminadas",
+    "Tiempo de servicio: 9 horas de servicio continuo"
+  ]
+}

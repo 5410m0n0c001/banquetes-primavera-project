@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "repo_origen": "https://github.com/5410m0n0c001/solaire",
+    "archivo_origen": "index.html",
+    "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+    "estado": "completo"
+  },
+  "nombre_venue": "Jardín Solaire",
+  "inclusiones_generales": [
+    "Espacio para banquete y cóctel",
+    "Áreas ajardinadas y semi techadas",
+    "Iluminación ambiental de casa",
+    "Barra para preparación de bebidas",
+    "Descorche libre de bebidas",
+    "Baños de lujo con personal",
+    "Atención personalizada",
+    "Horario hasta las 3:30 am"
+  ],
+  "paquetes_y_tarifas_2026": [
+    {
+      "nombre": "Boda en Solaire",
+      "capacidad": "Hasta 180 personas",
+      "duracion": "8 hrs",
+      "precio_locacion": "$32,000 MXN",
+      "precio_banquete_desde": "$850 p/p",
+      "detalles": "Alta estética y personalización total."
+    },
+    {
+      "nombre": "Evento Social",
+      "capacidad": "Hasta 100 personas",
+      "duracion": "8 hrs",
+      "precio_locacion": "$30,000 MXN",
+      "precio_banquete_desde": "$900 p/p",
+      "detalles": "Incluye mobiliario de casa (mix parota y vintage)."
+    },
+    {
+      "nombre": "Evento Petite (Mobiliario Campirano)",
+      "capacidad": "Hasta 80 personas",
+      "precio_locacion": "$28,000 MXN",
+      "precio_banquete_completo": "$1,050 p/p",
+      "inclusiones_especificas": [
+        "Mesas de madera sólida estilo campirano",
+        "Sillas Crossback de diseño",
+        "Vajilla a un tiempo: Plato trinche, cubiertos y vaso",
+        "Camino de mesa a tono de su elección"
+      ]
+    }
+  ]
+}

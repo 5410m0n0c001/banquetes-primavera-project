@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "repo_origen": "https://github.com/5410m0n0c001/-Sra.-Sandra-cotizaci-n",
+    "archivo_origen": "index.html",
+    "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+    "estado": "completo"
+  },
+  "cliente": "Sra. Sandra",
+  "recinto": "Salón / Jardín A convenir",
+  "precio_por_persona": "$590.00 MXN",
+  "total_inversion": "$47,200.00 MXN",
+  "minimo_invitados": 80,
+  "fecha": "Sábado 20 de Junio",
+  "tipo_evento": "Paquete Taquiza Premium XV Años",
+  "inclusiones": [
+    "Mobiliario Completo: Mesa redonda o cuadrada con mantelería fina (mantel y cubre mantel) a su elección, sillas Tiffany",
+    "Menú de Taquiza: Variedad especial a elegir de carnes (Pastor, Bistec, Campechano y Longaniza) con tortillas y salsas",
+    "Loza y Bebidas: Vajilla de loza blanca incluida, bebidas de línea Coca-Cola o agua de sabor en servicio continuo",
+    "Servicio de DJ: DJ profesional con cabina iluminada, audio e iluminación robótica de alta gama",
+    "Personal de Servicio: Coordinador, meseros, stewards y cocineros",
+    "Cortesías: Alfombra roja de bienvenida, chisperos de pirotecnia fría para momento estelar, mesas de regalos/pastel"
+  ]
+}

@@ -691,6 +691,238 @@
       "conditions": [
         "Sanción de $1,500.00 MXN en caso de no liquidar el día del evento"
       ]
+    },
+    {
+      "id": "paquete-uva-basico-(manzanares)",
+      "name": "Paquete UVA Basico (Manzanares)",
+      "url": null,
+      "venue": "Jardín Manzanares",
+      "duration": null,
+      "inclusions": [],
+      "menu_structure": {},
+      "pricing": [
+        {
+          "guests": "100 personas",
+          "price_per_person": "$320.00 MXN",
+          "details": "1 tiempo"
+        },
+        {
+          "guests": "150 personas",
+          "price_per_person": "$310.00 MXN",
+          "details": "1 tiempo"
+        },
+        {
+          "guests": "200 personas",
+          "price_per_person": "$300.00 MXN",
+          "details": "1 tiempo"
+        },
+        {
+          "guests": "250 personas",
+          "price_per_person": "$300.00 MXN",
+          "details": "1 tiempo"
+        }
+      ],
+      "conditions": {}
+    },
+    {
+      "id": "paquete-fresa-(manzanares)",
+      "name": "Paquete FRESA (Manzanares)",
+      "url": null,
+      "venue": "Jardín Manzanares",
+      "duration": null,
+      "inclusions": [],
+      "menu_structure": {},
+      "pricing": [
+        {
+          "guests": "100 personas",
+          "price_per_person": "$369.00 MXN",
+          "details": "2 tiempos"
+        },
+        {
+          "guests": "150 personas",
+          "price_per_person": "$359.00 MXN",
+          "details": "2 tiempos"
+        },
+        {
+          "guests": "200 personas",
+          "price_per_person": "$329.00 MXN",
+          "details": "2 tiempos"
+        },
+        {
+          "guests": "250 personas",
+          "price_per_person": "$329.00 MXN",
+          "details": "2 tiempos"
+        }
+      ],
+      "conditions": {}
+    },
+    {
+      "id": "paquete-manzanares-vip",
+      "name": "Paquete Manzanares VIP",
+      "url": null,
+      "venue": "Jardín Manzanares",
+      "duration": null,
+      "inclusions": [],
+      "menu_structure": {},
+      "pricing": [
+        {
+          "guests": "100 personas",
+          "price_per_person": "$499.00 MXN",
+          "details": "3 tiempos"
+        },
+        {
+          "guests": "150 personas",
+          "price_per_person": "$469.00 MXN",
+          "details": "3 tiempos"
+        },
+        {
+          "guests": "200 personas",
+          "price_per_person": "$429.00 MXN",
+          "details": "3 tiempos"
+        },
+        {
+          "guests": "250 personas",
+          "price_per_person": "$400.00 MXN",
+          "details": "3 tiempos"
+        }
+      ],
+      "conditions": {}
+    },
+    {
+      "id": "paquete-los-amates",
+      "name": "Paquete Los Amates",
+      "url": null,
+      "venue": "Jardín Los Amates",
+      "duration": null,
+      "inclusions": [],
+      "menu_structure": {},
+      "pricing": [
+        {
+          "guests": "250 personas",
+          "price_per_person": "$600.00 MXN",
+          "details": "Referencia 2024, total $150,000 sin IVA"
+        }
+      ],
+      "conditions": {}
+    },
+    {
+      "id": "paquete-los-reyes",
+      "name": "Paquete Los Reyes",
+      "url": null,
+      "venue": "Jardín Los Reyes",
+      "duration": null,
+      "inclusions": [],
+      "menu_structure": {},
+      "pricing": [
+        {
+          "guests": "50 personas",
+          "price_per_person": "$460.00 MXN",
+          "details": "6 horas de servicio, referencia 2022"
+        }
+      ],
+      "conditions": {}
+    },
+    {
+      "id": "paquete-portal-del-sol",
+      "name": "Paquete Portal del Sol",
+      "url": null,
+      "venue": "Jardín Portal del Sol",
+      "duration": null,
+      "inclusions": [],
+      "menu_structure": {},
+      "pricing": [
+        {
+          "guests": "110 personas",
+          "price_per_person": "$454.00 MXN",
+          "details": "Referencia 2024, total $49,999"
+        }
+      ],
+      "conditions": {}
+    },
+    {
+      "id": "paquete-la-palapa",
+      "name": "Paquete La Palapa",
+      "url": null,
+      "venue": "Jardín La Palapa",
+      "duration": null,
+      "inclusions": [],
+      "menu_structure": {},
+      "pricing": [
+        {
+          "guests": "Paquete integral",
+          "price_per_person": "$21,999.00 MXN total",
+          "details": "Bautizo, referencia 2023"
+        }
+      ],
+      "conditions": {}
+    },
+    {
+      "id": "paquete-la-finca-oaxtepec",
+      "name": "Paquete La Finca Oaxtepec",
+      "url": null,
+      "venue": "La Finca Oaxtepec",
+      "duration": null,
+      "inclusions": [],
+      "menu_structure": {},
+      "pricing": [
+        {
+          "guests": "132 personas",
+          "price_per_person": "$750.00 MXN",
+          "details": "Sin IVA, referencia enero 2026"
+        }
+      ],
+      "conditions": {}
+    },
+    {
+      "id": "paquete-quinta-aguamiel",
+      "name": "Paquete Quinta Aguamiel",
+      "url": null,
+      "venue": "Quinta Aguamiel",
+      "duration": null,
+      "inclusions": [],
+      "menu_structure": {},
+      "pricing": [
+        {
+          "guests": "150 personas (minimo)",
+          "price_per_person": "$433.00 MXN",
+          "details": "7 horas de servicio, referencia 2023"
+        }
+      ],
+      "conditions": {}
+    },
+    {
+      "id": "paquete-sol-y-luna",
+      "name": "Paquete Sol y Luna",
+      "url": null,
+      "venue": "Jardín Sol y Luna",
+      "duration": null,
+      "inclusions": [],
+      "menu_structure": {},
+      "pricing": [
+        {
+          "guests": "150 personas",
+          "price_per_person": "$399.00 MXN",
+          "details": "8 horas de servicio, referencia 2023"
+        }
+      ],
+      "conditions": {}
+    },
+    {
+      "id": "paquete-solaris-premium",
+      "name": "Paquete Solaris Premium",
+      "url": null,
+      "venue": "Jardín Solaris",
+      "duration": null,
+      "inclusions": [],
+      "menu_structure": {},
+      "pricing": [
+        {
+          "guests": "50 personas (minimo)",
+          "price_per_person": "$2,151.00 MXN",
+          "details": "Todo incluido, referencia sin fecha"
+        }
+      ],
+      "conditions": {}
     }
   ],
   "menus": [
@@ -1930,6 +2162,23 @@
       "garantia_efectivo": "$2,000.00 MXN, devuelta a las 48h post-evento (clausula presente solo en CONTRATO ACTUAL.pdf, la plantilla mas reciente; no aparece en contratos 2022-2023).",
       "caso_fortuito": "Se reintegra lo abonado o se reprograma el evento.",
       "nota": "Contratos de proveedores individuales (DJ, vocalista) tienen sus propias clausulas mas ligeras, no aplican estos porcentajes de banquete grande."
+    },
+    "politica_degustacion": {
+      "fuente": "Dictado por Salo (2026-08-09), no verificado contra contrato escrito",
+      "precios_por_persona": {
+        "menu_2_tiempos": "$150.00 MXN",
+        "menu_3_tiempos": "$190.00 MXN"
+      },
+      "incluye": "Pan y chiles a libre demanda",
+      "degustacion": {
+        "personas": 4,
+        "proteina_base_incluida": "Pollo o cerdo",
+        "upgrade_proteina": {
+          "res": "+$70.00 MXN por persona",
+          "salmon": "+$90.00 MXN por persona"
+        },
+        "ubicacion": "Se realiza en la locación/jardín donde se llevará a cabo el evento, para que el planner revise toda la logística y lo necesario para el evento."
+      }
     }
   },
   "entradas_blog": [

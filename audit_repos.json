@@ -1,0 +1,89 @@
+{
+  "repositorios": [
+    {
+      "nombre": "villa-di-fiori-",
+      "url": "https://github.com/5410m0n0c001/villa-di-fiori-",
+      "estado": "completado",
+      "descripcion": "Contiene cotización y recursos de la locación Villa di Fiori. Extraído exitosamente."
+    },
+    {
+      "nombre": "solaire",
+      "url": "https://github.com/5410m0n0c001/solaire",
+      "estado": "completado",
+      "descripcion": "Contiene información y tarifas de la locación Solaire. Extraído exitosamente."
+    },
+    {
+      "nombre": "antonio-cotizacion",
+      "url": "https://github.com/5410m0n0c001/antonio-cotizacion",
+      "estado": "completado",
+      "descripcion": "Contiene cotización para cliente Antonio. Extraído exitosamente."
+    },
+    {
+      "nombre": "viviana-cotizaci-n-",
+      "url": "https://github.com/5410m0n0c001/viviana-cotizaci-n-",
+      "estado": "completado",
+      "descripcion": "Contiene cotización para cliente Viviana. Extraído exitosamente."
+    },
+    {
+      "nombre": "cotizaci-n-DIF",
+      "url": "https://github.com/5410m0n0c001/cotizaci-n-DIF",
+      "estado": "completado",
+      "descripcion": "Contiene cotización tipo taquiza para el DIF. Extraído exitosamente."
+    },
+    {
+      "nombre": "cotizaci-n-edie",
+      "url": "https://github.com/5410m0n0c001/cotizaci-n-edie",
+      "estado": "completado",
+      "descripcion": "Contiene cotización tipo taquiza para Edimael Becerra. Extraído exitosamente."
+    },
+    {
+      "nombre": "-Sra.-Sandra-cotizaci-n",
+      "url": "https://github.com/5410m0n0c001/-Sra.-Sandra-cotizaci-n",
+      "estado": "completado",
+      "descripcion": "Contiene cotización tipo taquiza para Sra. Sandra. Extraído exitosamente."
+    },
+    {
+      "nombre": "cotizacion-viky-solaire",
+      "url": "https://github.com/5410m0n0c001/cotizacion-viky-solaire",
+      "estado": "completado",
+      "descripcion": "Contiene cotización premium en Solaire para cliente Viky. Extraído exitosamente."
+    },
+    {
+      "nombre": "expo-boda-y-15-a-os",
+      "url": "https://github.com/5410m0n0c001/expo-boda-y-15-a-os",
+      "estado": "completado",
+      "descripcion": "Contiene datos de la Expo Boda y 15 Años 2026, incluyendo manuales, estrategia de marketing, 52 leads y 11 proveedores. Extraído exitosamente."
+    },
+    {
+      "nombre": "primavera-events-group-agente-sofia-",
+      "url": "https://github.com/5410m0n0c001/primavera-events-group-agente-sofia-",
+      "estado": "descartado",
+      "descripcion": "El repositorio de origen está vacío y no contiene ningún archivo de configuración o código.",
+      "razon": "Repositorio vacío"
+    },
+    {
+      "nombre": "yolomecatl-croquis-",
+      "url": "https://github.com/5410m0n0c001/yolomecatl-croquis-",
+      "estado": "completado",
+      "descripcion": "Contiene manual técnico tridimensional y parámetros de modelado 3D de la locación Yolomecatl. Extraído exitosamente."
+    },
+    {
+      "nombre": "centro-de-convenciones-presidente-croquis",
+      "url": "https://github.com/5410m0n0c001/centro-de-convenciones-presidente-croquis",
+      "estado": "completado",
+      "descripcion": "Contiene layout y croquis interactivo 2D/3D del Centro de Convenciones Presidente. Extraído exitosamente."
+    },
+    {
+      "nombre": "jardin-la-flor-plano",
+      "url": "https://github.com/5410m0n0c001/jardin-la-flor-plano",
+      "estado": "completado",
+      "descripcion": "Contiene plano interactivo y lista de elementos iniciales del Jardín La Flor. Extraído exitosamente."
+    }
+  ],
+  "resumen_auditoria": {
+    "total_auditados": 13,
+    "completados": 12,
+    "descartados": 1,
+    "fecha_auditoria": "2026-06-22 19:26:00 UTC"
+  }
+}

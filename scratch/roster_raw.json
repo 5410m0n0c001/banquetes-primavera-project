@@ -1,0 +1,293 @@
+{
+  "excel": [
+    {
+      "source": "excel",
+      "sheet_name": "Aby decora",
+      "business_name": "ABI DECORA TU EVENTO",
+      "contact_name": "Abigail Jimenez Sandoval"
+    },
+    {
+      "source": "excel",
+      "sheet_name": "La princesa Paleteria",
+      "business_name": "PALETERIA LA PRINCESA",
+      "contact_name": "Griselda Anaid Villanueva Bailon"
+    },
+    {
+      "source": "excel",
+      "sheet_name": "Academia de Baile Dance Queens",
+      "business_name": "ACADEMIA DE BAILE DANCE QUEENS",
+      "contact_name": "HUMBERTO CARRANZA NUÑEZ"
+    },
+    {
+      "source": "excel",
+      "sheet_name": "Andrea Lozano Beauty Salon",
+      "business_name": "ANDREA LOZANO BEAUTY SALON",
+      "contact_name": ""
+    },
+    {
+      "source": "excel",
+      "sheet_name": "jardín de eventos calesa",
+      "business_name": "JARDÍN DE EVENTOS CALESA",
+      "contact_name": ""
+    },
+    {
+      "source": "excel",
+      "sheet_name": "letras gigantes LG",
+      "business_name": "LETRAS GIGANTES LG",
+      "contact_name": ""
+    },
+    {
+      "source": "excel",
+      "sheet_name": "Mariachi xiuhtepetl",
+      "business_name": "MARIACHI XIUHTEPETL",
+      "contact_name": "Renata Salazar"
+    },
+    {
+      "source": "excel",
+      "sheet_name": "redes",
+      "business_name": "REDES",
+      "contact_name": ""
+    },
+    {
+      "source": "excel",
+      "sheet_name": "mia pasteleria",
+      "business_name": "MIA PASTELERIA",
+      "contact_name": ""
+    },
+    {
+      "source": "excel",
+      "sheet_name": "viajando con la musica",
+      "business_name": "VIAJANDO CON LA MUSICA",
+      "contact_name": ""
+    },
+    {
+      "source": "excel",
+      "sheet_name": "licky baut photo",
+      "business_name": "LICKY BAUT PHOTO",
+      "contact_name": "Licky Baut"
+    },
+    {
+      "source": "excel",
+      "sheet_name": "Producciones DJ Classic",
+      "business_name": "PRODUCCIONES DJ CLASSIC",
+      "contact_name": ""
+    },
+    {
+      "source": "excel",
+      "sheet_name": "kataleya florist",
+      "business_name": "KATALEYA FLORIST",
+      "contact_name": "Isabel Santibáñez alanis"
+    },
+    {
+      "source": "excel",
+      "sheet_name": "anetth guarneros",
+      "business_name": "ANETTH GUARNEROS",
+      "contact_name": ""
+    },
+    {
+      "source": "excel",
+      "sheet_name": "coreografias y bailes david",
+      "business_name": "COREOGRAFIAS Y BAILES DAVID",
+      "contact_name": ""
+    },
+    {
+      "source": "excel",
+      "sheet_name": "Tequila personalizado don Ramón",
+      "business_name": "TEQUILA PERSONALIZADO DON RAMÓN",
+      "contact_name": "Carlos Arturo Sánchez Chávez"
+    },
+    {
+      "source": "excel",
+      "sheet_name": "scanner dj",
+      "business_name": "SCANNER DJ",
+      "contact_name": "ISMAEL CUEVAS"
+    },
+    {
+      "source": "excel",
+      "sheet_name": "corona music",
+      "business_name": "CORONA MUSIC",
+      "contact_name": "DIEGO CORONA VEGA"
+    }
+  ],
+  "logos": [
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/vcm.png",
+      "caption": "Viajando con la Música (VCM)"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new1.png",
+      "caption": "La Princesa Paletería"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new2.png",
+      "caption": "Licky Baut Photo"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new3.png",
+      "caption": "Tequila Personalizado Don Ramón"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new4.png",
+      "caption": "Aby Decora"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new5.png",
+      "caption": "Academia de Baile Dance Queens"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new6.png",
+      "caption": "Banquetes Delicatessen"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new7.png",
+      "caption": "DJ & Proyecciones"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new8.png",
+      "caption": "Corona Music"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new9.png",
+      "caption": "Kataleya Florist"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new10.png",
+      "caption": "Arreglos Florales"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new11.png",
+      "caption": "Invitaciones Elegantes"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new12.jpeg",
+      "caption": "Mariachi Xiuhtépetl"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new13.png",
+      "caption": "Iluminación Led"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new14.png",
+      "caption": "Cabina de Fotos"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new15.png",
+      "caption": "Barra de Postres"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new16.png",
+      "caption": "Saxofonista Solista"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new17.png",
+      "caption": "Mía Concept Store"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new18.jpeg",
+      "caption": "Coreografías Bailes y Vals David"
+    },
+    {
+      "source": "cronograma_js",
+      "logo_path": "assets/logo_new19.png",
+      "caption": "Scanner DJ"
+    }
+  ],
+  "directory": [
+    {
+      "source": "directorio_html",
+      "name": "Primavera Events Group Jessy & Richard Banquetes"
+    },
+    {
+      "source": "directorio_html",
+      "name": "scanner dj ISMAEL CUEVAS"
+    },
+    {
+      "source": "directorio_html",
+      "name": "corona music DIEGO CORONA VEGA"
+    },
+    {
+      "source": "directorio_html",
+      "name": "Aby decora Abigail Jimenez Sandoval"
+    },
+    {
+      "source": "directorio_html",
+      "name": "La princesa Paleteria Griselda Anaid Villanueva Bailon"
+    },
+    {
+      "source": "directorio_html",
+      "name": "Academia de Baile Dance Queens HUMBERTO CARRANZA NUÑEZ"
+    },
+    {
+      "source": "directorio_html",
+      "name": "Mariachi xiuhtepetl Renata Salazar"
+    },
+    {
+      "source": "directorio_html",
+      "name": "licky baut photo Licky Baut"
+    },
+    {
+      "source": "directorio_html",
+      "name": "kataleya florist Isabel Santibáñez alanis"
+    },
+    {
+      "source": "directorio_html",
+      "name": "Tequila personalizado don Ramón Carlos Arturo Sánchez Chávez"
+    }
+  ],
+  "activities": [
+    {
+      "source": "cronograma_html",
+      "title": "Inicio y Corte de Listón",
+      "desc": "Ceremonia de inauguración oficial del evento con palabras de bienvenida por parte de los organizadores y patrocinadores oficiales."
+    },
+    {
+      "source": "cronograma_html",
+      "title": "Apertura y Recorrido de Stands",
+      "desc": "Apertura general de la zona de exhibición. Tiempo ideal para que los visitantes conozcan a los proveedores, coticen y participen en las dinámicas de los stands."
+    },
+    {
+      "source": "cronograma_html",
+      "title": "Saxofonista en Vivo",
+      "desc": "Presentación musical elegante en el escenario principal, perfecta para dar una atmósfera sofisticada a cócteles y banquetes."
+    },
+    {
+      "source": "cronograma_html",
+      "title": "Espectáculo de Marimba",
+      "desc": "Interpretaciones acústicas folclóricas llenas de alegría y tradición para amenizar la tarde de todos los asistentes."
+    },
+    {
+      "source": "cronograma_html",
+      "title": "Showcase en Vivo: Banda Instrumental",
+      "desc": "Paola presenta un espectacular performance de danza por la Academia JHANADE para acompañar el atardecer."
+    },
+    {
+      "source": "cronograma_html",
+      "title": "Showcase en Vivo: Grupo Bonanza",
+      "desc": "La pasarela estelar y performance de moda de primavera dedicado a las quinceañeras, presentado y producido por Dance Queens a cargo del profesor Humberto Núñez. Conoce las últimas tendencias de vestidos de 15 años con alta costura exclusiva."
+    },
+    {
+      "source": "cronograma_html",
+      "title": "Showcase en Vivo: Banda Lago Negro",
+      "desc": "Reunión de todos los expositores en el escenario principal para capturar la fotografía oficial del recuerdo de la Expo Boda y 15 Años."
+    }
+  ]
+}

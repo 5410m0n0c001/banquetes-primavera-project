@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ══ SEO — PERSONALIZAR ══ -->
+    <title>Cotización [TIPO_EVENTO]: [NOMBRE_CLIENTE] | Primavera Events Group</title>
+    <meta name="description" content="Propuesta exclusiva de [TIPO_EVENTO] para [NOMBRE_CLIENTE]. [DESCRIPCION_CORTA].">
+    <meta property="og:title" content="Cotización [TIPO_EVENTO]: [NOMBRE_CLIENTE] — Primavera Events Group">
+    <meta property="og:description" content="[DESCRIPCION_CORTA]">
+    <meta property="og:image" content="hero1.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+/* ══ BRAND TOKENS — NO MODIFICAR ══════════════════════════ */
+:root{
+    --primary-pink:#F65C7A;
+    --primary-light:#FF8FA3;
+    --primary-dark:#1F1F1F;
+    --background-light:#F8F6F4;
+    --white:#FFFFFF;
+    --soft-pink:#FADADD;
+    --beige:#EFE7E1;
+    --gold-accent:#C9A96E;
+    --gray-text:#6D6D6D;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+
+/* ══ PRELOADER ══════════════════════════════════════════════ */
+#preloader{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--white);z-index:9999;display:flex;align-items:center;justify-content:center;transition:opacity 0.8s ease,visibility 0.8s ease;}
+#preloader.fade-out{opacity:0;visibility:hidden;}
+#preloader video{max-width:100%;max-height:100%;object-fit:contain;}
+.preloader-overlay{position:absolute;bottom:10%;left:50%;transform:translateX(-50%);text-align:center;z-index:10;width:90%;max-width:420px;}
+.preloader-text{color:var(--primary-dark);font-size:1rem;margin-bottom:20px;font-weight:500;font-family:'Poppins',sans-serif;}
+.btn-enter{background:var(--primary-pink);color:var(--white);border:none;padding:13px 36px;border-radius:30px;font-size:1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 18px rgba(246,92,122,0.4);transition:all 0.3s ease;font-family:'Poppins',sans-serif;}
+.btn-enter:hover{transform:scale(1.05);background:#e04b69;}
+
+/* ══ BASE ══════════════════════════════════════════════════ */
+body{font-family:'Poppins',sans-serif;background:var(--background-light);color:var(--primary-dark);line-height:1.6;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;}
+
+/* ══ HERO SLIDESHOW ═════════════════════════════════════════ */
+.hero{position:relative;height:70vh;min-height:460px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;}
+.hero-slides{position:absolute;inset:0;}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s ease;}
+.hero-slide.active{opacity:1;}
+/* PERSONALIZAR: agregar fotos del salon */
+.hero-slide:nth-child(1){background-image:url('hero1.jpg');}
+.hero-slide:nth-child(2){background-image:url('hero2.jpg');}
+.hero-slide:nth-child(3){background-image:url('hero3.jpg');}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(31,31,31,0.15),rgba(31,31,31,0.65));z-index:1;}
+.hero-content{position:relative;z-index:2;text-align:center;padding:0 20px 70px;color:var(--white);}
+.hero-eyebrow{font-family:'Poppins',sans-serif;font-size:0.78rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold-accent);font-weight:600;margin-bottom:12px;}
+.hero h1{font-size:3.8rem;font-weight:700;line-height:1.05;text-shadow:0 3px 24px rgba(0,0,0,0.5);margin-bottom:8px;}
+.hero-sub{font-size:1rem;letter-spacing:5px;text-transform:uppercase;font-weight:300;color:rgba(255,255,255,0.8);}
+.hero-badges{display:flex;justify-content:center;gap:14px;margin-top:20px;flex-wrap:wrap;}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(201,169,110,0.2);border:1px solid var(--gold-accent);backdrop-filter:blur(4px);padding:7px 18px;border-radius:50px;font-size:0.8rem;color:var(--gold-accent);font-weight:600;}
+.hero-dots{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:8px;}
+.hero-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s ease;}
+.hero-dot.active{background:var(--gold-accent);transform:scale(1.3);}
+
+/* ══ CONTAINER ═════════════════════════════════════════════ */
+.container{max-width:1100px;margin:-110px auto 60px;position:relative;z-index:2;padding:0 20px;}
+.quote-card{background:var(--white);border-radius:30px;box-shadow:0 30px 60px rgba(31,31,31,0.12);padding:65px 60px;animation:fadeInUp 1s ease 0.2s both;}
+
+/* ══ HEADER INFO ════════════════════════════════════════════ */
+.header-info{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--beige);padding-bottom:40px;margin-bottom:50px;flex-wrap:wrap;gap:22px;}
+.header-main h2{font-size:3rem;color:var(--primary-dark);line-height:1.1;margin-bottom:14px;}
+.header-main p{font-size:1.05rem;color:var(--gray-text);max-width:620px;line-height:1.7;}
+.badge-event{display:inline-flex;align-items:center;gap:8px;background:var(--soft-pink);color:var(--primary-pink);padding:8px 22px;border-radius:40px;font-size:0.88rem;font-weight:600;margin-top:18px;text-transform:uppercase;letter-spacing:1.5px;}
+.summary-boxes{display:flex;gap:14px;flex-wrap:wrap;}
+.info-box{text-align:center;background:var(--background-light);padding:20px 24px;border-radius:18px;border:1px solid var(--beige);min-width:110px;}
+.info-box span{display:block;font-size:0.72rem;color:var(--gray-text);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:8px;}
+.info-box strong{display:block;font-size:1.4rem;color:var(--primary-dark);font-family:'Playfair Display',serif;}
+
+/* ══ LOGO SALON (boton-link) ════════════════════════════════ */
+.venue-logo-wrap{text-align:center;margin-bottom:40px;}
+.venue-logo-wrap a{display:inline-block;transition:all 0.3s ease;}
+.venue-logo-wrap img{height:80px;width:auto;object-fit:contain;border:2px solid var(--beige);border-radius:16px;padding:12px 22px;background:var(--white);box-shadow:0 4px 16px rgba(0,0,0,0.06);transition:all 0.3s ease;}
+.venue-logo-wrap img:hover{border-color:var(--primary-pink);box-shadow:0 8px 28px rgba(246,92,122,0.18);transform:translateY(-3px);}
+.venue-logo-wrap span{display:block;font-size:0.72rem;color:var(--gray-text);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;text-align:center;margin-top:10px;}
+
+/* ══ GALERÍA ════════════════════════════════════════════════ */
+.venue-gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 40px;border-radius:22px;overflow:hidden;}
+.venue-gallery img{width:100%;height:200px;object-fit:cover;transition:transform 0.6s ease;cursor:pointer;display:block;}
+.venue-gallery img:hover{transform:scale(1.04);}
+.venue-gallery .span2{grid-column:1/3;height:280px;}
+
+/* ══ DATOS SALON ════════════════════════════════════════════ */
+.venue-info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:50px;}
+.venue-info-card{background:var(--background-light);border:1px solid var(--beige);border-radius:16px;padding:20px;text-align:center;}
+.venue-info-card i{color:var(--primary-pink);font-size:1.4rem;margin-bottom:8px;display:block;}
+.venue-info-card h5{font-size:0.75rem;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;color:var(--gray-text);margin-bottom:5px;}
+.venue-info-card p{font-size:0.95rem;font-weight:600;color:var(--primary-dark);}
+
+/* ══ SECTION TITLE ══════════════════════════════════════════ */
+.section-title{color:var(--primary-dark);font-size:1.9rem;margin:55px 0 36px;display:flex;align-items:center;gap:18px;}
+.section-title i{color:var(--primary-pink);}
+
+/* ══ DESGLOSE DE SERVICIOS ══════════════════════════════════ */
+.includes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;margin-bottom:55px;}
+.include-item{background:var(--white);border:1px solid var(--beige);border-radius:22px;overflow:hidden;transition:all 0.5s cubic-bezier(0.165,0.84,0.44,1);display:flex;flex-direction:column;}
+.include-item:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(31,31,31,0.08);border-color:var(--primary-pink);}
+.include-img-container{width:100%;height:210px;overflow:hidden;}
+.include-img{width:100%;height:100%;object-fit:cover;transition:transform 0.8s ease;}
+.include-item:hover .include-img{transform:scale(1.1);}
+.include-content{padding:24px;flex-grow:1;}
+.include-content h4{font-weight:600;font-size:1.12rem;margin-bottom:10px;color:var(--primary-dark);display:flex;align-items:center;gap:10px;}
+.include-content h4 i{color:var(--primary-pink);}
+.include-content p{font-size:0.92rem;color:var(--gray-text);line-height:1.65;}
+.include-list{margin-top:10px;list-style:none;padding:0;}
+.include-list li{display:flex;align-items:flex-start;gap:8px;font-size:0.9rem;color:var(--gray-text);margin-bottom:6px;}
+.include-list li i{color:var(--gold-accent);font-size:0.8rem;margin-top:3px;flex-shrink:0;}
+
+/* ══ PRECIO ═════════════════════════════════════════════════ */
+.pricing-section{background:linear-gradient(135deg,var(--primary-dark) 0%,#2d1422 100%);border-radius:28px;padding:55px;margin-top:60px;color:var(--white);text-align:center;}
+.pricing-section h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold-accent);margin-bottom:8px;}
+.price-hero{font-family:'Playfair Display',serif;font-size:5rem;font-weight:700;color:var(--white);line-height:1;margin:20px 0 10px;}
+.price-hero sup{font-size:2rem;vertical-align:super;color:var(--gold-accent);}
+.price-label{font-size:1.1rem;color:rgba(255,255,255,0.7);margin-bottom:30px;}
+.price-includes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-top:28px;text-align:left;}
+.price-include-item{background:rgba(255,255,255,0.07);border:1px solid rgba(201,169,110,0.2);border-radius:14px;padding:16px;display:flex;align-items:flex-start;gap:12px;}
+.price-include-item i{color:var(--gold-accent);font-size:1.1rem;flex-shrink:0;margin-top:2px;}
+.price-include-item span{font-size:0.87rem;color:rgba(255,255,255,0.85);line-height:1.4;}
+.price-note{margin-top:26px;font-size:0.8rem;color:rgba(255,255,255,0.45);}
+
+/* ══ COMPLEMENTOS ═══════════════════════════════════════════ */
+.complementos-section{margin-top:60px;padding-top:55px;border-top:1px solid var(--beige);}
+.complementos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;margin-top:28px;}
+.complemento-card{border-radius:22px;overflow:hidden;border:1px solid var(--beige);background:var(--white);transition:all 0.4s cubic-bezier(0.165,0.84,0.44,1);}
+.complemento-card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(246,92,122,0.12);border-color:var(--primary-pink);}
+.complemento-img{width:100%;height:200px;object-fit:cover;display:block;transition:transform 0.7s ease;}
+.complemento-card:hover .complemento-img{transform:scale(1.06);}
+.complemento-body{padding:24px;}
+.complemento-body h4{font-size:1.2rem;color:var(--primary-dark);margin-bottom:8px;display:flex;align-items:center;gap:10px;}
+.complemento-body h4 i{color:var(--primary-pink);}
+.complemento-body p{font-size:0.9rem;color:var(--gray-text);line-height:1.6;margin-bottom:18px;}
+.btn-complemento{display:inline-flex;align-items:center;gap:9px;background:var(--primary-pink);color:var(--white);padding:10px 22px;border-radius:50px;font-weight:600;font-size:0.87rem;text-decoration:none;transition:all 0.3s ease;}
+.btn-complemento:hover{background:#e04b69;transform:translateY(-2px);}
+.btn-complemento.gold{background:var(--gold-accent);color:var(--primary-dark);}
+
+/* ══ PUBLICIDAD ═════════════════════════════════════════════ */
+.pub-section{margin-top:60px;padding:50px 0 0;}
+.pub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:28px;}
+.pub-card{border-radius:20px;overflow:hidden;position:relative;cursor:pointer;aspect-ratio:4/5;}
+.pub-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.7s ease;}
+.pub-card:hover img{transform:scale(1.06);}
+.pub-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(31,31,31,0.6),transparent);opacity:0;transition:opacity 0.4s ease;display:flex;align-items:flex-end;padding:20px;}
+.pub-card:hover .pub-card-overlay{opacity:1;}
+.pub-card-overlay span{color:var(--white);font-weight:600;font-size:0.9rem;}
+
+/* ══ KIT PLANNER ════════════════════════════════════════════ */
+.kit-section{margin-top:60px;background:linear-gradient(135deg,var(--primary-dark) 0%,#2d1422 100%);border-radius:24px;padding:50px;color:white;display:flex;flex-wrap:wrap;align-items:center;gap:40px;}
+.kit-content{flex:1;min-width:260px;}
+.kit-badge{background:var(--gold-accent);display:inline-block;padding:5px 15px;border-radius:50px;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;color:var(--primary-dark);}
+.kit-content h3{font-family:'Playfair Display',serif;font-size:2rem;margin-bottom:12px;}
+.kit-content p{color:rgba(255,255,255,0.75);font-size:0.95rem;margin-bottom:24px;line-height:1.7;}
+.kit-buttons{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-kit{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;border-radius:50px;font-weight:600;font-size:0.9rem;text-decoration:none;transition:all 0.3s ease;}
+.btn-kit.primary{background:var(--primary-pink);color:white;}
+.btn-kit.primary:hover{filter:brightness(1.1);transform:translateY(-3px);}
+.btn-kit.secondary{background:rgba(255,255,255,0.1);color:white;border:1px solid rgba(255,255,255,0.25);}
+.btn-kit.secondary:hover{background:rgba(255,255,255,0.2);transform:translateY(-3px);}
+
+/* ══ PDF BUTTON ═════════════════════════════════════════════ */
+.pdf-section{margin-top:50px;text-align:center;padding:38px;background:var(--white);border:1px solid var(--beige);border-radius:24px;}
+.pdf-section p{color:var(--gray-text);margin-bottom:20px;font-size:0.92rem;}
+.btn-pdf{display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,#c0392b,#e74c3c);color:white;padding:15px 36px;border-radius:50px;font-weight:600;font-size:1rem;border:none;cursor:pointer;transition:all 0.4s;box-shadow:0 10px 28px rgba(192,57,43,0.3);font-family:'Poppins',sans-serif;}
+.btn-pdf:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 18px 40px rgba(192,57,43,0.4);}
+
+/* ══ FIRMA ══════════════════════════════════════════════════ */
+.signature-section{text-align:center;margin:40px 0 10px;}
+
+/* ══ NOTAS ══════════════════════════════════════════════════ */
+.notes-section{margin-top:50px;padding:36px;border:1px solid var(--beige);border-radius:22px;background:var(--white);}
+.notes-section h3{font-size:1.4rem;margin-bottom:18px;display:flex;align-items:center;gap:12px;}
+.notes-section h3 i{color:var(--primary-pink);}
+.notes-section p{color:var(--gray-text);font-size:0.92rem;line-height:1.7;margin-bottom:10px;}
+.quote-phrase{font-style:italic;color:var(--primary-pink);font-weight:600;margin-top:16px!important;}
+
+/* ══ CTA ════════════════════════════════════════════════════ */
+.cta-container{text-align:center;margin-top:60px;padding:50px 20px;background:var(--background-light);border-radius:24px;}
+.cta-container p{margin-bottom:28px;font-style:italic;color:var(--gray-text);}
+.btn-wa{background:linear-gradient(135deg,var(--primary-pink),var(--primary-light));color:white;padding:20px 50px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:15px;font-weight:600;font-size:1.1rem;transition:all 0.4s;box-shadow:0 15px 30px rgba(246,92,122,0.25);}
+.btn-wa:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 22px 44px rgba(246,92,122,0.38);}
+
+/* ══ FOOTER ═════════════════════════════════════════════════ */
+footer{padding:60px 20px;background:var(--white);border-top:1px solid var(--beige);text-align:center;}
+.footer-container{max-width:800px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:16px;}
+.footer-logo{width:70px;height:70px;border-radius:50%;object-fit:cover;border:2px solid var(--gold-accent);}
+.footer-container h3{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--primary-dark);}
+.footer-container p,.footer-container a{font-size:0.92rem;color:var(--gray-text);text-decoration:none;}
+.footer-container a:hover{color:var(--primary-pink);}
+.footer-bottom{margin-top:30px;padding-top:18px;border-top:1px solid var(--beige);font-size:0.78rem;color:var(--gray-text);}
+
+/* ══ FABs ═══════════════════════════════════════════════════ */
+.floating-actions-container{position:fixed;bottom:15px;right:15px;z-index:1000;display:flex;flex-direction:column;align-items:flex-end;gap:15px;}
+.fab-group{display:flex;flex-direction:column;align-items:flex-end;position:relative;}
+.fab-main{width:50px;height:50px;border-radius:50%;background:transparent;border:none;color:var(--primary-pink);font-size:1.8rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);}
+.fab-main:hover{transform:scale(1.1) translateY(-5px);}
+.fab-label{position:absolute;right:65px;background:var(--white);color:var(--primary-dark);padding:6px 12px;border-radius:20px;font-size:0.78rem;white-space:nowrap;box-shadow:0 4px 10px rgba(0,0,0,0.1);opacity:0;visibility:hidden;transition:all 0.3s ease;font-weight:500;pointer-events:none;}
+.fab-main:hover .fab-label{opacity:1;visibility:visible;right:60px;}
+.fab-menu{display:flex;flex-direction:column-reverse;gap:8px;position:absolute;bottom:100%;right:5px;opacity:0;visibility:hidden;transform:translateY(20px);transition:all 0.4s;margin-bottom:10px;pointer-events:none;}
+.fab-group.active .fab-menu{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;}
+.fab-item{width:40px;height:40px;border-radius:50%;background:var(--white);color:var(--primary-pink);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.1rem;box-shadow:0 4px 12px rgba(0,0,0,0.1);transition:all 0.3s ease;}
+.fab-item:hover{background:var(--primary-pink);color:var(--white);transform:scale(1.15);}
+.fab-group.active .fab-main{transform:rotate(15deg) scale(0.9);}
+
+/* ══ ANIMACIONES ════════════════════════════════════════════ */
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-40px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
+.reveal{opacity:0;transition:all 1.2s cubic-bezier(0.2,0.8,0.2,1);}
+.reveal:not(.reveal-left):not(.reveal-right){transform:translateY(40px);}
+.reveal-left{transform:translateX(-50px);}
+.reveal-right{transform:translateX(50px);}
+.reveal.active{opacity:1;transform:translate(0,0)!important;}
+.d1{transition-delay:0.1s;}.d2{transition-delay:0.2s;}.d3{transition-delay:0.3s;}.d4{transition-delay:0.4s;}
+
+/* ══ RESPONSIVE ═════════════════════════════════════════════ */
+@media(max-width:768px){
+    .hero h1{font-size:2.2rem;}
+    .container{margin-top:0;padding:0 15px;}
+    .quote-card{padding:28px 15px;border-radius:0;box-shadow:none;}
+    .header-main h2{font-size:2rem;}
+    .header-info{text-align:center;justify-content:center;}
+    .summary-boxes{width:100%;gap:8px;}
+    .info-box{flex:1;padding:14px;min-width:0;}
+    .includes-grid,.complementos-grid{grid-template-columns:1fr;}
+    .pricing-section{padding:35px 20px;}
+    .pub-grid{grid-template-columns:1fr 1fr;}
+    .kit-section{padding:30px 22px;}
+    .venue-gallery{grid-template-columns:1fr;}
+    .venue-gallery .span2{grid-column:1;}
+}
+
+/* ══ PRINT — NO MODIFICAR ═══════════════════════════════════ */
+@media print{
+    #preloader,.floating-actions-container,.pdf-section,.kit-buttons,
+    .cta-container .btn-wa,audio,.hero-dots{display:none!important;}
+    body{background:white!important;font-size:10pt;}
+    .quote-card{box-shadow:none!important;padding:16px!important;margin:0!important;border-radius:0!important;}
+    .hero{height:160px!important;min-height:auto!important;}
+    .hero h1{font-size:1.8rem!important;}
+    .hero p,.hero-sub,.hero-eyebrow,.hero-badges{display:none!important;}
+    .container{margin-top:0!important;}
+    .include-item,.venue-info-card,.complemento-card,.pub-card,
+    .notes-section,.pricing-section,.kit-section{
+        page-break-inside:avoid!important;break-inside:avoid!important;
+    }
+    .include-img-container,.complemento-img{height:90px!important;page-break-inside:avoid!important;}
+    .pub-section{display:none!important;}
+    h2,h3,h4,.section-title{page-break-after:avoid!important;break-after:avoid!important;}
+    .includes-grid,.complementos-grid,.venue-info-grid{display:block!important;}
+    .include-item,.complemento-card{margin-bottom:10pt!important;}
+    .reveal{opacity:1!important;transform:none!important;}
+    .signature-section video{display:none!important;}
+    @page{margin:1.5cm 1.2cm;}
+}
+</style>
+
+<body>
+
+<!-- ══ 1. PRELOADER ══════════════════════════════════════════ -->
+<div id="preloader">
+    <video id="preloaderVideo" autoplay muted loop playsinline preload="auto">
+        <source src="precarga.mp4" type="video/mp4">
+    </video>
+    <div class="preloader-overlay">
+        <!-- PERSONALIZAR: mensaje de bienvenida -->
+        <p class="preloader-text">Bienvenido a su cotización exclusiva</p>
+        <button id="btnEnter" class="btn-enter">Haz clic para continuar</button>
+    </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+    var vid=document.getElementById('preloaderVideo');
+    var audio=document.getElementById('bgAudio');
+    var pre=document.getElementById('preloader');
+    if(vid)vid.play().catch(function(){});
+    document.getElementById('btnEnter').addEventListener('click',function(){
+        if(audio)audio.play().catch(function(){});
+        pre.classList.add('fade-out');
+        setTimeout(function(){pre.style.display='none';},800);
+    });
+});
+</script>
+
+<!-- ══ 2. HERO SLIDESHOW ══════════════════════════════════════ -->
+<header class="hero" id="hero">
+    <div class="hero-slides">
+        <div class="hero-slide active"></div>
+        <div class="hero-slide"></div>
+        <div class="hero-slide"></div>
+    </div>
+    <div class="hero-content">
+        <!-- PERSONALIZAR -->
+        <div class="hero-eyebrow"><i class="fa-solid fa-location-dot"></i> [NOMBRE_SALON] · [CIUDAD], Morelos</div>
+        <h1>[TITULO_PAQUETE]</h1>
+        <p class="hero-sub">Primavera Events Group · El Arte de Servir</p>
+        <div class="hero-badges">
+            <span class="hero-badge"><i class="fa-solid fa-star"></i> [BADGE_1]</span>
+            <span class="hero-badge"><i class="fa-solid fa-star"></i> [BADGE_2]</span>
+        </div>
+    </div>
+    <div class="hero-dots">
+        <div class="hero-dot active" data-idx="0"></div>
+        <div class="hero-dot" data-idx="1"></div>
+        <div class="hero-dot" data-idx="2"></div>
+    </div>
+</header>
+
+<main class="container">
+<div class="quote-card">
+
+<!-- ══ 3. HEADER INFO ═════════════════════════════════════════ -->
+<div class="header-info reveal">
+    <div class="header-main">
+        <!-- PERSONALIZAR -->
+        <h2>[TITULO_COTIZACION]</h2>
+        <p>[DESCRIPCION_DEL_PAQUETE_PARA_EL_CLIENTE]</p>
+        <span class="badge-event"><i class="fa-solid fa-star"></i> [TIPO_EVENTO]</span>
+    </div>
+    <div class="summary-boxes">
+        <div class="info-box"><span>Invitados</span><strong>[NUM]</strong></div>
+        <div class="info-box"><span>Precio</span><strong>$[PPP] p/p</strong></div>
+        <div class="info-box"><span>Evento</span><strong>[TIPO]</strong></div>
+    </div>
+</div>
+
+<!-- ══ 4. LOGO SALON (boton-link al sitio oficial) ════════════ -->
+<div class="venue-logo-wrap reveal">
+    <a href="[URL_SALON]" target="_blank">
+        <img src="logo_salon.png" alt="[NOMBRE_SALON]" onerror="this.style.display='none'">
+    </a>
+    <span class="venue-logo-caption">Visitar sitio oficial del Salón</span>
+</div>
+
+<!-- ══ 5. GALERIA ════════════════════════════════════════════ -->
+<h3 class="section-title reveal"><i class="fa-solid fa-images"></i> El Salón</h3>
+<div class="venue-gallery reveal">
+    <!-- PERSONALIZAR: fotos del salon -->
+    <img src="hero1.jpg" alt="[SALON]" class="span2">
+    <img src="hero2.jpg" alt="[SALON] vista 2">
+    <img src="hero3.jpg" alt="[SALON] vista 3">
+</div>
+
+<!-- ══ 6. DATOS SALON ════════════════════════════════════════ -->
+<div class="venue-info-grid reveal">
+    <!-- PERSONALIZAR -->
+    <div class="venue-info-card"><i class="fa-solid fa-users"></i><h5>Capacidad</h5><p>[NUM] personas</p></div>
+    <div class="venue-info-card"><i class="fa-solid fa-location-dot"></i><h5>Dirección</h5><p>[DIRECCION]</p></div>
+    <div class="venue-info-card"><i class="fa-solid fa-phone"></i><h5>Teléfono</h5><p>[TEL_SALON]</p></div>
+    <div class="venue-info-card"><i class="fa-solid fa-clock"></i><h5>Servicio</h5><p>[HORAS] horas</p></div>
+</div>
+
+<!-- ══ 7. DESGLOSE DE SERVICIOS ══════════════════════════════ -->
+<h3 class="section-title reveal"><i class="fa-solid fa-list-check"></i> Desglose del Paquete</h3>
+<div class="includes-grid">
+
+    <!-- EJEMPLO DE TARJETA — DUPLICAR/ELIMINAR SEGÚN PAQUETE -->
+    <div class="reveal d1"><div class="include-item">
+        <div class="include-img-container"><img src="[IMAGEN_BANCO].jpg" alt="[SERVICIO]" class="include-img"></div>
+        <div class="include-content">
+            <h4><i class="fa-solid fa-[ICONO]"></i> [NOMBRE_SERVICIO]</h4>
+            <p>[DESCRIPCION_SERVICIO]</p>
+        </div>
+    </div></div>
+
+    <!-- Agregar más tarjetas aquí siguiendo el mismo patrón -->
+
+</div><!-- end includes-grid -->
+
+<!-- ══ 8. PRECIO ══════════════════════════════════════════════ -->
+<div class="pricing-section reveal">
+    <!-- PERSONALIZAR: precio por persona o precio total -->
+    <h3>Inversión por Persona</h3>
+    <div class="price-hero"><sup>$</sup>[PRECIO]</div>
+    <div class="price-label">MXN por persona · Todo incluido</div>
+    <div class="price-includes-grid">
+        <!-- PERSONALIZAR: listado de lo que incluye -->
+        <div class="price-include-item"><i class="fa-solid fa-check"></i><span>[ITEM_INCLUIDO_1]</span></div>
+        <div class="price-include-item"><i class="fa-solid fa-check"></i><span>[ITEM_INCLUIDO_2]</span></div>
+    </div>
+    <p class="price-note">Precio neto · IVA 16% en caso de factura · Válido 15 días · Sujeto a disponibilidad</p>
+</div>
+
+<!-- ══ 9. COMPLEMENTOS DISPONIBLES (OBLIGATORIO) ════════════ -->
+<div class="complementos-section">
+    <h3 class="section-title reveal" style="margin-top:0;"><i class="fa-solid fa-plus-circle"></i> Complementos Disponibles</h3>
+    <p class="reveal" style="color:var(--gray-text);font-size:0.95rem;margin-bottom:4px;">Potencia tu evento con estos servicios que puedes contratar por separado:</p>
+    <div class="complementos-grid">
+
+        <!-- SIEMPRE INCLUIR FOTOGRAFÍA -->
+        <div class="complemento-card reveal reveal-left">
+            <img src="fotografia.jpg" alt="Fotografía y Video" class="complemento-img">
+            <div class="complemento-body">
+                <h4><i class="fa-solid fa-camera"></i> Fotografía y Video Profesional</h4>
+                <p>Captura cada momento especial con nuestros paquetes profesionales. Recuerdos que duran toda la vida.</p>
+                <a href="https://primaveraeventsgroup.com/paquetes-de-fotografia-y-video/" target="_blank" class="btn-complemento">
+                    <i class="fa-solid fa-eye"></i> Ver paquetes
+                </a>
+            </div>
+        </div>
+
+        <!-- SIEMPRE INCLUIR INVITACIÓN DIGITAL -->
+        <div class="complemento-card reveal reveal-right">
+            <img src="pub_xv_anos.png" alt="Invitación Digital" class="complemento-img" style="object-position:top;">
+            <div class="complemento-body">
+                <h4><i class="fa-solid fa-mobile-screen-button"></i> Invitación Digital Premium</h4>
+                <p>Invitación interactiva con RSVP en tiempo real, mapa satelital, galería de fotos y mesa de regalos.</p>
+                <a href="https://5410m0n0c001.github.io/invitacion-demo/" target="_blank" class="btn-complemento gold">
+                    <i class="fa-solid fa-eye"></i> Ver demo
+                </a>
+            </div>
+        </div>
+
+        <!-- AGREGAR MÁS COMPLEMENTOS SEGÚN EL EVENTO -->
+        <!-- Ver catálogo completo en DIRECTIVES.md -->
+
+    </div>
+</div>
+
+<!-- ══ 10. PUBLICIDAD ════════════════════════════════════════ -->
+<div class="pub-section reveal">
+    <h3 class="section-title" style="margin-top:0;"><i class="fa-solid fa-sparkles"></i> También Creamos Experiencias Para…</h3>
+    <div class="pub-grid">
+        <div class="pub-card"><img src="pub_boda_ensueno.png" alt="Bodas"><div class="pub-card-overlay"><span>Bodas de Ensueño</span></div></div>
+        <div class="pub-card"><img src="pub_xv_anos.png" alt="XV Años"><div class="pub-card-overlay"><span>XV Años</span></div></div>
+        <div class="pub-card"><img src="pub_graduados.png" alt="Graduaciones"><div class="pub-card-overlay"><span>Graduaciones</span></div></div>
+        <div class="pub-card"><img src="pub_jessy_richard.png" alt="Planning"><div class="pub-card-overlay"><span>Wedding &amp; Event Planning</span></div></div>
+    </div>
+</div>
+
+<!-- ══ 11. KIT PLANNER ════════════════════════════════════════ -->
+<div class="kit-section reveal">
+    <div class="kit-content">
+        <div class="kit-badge"><i class="fa-solid fa-gift"></i> Recursos Gratuitos</div>
+        <h3>Kit Planner &amp; Guía Maestra</h3>
+        <p>Organiza tu evento con las herramientas correctas. Te compartimos nuestro <strong>Smart Event Planner Pro</strong> y la <strong>Guía Maestra Primavera Events</strong>.</p>
+        <div class="kit-buttons">
+            <a href="smart_event_planner_pro.xlsx" download class="btn-kit primary"><i class="fa-solid fa-file-excel"></i> Kit Planner Excel</a>
+            <a href="guia_maestra_primavera.pdf" download class="btn-kit secondary"><i class="fa-solid fa-file-pdf"></i> Guía Maestra PDF</a>
+        </div>
+    </div>
+</div>
+
+<!-- ══ 12. PDF BUTTON ═════════════════════════════════════════ -->
+<div class="pdf-section reveal">
+    <h3 style="font-size:1.4rem;margin-bottom:10px;"><i class="fa-solid fa-file-pdf" style="color:#e74c3c;"></i> Descargar esta Cotización</h3>
+    <p>Guarda o imprime esta propuesta en PDF para compartirla con quien necesites.</p>
+    <button class="btn-pdf" id="btnDownloadPDF"><i class="fa-solid fa-download"></i> Descargar en PDF</button>
+</div>
+
+<!-- ══ 13. FIRMA ══════════════════════════════════════════════ -->
+<div class="signature-section reveal">
+    <video id="videoFirma" autoplay muted loop playsinline preload="auto" style="max-width:260px;width:100%;height:auto;mix-blend-mode:multiply;">
+        <source src="firma.mp4" type="video/mp4">
+    </video>
+</div>
+
+<!-- ══ 14. NOTAS Y CONDICIONES ════════════════════════════════ -->
+<div class="notes-section reveal">
+    <h3><i class="fa-solid fa-file-signature"></i> Condiciones</h3>
+    <!-- PERSONALIZAR -->
+    <p>[NOTA_ESPECIFICA_DEL_PAQUETE_O_SALON]</p>
+    <p>Precio neto · No incluye IVA del 16% en caso de requerir factura oficial · Precios sujetos a cambios sin previo aviso · Se requiere anticipo del 50% para reservar la fecha.</p>
+    <p class="quote-phrase">«El arte de servir, hecho realidad.»</p>
+</div>
+
+<!-- ══ 15. CTA WHATSAPP ═══════════════════════════════════════ -->
+<div class="cta-container reveal">
+    <p>«¿Tienes alguna duda o quieres ajustar algo? Estamos aquí para ti.»</p>
+    <!-- PERSONALIZAR: mensaje de WhatsApp -->
+    <a href="https://wa.me/527774587923?text=Hola%2C%20revis%C3%A9%20la%20cotizaci%C3%B3n%20y%20quisiera%20m%C3%A1s%20informaci%C3%B3n." class="btn-wa" target="_blank">
+        Contactar a un Planner <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <p style="font-size:0.8rem;margin-top:14px;color:var(--gray-text);">Jessy Sandoval &amp; Richard Hernández · +52 777 458 7923</p>
+</div>
+
+</div><!-- end quote-card -->
+</main>
+
+<!-- ══ 16. FOOTER ═════════════════════════════════════════════ -->
+<footer>
+    <div class="footer-container">
+        <img src="logo_primavera.png" alt="Primavera Events Group" class="footer-logo" onerror="this.style.display='none'">
+        <h3>Primavera Events Group</h3>
+        <p><strong style="color:var(--gold-accent);">El Arte de Servir</strong></p>
+        <p><i class="fa-solid fa-location-dot" style="color:var(--primary-pink);width:20px;"></i> Cuernavaca, Morelos</p>
+        <p><i class="fa-solid fa-phone" style="color:var(--primary-pink);width:20px;"></i> <a href="tel:+527774587923">+52 777 458 7923</a></p>
+        <p><i class="fa-solid fa-globe" style="color:var(--primary-pink);width:20px;"></i> <a href="https://primaveraeventsgroup.com" target="_blank">primaveraeventsgroup.com</a></p>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Primavera Events Group. Todos los derechos reservados. · Propuesta válida por 15 días.</p></div>
+</footer>
+
+<!-- ══ FABs ═══════════════════════════════════════════════════ -->
+<div class="floating-actions-container">
+    <div class="fab-group">
+        <div class="fab-menu">
+            <a href="https://facebook.com/share/1GLd3Qt2Tj" target="_blank" class="fab-item"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://instagram.com/primavera.events.group" target="_blank" class="fab-item"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com/@primavera_events_group" target="_blank" class="fab-item"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <button class="fab-main" id="btnSocial"><span class="fab-label">Síguenos</span><i class="fa-solid fa-thumbs-up"></i></button>
+    </div>
+    <button class="fab-main" id="btnShare"><span class="fab-label">Compartir</span><i class="fa-solid fa-share-nodes"></i></button>
+</div>
+
+<audio id="bgAudio" loop preload="auto"><source src="marcasonora.mp3" type="audio/mpeg"></audio>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+    // Reveal on scroll
+    var obs=new IntersectionObserver(function(entries,o){
+        entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('active');o.unobserve(e.target);}});
+    },{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(r){obs.observe(r);});
+
+    // Hero slideshow
+    var slides=document.querySelectorAll('.hero-slide');
+    var dots=document.querySelectorAll('.hero-dot');
+    var cur=0;
+    function goSlide(n){slides[cur].classList.remove('active');dots[cur].classList.remove('active');cur=n;slides[cur].classList.add('active');dots[cur].classList.add('active');}
+    dots.forEach(function(d){d.addEventListener('click',function(){goSlide(parseInt(d.dataset.idx));});});
+    setInterval(function(){goSlide((cur+1)%slides.length);},4500);
+
+    // Video firma
+    var firma=document.getElementById('videoFirma');
+    if(firma){new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)firma.play().catch(function(){});});},{threshold:0.05}).observe(firma);}
+
+    // FABs
+    var fabs=document.querySelectorAll('.fab-group');
+    fabs.forEach(function(g){
+        g.querySelector('.fab-main').addEventListener('click',function(e){
+            e.stopPropagation();fabs.forEach(function(o){if(o!==g)o.classList.remove('active');});g.classList.toggle('active');
+        });
+    });
+    document.addEventListener('click',function(){fabs.forEach(function(g){g.classList.remove('active');});});
+
+    // Share
+    document.getElementById('btnShare').addEventListener('click',async function(){
+        var d={title:'Cotización Primavera Events Group',text:'Te comparto esta propuesta exclusiva.',url:window.location.href};
+        if(navigator.share){try{await navigator.share(d);}catch(e){}}
+        else{try{await navigator.clipboard.writeText(window.location.href);alert('Enlace copiado.');}catch(e){}}
+    });
+
+    // PDF
+    document.getElementById('btnDownloadPDF').addEventListener('click',function(){
+        var btn=this;btn.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Preparando...';btn.disabled=true;
+        setTimeout(function(){window.print();btn.innerHTML='<i class="fa-solid fa-download"></i> Descargar en PDF';btn.disabled=false;},300);
+    });
+
+    // Audio
+    var audio=document.getElementById('bgAudio');
+    var tryPlay=function(){audio.play().then(function(){document.removeEventListener('click',tryPlay);}).catch(function(){});};
+    tryPlay();document.addEventListener('click',tryPlay);
+    audio.addEventListener('pause',function(){audio.play().catch(function(){});});
+});
+</script>
+</body>
+</html>

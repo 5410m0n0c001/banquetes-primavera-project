@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "repo_origen": "https://github.com/5410m0n0c001/cotizaci-n-edie",
+    "archivo_origen": "index.html",
+    "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+    "estado": "completo"
+  },
+  "cliente": "Edimael Becerra",
+  "recinto": "Locación campestre / A convenir",
+  "precio_por_persona": "$125.00 MXN",
+  "minimo_invitados": 100,
+  "tipo_evento": "Taquiza Especial",
+  "inclusiones": [
+    "Taquiza Variada: Pastor, Longaniza y Campechano preparados al momento en el evento",
+    "Agua Fresca: Deliciosa agua fresca de sabor ilimitada",
+    "Complementos: Pepinos, cebolla, cilantro, salsas caseras y limones",
+    "Servicio: Platos desechables, servilletas y personal para despachar la taquiza"
+  ]
+}

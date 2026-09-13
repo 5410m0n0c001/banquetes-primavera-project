@@ -1,0 +1,594 @@
+{
+  "metadata": {
+    "repo_origen": "https://github.com/5410m0n0c001/expo-boda-y-15-a-os",
+    "archivo_origen": "multiple_files",
+    "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+    "estado": "completo"
+  },
+  "evento": {
+    "nombre": "Expo Boda & 15 Años 2026",
+    "fecha": "21 de Junio de 2026",
+    "lugar": "Centro de Convenciones Presidente (Córdoba, Veracruz)",
+    "slogan_campana": "2026 es un año para casarse"
+  },
+  "manual_colaboracion": {
+    "colaboradores_y_roles": [],
+    "colores_branding": [],
+    "hashtags": [
+      "#ch11",
+      "#FCFBF7",
+      "#FFFDF8",
+      "#ch10",
+      "#PrimaveraEventsGroup",
+      "#PrimaveraHauteRunway",
+      "#CentroDeConvencionesPresidente",
+      "#ff6b6b",
+      "#FFFFFF",
+      "#ch8",
+      "#XV2026",
+      "#XVMorelos",
+      "#ExpoBodaTuMarca",
+      "#ch6",
+      "#ExpoBoda15Presidente",
+      "#C9A96E",
+      "#ch4",
+      "#F8F6F4",
+      "#d94f6f",
+      "#6D6D6D",
+      "#FFF5F6",
+      "#ch3",
+      "#1F1F1F",
+      "#ch9",
+      "#ReviveTuGranDia",
+      "#FFF0F2",
+      "#FFFDFB",
+      "#WeddingPlannerMexico",
+      "#Quinceañeras",
+      "#ch12",
+      "#1e7e34",
+      "#25D366",
+      "#ch2",
+      "#FAF4F5",
+      "#ch1",
+      "#EFE7E1",
+      "#ch7",
+      "#BodasCuernavaca",
+      "#bd2130",
+      "#f05a7e",
+      "#ch5",
+      "#f78da7",
+      "#FFFDF9"
+    ]
+  },
+  "estrategia_marketing": {
+    "password_plan": "No encontrada",
+    "enlaces_drive": []
+  },
+  "leads_capturados": [
+    {
+      "id": "L001",
+      "name": "Elena García Lucero",
+      "email": "Garcia-LuceroElena44@outlook.com",
+      "phone": "",
+      "eventType": "15 años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L002",
+      "name": "Sara López",
+      "email": "",
+      "phone": "7773771550",
+      "eventType": "15 años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L003",
+      "name": "Dalia Ramírez Carreón",
+      "email": "Rafica21@hotmail.com",
+      "phone": "7771334014",
+      "eventType": "15 años",
+      "location": "Emiliano Zapata",
+      "status": "Pending"
+    },
+    {
+      "id": "L004",
+      "name": "Catherine Cabrera",
+      "email": "katherynecabrerab@gmail.com",
+      "phone": "5513034217",
+      "eventType": "Boda",
+      "location": "Jiutepec",
+      "status": "Pending"
+    },
+    {
+      "id": "L005",
+      "name": "Sonia Gómez Salinas",
+      "email": "soniagomezsalinas@gmail.com",
+      "phone": "",
+      "eventType": "Boda (5 Dic)",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L006",
+      "name": "Gabriela López Ortiz",
+      "email": "emirak16@hotmail.com",
+      "phone": "5517636258",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L007",
+      "name": "Silvia",
+      "email": "seic90@hotmail.com",
+      "phone": "7772571518",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L008",
+      "name": "Pablo Garcia",
+      "email": "pg318156@gmail.com",
+      "phone": "7352160868",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L009",
+      "name": "Olga Cárdenas",
+      "email": "angiecardenas396@gmail.com",
+      "phone": "7776232363",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L010",
+      "name": "Feli Lira",
+      "email": "liramejiafelipa@gmail.com",
+      "phone": "7352595868",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L011",
+      "name": "Enrique Resonico Buenavides",
+      "email": "resonico.enrique@gmail.com",
+      "phone": "5576868863",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L012",
+      "name": "Esther Gallegos",
+      "email": "flacagallegos1954@gmail.com",
+      "phone": "7711655630",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L013",
+      "name": "Moisés Gallardo",
+      "email": "unmoisesgallardofuentes@gmail.com",
+      "phone": "7352101408",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L014",
+      "name": "Herlinda López",
+      "email": "herlindalopez63316@gmail.com",
+      "phone": "7471436334",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L015",
+      "name": "Keny Mancebo",
+      "email": "kennrosas@gmail.com",
+      "phone": "7351448670",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L016",
+      "name": "Victor Rojo",
+      "email": "vrojo539@gmail.com",
+      "phone": "7352058452",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L017",
+      "name": "Leo Gálvez",
+      "email": "leonorg1@yahoo.com.mx",
+      "phone": "7775654712",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L019",
+      "name": "Daniel Munguia Diaz",
+      "email": "",
+      "phone": "",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L020",
+      "name": "Yelitza Hoyos",
+      "email": "",
+      "phone": "",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L021",
+      "name": "Camila Acosta",
+      "email": "camilaacosta1234@icloud.com",
+      "phone": "7341133410",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L022",
+      "name": "Aby Vian RE",
+      "email": "vianeromero90@gmail.com",
+      "phone": "5518960173",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L023",
+      "name": "Fermin Estrada",
+      "email": "ortizdenovaefrain66@gmail.com",
+      "phone": "7779685906",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L024",
+      "name": "Veronica Sánchez",
+      "email": "",
+      "phone": "",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L025",
+      "name": "Maylin Yarani",
+      "email": "",
+      "phone": "",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L026",
+      "name": "Fabi Maya",
+      "email": "",
+      "phone": "",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L027",
+      "name": "Katteryne BM",
+      "email": "",
+      "phone": "",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L028",
+      "name": "Michelle Gimenez",
+      "email": "",
+      "phone": "",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L029",
+      "name": "Juana Iris De Medina",
+      "email": "",
+      "phone": "",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L030",
+      "name": "Colibrí Amcra",
+      "email": "",
+      "phone": "",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L031",
+      "name": "Mld Allhyy",
+      "email": "",
+      "phone": "",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L032",
+      "name": "Av. Vicente Guerrero 777, Cuernavaca.",
+      "email": "",
+      "phone": "7773114631",
+      "eventType": "Boda / 15 Años",
+      "location": "Av. Vicente Guerrero 777, Cuernavaca",
+      "status": "Pending"
+    },
+    {
+      "id": "L033",
+      "name": "Av. Miguel Hidalgo 109, Ocotepec, Cuernavaca.",
+      "email": "",
+      "phone": "7772436200",
+      "eventType": "Boda / 15 Años",
+      "location": "Ocotepec, Cuernavaca",
+      "status": "Pending"
+    },
+    {
+      "id": "L034",
+      "name": "Paseo del Conquistador 55, Cuernavaca.",
+      "email": "",
+      "phone": "7771012570",
+      "eventType": "Boda / 15 Años",
+      "location": "Paseo del Conquistador 55, Cuernavaca",
+      "status": "Pending"
+    },
+    {
+      "id": "L035",
+      "name": "Calle Galeana 125, Las Palmas, Cuernavaca.",
+      "email": "",
+      "phone": "7773103929",
+      "eventType": "Boda / 15 Años",
+      "location": "Las Palmas, Cuernavaca",
+      "status": "Pending"
+    },
+    {
+      "id": "L036",
+      "name": "Comonfort 10, Centro, Cuernavaca.",
+      "email": "",
+      "phone": "7773103142",
+      "eventType": "Boda / 15 Años",
+      "location": "Centro, Cuernavaca",
+      "status": "Pending"
+    },
+    {
+      "id": "L037",
+      "name": "Del Hueso 112, Buena Vista, Cuernavaca.",
+      "email": "",
+      "phone": "7773133880",
+      "eventType": "Boda / 15 Años",
+      "location": "Buena Vista, Cuernavaca",
+      "status": "Pending"
+    },
+    {
+      "id": "L038",
+      "name": "Miguel Hidalgo 109, Ocotepec, Cuernavaca.",
+      "email": "",
+      "phone": "7772436200",
+      "eventType": "Boda / 15 Años",
+      "location": "Ocotepec, Cuernavaca",
+      "status": "Pending"
+    },
+    {
+      "id": "L039",
+      "name": "Av. Emiliano Zapata 601, Tlaltenango, Cuernavaca.",
+      "email": "",
+      "phone": "7771012570",
+      "eventType": "Boda / 15 Años",
+      "location": "Tlaltenango, Cuernavaca",
+      "status": "Pending"
+    },
+    {
+      "id": "L040",
+      "name": "Calzada de los Estrada 22, Vista Hermosa, Cuernavaca.",
+      "email": "",
+      "phone": "7773166219",
+      "eventType": "Boda / 15 Años",
+      "location": "Vista Hermosa, Cuernavaca",
+      "status": "Pending"
+    },
+    {
+      "id": "L041",
+      "name": "Herradura de Plata 27, Cuernavaca.",
+      "email": "",
+      "phone": "7772952996",
+      "eventType": "Boda / 15 Años",
+      "location": "Herradura de Plata 27, Cuernavaca",
+      "status": "Pending"
+    },
+    {
+      "id": "L042",
+      "name": "Cuernavaca, Morelos.",
+      "email": "radio@uaem.mx",
+      "phone": "7773297911",
+      "eventType": "Boda / 15 Años",
+      "location": "Morelos",
+      "status": "Pending"
+    },
+    {
+      "id": "L043",
+      "name": "Avenida Morelos Sur 134, Cuernavaca.",
+      "email": "",
+      "phone": "7773121356",
+      "eventType": "Boda / 15 Años",
+      "location": "Avenida Morelos Sur 134, Cuernavaca",
+      "status": "Pending"
+    },
+    {
+      "id": "L044",
+      "name": "Av. Río Mayo 1417-C, Vista Hermosa, Cuernavaca.",
+      "email": "",
+      "phone": "7773720494",
+      "eventType": "Boda / 15 Años",
+      "location": "Vista Hermosa, Cuernavaca",
+      "status": "Pending"
+    },
+    {
+      "id": "L045",
+      "name": "Av. Universidad 153, Chamilpa, Cuernavaca, Morelos.",
+      "email": "",
+      "phone": "7773117326",
+      "eventType": "Boda / 15 Años",
+      "location": "Morelos",
+      "status": "Pending"
+    },
+    {
+      "id": "L046",
+      "name": "Av. Morelos 309, Centro, Cuernavaca.",
+      "email": "",
+      "phone": "7772455900",
+      "eventType": "Boda / 15 Años",
+      "location": "Centro, Cuernavaca",
+      "status": "Pending"
+    },
+    {
+      "id": "L047",
+      "name": "José María Morelos 132, Chipitlán, Cuernavaca.",
+      "email": "",
+      "phone": "7773620220",
+      "eventType": "Boda / 15 Años",
+      "location": "Chipitlán, Cuernavaca",
+      "status": "Pending"
+    },
+    {
+      "id": "L048",
+      "name": "Val Ponce",
+      "email": "",
+      "phone": "",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L049",
+      "name": "Alex Ramz Ortega",
+      "email": "",
+      "phone": "",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L050",
+      "name": "Gustavo Garduño",
+      "email": "",
+      "phone": "",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L051",
+      "name": "José De Jesús González Zepeda",
+      "email": "",
+      "phone": "",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L052",
+      "name": "Yuriana Calleja",
+      "email": "yeseniayuriana5@hotmail.com",
+      "phone": "7774516311",
+      "eventType": "Boda / 15 Años",
+      "location": "",
+      "status": "Pending"
+    },
+    {
+      "id": "L055",
+      "name": "Yazmin Montesinos",
+      "email": "yazminmontesinos88@gmail.com",
+      "phone": "6648234936",
+      "eventType": "Boda",
+      "location": "Cuernavaca",
+      "status": "Pending"
+    }
+  ],
+  "proveedores_expositores": [
+    {
+      "archivo": "aby_decora.html",
+      "nombre_comercial": "Aby decora | Directorio de Proveedores",
+      "texto_completo": "Aby decora | Directorio de Proveedores Volver al Directorio Inicio Aby decora Decoración y Globos Titular: Abigail Jimenez Sandoval Horarios: Durante el día completo Decoraciones de globos para eventos Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: Bouquete de globos con el número 15. Condiciones: Válido al contratar en la Expo. Catálogo de Servicios y Paquetes Paquete 1 Básico Guirnalda de globos con bouquete de número de cumpleaños. Precio Especial Expo $2,500.00 MXN Disponibilidad: Abierta Políticas: Zona Requisitos: 50% de anticipo Paquete 2 Básico Arco de globos, bouquete con número y fondo (shimer, cortinas, etc) Precio Especial Expo $3,000.00 MXN Disponibilidad: Abierta Políticas: Zona Requisitos: 50% de anticipo Paquete 3 Medio 2 mamparas, bouquete con numero, fondo (lona, shimer, etc.) Precio Especial Expo $4,500.00 MXN Disponibilidad: Abierta Políticas: Zona Requisitos: 50% anticipo Paquete 4 VIP 2 mamparas, shimer, bouquete con número, mesa pastel personal Precio Especial Expo $5,000.00 MXN Disponibilidad: Abierta Políticas: Zona Requisitos: 50% anticipo"
+    },
+    {
+      "archivo": "academia_de_baile_dance_queens.html",
+      "nombre_comercial": "Academia de Baile Dance Queens | Directorio de Proveedores",
+      "texto_completo": "Academia de Baile Dance Queens | Directorio de Proveedores Volver al Directorio Inicio Academia de Baile Dance Queens Danza y Performance Titular: HUMBERTO CARRANZA NUÑEZ Horarios: 2:00 pm a 8:00 pm Nuestra academia se rige por el compromiso,la responsabilidad y el desmotrar de que estamos hechos, el brindar un servicio de calidad a todos nuestros clientes. Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: Se le regalará un juego de copas decoradas para su evento, pirotecnia extra y un descuento del 10% o 15% en su contratación. Condiciones: Al contratar el paquete basico se llebara los dos primeros premios. y el segundo premio se otorgara al contratar el paquete vip. siempre y cuando mecionen que bienen de la expo boda y xv años de PRIMAVER EVETS GROUP. Catálogo de Servicios y Paquetes 1.0 Basico Contiene 6 temas en todo su vals como son: presentacion, vals, coronacion, brindis, salida y moderna Precio Especial Expo $6,500.00 MXN Disponibilidad: Durante los soguientes meses del año 2026 Requisitos: Mensionar que asistieron a la expo boda y xv años 2.0 V.I.P Contiene 9 temas en todo su vals como son:Entrada al salon, Presentacion, Vals 1 y 2 temas , Coronacion, Brindis simbolico (brindis de fuego ù bolita de hidrogel con cuvo let), Brindis tradicional, Salida. Moderna. Precio Especial Expo $9,500.00 MXN Disponibilidad: Durante los soguientes meses del año 2026 Requisitos: Mensionar que asistieron a la expo boda y xv años"
+    },
+    {
+      "archivo": "andrea_lozano_beauty_salon.html",
+      "nombre_comercial": "Andrea Lozano Beauty Salon | Directorio de Proveedores",
+      "texto_completo": "Andrea Lozano Beauty Salon | Directorio de Proveedores Volver al Directorio Inicio Andrea Lozano Beauty Salon Belleza y Maquillaje Titular: Andrea Lozano López Horarios: Previa Cita Servicios profesionales de maquillaje aerógrafo, tradicional y peinado para novias e invitadas. Con más de 20 años de experiencia en el sector nupcial, garantizando técnicas de larga duración, maquillaje blindado y las últimas tendencias para hacer de tu boda un día inolvidable. Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: Ampolleta de lifting de obsequio en la contratación de cualquier paquete. Condiciones: Válido al apartar tu fecha el día del evento de la Expo. Catálogo de Servicios y Precios Lista de Precios Catálogo Visual (Imágenes) Novias VIP Paquete Plus (Novias) Servicio de máximo lujo que incluye: Maquillaje aerógrafo ojos/rostro (Prueba) Maquillaje aerógrafo (Día del evento) Pestaña natural 3D (Prueba y Evento) Preparación profunda de piel con sueros/mascarilla Ampolleta de lifting & Contour highlight Peinado profesional & puesta de tocado/velo Precio Especial $8,900.00 MXN Novias Premium Paquete Power (Novias) Servicio intermedio de gran durabilidad: Maquillaje aerógrafo (Prueba y Evento) Pestaña natural 3D (Prueba y Evento) Diseño de ceja (Prueba y Evento) Preparación de piel, sueros y mascarilla Ampolleta de lifting & Contour highlight Peinado profesional & puesta de tocado/velo Precio Especial $7,700.00 MXN Novias Básico Paquete Básico (Novias) Servicio esencial tradicional de cobertura completa: Maquillaje tradicional (Prueba y Evento) 2 tiras de pestañas de pelo natural Diseño de ceja (Prueba y 1 día antes) Preparación de piel con primer, sueros y mascarilla Contour highlight & Sellador Makeup Peinado tradicional & puesta de tocado/velo Precio Especial $7,200.00 MXN Servicios Individuales Novias Individuales Servicios a domicilio por separado: Maquillaje Aerógrafo: $2,530.00 MXN Maquillaje Tradicional: $2,420.00 MXN Peinado de Novia (tocado/velo): $2,100.00 MXN *No incluye pruebas. Invitadas & Damas Servicios para Invitadas Paquetes y servicios individuales para acompañantes: Paquete Peinado + Aero: $2,450.00 MXN Paquete Peinado + Tradicional: $2,200.00 MXN Maquillaje Aerógrafo: $1,500.00 MXN Maquillaje Tradicional: $1,350.00 MXN Peinado Invitadas: $1,100.00 MXN *Pestañas naturales incluidas en maquillaje. Servicios Extras Cuidado Facial y Cejas Adicionales para lucir una piel radiante: Servicio Facial Hidratante: $1,800.00 MXN Diseño de Cejas (Perfilación): $605.00 MXN Ampolleta de Lifting: $250.00 MXN *Recomendados previos al maquillaje. Políticas de Servicio a Domicilio El servicio a domicilio requiere de un mínimo de Novia + 2 invitadas contratando paquete de maquillaje y peinado. Todos los productos utilizados son de calidad profesional de alta gama para asegurar una cobertura blindada y de larga duración para tu evento. 1. Portada del Catálogo 2. Preparativos 3. Paquete Básico 4. Paquete Power 5. Paquete Plus 6. Maquillaje Novia 7. Peinado Novia 8. Paquete Invitadas 9. Maquillaje Invitadas 10. Peinado Invitadas 11. Servicios Faciales 12. Políticas Domicilio 13. Contacto y Redes &times;"
+    },
+    {
+      "archivo": "corona_music.html",
+      "nombre_comercial": "corona music | Directorio de Proveedores",
+      "texto_completo": "corona music | Directorio de Proveedores Volver al Directorio Inicio corona music Música y Audio Titular: DIEGO CORONA VEGA Horarios: SIEMPRE ABIERTO SERVICIO DE MUSICALISACIÓN E ILUMINACIÓN PARA EVENTOS SOCIALES Guardar en Contactos Chat WhatsApp Visitar Sitio Web Regalo Privilege Regalo: 6 detonaciones de pirotecnia en frío durante el evento contratado. Condiciones: CONTRATANDO EL DIA DE LA EXPO Catálogo de Servicios y Paquetes MEDIANO DJ AUDIO E ILUMINACIÓN Y PANTALLA DE PROYECCIÓN Precio Especial Expo $9,000.00 MXN Políticas: DURANTE LA EXPO Requisitos: AUTORIZANDO CONTRATO VIP DJ AUDIO E ILUMINACIÓN, CABEZONES Y PISTA DE BAILE ILUMINADA Precio Especial Expo $16,000.00 MXN Políticas: DURANTE LA EXPO Requisitos: AUTORIZANDO CONTRATO"
+    },
+    {
+      "archivo": "kataleya_florist.html",
+      "nombre_comercial": "kataleya florist | Directorio de Proveedores",
+      "texto_completo": "kataleya florist | Directorio de Proveedores Volver al Directorio Inicio kataleya florist Florería y Decoración Titular: Isabel Santibáñez alanis Horarios: 8 am 8 pm somos una empresa comprometida con lo que afresemos Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: Ramo de novia premium. Condiciones: Válido al contratar en la Expo. Catálogo Personalizado Este proveedor maneja cotizaciones personalizadas según las necesidades del evento. Solicita una cotización directamente por sus canales de contacto."
+    },
+    {
+      "archivo": "la_princesa_paleteria.html",
+      "nombre_comercial": "La princesa Paleteria | Directorio de Proveedores",
+      "texto_completo": "La princesa Paleteria | Directorio de Proveedores Volver al Directorio Inicio La princesa Paleteria Alimentos y Bebidas Titular: Griselda Anaid Villanueva Bailon Horarios: Lunes a Viernes de 08:00 a 17:00 hrs Paletería la Princesa de Tocumbo es un concepto que combina la elaboración tradicional artesanal de helados y paletas directamente de Tocubo Michoacan (cuna de la paletería y heladería mexicana) con la innovación en el mercado de paletas y helados, nuestros productos son elaborados 100% de fruta natural, lo que los hace un manjar que satisface los paladares más exigentes. Nuestros valores se basan en el respeto por las personas, honestidad y confianza. Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: En caso de liquidación del 100% del servicio, se aplicará un 10% de descuento sobre el Precio Exclusivo. Condiciones: El gasto de envío (en caso de aplicar) no entra en el descuento de 10%. Catálogo de Servicios y Paquetes Paquete 1 mini paletas Premium Servicio por 2 horas 150 mini paletas Sabores a elegir Carrito paletero personalizado Precio Especial Expo $1,700.00 MXN Disponibilidad: De acuerdo a agenda Políticas: 50% de anticipo para la reservación de la fecha y liquidación un día antes del servicio El costo incluido aplica para eventos en Cuernavaca, se podrá aplicar gastos de envío en caso de que el evento sea fuera de Cuernavaca En caso de cancelación del evento el anticipo no será devuelto, en caso de reprogramación el servicio quedará sujeto a disponibilidad de la nueva fecha. Requisitos: Los sabores deberán ser elegidos con al menos 30 días de anticipación a la fecha del evento. El diseño de personalización tendrá opción a 3 modificaciones. El diseño será aprobado por el cliente. Paquete 2 Nieve/Helado Premium Servicio por 2 horas Nieve/helado para 100 personas, servido en cono o vaso Carrito paletero personalizado Precio Especial Expo $3,600.00 MXN Disponibilidad: De acuerdo a agenda Políticas: 50% de anticipo para la reservación de la fecha y liquidación un día antes del servicio El costo incluido aplica para eventos en Cuernavaca, se podrá aplicar gastos de envío en caso de que el evento sea fuera de Cuernavaca En caso de cancelación del evento el anticipo no será devuelto, en caso de reprogramación el servicio quedará sujeto a disponibilidad de la nueva fecha. Requisitos: Los sabores deberán ser elegidos con al menos 30 días de anticipación a la fecha del evento. El diseño de personalización tendrá opción a 3 modificaciones. El diseño será aprobado por el cliente. Paquete 3 Mixto Premium Servicio por 2 horas 75 mini paletas Sabores a elegir Helado/nieve para 50 personas servido en vaso o cono Carrito paletero personalizado Precio Especial Expo $2,600.00 MXN Disponibilidad: De acuerdo a agenda Políticas: 50% de anticipo para la reservación de la fecha y liquidación un día antes del servicio El costo incluido aplica para eventos en Cuernavaca, se podrá aplicar gastos de envío en caso de que el evento sea fuera de Cuernavaca En caso de cancelación del evento el anticipo no será devuelto, en caso de reprogramación el servicio quedará sujeto a disponibilidad de la nueva fecha. Requisitos: Los sabores deberán ser elegidos con al menos 30 días de anticipación a la fecha del evento. El diseño de personalización tendrá opción a 3 modificaciones. El diseño será aprobado por el cliente."
+    },
+    {
+      "archivo": "licky_baut_photo.html",
+      "nombre_comercial": "licky baut photo | Directorio de Proveedores",
+      "texto_completo": "licky baut photo | Directorio de Proveedores Volver al Directorio Inicio licky baut photo Fotografía y Video Titular: Licky Baut Fotografía y cine para eventos especiales Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: 1 hora extra de lo contratado. Condiciones: Válido al contratar en la Expo. Catálogo de Servicios y Paquetes Fotografía y video Precio Especial Expo variante"
+    },
+    {
+      "archivo": "mariachi_xiuhtepetl.html",
+      "nombre_comercial": "Mariachi xiuhtepetl | Directorio de Proveedores",
+      "texto_completo": "Mariachi xiuhtepetl | Directorio de Proveedores Volver al Directorio Inicio Mariachi xiuhtepetl Música en Vivo Titular: Renata Salazar Horarios: 24/7 los 365 días del año (sujeto a disponibilidad). Atención telefónica: Lun-sáb 9 am a 9 pm. Dom 10 am a 9 pm. Mariachi de calidad, originario de Jiutepec. Integrado por músicos con experiencia y amplia trayectoria. Contamos ocn arpa en vivo y equipo de audio propio. Disponible para todo tipo de evento. Contamos con diferentes colores de vestuario. Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: Descuentos especiales a clientes recurrentes y en eventos entre semana. Condiciones: I. Ser cliente recurrente o haber contratado al menos una vez. II. Se considera entre semana de lunes a jueves Catálogo de Servicios y Paquetes Dos horas de servicio Dos horas 120 minutos de música en vivo Precio Especial Expo $9,500.00 MXN Disponibilidad: Sujeto a Políticas: Dentro de la zona Jiutepec, Zapata y Cuernavaca. Las dos horas deben de ser continuas, sin intermedio. Requisitos: Anticipo significativo de $300 para liquidar en efectivo el día del evento. Si desea liquidar con transferencia, ésta deberá realizarse antes de comenzar el servicio y se generará una comisión del 10% sobre el monto a transferir, por cuestiones fiscales. Una hora de servicio Hora 60 minutos de música en vivo Precio Especial Expo $5,000.00 MXN Disponibilidad: Sujeto a Políticas: Dentro de la zona Jiutepec, Zapata y Cuernavaca Requisitos: Anticipo significativo de $300 para liquidar en efectivo el día del evento. Si desea liquidar con transferencia, ésta deberá realizarse antes de comenzar el servicio y se generará una comisión del 10% sobre el monto a transferir, por cuestiones fiscales. Set de 45 minutos Set 45 45 minutos de música en vivo Precio Especial Expo $4,500.00 MXN Disponibilidad: Sujeto a Políticas: Dentro de la zona Jiutepec, Zapata y Cuernavaca Requisitos: Anticipo significativo de $300 para liquidar en efectivo el día del evento. Si desea liquidar con transferencia, ésta deberá realizarse antes de comenzar el servicio y se generará una comisión del 10% sobre el monto a transferir, por cuestiones fiscales. Serenata Serenata 7 canciones Precio Especial Expo $4,000.00 MXN Disponibilidad: Sujeto a Políticas: Dentro de la zona Jiutepec, Zapata y Cuernavaca Requisitos: Anticipo significativo de $300 para liquidar en efectivo el día del evento. Si desea liquidar con transferencia, ésta deberá realizarse antes de comenzar el servicio y se generará una comisión del 10% sobre el monto a transferir, por cuestiones fiscales. Serenata de 5 canciones Serenata económica 5 canciones Precio Especial Expo $3,500.00 MXN Disponibilidad: Sujeto a Políticas: Dentro de la zona Jiutepec, Zapata y Cuernavaca Requisitos: Anticipo significativo de $300 para liquidar en efectivo el día del evento. Si desea liquidar con transferencia, ésta deberá realizarse antes de comenzar el servicio y se generará una comisión del 10% sobre el monto a transferir, por cuestiones fiscales."
+    },
+    {
+      "archivo": "primavera_events_group.html",
+      "nombre_comercial": "Primavera Events Group | Servicios y Venues",
+      "texto_completo": "Primavera Events Group | Servicios y Venues Volver al Directorio Inicio Primavera Events Group Organizador Principal Richard & Jessy La firma organizadora y holding detrás de la producción general de la Expo. Brindamos servicios integrales de banquete y planeación en locaciones y venues del más alto nivel. Guardar en Contactos Chat WhatsApp Nuestros Principales Servicios Wedding & Event Planning Diseñamos y coordinamos bodas y eventos de destino que reflejan fielmente la visión de nuestros clientes. Jessy & Richard trabajan con un equipo experto para guiar la planificación paso a paso, gestionando el presupuesto, proveedores y la producción el gran día. Información General Jessica Sandoval Richard Hernández Banquetes Primavera Servicio exclusivo de banquetes, catering y mixología fina para eventos sociales. Fusionamos la alta cocina con presentaciones de mesa de postres personalizadas, flores de gala, mantelería y mobiliario de lujo. Banquetes Oficial Facebook Oficial Locaciones y Venues Oficiales Nuestros paquetes todo incluido se pueden realizar en las locaciones más exclusivas del estado. Explora todos los venues oficiales disponibles en nuestro sitio web oficial. Ver Todos los Venues Oficiales"
+    },
+    {
+      "archivo": "scanner_dj.html",
+      "nombre_comercial": "scanner dj | Directorio de Proveedores",
+      "texto_completo": "scanner dj | Directorio de Proveedores Volver al Directorio Inicio scanner dj Música y Audio Titular: ISMAEL CUEVAS Horarios: SIEMPRE ABIERTO SOMOS UNA EMPRESA SERIA DEDICADA A LA SONORIZACION ILUMINACION Y AMBIENTACION DE EVENTOS SOCIALES Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: PRECIO ESPECIAL EN NUESTROS PAQUETES DE SERVICIO. Condiciones: CONTRATANDO DENTRO DE LA EXPO Catálogo de Servicios y Paquetes BASICO DJ, AUDIO E ILUMINACIÓN Precio Especial Expo $10,000.00 MXN Disponibilidad: SUJETO A Políticas: CONTRATAR DURANTE LA EXPO Requisitos: APARTADO 20% INTERMEDIO DJ, AUDIO, ILUMINACION CON PANTALLA LED Precio Especial Expo $15,000.00 MXN Disponibilidad: SUJETO A Políticas: CONTRATAR DURANTE LA EXPO Requisitos: APARTADO 20% COMPLETO DJ, AUDIO, ILUMINACION , PANTALLA LED, ROBOT LED Y CABEZONES Precio Especial Expo $20,000.00 MXN Disponibilidad: SUJETO A Políticas: CONTRATAR DURANTE LA EXPO Requisitos: APARTADO 20%"
+    },
+    {
+      "archivo": "tequila_personalizado_don_ramon.html",
+      "nombre_comercial": "Tequila personalizado don Ramón | Directorio de Proveedores",
+      "texto_completo": "Tequila personalizado don Ramón | Directorio de Proveedores Volver al Directorio Inicio Tequila personalizado don Ramón Alimentos y Bebidas Titular: Carlos Arturo Sánchez Chávez Horarios: 8 am a 8 pm Transformamos una botella de Tequila Don Ramón en un recuerdo único e inolvidable. Cada pieza es personalizada mediante la técnica corte diamante, mediante la cuál podemos plasmar nombres, fechas, logotipos, siluetas de fotografías y mensajes especiales. Ideal para bodas, XV años, bautizos, graduaciones, aniversarios, reconocimientos empresariales y cualquier ocasión que merezca ser recordada para siempre. Guardar en Contactos Chat WhatsApp Regalo Privilege Regalo: 30% de descuento en la línea Punta Diamante Plata, Reposado y Añejo Cristalino. Condiciones: Firmar contrato el dia del evento y liquidar antes del 26 de Junio asi como mandar su disiño a mas tardar 5 dias despuede de realizar su pago Catálogo de Productos y Precios Lista de Precios Catálogo Visual (Imagen PDF) Arte Legendario Arte Legendario de México Botellas exclusivas decoradas artesanalmente: Tierra, Fuego, Éter, Alma, Aire y Agua. Presentación: 750 ml Precio Especial $7,515.00 MXN Cerámica Premium Línea Cerámica Luis Miguel Diseño de gala en cerámica fina: Plata: $5,500.00 MXN Reposado: $6,380.00 MXN Añejo: $7,480.00 MXN Presentación: 750 ml Cristales Genuinos Edición Limitada Swarovski Decoradas con auténticos cristales Swarovski: Plata: $8,175.00 MXN Añejo: $9,165.00 MXN Extra Añejo: $10,705.00 MXN Presentación: 750 ml Edición Limitada Línea Edición Limitada Colecciones exclusivas y añejados únicos: Añejo \"Dark\": $4,235.00 MXN Plata: $4,970.00 MXN Añejo: $6,120.00 MXN Extra Añejo: $7,270.00 MXN Presentación: 750 ml Platinium Línea Platinium Botellas estilizadas y de gran elegancia: Plata (700 ml): $750.00 MXN Reposado (700 ml): $865.00 MXN Añejo (700 ml): $1,040.00 MXN Añejo Cristalino (1.75 L): $2,185.00 MXN Varios Tamaños Punta Diamante Línea Punta Diamante La línea insignia de corte diamante: Plata/Reposado (50 ml): $155.00 MXN Plata/Reposado (200 ml): $285.00 MXN Añejo Cristalino (200 ml): $320.00 MXN Plata (750 ml): $445.00 MXN Reposado (750 ml): $465.00 MXN Añejo Cristalino (750 ml): $740.00 MXN Tahona (750 ml): $638.00 MXN Varios Tamaños Tradicional Línea Clásica El sabor original en todas sus presentaciones: Tamarindo (750 ml): $405.00 MXN Reposado (750 ml): $445.00 MXN Reposado (1 L): $530.00 MXN Plata (1.75 L): $925.00 MXN Reposado (1.75 L): $940.00 MXN Reposado (3 L): $1,610.00 MXN Varios Tamaños Mezcal Artesanal Línea Mezcales Mezcales premium de agaves selectos: Salmiana (750 ml): $1,040.00 MXN Espadín (750 ml): $1,090.00 MXN Tobalá (750 ml): $1,145.00 MXN Presentación: 750 ml Haz clic sobre la imagen para expandir en tamaño completo. Descargar Catálogo PDF Completo"
+    }
+  ]
+}

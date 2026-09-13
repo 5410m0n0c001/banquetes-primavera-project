@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "repo_origen": "https://github.com/5410m0n0c001/villa-di-fiori-",
+    "archivo_origen": "index.html",
+    "fecha_extraccion": "2026-06-22 19:26:37 UTC",
+    "estado": "completo"
+  },
+  "nombre_venue": "Villa Di Fiori",
+  "name": "Villa Di Fiori",
+  "cliente": "Señor Erasmo",
+  "tipo_evento": "Paquete Premium Completo (XV Años / Boda)",
+  "invitados_estimados": 120,
+  "precio_por_persona": "$850.00 MXN",
+  "inclusiones": [
+    "Montaje elegante y Decoración (Letras Iniciales Iluminadas, decoración floral, templete de madera, centro floral natural)",
+    "Banquete a 3 tiempos (Primer Tiempo: Entradas; Segundo Tiempo: Plato Fuerte de pollo o cerdo con 2 guarniciones, pan y chiles; Tercer Tiempo: Tornafiesta de chilaquiles o esquites)",
+    "Cóctel de bienvenida con periqueras altas, salas lounge, margaritas sin alcohol, piñadas, mojitos y aguas frescas",
+    "Personal Especializado (Meseros uniformados, cocina, stewards, Hostess, Capitán de Meseros y Coordinador General)",
+    "Música y Entretenimiento (DJ profesional con cabina, audio/iluminación, pista de baile 5x5)",
+    "Comodidades Exclusivas (9 horas de servicio continuo y estacionamiento)"
+  ],
+  "locaciones_disponibles": [
+    "Centro de Convenciones Presidente",
+    "Salón Los Potrillos",
+    "Salón Los Caballos"
+  ],
+  "imagenes": [
+    "portada.png",
+    "los caballos.webp",
+    "rancho los potrillos.webp"
+  ]
+}

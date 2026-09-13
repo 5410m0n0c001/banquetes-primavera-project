@@ -1,0 +1,54 @@
+{
+  "chatbot": {
+    "name": "Sofía Evolution",
+    "version": "2.0",
+    "agent_role": "Ventas y Atención al Cliente",
+    "fallback_agent": "Richard Hernández",
+    "default_language": "es",
+    "tone": "Warm & Consultative",
+    "prompts": {
+      "system_prompt": "rag/prompts/sistema_bot_madre.md",
+      "scoring_rules": "rag/prompts/calificacion_leads.md"
+    }
+  },
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "temperature": 0.3,
+    "max_tokens": 800,
+    "system_instruction_weight": 0.8
+  },
+  "rag_pipeline": {
+    "embedding_model": "text-embedding-3-small",
+    "chunk_size": 512,
+    "chunk_overlap": 64,
+    "semantic_chunking": true,
+    "vector_store": "pinecone",
+    "metadata_store": "supabase_postgresql",
+    "similarity_threshold": 0.72,
+    "top_k": 4
+  },
+  "integrations": {
+    "whatsapp": {
+      "provider": "meta_cloud_api",
+      "webhook_url": "/api/v1/whatsapp/webhook",
+      "interactive_messages": true
+    },
+    "web_widget": {
+      "theme_color": "#F65C7A",
+      "font_family": "Montserrat",
+      "welcome_message": "¡Hola! Soy Sofía, tu asesora virtual de eventos en Primavera Events Group. ¿Qué tipo de evento estás planeando?"
+    },
+    "crm": {
+      "platform": "supabase_tables",
+      "leads_table": "crm_leads",
+      "conversations_table": "crm_conversations",
+      "auto_assignment": {
+        "caliente": "Richard Hernández",
+        "urgente": "Richard Hernández",
+        "tibio": "Carlos Osorio",
+        "frio": "bot_nurturing"
+      }
+    }
+  }
+}

@@ -43,6 +43,18 @@ window.Visualizer3D = (function () {
   var _terrainMesh = null;
   var _gridHelper = null;
   var _terrain = { w: 50, h: 60 };
+  var _getState = null;
+  var _perimeterWalls = null;
+
+  function _getLayerVisibility(category) {
+    if (_getState) {
+      var state = _getState();
+      if (state && state.layers) {
+        return state.layers[category] !== false;
+      }
+    }
+    return true;
+  }
 
   // Helper to convert hex string to number
   function parseColor(hex) {
@@ -465,6 +477,7 @@ window.Visualizer3D = (function () {
   // ─── Init Three.js ────────────────────────────────────────
   function init(containerElement, initialElements, getState) {
     _container = containerElement;
+    _getState = getState;
     _currentElements = (typeof initialElements === 'function') ? initialElements() : (initialElements || []);
     
     var state = getState ? getState() : {};
@@ -643,6 +656,7 @@ window.Visualizer3D = (function () {
   function _buildTerrainFloor() {
     if (_terrainMesh) _scene.remove(_terrainMesh);
     if (_gridHelper) _scene.remove(_gridHelper);
+    if (_perimeterWalls) _scene.remove(_perimeterWalls);
 
     // Main terrain base
     var geom = new THREE.BoxGeometry(_terrain.w, 0.2, _terrain.h);
@@ -655,6 +669,46 @@ window.Visualizer3D = (function () {
     _terrainMesh.position.set(_terrain.w / 2, -0.1, _terrain.h / 2);
     _terrainMesh.receiveShadow = true;
     _scene.add(_terrainMesh);
+
+    // Perimeter boundary walls (barda perimetral)
+    _perimeterWalls = new THREE.Group();
+    _perimeterWalls.name = "Perimeter Walls";
+    var wallH = 3.0; // construction floor height
+    var wallT = 0.25; // thickness
+    var wallMat = new THREE.MeshStandardMaterial({
+      color: 0xd6d3d1, // warm stone-beige
+      roughness: 0.85
+    });
+
+    // North wall (Z = 0)
+    var wallN = new THREE.Mesh(new THREE.BoxGeometry(_terrain.w, wallH, wallT), wallMat);
+    wallN.position.set(_terrain.w / 2, wallH / 2, 0);
+    wallN.castShadow = true;
+    wallN.receiveShadow = true;
+    _perimeterWalls.add(wallN);
+
+    // South wall (Z = _terrain.h)
+    var wallS = new THREE.Mesh(new THREE.BoxGeometry(_terrain.w, wallH, wallT), wallMat);
+    wallS.position.set(_terrain.w / 2, wallH / 2, _terrain.h);
+    wallS.castShadow = true;
+    wallS.receiveShadow = true;
+    _perimeterWalls.add(wallS);
+
+    // West wall (X = 0)
+    var wallW = new THREE.Mesh(new THREE.BoxGeometry(wallT, wallH, _terrain.h), wallMat);
+    wallW.position.set(0, wallH / 2, _terrain.h / 2);
+    wallW.castShadow = true;
+    wallW.receiveShadow = true;
+    _perimeterWalls.add(wallW);
+
+    // East wall (X = _terrain.w)
+    var wallE = new THREE.Mesh(new THREE.BoxGeometry(wallT, wallH, _terrain.h), wallMat);
+    wallE.position.set(_terrain.w, wallH / 2, _terrain.h / 2);
+    wallE.castShadow = true;
+    wallE.receiveShadow = true;
+    _perimeterWalls.add(wallE);
+
+    _scene.add(_perimeterWalls);
 
     // Grid helper overlay
     var gridDivisions = Math.max(_terrain.w, _terrain.h);
@@ -731,8 +785,23 @@ window.Visualizer3D = (function () {
       // Skip flow lines since they are drawing-only stubs
       if (elem.shape === 'flow') return;
 
+      var cat = window.getCatalogEntry ? window.getCatalogEntry(elem.type) : null;
+      var category = (cat && cat.category) ? cat.category : 'mobiliario';
+
       var group = _active3dElements[elem.id];
+
+      // Layer visibility filter
+      var layerVisible = _getLayerVisibility(category);
+      if (!layerVisible) {
+        if (group) {
+          _scene.remove(group);
+          delete _active3dElements[elem.id];
+        }
+        return;
+      }
+
       var needsRebuild = false;
+      var currentTechosVisible = _getLayerVisibility('techos');
 
       if (group) {
         // Check if properties changed
@@ -740,7 +809,10 @@ window.Visualizer3D = (function () {
             group.userData.h !== elem.h ||
             group.userData.chairs !== elem.chairs ||
             group.userData.color !== elem.color ||
-            group.userData.type !== elem.type) {
+            group.userData.type !== elem.type ||
+            group.userData.salonType !== elem.salonType ||
+            group.userData.elevation !== elem.elevation ||
+            group.userData.techos !== currentTechosVisible) {
           needsRebuild = true;
           _scene.remove(group);
           delete _active3dElements[elem.id];
@@ -756,7 +828,10 @@ window.Visualizer3D = (function () {
           w: elem.w,
           h: elem.h,
           chairs: elem.chairs,
-          color: elem.color
+          color: elem.color,
+          salonType: elem.salonType,
+          elevation: elem.elevation,
+          techos: currentTechosVisible
         };
 
         _buildProceduralMesh(group, elem);
@@ -765,7 +840,8 @@ window.Visualizer3D = (function () {
       }
 
       // Update positions (x -> X, y -> Z)
-      group.position.set(elem.x, 0, elem.y);
+      var elev = parseFloat(elem.elevation) || 0.0;
+      group.position.set(elem.x, elev, elem.y);
       group.rotation.y = -(elem.rotation || 0) * Math.PI / 180;
     });
 
@@ -830,8 +906,11 @@ window.Visualizer3D = (function () {
     var w = elem.w;
     var h = elem.h;
     var colorNum = parseColor(elem.color);
+    var showTechos = _getLayerVisibility('techos');
 
     if (elem.type === 'salon') {
+      var salonType = elem.salonType || 'muros';
+
       // Floor slab
       var floor = new THREE.Mesh(
         new THREE.BoxGeometry(w, 0.04, h),
@@ -841,24 +920,150 @@ window.Visualizer3D = (function () {
       floor.receiveShadow = true;
       group.add(floor);
 
-      // Columns at 4 corners
-      var colGeom = new THREE.BoxGeometry(0.3, 4.0, 0.3);
-      var colMat = new THREE.MeshStandardMaterial({ color: COLORS.walls, roughness: 0.7 });
-      
-      var corners = [
-        { x: -w/2 + 0.15, z: -h/2 + 0.15 },
-        { x: w/2 - 0.15, z: -h/2 + 0.15 },
-        { x: -w/2 + 0.15, z: h/2 - 0.15 },
-        { x: w/2 - 0.15, z: h/2 - 0.15 }
-      ];
-      
-      corners.forEach(function (pos) {
-        var col = new THREE.Mesh(colGeom, colMat);
-        col.position.set(pos.x, 2.0, pos.z);
-        col.castShadow = true;
-        col.receiveShadow = true;
-        group.add(col);
-      });
+      if (salonType === 'sin_muros') {
+        // --- CARPA / TENT STYLE ---
+        // Metal columns
+        var colGeom = new THREE.CylinderGeometry(0.08, 0.08, 4.0, 8);
+        var colMat = new THREE.MeshStandardMaterial({ color: 0xe2e8f0, metalness: 0.6, roughness: 0.2 });
+
+        // Curtains
+        var curtainMat = new THREE.MeshStandardMaterial({
+          color: 0xf8fafc,
+          roughness: 0.9,
+          transparent: true,
+          opacity: 0.85
+        });
+        var curtainGeom = new THREE.BoxGeometry(0.35, 3.8, 0.12);
+
+        var pillars = [];
+        // Corner pillars
+        pillars.push({ x: -w/2 + 0.15, z: -h/2 + 0.15 });
+        pillars.push({ x: w/2 - 0.15, z: -h/2 + 0.15 });
+        pillars.push({ x: -w/2 + 0.15, z: h/2 - 0.15 });
+        pillars.push({ x: w/2 - 0.15, z: h/2 - 0.15 });
+
+        // Intermediate pillars
+        if (w > 8) {
+          var countW = Math.floor(w / 5);
+          for (var i = 1; i < countW; i++) {
+            var pct = i / countW;
+            var xPos = -w/2 + pct * w;
+            pillars.push({ x: xPos, z: -h/2 + 0.15 });
+            pillars.push({ x: xPos, z: h/2 - 0.15 });
+          }
+        }
+        if (h > 8) {
+          var countH = Math.floor(h / 5);
+          for (var j = 1; j < countH; j++) {
+            var pct = j / countH;
+            var zPos = -h/2 + pct * h;
+            pillars.push({ x: -w/2 + 0.15, z: zPos });
+            pillars.push({ x: w/2 - 0.15, z: zPos });
+          }
+        }
+
+        pillars.forEach(function (pos) {
+          var col = new THREE.Mesh(colGeom, colMat);
+          col.position.set(pos.x, 2.0, pos.z);
+          col.castShadow = true;
+          col.receiveShadow = true;
+          group.add(col);
+
+          var curtain = new THREE.Mesh(curtainGeom, curtainMat);
+          var offX = pos.x > 0 ? -0.12 : 0.12;
+          var offZ = pos.z > 0 ? -0.12 : 0.12;
+          curtain.position.set(pos.x + offX, 1.9, pos.z + offZ);
+          curtain.castShadow = true;
+          group.add(curtain);
+        });
+
+        // Pyramidal canvas roof
+        if (showTechos) {
+          var peakH = 4.0 + Math.max(2.0, Math.min(w, h) * 0.2);
+          var vertices = new Float32Array([
+            // Front face
+            0, peakH, 0,   -w/2, 4.0, h/2,   w/2, 4.0, h/2,
+            // Right face
+            0, peakH, 0,   w/2, 4.0, h/2,    w/2, 4.0, -h/2,
+            // Back face
+            0, peakH, 0,   w/2, 4.0, -h/2,   -w/2, 4.0, -h/2,
+            // Left face
+            0, peakH, 0,   -w/2, 4.0, -h/2,  -w/2, 4.0, h/2
+          ]);
+          var roofGeom = new THREE.BufferGeometry();
+          roofGeom.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
+          roofGeom.computeVertexNormals();
+
+          var roofMat = new THREE.MeshStandardMaterial({
+            color: 0xf8fafc,
+            roughness: 0.9,
+            side: THREE.DoubleSide
+          });
+          var roofMesh = new THREE.Mesh(roofGeom, roofMat);
+          roofMesh.castShadow = true;
+          roofMesh.receiveShadow = true;
+          group.add(roofMesh);
+        }
+
+      } else {
+        // --- CLOSED MASONRY SALON STYLE ---
+        var wallMat = new THREE.MeshStandardMaterial({ color: 0xf1f5f9, roughness: 0.85 });
+
+        // North wall
+        var wallN = new THREE.Mesh(new THREE.BoxGeometry(w, 4.0, 0.2), wallMat);
+        wallN.position.set(0, 2.0, -h/2 + 0.1);
+        wallN.castShadow = true;
+        wallN.receiveShadow = true;
+        group.add(wallN);
+
+        // West wall
+        var wallW = new THREE.Mesh(new THREE.BoxGeometry(0.2, 4.0, h), wallMat);
+        wallW.position.set(-w/2 + 0.1, 2.0, 0);
+        wallW.castShadow = true;
+        wallW.receiveShadow = true;
+        group.add(wallW);
+
+        // East wall
+        var wallE = new THREE.Mesh(new THREE.BoxGeometry(0.2, 4.0, h), wallMat);
+        wallE.position.set(w/2 - 0.1, 2.0, 0);
+        wallE.castShadow = true;
+        wallE.receiveShadow = true;
+        group.add(wallE);
+
+        // South wall with entrance gap
+        var gapW = Math.min(4.0, w * 0.35);
+        var sideWallW = (w - gapW) / 2;
+
+        var wallSLeft = new THREE.Mesh(new THREE.BoxGeometry(sideWallW, 4.0, 0.2), wallMat);
+        wallSLeft.position.set(-w/2 + sideWallW/2, 2.0, h/2 - 0.1);
+        wallSLeft.castShadow = true;
+        wallSLeft.receiveShadow = true;
+        group.add(wallSLeft);
+
+        var wallSRight = new THREE.Mesh(new THREE.BoxGeometry(sideWallW, 4.0, 0.2), wallMat);
+        wallSRight.position.set(w/2 - sideWallW/2, 2.0, h/2 - 0.1);
+        wallSRight.castShadow = true;
+        wallSRight.receiveShadow = true;
+        group.add(wallSRight);
+
+        // Beam above door gap
+        var beam = new THREE.Mesh(new THREE.BoxGeometry(gapW, 0.8, 0.2), wallMat);
+        beam.position.set(0, 3.6, h/2 - 0.1);
+        beam.castShadow = true;
+        beam.receiveShadow = true;
+        group.add(beam);
+
+        // Flat concrete roof slab
+        if (showTechos) {
+          var roof = new THREE.Mesh(
+            new THREE.BoxGeometry(w + 0.2, 0.15, h + 0.2),
+            new THREE.MeshStandardMaterial({ color: 0x94a3b8, roughness: 0.7 })
+          );
+          roof.position.y = 4.075;
+          roof.castShadow = true;
+          group.add(roof);
+        }
+      }
       
     } else if (elem.type === 'garden') {
       // Grass patch
@@ -1032,12 +1237,14 @@ window.Visualizer3D = (function () {
       group.add(bldg);
 
       // Roof slab
-      var roof = new THREE.Mesh(
-        new THREE.BoxGeometry(w + 0.2, 0.15, h + 0.2),
-        new THREE.MeshStandardMaterial({ color: 0x1e293b })
-      );
-      roof.position.y = 2.55;
-      group.add(roof);
+      if (showTechos) {
+        var roof = new THREE.Mesh(
+          new THREE.BoxGeometry(w + 0.2, 0.15, h + 0.2),
+          new THREE.MeshStandardMaterial({ color: 0x1e293b })
+        );
+        roof.position.y = 2.55;
+        group.add(roof);
+      }
 
     } else if (elem.type === 'ramp') {
       // Sloped Plane
@@ -1694,6 +1901,12 @@ window.Visualizer3D = (function () {
     }
   }
 
+  function setExposure(val) {
+    if (_renderer) {
+      _renderer.toneMappingExposure = val;
+    }
+  }
+
   // ─── Public API ───────────────────────────────────────────
   return {
     init: init,
@@ -1705,6 +1918,7 @@ window.Visualizer3D = (function () {
     resetCamera: resetCamera,
     setTerrain: setTerrain,
     setLighting: setLighting,
+    setExposure: setExposure,
     destroy: destroy
   };
 })();
